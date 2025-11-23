@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "globalEvent": {
+      "home": {
+        "title": "Global Events",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Global Event",
+        "createOrEditLabel": "Создать или отредактировать Global Event",
+        "search": "Найти Global Event",
+        "notFound": "Global Events не найдено"
+      },
+      "created": "Новый Global Event создан с идентификатором {{ param }}",
+      "updated": "Global Event обновлен с идентификатором {{ param }}",
+      "deleted": "Global Event удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Global Event {{ id }}?"
+      },
+      "detail": {
+        "title": "Global Event"
+      },
+      "id": "ID",
+      "eventName": "Event Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

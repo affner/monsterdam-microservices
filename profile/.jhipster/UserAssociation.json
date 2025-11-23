@@ -1,0 +1,65 @@
+{
+  "annotations": {
+    "changelogDate": "20240302180600"
+  },
+  "applications": ["profile"],
+  "clientRootFolder": "profile",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_association",
+  "fields": [
+    {
+      "fieldName": "requestedDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "AssociationStatus",
+      "fieldValues": "REQUESTED (association.status.requested),APPROVED (association.status.approved),REJECTED (association.status.rejected)"
+    },
+    {
+      "fieldName": "associationToken",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "expiryDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ownerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "profile",
+  "name": "UserAssociation",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

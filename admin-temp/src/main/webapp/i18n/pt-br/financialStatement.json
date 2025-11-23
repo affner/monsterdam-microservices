@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "financialStatement": {
+      "home": {
+        "title": "Financial Statements",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Financial Statement",
+        "createOrEditLabel": "Criar ou editar Financial Statement",
+        "search": "Pesquisar por Financial Statement",
+        "notFound": "Nenhum Financial Statement encontrado"
+      },
+      "created": "Um novo Financial Statement foi criado com o identificador {{ param }}",
+      "updated": "Um Financial Statement foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Financial Statement foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Financial Statement {{ id }}?"
+      },
+      "detail": {
+        "title": "Financial Statement"
+      },
+      "id": "ID",
+      "statementType": "Statement Type",
+      "periodStartDate": "Period Start Date",
+      "periodEndDate": "Period End Date",
+      "createdDate": "Created Date",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

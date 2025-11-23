@@ -1,0 +1,9 @@
+export enum EmailTemplateType {
+  NOTIFICATION = 'NOTIFICATION',
+
+  NEWSLETTER = 'NEWSLETTER',
+
+  ALERT = 'ALERT',
+
+  PROMOTION = 'PROMOTION',
+}

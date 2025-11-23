@@ -1,0 +1,89 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235112"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "post_comment",
+  "fields": [
+    {
+      "fieldName": "commentContent",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "likeCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "commenterUserId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "PostComment",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "responseTo",
+      "relationshipName": "responses",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "userMention",
+      "otherEntityRelationshipName": "originPostComment",
+      "relationshipName": "commentMentions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "postContent",
+      "otherEntityName": "postFeed",
+      "otherEntityRelationshipName": "comments",
+      "relationshipName": "post",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "responses",
+      "relationshipName": "responseTo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl"
+}

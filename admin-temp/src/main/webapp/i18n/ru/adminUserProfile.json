@@ -1,0 +1,38 @@
+{
+  "adminApp": {
+    "adminUserProfile": {
+      "home": {
+        "title": "Admin User Profiles",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Admin User Profile",
+        "createOrEditLabel": "Создать или отредактировать Admin User Profile",
+        "search": "Найти Admin User Profile",
+        "notFound": "Admin User Profiles не найдено"
+      },
+      "created": "Новый Admin User Profile создан с идентификатором {{ param }}",
+      "updated": "Admin User Profile обновлен с идентификатором {{ param }}",
+      "deleted": "Admin User Profile удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Admin User Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin User Profile"
+      },
+      "id": "ID",
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "nickName": "Nick Name",
+      "gender": "Gender",
+      "mobilePhone": "Mobile Phone",
+      "lastLoginDate": "Last Login Date",
+      "birthDate": "Birth Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "assignedTickets": "Assigned Tickets",
+      "announcements": "Announcements"
+    }
+  }
+}

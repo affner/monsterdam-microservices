@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "adminAnnouncement": {
+      "home": {
+        "title": "Admin Announcements",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Admin Announcement",
+        "createOrEditLabel": "Создать или отредактировать Admin Announcement",
+        "search": "Найти Admin Announcement",
+        "notFound": "Admin Announcements не найдено"
+      },
+      "created": "Новый Admin Announcement создан с идентификатором {{ param }}",
+      "updated": "Admin Announcement обновлен с идентификатором {{ param }}",
+      "deleted": "Admin Announcement удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Admin Announcement {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin Announcement"
+      },
+      "id": "ID",
+      "announcementType": "Announcement Type",
+      "title": "Title",
+      "content": "Content",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "directMessageId": "Direct Message Id",
+      "admin": "Admin"
+    }
+  }
+}

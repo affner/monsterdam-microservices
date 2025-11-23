@@ -1,0 +1,10 @@
+{
+  "adminApp": {
+    "AssetType": {
+      "null": "",
+      "CURRENT": "CURRENT",
+      "FIXED": "FIXED",
+      "INTANGIBLE": "INTANGIBLE"
+    }
+  }
+}

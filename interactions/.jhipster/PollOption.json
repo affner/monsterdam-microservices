@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235712"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "poll_option",
+  "fields": [
+    {
+      "fieldName": "optionDescription",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "voteCount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "PollOption",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "question",
+      "otherEntityName": "postPoll",
+      "otherEntityRelationshipName": "options",
+      "relationshipName": "poll",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "pollVote",
+      "otherEntityRelationshipName": "pollOption",
+      "relationshipName": "votes",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

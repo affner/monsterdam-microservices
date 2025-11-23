@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "purchasedContent": {
+      "home": {
+        "title": "Purchased Contents",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Purchased Content",
+        "createOrEditLabel": "Criar ou editar Purchased Content",
+        "search": "Pesquisar por Purchased Content",
+        "notFound": "Nenhum Purchased Content encontrado"
+      },
+      "created": "Um novo Purchased Content foi criado com o identificador {{ param }}",
+      "updated": "Um Purchased Content foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Purchased Content foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Purchased Content {{ id }}?"
+      },
+      "detail": {
+        "title": "Purchased Content"
+      },
+      "id": "ID",
+      "rating": "Rating",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payment": "Payment",
+      "walletTransaction": "Wallet Transaction",
+      "creatorEarning": "Creator Earning",
+      "viewer": "Viewer",
+      "purchasedContentPackage": "Purchased Content Package"
+    }
+  }
+}

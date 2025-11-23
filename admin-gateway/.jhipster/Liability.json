@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240302144255"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "liability",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "LiabilityType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CURRENT,LONG_TERM"
+    }
+  ],
+  "name": "Liability",
+  "relationships": [
+    {
+      "otherEntityName": "accountingRecord",
+      "otherEntityRelationshipName": "liability",
+      "relationshipName": "accountingRecords",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

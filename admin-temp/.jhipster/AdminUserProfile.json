@@ -1,0 +1,92 @@
+{
+  "annotations": {
+    "changelogDate": "20240229231145"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "admin_user_profile",
+  "fields": [
+    {
+      "fieldName": "fullName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[a-z0-9_-]+$"
+    },
+    {
+      "fieldName": "emailAddress",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[^@]+@[^@]+\\.[^@]+$"
+    },
+    {
+      "fieldName": "nickName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[a-z0-9_-]{3,16}$"
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "AdminGender",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MALE (user.gender.male),FEMALE (user.gender.female),TRANS_FEMALE (user.gender.trans-female),TRANS_MALE (user.gender.trans-male)"
+    },
+    {
+      "fieldName": "mobilePhone",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "^\\+?[0-9]{10,15}$"
+    },
+    {
+      "fieldName": "lastLoginDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "AdminUserProfile",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "assistanceTicket",
+      "otherEntityRelationshipName": "assignedAdmin",
+      "relationshipName": "assignedTickets",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "adminAnnouncement",
+      "otherEntityRelationshipName": "admin",
+      "relationshipName": "announcements",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

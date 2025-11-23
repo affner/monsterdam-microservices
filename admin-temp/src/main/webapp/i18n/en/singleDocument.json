@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "singleDocument": {
+      "home": {
+        "title": "Single Documents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Single Document",
+        "createOrEditLabel": "Create or edit a Single Document",
+        "search": "Search for Single Document",
+        "notFound": "No Single Documents found"
+      },
+      "created": "A new Single Document is created with identifier {{ param }}",
+      "updated": "A Single Document is updated with identifier {{ param }}",
+      "deleted": "A Single Document is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Single Document {{ id }}?"
+      },
+      "detail": {
+        "title": "Single Document"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "documentFile": "Document File",
+      "documentFileS3Key": "Document File S 3 Key",
+      "documentType": "Document Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "user": "User"
+    }
+  }
+}

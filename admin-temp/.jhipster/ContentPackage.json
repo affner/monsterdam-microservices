@@ -1,0 +1,109 @@
+{
+  "annotations": {
+    "changelogDate": "20240229235845"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "content_package",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "videoCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "imageCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isPaidContent",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "ContentPackage",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "singleAudio",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "audio",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "purchasedContent",
+      "otherEntityRelationshipName": "purchasedContentPackage",
+      "relationshipName": "selledPackages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "duration",
+      "otherEntityName": "singleVideo",
+      "otherEntityRelationshipName": "belongPackage",
+      "relationshipName": "videos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "singlePhoto",
+      "otherEntityRelationshipName": "belongPackage",
+      "relationshipName": "photos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "contentPackageTags",
+      "relationshipName": "usersTagged",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "messageContent",
+      "otherEntityName": "directMessage",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "message",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "postContent",
+      "otherEntityName": "postFeed",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "post",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

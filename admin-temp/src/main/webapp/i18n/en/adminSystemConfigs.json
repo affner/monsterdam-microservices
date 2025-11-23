@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "adminSystemConfigs": {
+      "home": {
+        "title": "Admin System Configs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Admin System Configs",
+        "createOrEditLabel": "Create or edit a Admin System Configs",
+        "search": "Search for Admin System Configs",
+        "notFound": "No Admin System Configs found"
+      },
+      "created": "A new Admin System Configs is created with identifier {{ param }}",
+      "updated": "A Admin System Configs is updated with identifier {{ param }}",
+      "deleted": "A Admin System Configs is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Admin System Configs {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin System Configs"
+      },
+      "id": "ID",
+      "configKey": "Config Key",
+      "configValue": "Config Value",
+      "description": "Description",
+      "configValueType": "Config Value Type",
+      "configCategory": "Config Category",
+      "configFile": "Config File",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isActive": "Is Active"
+    }
+  }
+}

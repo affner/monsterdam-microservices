@@ -1,0 +1,11 @@
+export enum ModerationActionType {
+  WARNING = 'admin.moderation.action.type.warning',
+
+  TEMPORARY_BAN = 'admin.moderation.action.type.temporary_ban',
+
+  PERMANENT_BAN = 'admin.moderation.action.type.permanent_ban',
+
+  CONTENT_REMOVAL = 'admin.moderation.action.type.content_removal',
+
+  OTHER = 'admin.moderation.action.type.other',
+}

@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "paymentProvider": {
+      "home": {
+        "title": "Payment Providers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Payment Provider",
+        "createOrEditLabel": "Create or edit a Payment Provider",
+        "search": "Search for Payment Provider",
+        "notFound": "No Payment Providers found"
+      },
+      "created": "A new Payment Provider is created with identifier {{ param }}",
+      "updated": "A Payment Provider is updated with identifier {{ param }}",
+      "deleted": "A Payment Provider is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Payment Provider {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment Provider"
+      },
+      "id": "ID",
+      "providerName": "Provider Name",
+      "description": "Description",
+      "apiKeyText": "Api Key Text",
+      "apiSecretText": "Api Secret Text",
+      "endpointText": "Endpoint Text",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payments": "Payments"
+    }
+  }
+}

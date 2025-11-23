@@ -1,0 +1,27 @@
+application {
+  config {
+    baseName adminbff
+    packageName com.fanflip.bff
+    applicationType microservice
+    authenticationType jwt
+    reactive false
+    cacheProvider redis
+    buildTool maven
+    serviceDiscoveryType consul
+    enableSwaggerCodegen true
+    enableTranslation true
+    nativeLanguage es
+    languages [en, fr, de, pt-br, ru]
+    testFrameworks [gatling]
+    searchEngine elasticsearch
+    messageBroker kafka
+    serverPort 8091
+  }
+  entities *
+}
+
+dto all with mapstruct
+
+paginate * with pagination
+
+service * with serviceImpl

@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "notification": {
+      "home": {
+        "title": "Notifications",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Notification",
+        "createOrEditLabel": "Criar ou editar Notification",
+        "search": "Pesquisar por Notification",
+        "notFound": "Nenhum Notification encontrado"
+      },
+      "created": "Um novo Notification foi criado com o identificador {{ param }}",
+      "updated": "Um Notification foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Notification foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Notification {{ id }}?"
+      },
+      "detail": {
+        "title": "Notification"
+      },
+      "id": "ID",
+      "readDate": "Read Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "postCommentId": "Post Comment Id",
+      "postFeedId": "Post Feed Id",
+      "directMessageId": "Direct Message Id",
+      "userMentionId": "User Mention Id",
+      "likeMarkId": "Like Mark Id",
+      "commentedUser": "Commented User",
+      "messagedUser": "Messaged User",
+      "mentionerUserInPost": "Mentioner User In Post",
+      "mentionerUserInComment": "Mentioner User In Comment"
+    }
+  }
+}

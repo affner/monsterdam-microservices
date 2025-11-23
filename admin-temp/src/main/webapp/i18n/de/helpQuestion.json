@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "helpQuestion": {
+      "home": {
+        "title": "Help Questions",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Help Question erstellen",
+        "createOrEditLabel": "Help Question erstellen oder bearbeiten",
+        "search": "Suche nach Help Question",
+        "notFound": "Keine Help Questions gefunden"
+      },
+      "created": "Help Question erstellt mit ID {{ param }}",
+      "updated": "Help Question aktualisiert mit ID {{ param }}",
+      "deleted": "Help Question gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Help Question {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Help Question"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "isDeleted": "Is Deleted",
+      "question": "Question",
+      "subcategory": "Subcategory"
+    }
+  }
+}

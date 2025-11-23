@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "accountingRecord": {
+      "home": {
+        "title": "Accounting Records",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Accounting Record",
+        "createOrEditLabel": "Создать или отредактировать Accounting Record",
+        "search": "Найти Accounting Record",
+        "notFound": "Accounting Records не найдено"
+      },
+      "created": "Новый Accounting Record создан с идентификатором {{ param }}",
+      "updated": "Accounting Record обновлен с идентификатором {{ param }}",
+      "deleted": "Accounting Record удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Accounting Record {{ id }}?"
+      },
+      "detail": {
+        "title": "Accounting Record"
+      },
+      "id": "ID",
+      "date": "Date",
+      "description": "Description",
+      "debit": "Debit",
+      "credit": "Credit",
+      "balance": "Balance",
+      "accountType": "Account Type",
+      "paymentId": "Payment Id",
+      "budget": "Budget",
+      "asset": "Asset",
+      "liability": "Liability",
+      "taxDeclarations": "Tax Declarations",
+      "financialStatements": "Financial Statements"
+    }
+  }
+}

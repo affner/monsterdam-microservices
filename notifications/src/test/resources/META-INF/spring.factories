@@ -1,0 +1,6 @@
+org.springframework.test.context.ContextCustomizerFactory = com.fanflip.\
+    notifications.config.TestContainersSpringContextCustomizerFactory,com.\
+    fanflip.notifications.config.\
+    SqlTestContainersSpringContextCustomizerFactory,com.fanflip.notifications.\
+    config.KafkaTestContainersSpringContextCustomizerFactory,com.fanflip.\
+    notifications.config.RedisTestContainersSpringContextCustomizerFactory

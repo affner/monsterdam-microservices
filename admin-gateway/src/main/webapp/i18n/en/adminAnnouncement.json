@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "adminAnnouncement": {
+      "home": {
+        "title": "Admin Announcements",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Admin Announcement",
+        "createOrEditLabel": "Create or edit a Admin Announcement",
+        "search": "Search for Admin Announcement",
+        "notFound": "No Admin Announcements found"
+      },
+      "created": "A new Admin Announcement is created with identifier {{ param }}",
+      "updated": "A Admin Announcement is updated with identifier {{ param }}",
+      "deleted": "A Admin Announcement is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Admin Announcement {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin Announcement"
+      },
+      "id": "ID",
+      "announcementType": "Announcement Type",
+      "title": "Title",
+      "content": "Content",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "directMessageId": "Direct Message Id",
+      "admin": "Admin"
+    }
+  }
+}

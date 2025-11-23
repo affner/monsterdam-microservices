@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "moneyPayout": {
+      "home": {
+        "title": "Money Payouts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Money Payout",
+        "createOrEditLabel": "Create or edit a Money Payout",
+        "search": "Search for Money Payout",
+        "notFound": "No Money Payouts found"
+      },
+      "created": "A new Money Payout is created with identifier {{ param }}",
+      "updated": "A Money Payout is updated with identifier {{ param }}",
+      "deleted": "A Money Payout is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Money Payout {{ id }}?"
+      },
+      "detail": {
+        "title": "Money Payout"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "withdrawStatus": "Withdraw Status",
+      "creatorEarning": "Creator Earning",
+      "creator": "Creator"
+    }
+  }
+}

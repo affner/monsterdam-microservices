@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "helpCategory": {
+      "home": {
+        "title": "Help Categories",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Help Category erstellen",
+        "createOrEditLabel": "Help Category erstellen oder bearbeiten",
+        "search": "Suche nach Help Category",
+        "notFound": "Keine Help Categories gefunden"
+      },
+      "created": "Help Category erstellt mit ID {{ param }}",
+      "updated": "Help Category aktualisiert mit ID {{ param }}",
+      "deleted": "Help Category gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Help Category {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Help Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "isDeleted": "Is Deleted",
+      "subCategories": "Sub Categories"
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235212"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "chat_room",
+  "fields": [
+    {
+      "fieldName": "lastAction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastConnectionDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "muted",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "participantUserId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "ChatRoom",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "messageContent",
+      "otherEntityName": "directMessage",
+      "otherEntityRelationshipName": "chatRooms",
+      "relationshipName": "sentMessages",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

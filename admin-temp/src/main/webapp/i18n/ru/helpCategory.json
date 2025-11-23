@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "helpCategory": {
+      "home": {
+        "title": "Help Categories",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Help Category",
+        "createOrEditLabel": "Создать или отредактировать Help Category",
+        "search": "Найти Help Category",
+        "notFound": "Help Categories не найдено"
+      },
+      "created": "Новый Help Category создан с идентификатором {{ param }}",
+      "updated": "Help Category обновлен с идентификатором {{ param }}",
+      "deleted": "Help Category удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Help Category {{ id }}?"
+      },
+      "detail": {
+        "title": "Help Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "isDeleted": "Is Deleted",
+      "subCategories": "Sub Categories"
+    }
+  }
+}

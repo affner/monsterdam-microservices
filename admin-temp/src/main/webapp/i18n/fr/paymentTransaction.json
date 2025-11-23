@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "paymentTransaction": {
+      "home": {
+        "title": "PaymentTransactions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Payment Transaction",
+        "createOrEditLabel": "Créer ou éditer un Payment Transaction",
+        "search": "Recherche pour Payment Transaction",
+        "notFound": "Aucun Payment Transaction trouvé"
+      },
+      "created": "Un nouveau Payment Transaction a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Payment Transaction avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Payment Transaction avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Payment Transaction {{ id }} ?"
+      },
+      "detail": {
+        "title": "Payment Transaction"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "paymentDate": "Payment Date",
+      "paymentStatus": "Payment Status",
+      "paymentReference": "Payment Reference",
+      "cloudTransactionId": "Cloud Transaction Id",
+      "paymentMethod": "Payment Method",
+      "paymentProvider": "Payment Provider",
+      "viewer": "Viewer",
+      "accountingRecord": "Accounting Record",
+      "purchasedContent": "Purchased Content",
+      "purchasedSubscription": "Purchased Subscription",
+      "walletTransaction": "Wallet Transaction",
+      "purchasedTip": "Purchased Tip"
+    }
+  }
+}

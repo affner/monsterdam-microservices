@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235552"
+  },
+  "applications": ["catalogs"],
+  "clientRootFolder": "catalogs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "tax_info",
+  "fields": [
+    {
+      "fieldName": "ratePercentage",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "taxType",
+      "fieldType": "TaxType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "VAT (tax.type.vat),WITHHOLDING (tax.type.withholding)"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "catalogs",
+  "name": "TaxInfo",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "country",
+      "relationshipName": "country",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

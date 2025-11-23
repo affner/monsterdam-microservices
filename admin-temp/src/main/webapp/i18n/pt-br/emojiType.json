@@ -1,0 +1,31 @@
+{
+  "adminApp": {
+    "emojiType": {
+      "home": {
+        "title": "Emoji Types",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Emoji Type",
+        "createOrEditLabel": "Criar ou editar Emoji Type",
+        "search": "Pesquisar por Emoji Type",
+        "notFound": "Nenhum Emoji Type encontrado"
+      },
+      "created": "Um novo Emoji Type foi criado com o identificador {{ param }}",
+      "updated": "Um Emoji Type foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Emoji Type foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Emoji Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Emoji Type"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

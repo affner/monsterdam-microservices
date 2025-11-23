@@ -1,0 +1,13 @@
+export enum UserLanguage {
+  ES = 'user.language.es',
+
+  EN = 'user.language.en',
+
+  FR = 'user.language.fr',
+
+  DE = 'user.language.de',
+
+  PT_BR = 'user.language.pt_br',
+
+  RU = 'user.language.ru',
+}

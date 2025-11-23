@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "payoutMethod": {
+      "home": {
+        "title": "Payout Methods",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Payout Method",
+        "createOrEditLabel": "Criar ou editar Payout Method",
+        "search": "Pesquisar por Payout Method",
+        "notFound": "Nenhum Payout Method encontrado"
+      },
+      "created": "Um novo Payout Method foi criado com o identificador {{ param }}",
+      "updated": "Um Payout Method foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Payout Method foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Payout Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Payout Method"
+      },
+      "id": "ID",
+      "methodName": "Method Name",
+      "tokenText": "Token Text",
+      "expirationDate": "Expiration Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "bookMark": {
+      "home": {
+        "title": "Book Marks",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Book Mark erstellen",
+        "createOrEditLabel": "Book Mark erstellen oder bearbeiten",
+        "search": "Suche nach Book Mark",
+        "notFound": "Keine Book Marks gefunden"
+      },
+      "created": "Book Mark erstellt mit ID {{ param }}",
+      "updated": "Book Mark aktualisiert mit ID {{ param }}",
+      "deleted": "Book Mark gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Book Mark {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Book Mark"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "post": "Post",
+      "message": "Message",
+      "user": "User"
+    }
+  }
+}

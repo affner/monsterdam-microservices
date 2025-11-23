@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "currency": {
+      "home": {
+        "title": "Currencies",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Currency erstellen",
+        "createOrEditLabel": "Currency erstellen oder bearbeiten",
+        "search": "Suche nach Currency",
+        "notFound": "Keine Currencies gefunden"
+      },
+      "created": "Currency erstellt mit ID {{ param }}",
+      "updated": "Currency aktualisiert mit ID {{ param }}",
+      "deleted": "Currency gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Currency {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Currency"
+      },
+      "id": "ID",
+      "name": "Name",
+      "symbol": "Symbol",
+      "code": "Code",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

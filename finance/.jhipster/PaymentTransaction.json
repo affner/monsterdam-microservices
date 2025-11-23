@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235016"
+  },
+  "applications": ["finance"],
+  "clientRootFolder": "finance",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "payment_transaction",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "GenericStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PENDING (generic.status.pending),COMPLETED (generic.status.completed),DECLINED (generic.status.declined),REFUNDED (generic.status.refunded),CANCELED (generic.status.canceled)"
+    },
+    {
+      "fieldName": "paymentReference",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "cloudTransactionId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "viewerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentMethodId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "paymentProviderId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "finance",
+  "name": "PaymentTransaction",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "asset": {
+      "home": {
+        "title": "Assets",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Asset",
+        "createOrEditLabel": "Создать или отредактировать Asset",
+        "search": "Найти Asset",
+        "notFound": "Assets не найдено"
+      },
+      "created": "Новый Asset создан с идентификатором {{ param }}",
+      "updated": "Asset обновлен с идентификатором {{ param }}",
+      "deleted": "Asset удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Asset {{ id }}?"
+      },
+      "detail": {
+        "title": "Asset"
+      },
+      "id": "ID",
+      "name": "Name",
+      "value": "Value",
+      "acquisitionDate": "Acquisition Date",
+      "type": "Type",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

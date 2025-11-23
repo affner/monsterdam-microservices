@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity AssistanceTicket.
+    -->
+    <changeSet id="20240229231545-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="moderation_action_id"
+                                 baseTableName="assistance_ticket"
+                                 constraintName="fk_assistance_ticket__moderation_action_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="moderation_action"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="assigned_admin_id"
+                                 baseTableName="assistance_ticket"
+                                 constraintName="fk_assistance_ticket__assigned_admin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="admin_user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="assistance_ticket"
+                                 constraintName="fk_assistance_ticket__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

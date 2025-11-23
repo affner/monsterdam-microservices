@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "specialAward": {
+      "home": {
+        "title": "Special Awards",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Special Award",
+        "createOrEditLabel": "Crear o editar Special Award",
+        "search": "Buscar Special Award",
+        "notFound": "Ningún Special Awards encontrado"
+      },
+      "created": "Un nuevo Special Award ha sido creado con el identificador {{ param }}",
+      "updated": "Un Special Award ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Special Award ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Special Award {{ id }}?"
+      },
+      "detail": {
+        "title": "Special Award"
+      },
+      "id": "ID",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "reason": "Reason",
+      "altSpecialTitle": "Alt Special Title",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "viewerId": "Viewer Id",
+      "creatorId": "Creator Id",
+      "specialTitleId": "Special Title Id"
+    }
+  }
+}

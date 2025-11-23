@@ -1,0 +1,323 @@
+application {
+    config {
+        baseName profile
+        packageName com.fanflip.profile
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        serviceDiscoveryType consul
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        serverPort 8084
+    }
+    entities UserLite, UserProfile, UserSettings, UserAssociation, UserEvent, BookMark, PersonalSocialLinks, Feedback, StateUserRelation, HashTag, PostFeedHashTagRelation, SpecialAward
+}
+
+entity UserLite{
+  //  thumbnail ImageBlob  este campo no existira en db estara realmente en S3
+    thumbnailS3Key String
+    birthDate LocalDate required
+    gender UserGender required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    nickName String required pattern(/^[a-z0-9_-]{3,16}$/)
+    fullName String required pattern(/^[a-zA-Z0-9 ]*$/)
+    contentPreference ContentPreference required
+    //     Uzer{countryOfBirth(name)} to Country
+    countryOfBirthId Long
+}
+entity UserProfile{
+    emailContact String required
+ //   profilePhoto ImageBlob  este campo no existira en db estara realmente en S3
+  //  coverPhoto ImageBlob  este campo no existira en db estara realmente en S3
+    profilePhotoS3Key String
+    coverPhotoS3Key String
+    mainContentUrl String
+    mobilePhone String
+    websiteUrl String
+    amazonWishlistUrl String
+    lastLoginDate Instant required
+    biography TextBlob
+    isFree Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //     UserProfile{stateOfResidence(stateName)} to State,
+    stateOfResidenceId Long
+}
+
+
+entity StateUserRelation(rel_state_user){
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // ManyToMany    Uzer{blockedUbications} to State{blockers},
+    idState Long required
+}
+enum ContentPreference {
+
+    /* Preferencia por todo tipo de contenido. */
+    ALL("content.preference.all"),
+
+    /* Preferencia por contenido heterosexual. */
+    STRAIGHT("content.preference.straight"),
+
+    /* Preferencia por contenido homosexual. */
+    GAY("content.preference.gay"),
+
+    /* Preferencia por contenido relacionado con personas transgénero. */
+    TRANS("content.preference.trans")
+}
+enum UserGender {
+
+    /* Género masculino. */
+    MALE("user.gender.male"),
+
+    /* Género femenino. */
+    FEMALE("user.gender.female"),
+
+    /* Individuo que ha realizado una transición de hombre a mujer. */
+    TRANS_FEMALE("user.gender.trans-female"),
+
+    /* Individuo que ha realizado una transición de mujer a hombre. */
+    TRANS_MALE("user.gender.trans-male")
+}
+
+entity UserSettings {
+    lastModifiedDate Instant
+    darkMode Boolean required
+    language UserLanguage required
+    contentFilter Boolean required
+    messageBlurIntensity Integer
+    activityStatusVisibility Boolean required
+    twoFactorAuthentication Boolean required
+    sessionsActiveCount Integer
+    emailNotifications Boolean required
+    importantSubscriptionNotifications Boolean required
+    newMessages Boolean required
+    postReplies Boolean required
+    postLikes Boolean required
+    newFollowers Boolean required
+    smsNewStream Boolean required
+    toastNewComment Boolean required
+    toastNewLikes Boolean required
+    toastNewStream Boolean required
+    siteNewComment Boolean required
+    siteNewLikes Boolean required
+    siteDiscountsFromFollowedUsers Boolean required
+    siteNewStream Boolean required
+    siteUpcomingStreamReminders Boolean required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+enum UserLanguage {
+
+    /* Idioma español. */
+    ES("user.language.es"),
+
+    /* Idioma inglés. */
+    EN("user.language.en"),
+
+    /* Idioma francés. */
+    FR("user.language.fr"),
+
+    /* Idioma alemán. */
+    DE("user.language.de"),
+
+    /* Idioma portugués (Brasil). */
+    PT_BR("user.language.pt_br"),
+
+    /* Idioma ruso. */
+    RU("user.language.ru")
+}
+entity HashTag {
+    tagName String required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+
+// mostrar cada mes al creador estadisticas de sus usuarios y pedirle que escoga a su usuario del mes, si no lo escoge se pone el que mas compro y debe darle un regalo si no se le da un descuento en su renovacion.
+entity SpecialAward {
+    startDate LocalDate required
+    endDate LocalDate required
+    reason String
+    altSpecialTitle String
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+  //  viewerId Long required
+  //  creatorId Long required
+    specialTitleId Long required
+}
+
+entity PostFeedHashTagRelation(rel_postfeed_hashtag){
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // ManyToMany    PostFeed{hashTags} to HashTag{posts},
+    postFeedId Long required
+}
+
+entity UserAssociation {
+    requestedDate Instant required,
+    status AssociationStatus,
+    associationToken String required,
+    expiryDate Instant required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //  relationship OneToMany UzerInteractions{ownAccountsAssociations} to UserAssociation{owner required}
+    ownerId Long required
+
+}
+enum AssociationStatus {
+
+    /* Indica que se ha solicitado una asociación. */
+    REQUESTED("association.status.requested"),
+
+    /* La solicitud de asociación ha sido aprobada. */
+    APPROVED("association.status.approved"),
+
+    /* La solicitud de asociación ha sido rechazada. */
+    REJECTED("association.status.rejected")
+}
+
+entity UserEvent {
+    title String required
+    description TextBlob required
+    startDate LocalDate required
+    endDate LocalDate required
+    creatorEventStatus UserEventStatus
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerInteractions{createdEvents(title)} to UserEvent{creator required},
+    creatorId Long required
+}
+enum UserEventStatus {
+
+    /* El evento ha sido cancelado. */
+    CANCELED("creator.event.status.canceled"),
+
+    /* El evento está activo y en curso. */
+    ACTIVE("creator.event.status.active"),
+
+    /* El evento ha sido eliminado. */
+    DELETED("creator.event.status.deleted")
+}
+
+entity BookMark {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // manytoone BookMark{user required} to UzerInteractions{bookMarks(createdDate)},
+    userId Long
+    // manytoone BookMark{post(postContent) required} to PostFeed{bookMarks(createdDate)},
+    postId Long
+    // manytoone BookMark{message(messageContent) required} to DirectMessage{bookMarks(createdDate)},
+    messageId Long
+}
+entity Feedback {
+    content String required
+    feedbackDate Instant required
+    feedbackRating Integer
+    feedbackType FeedbackType
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //manyToOne Feedback{creator required} to UzerInteractions{feedback(feedbackRating)},
+    creatorId Long required
+}
+enum FeedbackType {
+
+    /* Se utiliza cuando un usuario quiere reportar un problema o fallo en la plataforma. */
+    ERROR("feedback.type.error"),
+
+    /* Se utiliza cuando un usuario propone una mejora o sugiere una nueva característica. */
+    SUGGESTION("feedback.type.suggestion"),
+
+    /* Se utiliza para categorizar comentarios positivos sobre el servicio o plataforma. */
+    PRAISE("feedback.type.praise"),
+
+    /* Para comentarios o consultas que no encajan en las categorías anteriores. */
+    OTHER("feedback.type.other")
+}
+
+entity PersonalSocialLinks {
+   // thumbnail ImageBlob  este campo no existira en db estara realmente en S3
+   // normalImage ImageBlob  este campo no existira en db estara realmente en S3
+    normalImageS3Key String
+    thumbnailIconS3Key String
+    socialLink String required unique
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // PersonalSocialLinks{socialNetwork(thumbnail)} to SocialNetwork
+    socialNetworkId Long
+}
+
+relationship OneToOne {
+    UserProfile{settings required} to UserSettings
+}
+relationship OneToMany {
+
+    UserProfile{socialNetworks} to PersonalSocialLinks{user required},
+    UserProfile{blockedUbications} to StateUserRelation{user required}, // MAnyToMany
+    HashTag{postFeeds} to PostFeedHashTagRelation{hashtag required}, // MAnyToMany
+}
+relationship ManyToMany {
+    UserProfile{followed} to UserProfile{followers},
+    UserProfile{blockedList} to UserProfile{blockers},
+    // la idea es meter la tabla SpecialAward en lugar de la tabla relacional y asi se tabla relacion y con propiedades.
+    UserProfile{loyaLists} to UserProfile{awards},
+    // la idea es meter la tabla PurchasedSuscriptions en lugar de la tabla relacional y asi tener tabla relacion con propiedades.
+    UserProfile{subscribed} to UserProfile{subscriptions},
+    UserProfile{joinedEvents(startDate)} to UserEvent{members}
+    UserProfile{hashtags} to HashTag{user required},
+}
+
+search HashTag with elasticsearch
+
+dto all with mapstruct
+
+paginate * with pagination
+
+service * with serviceImpl

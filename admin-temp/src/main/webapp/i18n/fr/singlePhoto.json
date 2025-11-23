@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "singlePhoto": {
+      "home": {
+        "title": "SinglePhotos",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Single Photo",
+        "createOrEditLabel": "Créer ou éditer un Single Photo",
+        "search": "Recherche pour Single Photo",
+        "notFound": "Aucun Single Photo trouvé"
+      },
+      "created": "Un nouveau Single Photo a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Single Photo avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Single Photo avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Single Photo {{ id }} ?"
+      },
+      "detail": {
+        "title": "Single Photo"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "belongPackage": "Belong Package"
+    }
+  }
+}

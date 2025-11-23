@@ -1,0 +1,28 @@
+{
+  "adminApp": {
+    "pollOption": {
+      "home": {
+        "title": "Poll Options",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Poll Option",
+        "createOrEditLabel": "Criar ou editar Poll Option",
+        "search": "Pesquisar por Poll Option",
+        "notFound": "Nenhum Poll Option encontrado"
+      },
+      "created": "Um novo Poll Option foi criado com o identificador {{ param }}",
+      "updated": "Um Poll Option foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Poll Option foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Poll Option {{ id }}?"
+      },
+      "detail": {
+        "title": "Poll Option"
+      },
+      "id": "ID",
+      "optionDescription": "Option Description",
+      "voteCount": "Vote Count",
+      "poll": "Poll",
+      "votes": "Votes"
+    }
+  }
+}

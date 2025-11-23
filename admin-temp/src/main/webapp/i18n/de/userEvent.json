@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "userEvent": {
+      "home": {
+        "title": "User Events",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "User Event erstellen",
+        "createOrEditLabel": "User Event erstellen oder bearbeiten",
+        "search": "Suche nach User Event",
+        "notFound": "Keine User Events gefunden"
+      },
+      "created": "User Event erstellt mit ID {{ param }}",
+      "updated": "User Event aktualisiert mit ID {{ param }}",
+      "deleted": "User Event gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll User Event {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "User Event"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "creatorEventStatus": "Creator Event Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "creator": "Creator",
+      "members": "Members"
+    }
+  }
+}

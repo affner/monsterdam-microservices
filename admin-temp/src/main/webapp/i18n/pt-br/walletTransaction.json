@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "walletTransaction": {
+      "home": {
+        "title": "Wallet Transactions",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Wallet Transaction",
+        "createOrEditLabel": "Criar ou editar Wallet Transaction",
+        "search": "Pesquisar por Wallet Transaction",
+        "notFound": "Nenhum Wallet Transaction encontrado"
+      },
+      "created": "Um novo Wallet Transaction foi criado com o identificador {{ param }}",
+      "updated": "Um Wallet Transaction foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Wallet Transaction foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Wallet Transaction {{ id }}?"
+      },
+      "detail": {
+        "title": "Wallet Transaction"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "lastModifiedDate": "Last Modified Date",
+      "transactionType": "Transaction Type",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payment": "Payment",
+      "viewer": "Viewer",
+      "purchasedContent": "Purchased Content",
+      "purchasedSubscription": "Purchased Subscription",
+      "purchasedTip": "Purchased Tip"
+    }
+  }
+}

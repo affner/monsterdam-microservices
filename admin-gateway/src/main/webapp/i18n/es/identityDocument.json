@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "identityDocument": {
+      "home": {
+        "title": "Identity Documents",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Identity Document",
+        "createOrEditLabel": "Crear o editar Identity Document",
+        "search": "Buscar Identity Document",
+        "notFound": "Ningún Identity Documents encontrado"
+      },
+      "created": "Un nuevo Identity Document ha sido creado con el identificador {{ param }}",
+      "updated": "Un Identity Document ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Identity Document ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Identity Document {{ id }}?"
+      },
+      "detail": {
+        "title": "Identity Document"
+      },
+      "id": "ID",
+      "documentName": "Document Name",
+      "documentDescription": "Document Description",
+      "documentStatus": "Document Status",
+      "documentType": "Document Type",
+      "fileDocument": "File Document",
+      "fileDocumentS3Key": "File Document S 3 Key",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "review": "Review"
+    }
+  }
+}

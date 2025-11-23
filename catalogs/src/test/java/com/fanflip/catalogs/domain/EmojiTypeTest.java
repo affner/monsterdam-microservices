@@ -1,0 +1,24 @@
+package com.fanflip.catalogs.domain;
+
+import static com.fanflip.catalogs.domain.EmojiTypeTestSamples.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.fanflip.catalogs.web.rest.TestUtil;
+import org.junit.jupiter.api.Test;
+
+class EmojiTypeTest {
+
+    @Test
+    void equalsVerifier() throws Exception {
+        TestUtil.equalsVerifier(EmojiType.class);
+        EmojiType emojiType1 = getEmojiTypeSample1();
+        EmojiType emojiType2 = new EmojiType();
+        assertThat(emojiType1).isNotEqualTo(emojiType2);
+
+        emojiType2.setId(emojiType1.getId());
+        assertThat(emojiType1).isEqualTo(emojiType2);
+
+        emojiType2 = getEmojiTypeSample2();
+        assertThat(emojiType1).isNotEqualTo(emojiType2);
+    }
+}

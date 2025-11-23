@@ -1,0 +1,11 @@
+export enum ReportCategory {
+  POST_REPORT = 'admin.report.post',
+
+  COMMENT_REPORT = 'admin.report.comment',
+
+  MESSAGE_REPORT = 'admin.report.message',
+
+  MULTIMEDIA_REPORT = 'admin.report.multimedia',
+
+  USER_REPORT = 'admin.report.user',
+}

@@ -1,0 +1,216 @@
+{
+  "global": {
+    "title": "Admin",
+    "browsehappy": "Sie benutzen einen <strong>veralteten</strong> Browser. Bitte <a href=\"http://browsehappy.com/?locale=de/\">aktualisieren Sie Ihren Browser</a>, um die Benutzerfreundlichkeit zu erhöhen.",
+    "menu": {
+      "home": "Startseite",
+      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+      "entities": {
+        "main": "Entitäten",
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+        "adminUserProfile": "Admin User Profile",
+        "identityDocumentReview": "Identity Document Review",
+        "documentReviewObservation": "Document Review Observation",
+        "identityDocument": "Identity Document",
+        "assistanceTicket": "Assistance Ticket",
+        "moderationAction": "Moderation Action",
+        "adminAnnouncement": "Admin Announcement",
+        "userReport": "User Report",
+        "accountingRecord": "Accounting Record",
+        "financialStatement": "Financial Statement",
+        "taxDeclaration": "Tax Declaration",
+        "budget": "Budget",
+        "asset": "Asset",
+        "liability": "Liability",
+        "moneyPayout": "Money Payout",
+        "creatorEarning": "Creator Earning",
+        "subscriptionBundle": "Subscription Bundle",
+        "paymentTransaction": "Payment Transaction",
+        "offerPromotion": "Offer Promotion",
+        "purchasedContent": "Purchased Content",
+        "purchasedSubscription": "Purchased Subscription",
+        "walletTransaction": "Wallet Transaction",
+        "purchasedTip": "Purchased Tip",
+        "specialAward": "Special Award",
+        "specialReward": "Special Reward",
+        "userLite": "User Lite",
+        "userProfile": "User Profile",
+        "userSettings": "User Settings",
+        "userAssociation": "User Association",
+        "userEvent": "User Event",
+        "bookMark": "Book Mark",
+        "feedback": "Feedback",
+        "personalSocialLinks": "Personal Social Links",
+        "notification": "Notification",
+        "postFeed": "Post Feed",
+        "postComment": "Post Comment",
+        "postPoll": "Post Poll",
+        "chatRoom": "Chat Room",
+        "directMessage": "Direct Message",
+        "userMention": "User Mention",
+        "likeMark": "Like Mark",
+        "hashTag": "Hash Tag",
+        "pollVote": "Poll Vote",
+        "pollOption": "Poll Option",
+        "singleAudio": "Single Audio",
+        "singleVideo": "Single Video",
+        "singlePhoto": "Single Photo",
+        "contentPackage": "Content Package",
+        "singleDocument": "Single Document",
+        "videoStory": "Video Story",
+        "singleLiveStream": "Single Live Stream",
+        "country": "Country",
+        "state": "State",
+        "socialNetwork": "Social Network",
+        "emojiType": "Emoji Type",
+        "payoutMethod": "Payout Method",
+        "paymentMethod": "Payment Method",
+        "paymentProvider": "Payment Provider",
+        "specialTitle": "Special Title",
+        "taxInfo": "Tax Info",
+        "currency": "Currency",
+        "globalEvent": "Global Event",
+        "helpCategory": "Help Category",
+        "helpSubcategory": "Help Subcategory",
+        "helpQuestion": "Help Question",
+        "helpRelatedArticle": "Help Related Article",
+        "adminSystemConfigs": "Admin System Configs",
+        "adminEmailConfigs": "Admin Email Configs"
+      },
+      "account": {
+        "main": "Zugang",
+        "settings": "Einstellungen",
+        "password": "Passwort",
+        "sessions": "Sitzungen",
+        "login": "Anmelden",
+        "logout": "Abmelden",
+        "register": "Registrierung"
+      },
+      "admin": {
+        "main": "Administration",
+        "gateway": "Gateway",
+        "userManagement": "Benutzerverwaltung",
+        "tracker": "Benutzer Aktivitäten",
+        "metrics": "Metriken",
+        "health": "Status",
+        "configuration": "Konfiguration",
+        "logs": "Protokoll",
+        "apidocs": "API",
+        "database": "Datenbank",
+        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+      },
+      "language": "Sprache"
+    },
+    "form": {
+      "username.label": "Benutzername",
+      "username.placeholder": "Ihr Benutzername",
+      "currentpassword.label": "Aktuelles Passwort",
+      "currentpassword.placeholder": "Aktuelles Passwort",
+      "newpassword.label": "Neues Passwort",
+      "newpassword.placeholder": "Neues Passwort",
+      "confirmpassword.label": "Neues Passwort bestätigen",
+      "confirmpassword.placeholder": "Bestätigen Sie Ihr neues Passwort",
+      "email.label": "Email Adresse",
+      "email.placeholder": "Ihre Email Adresse"
+    },
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "Wenn Sie sich ",
+          "link": "anmelden",
+          "suffix": " möchten, versuchen Sie es mit <br/>- Administrator (Name=\"admin\" und Passwort=\"admin\")<br/>- Benutzer (Name=\"user\" und Passwort=\"user\")."
+        },
+        "register": {
+          "noaccount": "Sie haben noch keinen Zugang?",
+          "link": "Registrieren Sie sich"
+        }
+      },
+      "error": {
+        "dontmatch": "Das bestätigte Passwort entspricht nicht dem neuen Passwort!"
+      },
+      "validate": {
+        "newpassword": {
+          "required": "Ein neues Passwort wird benötigt.",
+          "minlength": "Das neue Passwort muss mindestens 4 Zeichen lang sein",
+          "maxlength": "Das neue Passwort darf nicht länger als 50 Zeichen sein",
+          "strength": "Passwortstärke:"
+        },
+        "confirmpassword": {
+          "required": "Sie müssen das Passwort bestätigen.",
+          "minlength": "Das bestätigte Passwort muss mindestens 4 Zeichen lang sein",
+          "maxlength": "Das bestätigte Passwort darf nicht länger als 50 Zeichen sein"
+        },
+        "email": {
+          "required": "Ihre Email Adresse wird benötigt.",
+          "invalid": "Ihre Email Adresse ist ungültig.",
+          "minlength": "Ihre Email Adresse muss mindestens 5 Zeichen lang sein",
+          "maxlength": "Ihre Email Adresse darf nicht länger als 50 Zeichen sein"
+        }
+      }
+    },
+    "field": {
+      "id": "ID"
+    },
+    "ribbon": {
+      "dev": "Entwicklung"
+    },
+    "item-count": "Ergebnis {{first}} - {{second}} von {{total}} Elemente."
+  },
+  "entity": {
+    "action": {
+      "addblob": "Blob hinzufügen",
+      "addimage": "Bild hinzufügen",
+      "back": "Zurück",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "open": "Öffnen",
+      "save": "Speichern",
+      "view": "Details",
+      "show": "Zeige {{otherEntity}}"
+    },
+    "detail": {
+      "field": "Feld",
+      "value": "Wert"
+    },
+    "delete": {
+      "title": "Löschen bestätigen"
+    },
+    "validation": {
+      "required": "Dieses Feld wird benötigt.",
+      "minlength": "Dieses Feld muss mind. {{min}} Zeichen lang sein.",
+      "maxlength": "Dieses Feld darf max. {{max}} Zeichen lang sein.",
+      "min": "Dieses Feld muss größer als {{min}} sein.",
+      "max": "Dieses Feld muss kleiner als {{max}} sein.",
+      "minbytes": "Dieses Feld sollte mehr als {{min}} bytes haben.",
+      "maxbytes": "Dieses Feld sollte nicht mehr als {{max}} bytes haben.",
+      "pattern": "Dieses Feld muss das Muster {{pattern}} erfüllen.",
+      "number": "Dieses Feld muss eine Zahl sein.",
+      "datetimelocal": "Dieses Feld muss eine Datums- und Zeitangabe enthalten."
+    },
+    "filters": {
+      "set": "Folgende Filter sind gesetzt",
+      "clear": "Filter entfernen",
+      "clearAll": "Alle Filter entfernen"
+    }
+  },
+  "error": {
+    "internalServerError": "Interner Serverfehler",
+    "server.not.reachable": "Server ist nicht erreichbar",
+    "url.not.found": "Nicht gefunden",
+    "NotNull": "Feld {{fieldName}} kann nicht leer sein!",
+    "Size": "Feld {{fieldName}} erfüllt nicht die minimalen/maximalen Voraussetzungen!",
+    "userexists": "Benutzername bereits vergeben!",
+    "emailexists": "Email wird bereits verwendet!",
+    "idexists": "Ein neuer {{entityName}} kann noch keine ID haben",
+    "idnull": "Ungültige ID",
+    "idinvalid": "Ungültige ID",
+    "idnotfound": "ID konnte nicht gefunden werden",
+    "querySyntaxError": "Ungültige Suchanfrage",
+    "file": {
+      "could.not.extract": "Datei konnte nicht extrahiert werden",
+      "not.image": "Es wird erwartet, dass die Datei ein Bild ist. Die Datei ist jedoch vom Typ \"{{ fileType }}\""
+    }
+  },
+  "footer": "Dies ist Ihre Fußzeile"
+}

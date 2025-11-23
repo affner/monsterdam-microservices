@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "singleVideo": {
+      "home": {
+        "title": "Single Videos",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Single Video",
+        "createOrEditLabel": "Создать или отредактировать Single Video",
+        "search": "Найти Single Video",
+        "notFound": "Single Videos не найдено"
+      },
+      "created": "Новый Single Video создан с идентификатором {{ param }}",
+      "updated": "Single Video обновлен с идентификатором {{ param }}",
+      "deleted": "Single Video удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Single Video {{ id }}?"
+      },
+      "detail": {
+        "title": "Single Video"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "duration": "Duration",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "belongPackage": "Belong Package"
+    }
+  }
+}

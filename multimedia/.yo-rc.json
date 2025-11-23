@@ -1,0 +1,44 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "baseName": "multimedia",
+    "buildTool": "maven",
+    "cacheProvider": "redis",
+    "clientPackageManager": "npm",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "entities": [
+
+      "VideoStory",
+
+      "ContentPackage",
+      "SingleDocument",
+
+      "UserTagRelation",
+      "SpecialReward"
+    ],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "NjAxNzFhNjBiYmFlODRjMTUyZTQ2NDBhZWVkZTM4YmEyNGY0ZDcwMDc1M2ZiNTgyODRkZWJhMWRhN2Q0NzRlMjYwNzA3OWJhOWZiNzg4ODMwMDZlYjYwZjYxMGY4MWE0ZGEzZThlMDQ4MTQ2N2QxNDhiY2FjYWY2MDBkZTIwM2Y=",
+    "languages": ["es", "en", "fr", "de", "pt-br", "ru"],
+    "lastLiquibaseTimestamp": 1708560123000,
+    "messageBroker": "kafka",
+    "monorepository": true,
+    "nativeLanguage": "es",
+    "packageFolder": "com/fanflip/multimedia",
+    "packageName": "com.fanflip.multimedia",
+    "prodDatabaseType": "postgresql",
+    "reactive": false,
+    "searchEngine": "elasticsearch",
+    "serverPort": "8082",
+    "serviceDiscoveryType": "consul",
+    "skipClient": true,
+    "skipCommitHook": true,
+    "skipUserManagement": true,
+    "testFrameworks": ["gatling"]
+  }
+}

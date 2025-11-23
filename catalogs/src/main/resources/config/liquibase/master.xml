@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="floatType" value="float4" dbms="h2"/>
+    <property name="uuidType" value="uuid" dbms="h2"/>
+    <property name="datetimeType" value="datetime(6)" dbms="h2"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="blobType" value="blob" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql"/>
+    <property name="clobType" value="clob" dbms="postgresql"/>
+    <property name="blobType" value="blob" dbms="postgresql"/>
+    <property name="uuidType" value="uuid" dbms="postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221234852_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221234952_added_entity_State.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235052_added_entity_SocialNetwork.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235152_added_entity_EmojiType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235252_added_entity_PayoutMethod.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235352_added_entity_PaymentMethod.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235452_added_entity_PaymentProvider.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235552_added_entity_TaxInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235652_added_entity_Currency.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235752_added_entity_GlobalEvent.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235852_added_entity_HelpCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235952_added_entity_HelpSubcategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000052_added_entity_HelpQuestion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000152_added_entity_HelpRelatedArticle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000252_added_entity_AdminSystemConfigs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000352_added_entity_AdminEmailConfigs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000452_added_entity_SpecialTitle.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240221234952_added_entity_constraints_State.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235552_added_entity_constraints_TaxInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235952_added_entity_constraints_HelpSubcategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240222000052_added_entity_constraints_HelpQuestion.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

@@ -1,0 +1,77 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235316"
+  },
+  "applications": ["finance"],
+  "clientRootFolder": "finance",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "purchased_content",
+  "fields": [
+    {
+      "fieldName": "rating",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "viewerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contentPackageId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "finance",
+  "name": "PurchasedContent",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "paymentTransaction",
+      "relationshipName": "payment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "walletTransaction",
+      "relationshipName": "walletTransaction",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "creatorEarning",
+      "relationshipName": "creatorEarning",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

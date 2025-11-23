@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "postComment": {
+      "home": {
+        "title": "Post Comments",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Post Comment",
+        "createOrEditLabel": "Создать или отредактировать Post Comment",
+        "search": "Найти Post Comment",
+        "notFound": "Post Comments не найдено"
+      },
+      "created": "Новый Post Comment создан с идентификатором {{ param }}",
+      "updated": "Post Comment обновлен с идентификатором {{ param }}",
+      "deleted": "Post Comment удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Post Comment {{ id }}?"
+      },
+      "detail": {
+        "title": "Post Comment"
+      },
+      "id": "ID",
+      "commentContent": "Comment Content",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "responses": "Responses",
+      "commentMentions": "Comment Mentions",
+      "post": "Post",
+      "responseTo": "Response To",
+      "commenter": "Commenter"
+    }
+  }
+}

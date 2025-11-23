@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "postPoll": {
+      "home": {
+        "title": "Post Polls",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Post Poll",
+        "createOrEditLabel": "Crear o editar Post Poll",
+        "search": "Buscar Post Poll",
+        "notFound": "Ningún Post Polls encontrado"
+      },
+      "created": "Un nuevo Post Poll ha sido creado con el identificador {{ param }}",
+      "updated": "Un Post Poll ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Post Poll ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Post Poll {{ id }}?"
+      },
+      "detail": {
+        "title": "Post Poll"
+      },
+      "id": "ID",
+      "question": "Question",
+      "isMultiChoice": "Is Multi Choice",
+      "lastModifiedDate": "Last Modified Date",
+      "endDate": "End Date",
+      "postPollDuration": "Post Poll Duration",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "options": "Options",
+      "post": "Post"
+    }
+  }
+}

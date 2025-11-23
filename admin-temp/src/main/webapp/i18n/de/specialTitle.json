@@ -1,0 +1,30 @@
+{
+  "adminApp": {
+    "specialTitle": {
+      "home": {
+        "title": "Special Titles",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Special Title erstellen",
+        "createOrEditLabel": "Special Title erstellen oder bearbeiten",
+        "search": "Suche nach Special Title",
+        "notFound": "Keine Special Titles gefunden"
+      },
+      "created": "Special Title erstellt mit ID {{ param }}",
+      "updated": "Special Title aktualisiert mit ID {{ param }}",
+      "deleted": "Special Title gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Special Title {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Special Title"
+      },
+      "id": "ID",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

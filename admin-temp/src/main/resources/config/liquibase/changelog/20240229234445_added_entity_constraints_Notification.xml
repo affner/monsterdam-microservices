@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity Notification.
+    -->
+    <changeSet id="20240229234445-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="commented_user_id"
+                                 baseTableName="notification"
+                                 constraintName="fk_notification__commented_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="messaged_user_id"
+                                 baseTableName="notification"
+                                 constraintName="fk_notification__messaged_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="mentioner_user_in_post_id"
+                                 baseTableName="notification"
+                                 constraintName="fk_notification__mentioner_user_in_post_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="mentioner_user_in_comment_id"
+                                 baseTableName="notification"
+                                 constraintName="fk_notification__mentioner_user_in_comment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

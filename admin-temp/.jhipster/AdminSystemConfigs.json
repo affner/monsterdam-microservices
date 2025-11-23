@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "changelogDate": "20240301001745"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "admin_system_configs",
+  "fields": [
+    {
+      "fieldName": "configKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    },
+    {
+      "fieldName": "configValue",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "configValueType",
+      "fieldType": "ConfigurationValueType",
+      "fieldValues": "STRING (configuration.value.type.string),INTEGER (configuration.value.type.integer),BOOLEAN (configuration.value.type.boolean),FLOAT (configuration.value.type.float),DATE (configuration.value.type.date),JSON (configuration.value.type.json),TEXT (configuration.value.type.text)"
+    },
+    {
+      "fieldName": "configCategory",
+      "fieldType": "ConfigurationCategory",
+      "fieldValues": "GENERAL (configuration.category.general),SECURITY (configuration.category.security),NOTIFICATIONS (configuration.category.notifications),USER_INTERFACE (configuration.category.user_interface),PAYMENT (configuration.category.payment),INTEGRATIONS (configuration.category.integrations),CONTENT (configuration.category.content),SEO (configuration.category.seo)"
+    },
+    {
+      "fieldName": "configFile",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "AdminSystemConfigs",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

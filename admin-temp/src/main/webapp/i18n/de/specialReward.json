@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "specialReward": {
+      "home": {
+        "title": "Special Rewards",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Special Reward erstellen",
+        "createOrEditLabel": "Special Reward erstellen oder bearbeiten",
+        "search": "Suche nach Special Reward",
+        "notFound": "Keine Special Rewards gefunden"
+      },
+      "created": "Special Reward erstellt mit ID {{ param }}",
+      "updated": "Special Reward aktualisiert mit ID {{ param }}",
+      "deleted": "Special Reward gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Special Reward {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Special Reward"
+      },
+      "id": "ID",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "contentPackageId": "Content Package Id",
+      "viewerId": "Viewer Id",
+      "offerPromotionId": "Offer Promotion Id"
+    }
+  }
+}

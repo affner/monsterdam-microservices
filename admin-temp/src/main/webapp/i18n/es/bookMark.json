@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "bookMark": {
+      "home": {
+        "title": "Book Marks",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Book Mark",
+        "createOrEditLabel": "Crear o editar Book Mark",
+        "search": "Buscar Book Mark",
+        "notFound": "Ningún Book Marks encontrado"
+      },
+      "created": "Un nuevo Book Mark ha sido creado con el identificador {{ param }}",
+      "updated": "Un Book Mark ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Book Mark ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Book Mark {{ id }}?"
+      },
+      "detail": {
+        "title": "Book Mark"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "post": "Post",
+      "message": "Message",
+      "user": "User"
+    }
+  }
+}

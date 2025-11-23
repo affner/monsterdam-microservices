@@ -1,0 +1,30 @@
+{
+  "adminApp": {
+    "specialTitle": {
+      "home": {
+        "title": "Special Titles",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Special Title",
+        "createOrEditLabel": "Создать или отредактировать Special Title",
+        "search": "Найти Special Title",
+        "notFound": "Special Titles не найдено"
+      },
+      "created": "Новый Special Title создан с идентификатором {{ param }}",
+      "updated": "Special Title обновлен с идентификатором {{ param }}",
+      "deleted": "Special Title удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Special Title {{ id }}?"
+      },
+      "detail": {
+        "title": "Special Title"
+      },
+      "id": "ID",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

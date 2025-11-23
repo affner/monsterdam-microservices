@@ -1,0 +1,28 @@
+{
+  "adminApp": {
+    "helpSubcategory": {
+      "home": {
+        "title": "Help Subcategories",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Help Subcategory",
+        "createOrEditLabel": "Создать или отредактировать Help Subcategory",
+        "search": "Найти Help Subcategory",
+        "notFound": "Help Subcategories не найдено"
+      },
+      "created": "Новый Help Subcategory создан с идентификатором {{ param }}",
+      "updated": "Help Subcategory обновлен с идентификатором {{ param }}",
+      "deleted": "Help Subcategory удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Help Subcategory {{ id }}?"
+      },
+      "detail": {
+        "title": "Help Subcategory"
+      },
+      "id": "ID",
+      "name": "Name",
+      "isDeleted": "Is Deleted",
+      "questions": "Questions",
+      "category": "Category"
+    }
+  }
+}

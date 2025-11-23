@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "subscriptionBundle": {
+      "home": {
+        "title": "Subscription Bundles",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Subscription Bundle",
+        "createOrEditLabel": "Crear o editar Subscription Bundle",
+        "search": "Buscar Subscription Bundle",
+        "notFound": "Ningún Subscription Bundles encontrado"
+      },
+      "created": "Un nuevo Subscription Bundle ha sido creado con el identificador {{ param }}",
+      "updated": "Un Subscription Bundle ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Subscription Bundle ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Subscription Bundle {{ id }}?"
+      },
+      "detail": {
+        "title": "Subscription Bundle"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "duration": "Duration",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "selledSubscriptions": "Selled Subscriptions",
+      "creator": "Creator"
+    }
+  }
+}

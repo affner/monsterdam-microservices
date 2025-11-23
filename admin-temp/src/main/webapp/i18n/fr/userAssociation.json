@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "userAssociation": {
+      "home": {
+        "title": "UserAssociations",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau User Association",
+        "createOrEditLabel": "Créer ou éditer un User Association",
+        "search": "Recherche pour User Association",
+        "notFound": "Aucun User Association trouvé"
+      },
+      "created": "Un nouveau User Association a été créé avec l'identifiant {{ param }}",
+      "updated": "Le User Association avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le User Association avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le User Association {{ id }} ?"
+      },
+      "detail": {
+        "title": "User Association"
+      },
+      "id": "ID",
+      "requestedDate": "Requested Date",
+      "status": "Status",
+      "associationToken": "Association Token",
+      "expiryDate": "Expiry Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "owner": "Owner"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "adminSystemConfigs": {
+      "home": {
+        "title": "Admin System Configs",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Admin System Configs",
+        "createOrEditLabel": "Criar ou editar Admin System Configs",
+        "search": "Pesquisar por Admin System Configs",
+        "notFound": "Nenhum Admin System Configs encontrado"
+      },
+      "created": "Um novo Admin System Configs foi criado com o identificador {{ param }}",
+      "updated": "Um Admin System Configs foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Admin System Configs foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Admin System Configs {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin System Configs"
+      },
+      "id": "ID",
+      "configKey": "Config Key",
+      "configValue": "Config Value",
+      "description": "Description",
+      "configValueType": "Config Value Type",
+      "configCategory": "Config Category",
+      "configFile": "Config File",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isActive": "Is Active"
+    }
+  }
+}

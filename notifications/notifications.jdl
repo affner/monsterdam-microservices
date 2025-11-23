@@ -1,0 +1,58 @@
+application {
+    config {
+        baseName notifications
+        packageName com.fanflip.notifications
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serverPort 8088
+        serviceDiscoveryType consul
+    }
+    entities *
+}
+
+
+entity AppNotification {
+    readDate Instant
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // ManyToOne Notification{comment(commentContent)} to PostComment{commentNotifications(readDate)},
+    postCommentId Long
+    // ManyToOne Notification{post(postContent)} to PostFeed{postNotifications(readDate)},
+    postFeedId Long
+    // ManyToOne Notification{message(messageContent)} to DirectMessage{messageNotifications(readDate)},
+    directMessageId Long
+    //UserProfile{commentNotifications(createdDate)} to Notification{targetUser required},
+    //UserProfile{messageNotifications(createdDate)} to Notification{targetUser required},
+    targetUserId Long
+    // ManyToOne Notification{userMention(postContent)} to UserMention{userMentionNotifications(readDate)},
+    likeMark Long
+
+    //UserProfile{userMentionNotifications(createdDate)} to Notification{mentionerUserInPost required},
+    //UserProfile{commentMentionNotifications(createdDate)} to Notification{mentionerUserInComment required},
+
+}
+
+dto all with mapstruct // except UserProfile
+
+paginate AppNotification with infinite-scroll
+
+service * with serviceImpl
+

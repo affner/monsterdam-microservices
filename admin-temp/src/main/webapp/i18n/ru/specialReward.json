@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "specialReward": {
+      "home": {
+        "title": "Special Rewards",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Special Reward",
+        "createOrEditLabel": "Создать или отредактировать Special Reward",
+        "search": "Найти Special Reward",
+        "notFound": "Special Rewards не найдено"
+      },
+      "created": "Новый Special Reward создан с идентификатором {{ param }}",
+      "updated": "Special Reward обновлен с идентификатором {{ param }}",
+      "deleted": "Special Reward удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Special Reward {{ id }}?"
+      },
+      "detail": {
+        "title": "Special Reward"
+      },
+      "id": "ID",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "contentPackageId": "Content Package Id",
+      "viewerId": "Viewer Id",
+      "offerPromotionId": "Offer Promotion Id"
+    }
+  }
+}

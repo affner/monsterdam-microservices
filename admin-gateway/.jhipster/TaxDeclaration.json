@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20240302143955"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "tax_declaration",
+  "fields": [
+    {
+      "fieldName": "year",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "declarationType",
+      "fieldType": "TaxDeclarationType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "INCOME_TAX,VAT,OTHER"
+    },
+    {
+      "fieldName": "submittedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "TaxDeclarationStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DRAFT,SUBMITTED,PROCESSED"
+    },
+    {
+      "fieldName": "totalIncome",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalTaxableIncome",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalTaxPaid",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "supportingDocumentsKey",
+      "fieldType": "String"
+    }
+  ],
+  "name": "TaxDeclaration",
+  "relationships": [
+    {
+      "otherEntityName": "accountingRecord",
+      "otherEntityRelationshipName": "taxDeclarations",
+      "relationshipName": "accountingRecords",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

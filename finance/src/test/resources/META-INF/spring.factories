@@ -1,0 +1,5 @@
+org.springframework.test.context.ContextCustomizerFactory = com.fanflip.finance.\
+    config.TestContainersSpringContextCustomizerFactory,com.fanflip.finance.\
+    config.SqlTestContainersSpringContextCustomizerFactory,com.fanflip.finance.\
+    config.KafkaTestContainersSpringContextCustomizerFactory,com.fanflip.\
+    finance.config.RedisTestContainersSpringContextCustomizerFactory

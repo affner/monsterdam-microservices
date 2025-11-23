@@ -1,0 +1,88 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235012"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "post_feed",
+  "fields": [
+    {
+      "fieldName": "postContent",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isHidden",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "pinnedPost",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "likeCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "creatorUserId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "PostFeed",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "question",
+      "otherEntityName": "postPoll",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "poll",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "comments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "userMention",
+      "otherEntityRelationshipName": "originPost",
+      "relationshipName": "commentMentions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl"
+}

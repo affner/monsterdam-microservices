@@ -1,0 +1,37 @@
+package com.fanflip.profile.domain;
+
+import static com.fanflip.profile.domain.PersonalSocialLinksTestSamples.*;
+import static com.fanflip.profile.domain.UserProfileTestSamples.*;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import com.fanflip.profile.web.rest.TestUtil;
+import org.junit.jupiter.api.Test;
+
+class PersonalSocialLinksTest {
+
+    @Test
+    void equalsVerifier() throws Exception {
+        TestUtil.equalsVerifier(PersonalSocialLinks.class);
+        PersonalSocialLinks personalSocialLinks1 = getPersonalSocialLinksSample1();
+        PersonalSocialLinks personalSocialLinks2 = new PersonalSocialLinks();
+        assertThat(personalSocialLinks1).isNotEqualTo(personalSocialLinks2);
+
+        personalSocialLinks2.setId(personalSocialLinks1.getId());
+        assertThat(personalSocialLinks1).isEqualTo(personalSocialLinks2);
+
+        personalSocialLinks2 = getPersonalSocialLinksSample2();
+        assertThat(personalSocialLinks1).isNotEqualTo(personalSocialLinks2);
+    }
+
+    @Test
+    void userTest() throws Exception {
+        PersonalSocialLinks personalSocialLinks = getPersonalSocialLinksRandomSampleGenerator();
+        UserProfile userProfileBack = getUserProfileRandomSampleGenerator();
+
+        personalSocialLinks.setUser(userProfileBack);
+        assertThat(personalSocialLinks.getUser()).isEqualTo(userProfileBack);
+
+        personalSocialLinks.user(null);
+        assertThat(personalSocialLinks.getUser()).isNull();
+    }
+}

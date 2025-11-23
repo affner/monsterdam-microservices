@@ -1,0 +1,10 @@
+{
+  "adminApp": {
+    "TaxDeclarationStatus": {
+      "null": "",
+      "DRAFT": "DRAFT",
+      "SUBMITTED": "SUBMITTED",
+      "PROCESSED": "PROCESSED"
+    }
+  }
+}

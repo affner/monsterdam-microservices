@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "moneyPayout": {
+      "home": {
+        "title": "Money Payouts",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Money Payout erstellen",
+        "createOrEditLabel": "Money Payout erstellen oder bearbeiten",
+        "search": "Suche nach Money Payout",
+        "notFound": "Keine Money Payouts gefunden"
+      },
+      "created": "Money Payout erstellt mit ID {{ param }}",
+      "updated": "Money Payout aktualisiert mit ID {{ param }}",
+      "deleted": "Money Payout gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Money Payout {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Money Payout"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "withdrawStatus": "Withdraw Status",
+      "creatorEarning": "Creator Earning",
+      "creator": "Creator"
+    }
+  }
+}

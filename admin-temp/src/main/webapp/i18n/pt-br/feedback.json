@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "feedback": {
+      "home": {
+        "title": "Feedbacks",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Feedback",
+        "createOrEditLabel": "Criar ou editar Feedback",
+        "search": "Pesquisar por Feedback",
+        "notFound": "Nenhum Feedback encontrado"
+      },
+      "created": "Um novo Feedback foi criado com o identificador {{ param }}",
+      "updated": "Um Feedback foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Feedback foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Feedback {{ id }}?"
+      },
+      "detail": {
+        "title": "Feedback"
+      },
+      "id": "ID",
+      "content": "Content",
+      "feedbackDate": "Feedback Date",
+      "feedbackRating": "Feedback Rating",
+      "feedbackType": "Feedback Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "creator": "Creator"
+    }
+  }
+}

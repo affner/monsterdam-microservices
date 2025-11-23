@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "userReport": {
+      "home": {
+        "title": "User Reports",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый User Report",
+        "createOrEditLabel": "Создать или отредактировать User Report",
+        "search": "Найти User Report",
+        "notFound": "User Reports не найдено"
+      },
+      "created": "Новый User Report создан с идентификатором {{ param }}",
+      "updated": "User Report обновлен с идентификатором {{ param }}",
+      "deleted": "User Report удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User Report {{ id }}?"
+      },
+      "detail": {
+        "title": "User Report"
+      },
+      "id": "ID",
+      "reportDescription": "Report Description",
+      "status": "Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reportCategory": "Report Category",
+      "reporterId": "Reporter Id",
+      "reportedId": "Reported Id",
+      "multimediaId": "Multimedia Id",
+      "messageId": "Message Id",
+      "postId": "Post Id",
+      "commentId": "Comment Id",
+      "ticket": "Ticket"
+    }
+  }
+}

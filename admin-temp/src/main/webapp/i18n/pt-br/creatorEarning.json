@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "creatorEarning": {
+      "home": {
+        "title": "Creator Earnings",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Creator Earning",
+        "createOrEditLabel": "Criar ou editar Creator Earning",
+        "search": "Pesquisar por Creator Earning",
+        "notFound": "Nenhum Creator Earning encontrado"
+      },
+      "created": "Um novo Creator Earning foi criado com o identificador {{ param }}",
+      "updated": "Um Creator Earning foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Creator Earning foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Creator Earning {{ id }}?"
+      },
+      "detail": {
+        "title": "Creator Earning"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "creator": "Creator",
+      "moneyPayout": "Money Payout",
+      "purchasedContent": "Purchased Content",
+      "purchasedSubscription": "Purchased Subscription",
+      "purchasedTip": "Purchased Tip"
+    }
+  }
+}

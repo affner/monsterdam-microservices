@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "singleVideo": {
+      "home": {
+        "title": "Single Videos",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Single Video erstellen",
+        "createOrEditLabel": "Single Video erstellen oder bearbeiten",
+        "search": "Suche nach Single Video",
+        "notFound": "Keine Single Videos gefunden"
+      },
+      "created": "Single Video erstellt mit ID {{ param }}",
+      "updated": "Single Video aktualisiert mit ID {{ param }}",
+      "deleted": "Single Video gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Single Video {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Single Video"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "duration": "Duration",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "belongPackage": "Belong Package"
+    }
+  }
+}

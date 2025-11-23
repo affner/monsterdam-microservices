@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity ChatRoom.
+    -->
+    <changeSet id="20240229234845-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="chat_room_id"
+                                 baseTableName="rel_chat_room__sent_messages"
+                                 constraintName="fk_rel_chat_room__sent_messages__chat_room_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chat_room"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="sent_messages_id"
+                                 baseTableName="rel_chat_room__sent_messages"
+                                 constraintName="fk_rel_chat_room__sent_messages__sent_messages_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="direct_message"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="chat_room"
+                                 constraintName="fk_chat_room__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20240222000103"
+  },
+  "applications": ["multimedia"],
+  "clientRootFolder": "multimedia",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "rel_user_tag_relation",
+  "fields": [
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "taggedUserId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tagStatus",
+      "fieldType": "TagStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AUTHORIZED,PENDING,REJECTED"
+    }
+  ],
+  "microserviceName": "multimedia",
+  "name": "UserTagRelation",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "contentPackage",
+      "otherEntityRelationshipName": "tags",
+      "relationshipName": "contentPackage",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

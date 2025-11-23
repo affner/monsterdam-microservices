@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "pollVote": {
+      "home": {
+        "title": "Poll Votes",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Poll Vote erstellen",
+        "createOrEditLabel": "Poll Vote erstellen oder bearbeiten",
+        "search": "Suche nach Poll Vote",
+        "notFound": "Keine Poll Votes gefunden"
+      },
+      "created": "Poll Vote erstellt mit ID {{ param }}",
+      "updated": "Poll Vote aktualisiert mit ID {{ param }}",
+      "deleted": "Poll Vote gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Poll Vote {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Poll Vote"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "pollOption": "Poll Option",
+      "votingUser": "Voting User"
+    }
+  }
+}

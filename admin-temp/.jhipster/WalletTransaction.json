@@ -1,0 +1,64 @@
+{
+  "annotations": {
+    "changelogDate": "20240229233245"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "wallet_transaction",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "transactionType",
+      "fieldType": "WalletTransactionType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "TOP_UP (viewer.wallet.transaction.type.deposit),PURCHASE (viewer.wallet.transaction.type.purchase),REFUND (viewer.wallet.transaction.type.refund),WITHDRAWAL (viewer.wallet.transaction.type.withdrawal)"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "WalletTransaction",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "paymentTransaction",
+      "relationshipName": "payment",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "wallet",
+      "relationshipName": "viewer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

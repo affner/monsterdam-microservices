@@ -1,0 +1,54 @@
+{
+  "annotations": {
+    "changelogDate": "20240302181300"
+  },
+  "applications": ["profile"],
+  "clientRootFolder": "profile",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "rel_postfeed_hashtag",
+  "fields": [
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postFeedId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "profile",
+  "name": "PostFeedHashTagRelation",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "postFeeds",
+      "relationshipName": "hashtag",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

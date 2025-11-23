@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "adminEmailConfigs": {
+      "home": {
+        "title": "AdminEmailConfigs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Admin Email Configs",
+        "createOrEditLabel": "Créer ou éditer un Admin Email Configs",
+        "search": "Recherche pour Admin Email Configs",
+        "notFound": "Aucun Admin Email Configs trouvé"
+      },
+      "created": "Un nouveau Admin Email Configs a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Admin Email Configs avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Admin Email Configs avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Admin Email Configs {{ id }} ?"
+      },
+      "detail": {
+        "title": "Admin Email Configs"
+      },
+      "id": "ID",
+      "title": "Title",
+      "subject": "Subject",
+      "content": "Content",
+      "mailTemplateType": "Mail Template Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isActive": "Is Active"
+    }
+  }
+}

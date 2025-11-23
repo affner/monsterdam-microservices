@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity AdminAnnouncement.
+    -->
+    <changeSet id="20240302143555-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="admin_id"
+                                 baseTableName="admin_announcement"
+                                 constraintName="fk_admin_announcement__admin_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="admin_user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

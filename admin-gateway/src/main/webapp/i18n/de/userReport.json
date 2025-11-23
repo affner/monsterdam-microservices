@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "userReport": {
+      "home": {
+        "title": "User Reports",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "User Report erstellen",
+        "createOrEditLabel": "User Report erstellen oder bearbeiten",
+        "search": "Suche nach User Report",
+        "notFound": "Keine User Reports gefunden"
+      },
+      "created": "User Report erstellt mit ID {{ param }}",
+      "updated": "User Report aktualisiert mit ID {{ param }}",
+      "deleted": "User Report gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll User Report {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "User Report"
+      },
+      "id": "ID",
+      "reportDescription": "Report Description",
+      "status": "Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reportCategory": "Report Category",
+      "reporterId": "Reporter Id",
+      "reportedId": "Reported Id",
+      "multimediaId": "Multimedia Id",
+      "messageId": "Message Id",
+      "postId": "Post Id",
+      "commentId": "Comment Id",
+      "ticket": "Ticket"
+    }
+  }
+}

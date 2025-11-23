@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "documentReviewObservation": {
+      "home": {
+        "title": "Document Review Observations",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Document Review Observation",
+        "createOrEditLabel": "Создать или отредактировать Document Review Observation",
+        "search": "Найти Document Review Observation",
+        "notFound": "Document Review Observations не найдено"
+      },
+      "created": "Новый Document Review Observation создан с идентификатором {{ param }}",
+      "updated": "Document Review Observation обновлен с идентификатором {{ param }}",
+      "deleted": "Document Review Observation удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Document Review Observation {{ id }}?"
+      },
+      "detail": {
+        "title": "Document Review Observation"
+      },
+      "id": "ID",
+      "commentDate": "Comment Date",
+      "comment": "Comment",
+      "review": "Review"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "personalSocialLinks": {
+      "home": {
+        "title": "Personal Social Links",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Personal Social Links",
+        "createOrEditLabel": "Criar ou editar Personal Social Links",
+        "search": "Pesquisar por Personal Social Links",
+        "notFound": "Nenhum Personal Social Links encontrado"
+      },
+      "created": "Um novo Personal Social Links foi criado com o identificador {{ param }}",
+      "updated": "Um Personal Social Links foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Personal Social Links foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Personal Social Links {{ id }}?"
+      },
+      "detail": {
+        "title": "Personal Social Links"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "normalImage": "Normal Image",
+      "normalImageS3Key": "Normal Image S 3 Key",
+      "thumbnailIconS3Key": "Thumbnail Icon S 3 Key",
+      "socialLink": "Social Link",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "socialNetwork": "Social Network",
+      "user": "User"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "annotations": {
+    "changelogDate": "20240302143755"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "accounting_record",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "debit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "credit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "balance",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "accountType",
+      "fieldType": "AccountingType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ASSET,LIABILITY,EQUITY,REVENUE,EXPENSE"
+    },
+    {
+      "fieldName": "paymentId",
+      "fieldType": "Long"
+    }
+  ],
+  "name": "AccountingRecord",
+  "relationships": [
+    {
+      "otherEntityName": "budget",
+      "otherEntityRelationshipName": "accountingRecords",
+      "relationshipName": "budget",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "asset",
+      "otherEntityRelationshipName": "accountingRecords",
+      "relationshipName": "asset",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "liability",
+      "otherEntityRelationshipName": "accountingRecords",
+      "relationshipName": "liability",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "taxDeclaration",
+      "otherEntityRelationshipName": "accountingRecords",
+      "relationshipName": "taxDeclarations",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "financialStatement",
+      "otherEntityRelationshipName": "accountingRecords",
+      "relationshipName": "financialStatements",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

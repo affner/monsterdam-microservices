@@ -1,0 +1,28 @@
+{
+  "adminApp": {
+    "pollOption": {
+      "home": {
+        "title": "Poll Options",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Poll Option erstellen",
+        "createOrEditLabel": "Poll Option erstellen oder bearbeiten",
+        "search": "Suche nach Poll Option",
+        "notFound": "Keine Poll Options gefunden"
+      },
+      "created": "Poll Option erstellt mit ID {{ param }}",
+      "updated": "Poll Option aktualisiert mit ID {{ param }}",
+      "deleted": "Poll Option gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Poll Option {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Poll Option"
+      },
+      "id": "ID",
+      "optionDescription": "Option Description",
+      "voteCount": "Vote Count",
+      "poll": "Poll",
+      "votes": "Votes"
+    }
+  }
+}

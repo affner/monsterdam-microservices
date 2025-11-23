@@ -1,0 +1,97 @@
+{
+  "annotations": {
+    "changelogDate": "20240229234645"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "post_comment",
+  "fields": [
+    {
+      "fieldName": "commentContent",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "likeCount",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "PostComment",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "userReport",
+      "otherEntityRelationshipName": "postComment",
+      "relationshipName": "reports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "responseTo",
+      "relationshipName": "responses",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "userMention",
+      "otherEntityRelationshipName": "originPostComment",
+      "relationshipName": "commentMentions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "postContent",
+      "otherEntityName": "postFeed",
+      "otherEntityRelationshipName": "comments",
+      "relationshipName": "post",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "responses",
+      "relationshipName": "responseTo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "comments",
+      "relationshipName": "commenter",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl"
+}

@@ -1,0 +1,43 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235952"
+  },
+  "applications": ["catalogs"],
+  "clientRootFolder": "catalogs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "help_subcategory",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "catalogs",
+  "name": "HelpSubcategory",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "helpQuestion",
+      "otherEntityRelationshipName": "subcategory",
+      "relationshipName": "questions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "helpCategory",
+      "otherEntityRelationshipName": "subCategories",
+      "relationshipName": "category",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

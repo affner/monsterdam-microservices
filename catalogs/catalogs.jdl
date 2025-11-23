@@ -1,0 +1,291 @@
+application {
+  config {
+    baseName catalogs
+    packageName com.fanflip.catalogs
+    applicationType microservice
+    authenticationType jwt
+    reactive false
+    databaseType sql
+    devDatabaseType h2Memory
+    prodDatabaseType postgresql
+    cacheProvider redis
+    buildTool maven
+    serviceDiscoveryType consul
+    enableHibernateCache true
+    enableSwaggerCodegen true
+    enableTranslation true
+    nativeLanguage es
+    languages [en, fr, de, pt-br, ru]
+    testFrameworks [gatling]
+    searchEngine elasticsearch
+    messageBroker kafka
+    serverPort 8089
+  }
+  entities *
+}
+
+
+entity Country {
+  name String required
+  alpha2Code String required minlength(2) maxlength(2) // Ejemplo: 'MX' para México
+  alpha3Code String required minlength(3) maxlength(3) // Ejemplo: 'MEX' para México
+  phoneCode String   // Ejemplo: '+52' para México
+//  thumbnailCountry ImageBlob   este campo no existira en db estara realmente en S3
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+
+}
+entity State {
+  stateName String required maxlength(100)
+  isoCode String required maxlength(3)
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+
+}
+entity SocialNetwork {
+//  thumbnail ImageBlob    este campo no existira en db estara realmente en S3
+  name String required maxlength(100) unique
+  completeName String required unique
+  mainLink String required unique
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+
+}
+entity EmojiType {
+//  thumbnail ImageBlob required     este campo no existira en db estara realmente en S3
+  description String required
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+
+entity PayoutMethod {
+  methodName String required
+  tokenText String required maxlength(100)
+  expirationDate LocalDate
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+entity PaymentMethod {
+  methodName String required
+  tokenText String required maxlength(100)
+  expirationDate LocalDate
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+entity PaymentProvider {
+  providerName String required
+  description String
+  apiKeyText String required
+  apiSecretText String required
+  endpointText String required
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+
+entity TaxInfo {
+  ratePercentage Float
+  taxType TaxType required
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+enum TaxType {
+
+  /* Impuesto sobre el valor añadido. */
+  VAT("tax.type.vat"),
+
+  /* Retención en la fuente. */
+  WITHHOLDING("tax.type.withholding")
+}
+
+// Catalogos Sueltos Help
+entity Currency {
+  name String required
+  symbol String required
+  code String required minlength(3) maxlength(3)
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+
+entity GlobalEvent {
+  eventName String required
+  startDate LocalDate required
+  endDate LocalDate
+  description String
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isDeleted Boolean required
+}
+
+entity HelpCategory {
+  name String required unique
+  isDeleted Boolean required
+
+}
+
+entity HelpSubcategory {
+  name String required unique
+  isDeleted Boolean required
+
+}
+
+entity HelpQuestion {
+  title String required unique
+  content TextBlob required
+  isDeleted Boolean required
+
+}
+
+entity HelpRelatedArticle {
+  title String required unique
+  content TextBlob required
+
+}
+
+// Tabla de configuraciones generales.
+entity AdminSystemConfigs {
+  configKey String required maxlength(255)
+  configValue String required
+  description String maxlength(500)
+  configValueType ConfigurationValueType
+  configCategory ConfigurationCategory
+  configFile AnyBlob
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isActive Boolean
+
+}
+
+enum ConfigurationValueType {
+
+  /* Valor de configuración en formato de cadena de texto. */
+  STRING("configuration.value.type.string"),
+
+  /* Valor de configuración en formato numérico entero. */
+  INTEGER("configuration.value.type.integer"),
+
+  /* Valor de configuración en formato booleano (verdadero/falso). */
+  BOOLEAN("configuration.value.type.boolean"),
+
+  /* Valor de configuración en formato de punto flotante. */
+  FLOAT("configuration.value.type.float"),
+
+  /* Valor de configuración en formato de fecha. */
+  DATE("configuration.value.type.date"),
+
+  /* Valor de configuración en formato JSON. */
+  JSON("configuration.value.type.json"),
+
+  /* Valor de configuración en formato de texto largo. */
+  TEXT("configuration.value.type.text")
+}
+
+enum ConfigurationCategory {
+
+  /* Configuraciones generales de la plataforma. */
+  GENERAL("configuration.category.general"),
+
+  /* Configuraciones relacionadas con la seguridad. */
+  SECURITY("configuration.category.security"),
+
+  /* Configuraciones de notificaciones. */
+  NOTIFICATIONS("configuration.category.notifications"),
+
+  /* Configuraciones de la interfaz de usuario. */
+  USER_INTERFACE("configuration.category.user_interface"),
+
+  /* Configuraciones relacionadas con métodos de pago. */
+  PAYMENT("configuration.category.payment"),
+
+  /* Configuraciones de integraciones externas. */
+  INTEGRATIONS("configuration.category.integrations"),
+
+  /* Configuraciones de contenido. */
+  CONTENT("configuration.category.content"),
+
+  /* Configuraciones de SEO. */
+  SEO("configuration.category.seo")
+}
+entity AdminEmailConfigs {
+  title String required
+  subject String required
+  content String required
+  mailTemplateType EmailTemplateType required
+  createdDate Instant required
+  lastModifiedDate Instant
+  createdBy String
+  lastModifiedBy String
+  isActive Boolean required
+}
+enum EmailTemplateType {
+  /* Notificaciones generales para el usuario, como alertas de actividad o actualizaciones. */
+  NOTIFICATION,
+  /* Boletines informativos con actualizaciones, noticias y contenido relevante para la comunidad. */
+  NEWSLETTER,
+  /* Alertas urgentes o importantes que el usuario debe conocer de inmediato. */
+  ALERT,
+  /* Promociones, descuentos o eventos especiales que se ofrezcan en la plataforma. */
+  PROMOTION
+
+}
+entity SpecialTitle {
+    description String
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+
+relationship ManyToOne {
+  State{country(name) required} to Country,
+  TaxInfo{country(name) required} to Country
+}
+relationship OneToMany {
+  // Establece la relación entre Categoría y Subcategoría
+  HelpCategory{subCategories} to HelpSubcategory{category}
+  // Establece la relación entre Subcategoría y Pregunta
+  HelpSubcategory{questions} to HelpQuestion{subcategory}
+}
+// Establece la relación entre Preguntas y Artículos Relacionados
+relationship ManyToMany {
+  HelpQuestion{question} to HelpRelatedArticle{relatedArticle}
+}
+
+search Country, State with elasticsearch
+
+dto all with mapstruct
+
+paginate * with pagination
+
+service * with serviceImpl

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity DirectMessage.
+    -->
+    <changeSet id="20240229234945-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="content_package_id"
+                                 baseTableName="direct_message"
+                                 constraintName="fk_direct_message__content_package_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="content_package"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="response_to_id"
+                                 baseTableName="direct_message"
+                                 constraintName="fk_direct_message__response_to_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="direct_message"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="replied_story_id"
+                                 baseTableName="direct_message"
+                                 constraintName="fk_direct_message__replied_story_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="video_story"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="direct_message"
+                                 constraintName="fk_direct_message__user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

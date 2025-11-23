@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "userEvent": {
+      "home": {
+        "title": "User Events",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый User Event",
+        "createOrEditLabel": "Создать или отредактировать User Event",
+        "search": "Найти User Event",
+        "notFound": "User Events не найдено"
+      },
+      "created": "Новый User Event создан с идентификатором {{ param }}",
+      "updated": "User Event обновлен с идентификатором {{ param }}",
+      "deleted": "User Event удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User Event {{ id }}?"
+      },
+      "detail": {
+        "title": "User Event"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "creatorEventStatus": "Creator Event Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "creator": "Creator",
+      "members": "Members"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "helpRelatedArticle": {
+      "home": {
+        "title": "Help Related Articles",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Help Related Article erstellen",
+        "createOrEditLabel": "Help Related Article erstellen oder bearbeiten",
+        "search": "Suche nach Help Related Article",
+        "notFound": "Keine Help Related Articles gefunden"
+      },
+      "created": "Help Related Article erstellt mit ID {{ param }}",
+      "updated": "Help Related Article aktualisiert mit ID {{ param }}",
+      "deleted": "Help Related Article gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Help Related Article {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Help Related Article"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "relatedArticle": "Related Article"
+    }
+  }
+}

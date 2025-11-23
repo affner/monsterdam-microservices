@@ -1,0 +1,62 @@
+{
+  "annotations": {
+    "changelogDate": "20240302143555"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "admin_announcement",
+  "fields": [
+    {
+      "fieldName": "announcementType",
+      "fieldType": "AdminAnnouncementType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "BANNER (admin.announcement),SYSTEM_UPDATE (admin.announcement.type.system_update),POLICY_CHANGE (admin.announcement.type.policy_change),COMMUNITY_ALERT (admin.announcement.type.community_alert),OTHER (admin.announcement.type.other)"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "directMessageId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "AdminAnnouncement",
+  "relationships": [
+    {
+      "otherEntityName": "adminUserProfile",
+      "otherEntityRelationshipName": "announcements",
+      "relationshipName": "admin",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

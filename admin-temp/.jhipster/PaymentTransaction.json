@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "changelogDate": "20240229232845"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "payment_transaction",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "GenericStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "PENDING (generic.status.pending),COMPLETED (generic.status.completed),DECLINED (generic.status.declined),REFUNDED (generic.status.refunded),CANCELED (generic.status.canceled)"
+    },
+    {
+      "fieldName": "paymentReference",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "cloudTransactionId",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    }
+  ],
+  "name": "PaymentTransaction",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "methodName",
+      "otherEntityName": "paymentMethod",
+      "otherEntityRelationshipName": "payments",
+      "relationshipName": "paymentMethod",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "providerName",
+      "otherEntityName": "paymentProvider",
+      "otherEntityRelationshipName": "payments",
+      "relationshipName": "paymentProvider",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "payments",
+      "relationshipName": "viewer",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

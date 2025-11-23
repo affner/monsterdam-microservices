@@ -1,0 +1,171 @@
+application {
+    config {
+        baseName multimedia
+        packageName com.fanflip.multimedia
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serverPort 8082
+        serviceDiscoveryType consul
+    }
+    entities SingleVideo, SinglePhoto, VideoStory, SingleAudio, ContentPackage, SingleDocument, SingleLiveStream, UserTagRelation, SpecialReward
+}
+
+entity SingleAudio  {
+  //  thumbnail ImageBlob required     este campo no existira en db estara realmente en S3
+    thumbnailS3Key String required
+  //  content AnyBlob    este campo no existira en db estara realmente en S3
+    contentS3Key String required
+    duration Duration
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity SingleVideo {
+  //  thumbnail ImageBlob required     este campo no existira en db estara realmente en S3
+    thumbnailS3Key String required
+  //  content AnyBlob    este campo no existira en db estara realmente en S3
+    contentS3Key String required
+    duration Duration
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity SinglePhoto {
+  //  thumbnail ImageBlob required    este campo no existira en db estara realmente en S3
+    thumbnailS3Key String required
+  //  content ImageBlob maxbytes(2147483648) /* 2GB for video, 5MB for photo, handle accordingly */     este campo no existira en db estara realmente en S3
+    contentS3Key String required
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity ContentPackage {
+    amount BigDecimal
+    videoCount Integer
+    imageCount Integer
+    isPaidContent Boolean required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //   DirectMessage{ContentPackage} to ContentPackage{message(messageContent) required},
+    messageId Long
+    //  PostFeed{ContentPackage} to ContentPackage{post(postContent) required},
+    postId Long
+}
+entity SingleDocument {
+    title String required
+    description String
+  //  documentFile AnyBlob required    este campo no existira en db estara realmente en S3
+    documentFileS3Key String required
+    documentType String
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    creatorId Long required
+}
+entity VideoStory {
+  //  thumbnail ImageBlob required    este campo no existira en db estara realmente en S3
+    thumbnailS3Key String required
+  //  content AnyBlob    este campo no existira en db estara realmente en S3
+    contentS3Key String required
+    duration Duration
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // UzerMultimedia{videoStories(duration)} to VideoStory{creator required},
+    creatorId Long required
+}
+entity SingleLiveStream {
+    title String
+    description String
+  //  thumbnail ImageBlob    este campo no existira en db estara realmente en S3
+    thumbnailS3Key String
+    startTime Instant required
+    endTime Instant
+  //  liveContent AnyBlob    este campo no existira en db estara realmente en S3
+    liveContentS3Key String
+    isRecorded Boolean required
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+
+entity UserTagRelation(rel_user_tag_relation) {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    taggedUserId Long required
+    tagStatus TagStatus required
+}
+enum TagStatus {
+    AUTHORIZED, // El usuario etiquetado ha autorizado la etiqueta.
+    PENDING, // La etiqueta está pendiente de autorización por el usuario etiquetado.
+    REJECTED // El usuario etiquetado ha rechazado la etiqueta.
+}
+// regalo que se da al ganador del mes por sus compras y su numero de renovaciones o reacciones etc.
+entity SpecialReward {
+    description String required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+   // contentPackageId Long required
+    viewerId Long required
+    offerPromotionId Long required
+}
+relationship OneToOne {
+
+    ContentPackage{audio} to SingleAudio{contentPackage required},
+    SpecialReward{contentPackage required} to ContentPackage, // contentPackageId Long required
+
+}
+
+relationship OneToMany {
+    ContentPackage{videos(duration)} to SingleVideo{belongPackage(amount)},
+    ContentPackage{photos} to SinglePhoto{belongPackage(amount)},
+
+    ContentPackage{tags} to UserTagRelation{contentPackage}  // ManyToMany
+
+}
+
+dto all with mapstruct
+
+paginate * with pagination
+
+service * with serviceImpl

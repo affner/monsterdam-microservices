@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "userAssociation": {
+      "home": {
+        "title": "User Associations",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый User Association",
+        "createOrEditLabel": "Создать или отредактировать User Association",
+        "search": "Найти User Association",
+        "notFound": "User Associations не найдено"
+      },
+      "created": "Новый User Association создан с идентификатором {{ param }}",
+      "updated": "User Association обновлен с идентификатором {{ param }}",
+      "deleted": "User Association удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User Association {{ id }}?"
+      },
+      "detail": {
+        "title": "User Association"
+      },
+      "id": "ID",
+      "requestedDate": "Requested Date",
+      "status": "Status",
+      "associationToken": "Association Token",
+      "expiryDate": "Expiry Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "owner": "Owner"
+    }
+  }
+}

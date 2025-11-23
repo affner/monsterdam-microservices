@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "userLite": {
+      "home": {
+        "title": "User Lites",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый User Lite",
+        "createOrEditLabel": "Создать или отредактировать User Lite",
+        "search": "Найти User Lite",
+        "notFound": "User Lites не найдено"
+      },
+      "created": "Новый User Lite создан с идентификатором {{ param }}",
+      "updated": "User Lite обновлен с идентификатором {{ param }}",
+      "deleted": "User Lite удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User Lite {{ id }}?"
+      },
+      "detail": {
+        "title": "User Lite"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "birthDate": "Birth Date",
+      "gender": "Gender",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "nickName": "Nick Name",
+      "fullName": "Full Name",
+      "contentPreference": "Content Preference",
+      "userProfile": "User Profile"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "helpCategory": {
+      "home": {
+        "title": "HelpCategories",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Help Category",
+        "createOrEditLabel": "Créer ou éditer un Help Category",
+        "search": "Recherche pour Help Category",
+        "notFound": "Aucun Help Category trouvé"
+      },
+      "created": "Un nouveau Help Category a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Help Category avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Help Category avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Help Category {{ id }} ?"
+      },
+      "detail": {
+        "title": "Help Category"
+      },
+      "id": "ID",
+      "name": "Name",
+      "isDeleted": "Is Deleted",
+      "subCategories": "Sub Categories"
+    }
+  }
+}

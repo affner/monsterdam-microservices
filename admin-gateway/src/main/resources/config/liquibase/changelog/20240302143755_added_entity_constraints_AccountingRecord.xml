@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity AccountingRecord.
+    -->
+    <changeSet id="20240302143755-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="budget_id"
+                                 baseTableName="accounting_record"
+                                 constraintName="fk_accounting_record__budget_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="budget"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="asset_id"
+                                 baseTableName="accounting_record"
+                                 constraintName="fk_accounting_record__asset_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="asset"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="liability_id"
+                                 baseTableName="accounting_record"
+                                 constraintName="fk_accounting_record__liability_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="liability"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "globalEvent": {
+      "home": {
+        "title": "GlobalEvents",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Global Event",
+        "createOrEditLabel": "Créer ou éditer un Global Event",
+        "search": "Recherche pour Global Event",
+        "notFound": "Aucun Global Event trouvé"
+      },
+      "created": "Un nouveau Global Event a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Global Event avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Global Event avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Global Event {{ id }} ?"
+      },
+      "detail": {
+        "title": "Global Event"
+      },
+      "id": "ID",
+      "eventName": "Event Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

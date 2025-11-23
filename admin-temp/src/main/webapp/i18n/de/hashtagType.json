@@ -1,0 +1,10 @@
+{
+  "adminApp": {
+    "HashtagType": {
+      "null": "",
+      "USER": "hashtag.type.user",
+      "POST": "hashtag.type.post",
+      "FETISH": "hashtag.type.fetish"
+    }
+  }
+}

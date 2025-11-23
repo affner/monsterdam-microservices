@@ -1,0 +1,40 @@
+{
+  "adminApp": {
+    "assistanceTicket": {
+      "home": {
+        "title": "Assistance Tickets",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Assistance Ticket",
+        "createOrEditLabel": "Criar ou editar Assistance Ticket",
+        "search": "Pesquisar por Assistance Ticket",
+        "notFound": "Nenhum Assistance Ticket encontrado"
+      },
+      "created": "Um novo Assistance Ticket foi criado com o identificador {{ param }}",
+      "updated": "Um Assistance Ticket foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Assistance Ticket foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Assistance Ticket {{ id }}?"
+      },
+      "detail": {
+        "title": "Assistance Ticket"
+      },
+      "id": "ID",
+      "subject": "Subject",
+      "description": "Description",
+      "status": "Status",
+      "type": "Type",
+      "openedAt": "Opened At",
+      "closedAt": "Closed At",
+      "comments": "Comments",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "userId": "User Id",
+      "moderationAction": "Moderation Action",
+      "report": "Report",
+      "documentsReview": "Documents Review",
+      "assignedAdmin": "Assigned Admin"
+    }
+  }
+}

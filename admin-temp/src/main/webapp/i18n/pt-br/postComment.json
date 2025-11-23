@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "postComment": {
+      "home": {
+        "title": "Post Comments",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Post Comment",
+        "createOrEditLabel": "Criar ou editar Post Comment",
+        "search": "Pesquisar por Post Comment",
+        "notFound": "Nenhum Post Comment encontrado"
+      },
+      "created": "Um novo Post Comment foi criado com o identificador {{ param }}",
+      "updated": "Um Post Comment foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Post Comment foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Post Comment {{ id }}?"
+      },
+      "detail": {
+        "title": "Post Comment"
+      },
+      "id": "ID",
+      "commentContent": "Comment Content",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "responses": "Responses",
+      "commentMentions": "Comment Mentions",
+      "post": "Post",
+      "responseTo": "Response To",
+      "commenter": "Commenter"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "purchasedContent": {
+      "home": {
+        "title": "Purchased Contents",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Purchased Content erstellen",
+        "createOrEditLabel": "Purchased Content erstellen oder bearbeiten",
+        "search": "Suche nach Purchased Content",
+        "notFound": "Keine Purchased Contents gefunden"
+      },
+      "created": "Purchased Content erstellt mit ID {{ param }}",
+      "updated": "Purchased Content aktualisiert mit ID {{ param }}",
+      "deleted": "Purchased Content gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Purchased Content {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Purchased Content"
+      },
+      "id": "ID",
+      "rating": "Rating",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payment": "Payment",
+      "walletTransaction": "Wallet Transaction",
+      "creatorEarning": "Creator Earning",
+      "viewer": "Viewer",
+      "purchasedContentPackage": "Purchased Content Package"
+    }
+  }
+}

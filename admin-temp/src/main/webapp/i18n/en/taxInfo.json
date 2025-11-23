@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "taxInfo": {
+      "home": {
+        "title": "Tax Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Tax Info",
+        "createOrEditLabel": "Create or edit a Tax Info",
+        "search": "Search for Tax Info",
+        "notFound": "No Tax Infos found"
+      },
+      "created": "A new Tax Info is created with identifier {{ param }}",
+      "updated": "A Tax Info is updated with identifier {{ param }}",
+      "deleted": "A Tax Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tax Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Tax Info"
+      },
+      "id": "ID",
+      "ratePercentage": "Rate Percentage",
+      "taxType": "Tax Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "country": "Country"
+    }
+  }
+}

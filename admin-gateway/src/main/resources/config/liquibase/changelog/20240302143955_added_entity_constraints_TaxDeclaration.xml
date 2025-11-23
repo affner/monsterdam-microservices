@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity TaxDeclaration.
+    -->
+    <changeSet id="20240302143955-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="tax_declaration_id"
+                                 baseTableName="rel_tax_declaration__accounting_records"
+                                 constraintName="fk_rel_tax_declaration__accounting_records__tax_declaration_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tax_declaration"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="accounting_records_id"
+                                 baseTableName="rel_tax_declaration__accounting_records"
+                                 constraintName="fk_rel_tax_declaration__account__accounting_records_e6_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="accounting_record"
+                                 />
+    </changeSet>
+</databaseChangeLog>

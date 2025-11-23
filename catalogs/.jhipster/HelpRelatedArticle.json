@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20240222000152"
+  },
+  "applications": ["catalogs"],
+  "clientRootFolder": "catalogs",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "help_related_article",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "catalogs",
+  "name": "HelpRelatedArticle",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "helpQuestion",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "relatedArticle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

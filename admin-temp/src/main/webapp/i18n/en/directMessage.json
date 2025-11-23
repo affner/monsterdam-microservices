@@ -1,0 +1,43 @@
+{
+  "adminApp": {
+    "directMessage": {
+      "home": {
+        "title": "Direct Messages",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Direct Message",
+        "createOrEditLabel": "Create or edit a Direct Message",
+        "search": "Search for Direct Message",
+        "notFound": "No Direct Messages found"
+      },
+      "created": "A new Direct Message is created with identifier {{ param }}",
+      "updated": "A Direct Message is updated with identifier {{ param }}",
+      "deleted": "A Direct Message is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Direct Message {{ id }}?"
+      },
+      "detail": {
+        "title": "Direct Message"
+      },
+      "id": "ID",
+      "messageContent": "Message Content",
+      "readDate": "Read Date",
+      "likeCount": "Like Count",
+      "isHidden": "Is Hidden",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "contentPackage": "Content Package",
+      "reports": "Reports",
+      "responses": "Responses",
+      "responseTo": "Response To",
+      "repliedStory": "Replied Story",
+      "user": "User",
+      "bookMarks": "Book Marks",
+      "chatRooms": "Chat Rooms",
+      "adminAnnouncement": "Admin Announcement",
+      "purchasedTip": "Purchased Tip"
+    }
+  }
+}

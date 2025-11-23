@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "socialNetwork": {
+      "home": {
+        "title": "Social Networks",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Social Network",
+        "createOrEditLabel": "Создать или отредактировать Social Network",
+        "search": "Найти Social Network",
+        "notFound": "Social Networks не найдено"
+      },
+      "created": "Новый Social Network создан с идентификатором {{ param }}",
+      "updated": "Social Network обновлен с идентификатором {{ param }}",
+      "deleted": "Social Network удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Social Network {{ id }}?"
+      },
+      "detail": {
+        "title": "Social Network"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "name": "Name",
+      "completeName": "Complete Name",
+      "mainLink": "Main Link",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

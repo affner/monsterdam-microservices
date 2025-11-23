@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "purchasedSubscription": {
+      "home": {
+        "title": "Purchased Subscriptions",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Purchased Subscription",
+        "createOrEditLabel": "Создать или отредактировать Purchased Subscription",
+        "search": "Найти Purchased Subscription",
+        "notFound": "Purchased Subscriptions не найдено"
+      },
+      "created": "Новый Purchased Subscription создан с идентификатором {{ param }}",
+      "updated": "Purchased Subscription обновлен с идентификатором {{ param }}",
+      "deleted": "Purchased Subscription удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Purchased Subscription {{ id }}?"
+      },
+      "detail": {
+        "title": "Purchased Subscription"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "endDate": "End Date",
+      "subscriptionStatus": "Subscription Status",
+      "viewerId": "Viewer Id",
+      "creatorId": "Creator Id",
+      "payment": "Payment",
+      "walletTransaction": "Wallet Transaction",
+      "creatorEarning": "Creator Earning",
+      "subscriptionBundle": "Subscription Bundle",
+      "appliedPromotion": "Applied Promotion",
+      "viewer": "Viewer"
+    }
+  }
+}

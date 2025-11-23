@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "taxDeclaration": {
+      "home": {
+        "title": "Tax Declarations",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Tax Declaration",
+        "createOrEditLabel": "Criar ou editar Tax Declaration",
+        "search": "Pesquisar por Tax Declaration",
+        "notFound": "Nenhum Tax Declaration encontrado"
+      },
+      "created": "Um novo Tax Declaration foi criado com o identificador {{ param }}",
+      "updated": "Um Tax Declaration foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Tax Declaration foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Tax Declaration {{ id }}?"
+      },
+      "detail": {
+        "title": "Tax Declaration"
+      },
+      "id": "ID",
+      "year": "Year",
+      "declarationType": "Declaration Type",
+      "submittedDate": "Submitted Date",
+      "status": "Status",
+      "totalIncome": "Total Income",
+      "totalTaxableIncome": "Total Taxable Income",
+      "totalTaxPaid": "Total Tax Paid",
+      "supportingDocumentsKey": "Supporting Documents Key",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

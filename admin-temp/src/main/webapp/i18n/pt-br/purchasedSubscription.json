@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "purchasedSubscription": {
+      "home": {
+        "title": "Purchased Subscriptions",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Purchased Subscription",
+        "createOrEditLabel": "Criar ou editar Purchased Subscription",
+        "search": "Pesquisar por Purchased Subscription",
+        "notFound": "Nenhum Purchased Subscription encontrado"
+      },
+      "created": "Um novo Purchased Subscription foi criado com o identificador {{ param }}",
+      "updated": "Um Purchased Subscription foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Purchased Subscription foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Purchased Subscription {{ id }}?"
+      },
+      "detail": {
+        "title": "Purchased Subscription"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "endDate": "End Date",
+      "subscriptionStatus": "Subscription Status",
+      "viewerId": "Viewer Id",
+      "creatorId": "Creator Id",
+      "payment": "Payment",
+      "walletTransaction": "Wallet Transaction",
+      "creatorEarning": "Creator Earning",
+      "subscriptionBundle": "Subscription Bundle",
+      "appliedPromotion": "Applied Promotion",
+      "viewer": "Viewer"
+    }
+  }
+}

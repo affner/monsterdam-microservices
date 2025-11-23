@@ -1,0 +1,65 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235512"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "like_mark",
+  "fields": [
+    {
+      "fieldName": "emojiTypeId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "multimediaId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "messageId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "commentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "likerUserId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "LikeMark",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

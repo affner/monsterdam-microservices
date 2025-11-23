@@ -1,0 +1,52 @@
+{
+  "adminApp": {
+    "userSettings": {
+      "home": {
+        "title": "User Settings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Settings",
+        "createOrEditLabel": "Create or edit a User Settings",
+        "search": "Search for User Settings",
+        "notFound": "No User Settings found"
+      },
+      "created": "A new User Settings is created with identifier {{ param }}",
+      "updated": "A User Settings is updated with identifier {{ param }}",
+      "deleted": "A User Settings is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Settings {{ id }}?"
+      },
+      "detail": {
+        "title": "User Settings"
+      },
+      "id": "ID",
+      "lastModifiedDate": "Last Modified Date",
+      "darkMode": "Dark Mode",
+      "language": "Language",
+      "contentFilter": "Content Filter",
+      "messageBlurIntensity": "Message Blur Intensity",
+      "activityStatusVisibility": "Activity Status Visibility",
+      "twoFactorAuthentication": "Two Factor Authentication",
+      "sessionsActiveCount": "Sessions Active Count",
+      "emailNotifications": "Email Notifications",
+      "importantSubscriptionNotifications": "Important Subscription Notifications",
+      "newMessages": "New Messages",
+      "postReplies": "Post Replies",
+      "postLikes": "Post Likes",
+      "newFollowers": "New Followers",
+      "smsNewStream": "Sms New Stream",
+      "toastNewComment": "Toast New Comment",
+      "toastNewLikes": "Toast New Likes",
+      "toastNewStream": "Toast New Stream",
+      "siteNewComment": "Site New Comment",
+      "siteNewLikes": "Site New Likes",
+      "siteDiscountsFromFollowedUsers": "Site Discounts From Followed Users",
+      "siteNewStream": "Site New Stream",
+      "siteUpcomingStreamReminders": "Site Upcoming Stream Reminders",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "userProfile": "User Profile"
+    }
+  }
+}

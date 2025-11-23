@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "likeMark": {
+      "home": {
+        "title": "Like Marks",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Like Mark erstellen",
+        "createOrEditLabel": "Like Mark erstellen oder bearbeiten",
+        "search": "Suche nach Like Mark",
+        "notFound": "Keine Like Marks gefunden"
+      },
+      "created": "Like Mark erstellt mit ID {{ param }}",
+      "updated": "Like Mark aktualisiert mit ID {{ param }}",
+      "deleted": "Like Mark gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Like Mark {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Like Mark"
+      },
+      "id": "ID",
+      "emojiTypeId": "Emoji Type Id",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "multimediaId": "Multimedia Id",
+      "messageId": "Message Id",
+      "postId": "Post Id",
+      "commentId": "Comment Id",
+      "likerUserId": "Liker User Id"
+    }
+  }
+}

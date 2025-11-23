@@ -1,0 +1,52 @@
+{
+  "adminApp": {
+    "userSettings": {
+      "home": {
+        "title": "User Settings",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "User Settings erstellen",
+        "createOrEditLabel": "User Settings erstellen oder bearbeiten",
+        "search": "Suche nach User Settings",
+        "notFound": "Keine User Settings gefunden"
+      },
+      "created": "User Settings erstellt mit ID {{ param }}",
+      "updated": "User Settings aktualisiert mit ID {{ param }}",
+      "deleted": "User Settings gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll User Settings {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "User Settings"
+      },
+      "id": "ID",
+      "lastModifiedDate": "Last Modified Date",
+      "darkMode": "Dark Mode",
+      "language": "Language",
+      "contentFilter": "Content Filter",
+      "messageBlurIntensity": "Message Blur Intensity",
+      "activityStatusVisibility": "Activity Status Visibility",
+      "twoFactorAuthentication": "Two Factor Authentication",
+      "sessionsActiveCount": "Sessions Active Count",
+      "emailNotifications": "Email Notifications",
+      "importantSubscriptionNotifications": "Important Subscription Notifications",
+      "newMessages": "New Messages",
+      "postReplies": "Post Replies",
+      "postLikes": "Post Likes",
+      "newFollowers": "New Followers",
+      "smsNewStream": "Sms New Stream",
+      "toastNewComment": "Toast New Comment",
+      "toastNewLikes": "Toast New Likes",
+      "toastNewStream": "Toast New Stream",
+      "siteNewComment": "Site New Comment",
+      "siteNewLikes": "Site New Likes",
+      "siteDiscountsFromFollowedUsers": "Site Discounts From Followed Users",
+      "siteNewStream": "Site New Stream",
+      "siteUpcomingStreamReminders": "Site Upcoming Stream Reminders",
+      "createdDate": "Created Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "userProfile": "User Profile"
+    }
+  }
+}

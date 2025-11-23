@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "paymentMethod": {
+      "home": {
+        "title": "Payment Methods",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Payment Method",
+        "createOrEditLabel": "Создать или отредактировать Payment Method",
+        "search": "Найти Payment Method",
+        "notFound": "Payment Methods не найдено"
+      },
+      "created": "Новый Payment Method создан с идентификатором {{ param }}",
+      "updated": "Payment Method обновлен с идентификатором {{ param }}",
+      "deleted": "Payment Method удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Payment Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment Method"
+      },
+      "id": "ID",
+      "methodName": "Method Name",
+      "tokenText": "Token Text",
+      "expirationDate": "Expiration Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payments": "Payments"
+    }
+  }
+}

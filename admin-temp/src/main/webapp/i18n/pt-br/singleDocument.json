@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "singleDocument": {
+      "home": {
+        "title": "Single Documents",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Single Document",
+        "createOrEditLabel": "Criar ou editar Single Document",
+        "search": "Pesquisar por Single Document",
+        "notFound": "Nenhum Single Document encontrado"
+      },
+      "created": "Um novo Single Document foi criado com o identificador {{ param }}",
+      "updated": "Um Single Document foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Single Document foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Single Document {{ id }}?"
+      },
+      "detail": {
+        "title": "Single Document"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "documentFile": "Document File",
+      "documentFileS3Key": "Document File S 3 Key",
+      "documentType": "Document Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "user": "User"
+    }
+  }
+}

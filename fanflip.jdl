@@ -1,0 +1,1430 @@
+application {
+    config {
+        baseName gateway
+        packageName com.fanflip.gateway
+        applicationType gateway
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        clientFramework react
+        clientTheme minty
+        clientThemeVariant primary
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling, cypress]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serviceDiscoveryType consul
+    }
+}
+
+application {
+    config {
+        baseName finance
+        packageName com.fanflip.finance
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serverPort 8081
+        serviceDiscoveryType consul
+
+
+    }
+    entities MoneyWithdraw, MoneyEarning, SubscriptionBundle, ViewerWallet, Payment, PaymentMethod, PaymentProvider, TaxInfo, MoneyGift, SubscriptionPlanOffer, PurchasedContent, PurchasedSubscription, TrialLink
+}
+
+
+entity MoneyWithdraw{
+    amount BigDecimal required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    withdrawStatus MoneyWithdrawStatus required
+    // oneTomany UzerFinance{withdraws(amount)} to MoneyWithdraw{creator required},
+    creatorId Long required
+}
+enum MoneyWithdrawStatus {
+
+    /* El retiro de dinero está pendiente de procesar. */
+    WITHDRAW_PENDING("money.withdraw.status.pending"),
+
+    /* El retiro de dinero ha sido procesado. */
+    WITHDRAW_PROCESSED("money.withdraw.status.processed"),
+
+    /* El retiro de dinero ha sido rechazado. */
+    WITHDRAW_DECLINED("money.withdraw.status.declined")
+}
+entity MoneyEarning{
+    amount BigDecimal required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    transactionType MoneyEarningType required
+    // oneTomany UzerFinance{earnings(amount)} to MoneyEarning{creator required},
+    creatorId Long required
+}
+enum MoneyEarningType {
+
+    /* Ganancias provenientes de propinas. */
+    TIP_EARNING("money.earnings.type.tip-earning"),
+
+    /* Ganancias provenientes de suscripciones. */
+    SUBSCRIPTION_EARNING("money.earnings.type.subscription-earning"),
+
+    /* Ganancias provenientes de publicaciones. */
+    POST_EARNING("money.earnings.type.post-earning"),
+
+    /* Ganancias provenientes de mensajes. */
+    MESSAGE_EARNING("money.earnings.type.message-earning"),
+
+    /* Se ha solicitado un retiro de dinero. */
+    WITHDRAW("money.earnings.type.withdraw")
+}
+entity SubscriptionBundle{
+    amount BigDecimal min(0) max(1000) required
+    duration Duration required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerFinance{subscriptionBundles(amount)} to SubscriptionBundle{creator required},
+    creatorId Long required
+}
+entity ViewerWallet{
+    amount BigDecimal required
+    lastModifiedDate Instant
+    transactionType ViewerWalletTransactionType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerFinance{wallet(amount)} to ViewerWallet{viewer required},
+    viewerId Long required
+}
+enum ViewerWalletTransactionType {
+
+    /* Se ha añadido dinero a la cartera. */
+    TOP_UP("viewer.wallet.transaction.type.top-up"),
+
+    /* Se ha solicitado un retiro de dinero de la cartera. */
+    WITHDRAW("viewer.wallet.transaction.type.withdraw"),
+
+    /* Se ha procesado un reembolso en la cartera. */
+    REFUND("viewer.wallet.transaction.type.refund")
+}
+entity Payment {
+    amount BigDecimal required
+    paymentDate Instant required
+    paymentStatus GenericStatus required
+    paymentReference String maxlength(100)
+    cloudTransactionId String maxlength(100)
+    // oneTomany UzerFinance{payments(amount)} to Payment{viewer required},
+    viewerId Long required
+}
+enum GenericStatus {
+
+    /* El estado genérico de una acción o solicitud está pendiente. */
+    PENDING("generic.status.pending"),
+
+    /* Una acción o solicitud ha sido completada. */
+    COMPLETED("generic.status.completed"),
+
+    /* Una acción o solicitud ha sido rechazada. */
+    DECLINED("generic.status.declined"),
+
+    /* Se ha procesado un reembolso. */
+    REFUNDED("generic.status.refunded"),
+
+    /* Una acción o solicitud ha sido cancelada. */
+    CANCELED("generic.status.canceled")
+}
+entity PaymentMethod {
+    methodName String required
+    tokenText String required maxlength(100)
+    expirationDate LocalDate
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity PaymentProvider{
+    providerName String required
+    description String
+    apiKeyText String required
+    apiSecretText String required
+    endpointText String required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity MoneyGift{
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //deben ser mas porque hay gifts de post tambien
+    //   DirectMessage{gift(createdDate)} to MoneyGift{message(messageContent) required},
+    messageId Long
+    postId Long
+    // oneTomany UzerMultimedia{givenGifts(createdDate)} to MoneyGift{giver},
+    viewerId Long required
+    //ManyToOne MoneyGift{receiver required} to UzerFinance{receivedGifts(createdDate)},
+    creatorId Long required
+}
+entity TaxInfo{
+    ratePercentage Float
+    taxType TaxType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //ManyToOne  TaxInfo{country(name) required} to Country,
+    countryId Long required
+}
+enum TaxType {
+
+    /* Impuesto sobre el valor añadido. */
+    VAT("tax.type.vat"),
+
+    /* Retención en la fuente. */
+    WITHHOLDING("tax.type.withholding")
+}
+entity SubscriptionPlanOffer {
+    freeDaysDuration Duration
+    discountPercentage Float min(0) max(100)
+    startDate LocalDate required
+    endDate LocalDate required
+    subscriptionsLimit Integer
+    promotionType OfferPromotionType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany  UzerFinance{planOffers(endDate)} to SubscriptionPlanOffer{creator required},
+    creatorId Long required
+}
+enum OfferPromotionType {
+
+    /* Promoción de descuento. */
+    DISCOUNT("offer.promotion.type.discount"),
+
+    /* Promoción de días gratuitos. */
+    FREE_DAYS("offer.promotion.type.free-days")
+}
+entity PurchasedContent {
+    rating Float
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany  UzerMultimedia{purchasedContent} to PurchasedContent{viewer required},
+    viewerId Long required
+}
+entity PurchasedSubscription {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    endDate LocalDate required
+    subscriptionStatus PurchasedSubscriptionStatus required
+    // oneTomany  UzerMultimedia{purchasedSubscriptions} to PurchasedSubscription{viewer required},
+    viewerId Long required
+}
+enum PurchasedSubscriptionStatus {
+
+    /* Suscripción adquirida por primera vez. */
+    PURCHASED("subscription.status.purchased"),
+
+    /* La suscripción ha sido renovada. */
+    RENEWED("subscription.status.renewed"),
+
+    /* Suscripción pendiente de procesar. */
+    PENDING("subscription.status.pending"),
+
+    /* La suscripción ha expirado. */
+    EXPIRED("subscription.status.expired"),
+
+    /* La suscripción ha sido cancelada. */
+    CANCELLED("subscription.status.cancelled"),
+
+    /* La suscripción ha sido suspendida. */
+    SUSPENDED("subscription.status.suspended")
+}
+entity TrialLink {
+    linkCode String required
+    startDate LocalDate required
+    endDate LocalDate required
+    freeDays Integer
+    isUsed Boolean required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // OntoMany UzerFinance{trialLinks(linkCode)} to TrialLink{creator required},
+    creatorId Long required
+}
+application {
+    config {
+        baseName multimedia
+        packageName com.fanflip.multimedia
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serverPort 8082
+        serviceDiscoveryType consul
+    }
+    entities SingleVideo, SinglePhoto, VideoStory, SingleAudio, ContentPackage
+}
+
+entity SingleAudio  {
+    thumbnail ImageBlob required
+    thumbnailS3Key String required
+    content AnyBlob maxbytes(2147483648) /* 2GB for video, 5MB for photo, handle accordingly */
+    contentS3Key String required
+    duration Duration
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity SingleVideo {
+    thumbnail ImageBlob required
+    thumbnailS3Key String required
+    content AnyBlob maxbytes(2147483648) /* 2GB for video, 5MB for photo, handle accordingly */
+    contentS3Key String required
+    duration Duration
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity SinglePhoto {
+    thumbnail ImageBlob required
+    thumbnailS3Key String required
+    content ImageBlob maxbytes(2147483648) /* 2GB for video, 5MB for photo, handle accordingly */
+    contentS3Key String required
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity VideoStory {
+    thumbnail ImageBlob required
+    thumbnailS3Key String required
+    content AnyBlob maxbytes(2147483648) /* 2GB for video, 5MB for photo, handle accordingly */
+    contentS3Key String required
+    duration Duration
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+
+    // UzerMultimedia{videoStories(duration)} to VideoStory{creator required},
+    creatorId Long required
+}
+entity ContentPackage {
+    amount BigDecimal
+    videoCount Integer
+    imageCount Integer
+    isPaidContent Boolean required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //   DirectMessage{ContentPackage} to ContentPackage{message(messageContent) required},
+    messageId Long
+    //  PostFeed{ContentPackage} to ContentPackage{post(postContent) required},
+    postId Long
+}
+application {
+    config {
+        baseName interactions
+        packageName com.fanflip.interactions
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        serviceDiscoveryType consul
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        serverPort 8083
+    }
+    entities PostFeed, PostComment, ChatRoom, DirectMessage, PostMention, CommentMention, LikeMark, PollVote, PollOption, PostPoll, HashTag, Notification
+}
+
+entity PostFeed{
+    postContent TextBlob required
+    isHidden Boolean
+    pinnedPost Boolean
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //  onetomany UzerMultimedia{feed(postContent)} to PostFeed{creator required},
+    creatorId Long required
+}
+entity PostComment {
+    commentContent TextBlob required
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany UzerMultimedia{commented(commentContent)} to PostComment{commenter required},
+    commenterId Long required
+}
+entity PostPoll {
+    question TextBlob required
+    isMultiChoice Boolean required
+    lastModifiedDate Instant
+    endDate LocalDate required
+    PostPollDuration Duration required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity ChatRoom {
+    lastAction String
+    lastConnectionDate Instant
+    muted Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany UzerInteractions{chats(lastMessage)} to ChatRoom{user required},
+    participantId Long
+}
+entity DirectMessage {
+    messageContent TextBlob required
+    readDate Instant
+    likeCount Integer
+    isHidden Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany  VideoStory{messages(messageContent)} to DirectMessage{repliedStory(duration)},
+    repliedStoryId Long
+    // oneToMany UzerInteractions{sentMessages(messageContent)} to DirectMessage{user required},
+    senderId Long required
+}
+entity PostMention {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity CommentMention {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity LikeMark {
+    entityType LikeEntityKind required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // ManyToOne LikeMark{videoStory(duration) required} to VideoStory{likeMarks},
+    // ManyToOne LikeMark{photo required} to SinglePhoto{likeMarks},
+    // ManyToOne LikeMark{video(duration) required} to SingleVideo{likeMarks},
+    multimediaId Long
+    //OnetoMany LikeMark{message(messageContent) required} to DirectMessage{likeMarks},
+    messageId Long
+    //OnetoMany LikeMark{post(postContent) required} to PostFeed{likeMarks},
+    postId Long
+    // ManyToOne LikeMark{comment(commentContent) required} to PostComment{likeMarks}
+    commentId Long
+    // OneToMany
+    //UzerInteractions{likedVideoStories} to LikeMark{storyLiker required},
+    //UzerInteractions{likedComments} to LikeMark{commentLiker required},
+    //UzerInteractions{likedPhotos} to LikeMark{photoLiker required},
+    //UzerInteractions{likedVideos} to LikeMark{videoLiker required},
+    //UzerInteractions{likedMessages} to LikeMark{messageLiker},
+    //UzerInteractions{likedPosts} to LikeMark{postLiker required},
+    likerId Long
+}
+enum LikeEntityKind {
+
+    /* Representa un "me gusta" en un video. */
+    VIDEO("multimedia.entity.kind.video"),
+
+    /* Representa un "me gusta" en una imagen. */
+    PHOTO("multimedia.entity.kind.photo"),
+
+    /* Representa un "me gusta" en una publicación. */
+    POST("like.entityType.post"),
+
+    /* Representa un "me gusta" en un mensaje. */
+    MESSAGE("like.entityType.message"),
+
+    /* Representa un "me gusta" en un comentario. */
+    COMMENT("like.entityType.comment"),
+
+    /* Representa un "me gusta" en una historia en video. */
+    STORY("like.entityType.videoStory")
+}
+entity HashTag {
+    tagName String required
+    hashtagType HashtagType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // Uzer{hashTags} to HashTag{profiles},
+    userId Long
+}
+
+enum HashtagType {
+
+    /* Hashtag asociado a un usuario. */
+    USER("configuration.category.general"),
+
+    /* Hashtag asociado a un Post. */
+    POST("configuration.category.security"),
+
+    /* Hashtag asociado a un Fetiche. */
+    FETISH("configuration.category.notifications")
+
+}
+entity PollVote {
+    createdDate Instant required
+    //     Uzer{votedPolls(createdDate)} to PollVote{votingUsers},
+    votingUserId Long required
+}
+entity PollOption {
+    optionDescription TextBlob required
+    voteCount Integer required
+}
+entity Notification {
+    readDate Instant
+    notificationKind NotificationKind required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // OnetoMany Uzer{commentNotifications(createdDate)} to Notification{commentedUser required},
+    commentedUserId Long required
+    // OnetoMany Uzer{messageNotifications(createdDate)} to Notification{messagedUser required},
+    messagedUserId Long required
+    // OnetoMany Uzer{postMentionNotifications(createdDate)} to Notification{mentionerUserInPost required},
+    mentionerIdInPost Long required
+    // OnetoMany Uzer{commentMentionNotifications(createdDate)} to Notification{mentionerUserInComment required}
+    mentionerIdInComment Long required
+}
+enum NotificationKind{
+    COMMENT, POST, MESSAGE, COMMENT_MENTION, POST_MENTION
+}
+application {
+    config {
+        baseName profile
+        packageName com.fanflip.profile
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        serviceDiscoveryType consul
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        serverPort 8084
+    }
+    entities Uzer, UserProfile, UserSettings, UserAssociation, UserEvent, Country, State, BookMark, SocialNetwork, PersonalSocialLinks, Feedback
+}
+    @skipClient
+entity Uzer{
+    thumbnail ImageBlob
+    thumbnailS3Key String
+    birthDate LocalDate required
+    gender UserGender required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    nickName String required pattern(/^[a-z0-9_-]{3,16}$/)
+    fullName String required pattern(/^[a-zA-Z0-9 ]*$/)
+    contentPreference ContentPreference required
+}
+enum ContentPreference {
+
+    /* Preferencia por todo tipo de contenido. */
+    ALL("content.preference.all"),
+
+    /* Preferencia por contenido heterosexual. */
+    STRAIGHT("content.preference.straight"),
+
+    /* Preferencia por contenido homosexual. */
+    GAY("content.preference.gay"),
+
+    /* Preferencia por contenido relacionado con personas transgénero. */
+    TRANS("content.preference.trans")
+}
+enum UserGender {
+
+    /* Género masculino. */
+    MALE("user.gender.male"),
+
+    /* Género femenino. */
+    FEMALE("user.gender.female"),
+
+    /* Individuo que ha realizado una transición de hombre a mujer. */
+    TRANS_FEMALE("user.gender.trans-female"),
+
+    /* Individuo que ha realizado una transición de mujer a hombre. */
+    TRANS_MALE("user.gender.trans-male")
+}
+entity UserProfile{
+    emailContact String required
+    profilePhoto ImageBlob
+    coverPhoto ImageBlob
+    profilePhotoS3Key String
+    coverPhotoS3Key String
+    mainContentUrl String
+    mobilePhone String
+    websiteUrl String
+    amazonWishlistUrl String
+    lastLoginDate Instant required
+    biography TextBlob
+    isFree Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+
+entity UserSettings {
+    lastModifiedDate Instant
+    darkMode Boolean required
+    language UserLanguage required
+    contentFilter Boolean required
+    messageBlurIntensity Integer
+    activityStatusVisibility Boolean required
+    twoFactorAuthentication Boolean required
+    sessionsActiveCount Integer
+    emailNotifications Boolean required
+    importantSubscriptionNotifications Boolean required
+    newMessages Boolean required
+    postReplies Boolean required
+    postLikes Boolean required
+    newFollowers Boolean required
+    smsNewStream Boolean required
+    toastNewComment Boolean required
+    toastNewLikes Boolean required
+    toastNewStream Boolean required
+    siteNewComment Boolean required
+    siteNewLikes Boolean required
+    siteDiscountsFromFollowedUsers Boolean required
+    siteNewStream Boolean required
+    siteUpcomingStreamReminders Boolean required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+enum UserLanguage {
+
+    /* Idioma español. */
+    ES("user.language.es"),
+
+    /* Idioma inglés. */
+    EN("user.language.en"),
+
+    /* Idioma francés. */
+    FR("user.language.fr"),
+
+    /* Idioma alemán. */
+    DE("user.language.de"),
+
+    /* Idioma portugués (Brasil). */
+    PT_BR("user.language.pt_br"),
+
+    /* Idioma ruso. */
+    RU("user.language.ru")
+}
+
+entity UserAssociation {
+    requestedDate Instant required,
+    status AssociationStatus,
+    associationToken String required,
+    expiryDate Instant required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //  relationship OneToMany UzerInteractions{ownAccountsAssociations} to UserAssociation{owner required}
+    ownerId Long required
+
+}
+enum AssociationStatus {
+
+    /* Indica que se ha solicitado una asociación. */
+    REQUESTED("association.status.requested"),
+
+    /* La solicitud de asociación ha sido aprobada. */
+    APPROVED("association.status.approved"),
+
+    /* La solicitud de asociación ha sido rechazada. */
+    REJECTED("association.status.rejected")
+}
+
+entity UserEvent {
+    title String required
+    description TextBlob required
+    startDate LocalDate required
+    endDate LocalDate required
+    creatorEventStatus UserEventStatus
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerInteractions{createdEvents(title)} to UserEvent{creator required},
+    creatorId Long required
+}
+enum UserEventStatus {
+
+    /* El evento ha sido cancelado. */
+    CANCELED("creator.event.status.canceled"),
+
+    /* El evento está activo y en curso. */
+    ACTIVE("creator.event.status.active"),
+
+    /* El evento ha sido eliminado. */
+    DELETED("creator.event.status.deleted")
+}
+
+entity Country {
+    name String required
+    alpha2Code String required minlength(2) maxlength(2) // Ejemplo: 'MX' para México
+    alpha3Code String required minlength(3) maxlength(3) // Ejemplo: 'MEX' para México
+    phoneCode String   // Ejemplo: '+52' para México
+    thumbnailCountry ImageBlob
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+
+}
+entity State {
+    stateName String required maxlength(100)
+    isoCode String required maxlength(3)
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+
+}
+entity BookMark {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // manytoone BookMark{user required} to UzerInteractions{bookMarks(createdDate)},
+    userId Long
+    // manytoone BookMark{post(postContent) required} to PostFeed{bookMarks(createdDate)},
+    postId Long
+    // manytoone BookMark{message(messageContent) required} to DirectMessage{bookMarks(createdDate)},
+    messageId Long
+}
+entity Feedback {
+    content String required
+    feedbackDate Instant required
+    feedbackRating Integer
+    feedbackType FeedbackType
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //manyToOne Feedback{creator required} to UzerInteractions{feedback(feedbackRating)},
+    creatorId Long required
+}
+enum FeedbackType {
+
+    /* Se utiliza cuando un usuario quiere reportar un problema o fallo en la plataforma. */
+    ERROR("feedback.type.error"),
+
+    /* Se utiliza cuando un usuario propone una mejora o sugiere una nueva característica. */
+    SUGGESTION("feedback.type.suggestion"),
+
+    /* Se utiliza para categorizar comentarios positivos sobre el servicio o plataforma. */
+    PRAISE("feedback.type.praise"),
+
+    /* Para comentarios o consultas que no encajan en las categorías anteriores. */
+    OTHER("feedback.type.other")
+}
+entity SocialNetwork{
+    thumbnail ImageBlob
+    name String required maxlength(100) unique
+    completeName String required unique
+    mainLink String required unique
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+
+}
+entity PersonalSocialLinks {
+    thumbnail ImageBlob
+    normalImage ImageBlob
+    normalImageS3Key String
+    thumbnailIconS3Key String
+    socialLink String required unique
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+
+application {
+    config {
+        baseName admin
+        packageName com.fanflip.admin
+        applicationType monolith
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        websocket spring-websocket
+        buildTool maven
+        clientFramework react
+        clientTheme minty
+        clientThemeVariant primary
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling, cypress]
+        searchEngine elasticsearch
+        messageBroker kafka
+        serviceDiscoveryType eureka
+        clientPackageManager npm
+
+    }
+    entities *
+    //  entities AdminUzer, IdentityDocumentReview, DocumentReviewObservation, IdentityDocument, AssistanceTicket, ModerationAction, AdminAnnouncement, AdminEmailConfigs, AdminSystemConfigs
+}
+// --- Tablas y lógica de superUsuarios ---
+
+// Detalles para el usuario administrativo
+entity AdminUzer {
+    fullName String required
+    emailAddress String required
+    nickName String
+    gender AdminGender required
+    mobilePhone String
+    lastLoginDate Instant required
+    birthDate LocalDate required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+
+}
+
+enum AdminGender {
+
+    /* Género masculino. */
+    MALE("user.gender.male"),
+
+    /* Género femenino. */
+    FEMALE("user.gender.female"),
+
+    /* Individuo que ha realizado una transición de hombre a mujer. */
+    TRANS_FEMALE("user.gender.trans-female"),
+
+    /* Individuo que ha realizado una transición de mujer a hombre. */
+    TRANS_MALE("user.gender.trans-male")
+}
+
+// Revisión de documentos por el administrador
+entity IdentityDocumentReview {
+    documentStatus DocumentStatus
+    resolutionDate Instant
+    reviewStatus ReviewStatus
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+
+}
+entity DocumentReviewObservation {
+    commentDate Instant
+    comment String required
+
+}
+entity IdentityDocument {
+    documentName String required
+    documentDescription String
+    documentStatus DocumentStatus
+    documentType DocumentType
+    fileDocument AnyBlob required
+    fileDocumentS3Key String required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+
+}
+// Los tickets de asistencia creados por usuarios o administradores
+entity AssistanceTicket {
+    subject String required
+    description String required
+    status TicketStatus required
+    type TicketType required
+    openedAt Instant
+    closedAt Instant
+    comments String
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    // OneToMany  UzerInteractions{assistanceTickets} to AssistanceTicket{uzer},
+    uzerId Long required
+
+}
+entity ModerationAction {
+    actionType ModerationActionType required
+    reason String maxlength(255)
+    actionDate Instant
+    durationDays Duration
+
+}
+// mi idea es mensajes como los de telegram, asi les llegan mensajes de anuncios, dados de alta y enviados en forma de mensaje por un Admin
+// Crear el usuario de noticiero en Fanflip, que podra enviar mensajes a todos como anuncios. y a ese user se asociara su chat.
+entity AdminAnnouncement {
+    announcementType AdminAnnouncementType required
+    title String maxlength(100) required
+    content String required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    //en las cajas de mensajes se visualiza si es un validamos si es de admin se manda hasta arriba en los mensajes como anuncio.
+    //  AdminAnnouncement{uzerAnnouncer} to UzerInteractions
+    announcerId Long required
+}
+enum TicketStatus {
+
+    /* El ticket está abierto y esperando respuesta. */
+    OPEN("admin.ticket.status.open"),
+
+    /* El ticket ha sido asignado a un miembro del equipo. */
+    ASSIGNED("admin.ticket.status.assigned"),
+
+    /* El ticket ha sido cerrado. */
+    CLOSED("admin.ticket.status.closed")
+}
+
+enum TicketType {
+
+    /* Problemas de acceso a la cuenta. */
+    ACCESS_ISSUE("admin.ticket.type.accessIssue"),
+
+    /* Verificación de documentos para convertirse en creador. */
+    DOCUMENT_VERIFICATION("admin.ticket.type.document.verification"),
+
+    /* Solicitudes de reembolso. */
+    REFUND_REQUEST("admin.ticket.type.refund.request"),
+
+    /* Reportar contenido o comportamiento inapropiado. */
+    REPORT_REQUEST("admin.ticket.type.report.request"),
+
+    /* Otros problemas no categorizados. */
+    OTHER("admin.ticket.type.other"),
+
+    /* Problemas con el contenido (no carga, mala calidad, etc.). */
+    CONTENT_ISSUE("admin.ticket.type.content.issue"),
+
+    /* Problemas con transacciones o pagos. */
+    PAYMENT_ISSUE("admin.ticket.type.payment.issue"),
+
+    /* Denuncias de acoso o comportamiento inapropiado. */
+    HARASSMENT_REPORT("admin.ticket.type.harassment.report"),
+
+    /* Reportar fallos técnicos o errores en la plataforma. */
+    BUG_REPORT("admin.ticket.type.bug.report"),
+
+    /* Consultas sobre suspensiones o bloqueos de cuenta. */
+    ACCOUNT_SUSPENSION("admin.ticket.type.account.suspension"),
+
+    /* Inquietudes relacionadas con la privacidad o datos personales. */
+    PRIVACY_CONCERN("admin.ticket.type.privacy.concern"),
+
+    /* Sugerencias de nuevas características o mejoras. */
+    FEATURE_REQUEST("admin.ticket.type.feature.request")
+}
+
+enum ModerationActionType {
+
+    /* Advertencia al usuario sobre una infracción. */
+    WARNING("admin.moderation.action.type.warning"),
+
+    /* Bloqueo temporal del usuario. */
+    TEMPORARY_BAN("admin.moderation.action.type.temporary_ban"),
+
+    /* Bloqueo permanente del usuario. */
+    PERMANENT_BAN("admin.moderation.action.type.permanent_ban"),
+
+    /* Eliminación de contenido específico. */
+    CONTENT_REMOVAL("admin.moderation.action.type.content_removal"),
+
+    /* Otras acciones de moderación no especificadas. */
+    OTHER("admin.moderation.action.type.other")
+}
+
+enum AdminAnnouncementType {
+
+    /* Anuncio en forma de banner. */
+    BANNER("admin.announcement"),
+
+    /* Actualización del sistema o plataforma. */
+    SYSTEM_UPDATE("admin.announcement.type.system_update"),
+
+    /* Cambios en las políticas de la plataforma. */
+    POLICY_CHANGE("admin.announcement.type.policy_change"),
+
+    /* Alerta para la comunidad. */
+    COMMUNITY_ALERT("admin.announcement.type.community_alert"),
+
+    /* Otros anuncios no categorizados. */
+    OTHER("admin.announcement.type.other")
+}
+
+enum DocumentStatus {
+
+    /* El documento está pendiente de revisión. */
+    PENDING("admin.document.status.pending"),
+
+    /* El documento ha sido aprobado. */
+    APPROVED("admin.document.status.approved"),
+
+    /* El documento ha sido rechazado. */
+    REJECTED("admin.document.status.rejected")
+}
+
+enum ReviewStatus {
+
+    /* La revisión está en proceso. */
+    REVIEWING("admin.review.status.reviewing"),
+
+    /* La revisión ha sido aprobada. */
+    APPROVED("admin.review.status.approved"),
+
+    /* La revisión ha sido rechazada. */
+    REJECTED("admin.review.status.rejected")
+}
+
+enum DocumentType {
+
+    /* Verificación de identidad. */
+    ID_VERIFICATION("admin.document.type.id_verification"),
+
+    /* Contrato. */
+    CONTRACT("admin.document.type.contract"),
+
+    /* Otros documentos no especificados. */
+    MISC("admin.document.type.misc")
+}
+
+
+// Catalogos Sueltos Help
+
+entity HelpCategory {
+    name String required unique
+    isDeleted Boolean required
+
+}
+
+entity HelpSubcategory {
+    name String required unique
+    isDeleted Boolean required
+
+}
+
+entity HelpQuestion {
+    title String required unique
+    content TextBlob required
+    isDeleted Boolean required
+
+}
+
+entity HelpRelatedArticle {
+    title String required unique
+    content TextBlob required
+
+}
+entity UserReport {
+    reportDescription String
+    status ReportStatus required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    reportCategory ReportCategory required
+    // oneToMany UzerInteractions{makedReports(reportDescription)} to UserReport{reporter required}
+    reporterId Long required
+    // ManytoOne UserReport{reported required} to UzerInteractions{receivedReports(reportDescription)},
+    reportedId Long required
+    // UserReport{story(duration)} to VideoStory{reports(reportCategory)},
+    multimediaId Long
+    messageId Long
+    postId Long
+    commentId Long
+}
+enum ReportStatus {
+
+    /* El reporte ha sido registrado y está pendiente de revisión. */
+    PENDING("report.status.pending"),
+
+    /* El reporte ha sido revisado por un administrador. */
+    REVIEWED("report.status.reviewed"),
+
+    /* Se ha tomado acción con respecto al reporte. */
+    ACTION_TAKEN("report.status.action-taken"),
+
+    /* El reporte ha sido descartado sin tomar acciones. */
+    DISMISSED("report.status.dismissed")
+}
+enum ReportCategory {
+
+    /* Reporte relacionado con una publicación. */
+    POST_REPORT("admin.report.post"),
+
+    /* Reporte relacionado con un comentario. */
+    COMMENT_REPORT("admin.report.comment"),
+
+    /* Reporte relacionado con un mensaje. */
+    MESSAGE_REPORT("admin.report.message"),
+
+    /* Reporte relacionado con contenido multimedia. */
+    MULTIMEDIA_REPORT("admin.report.multimedia"),
+
+    /* Reporte relacionado con un usuario. */
+    USER_REPORT("admin.report.user")
+}
+
+enum EmailTemplateType {
+    /* Notificaciones generales para el usuario, como alertas de actividad o actualizaciones. */
+    NOTIFICATION,
+    /* Boletines informativos con actualizaciones, noticias y contenido relevante para la comunidad. */
+    NEWSLETTER,
+    /* Alertas urgentes o importantes que el usuario debe conocer de inmediato. */
+    ALERT,
+    /* Promociones, descuentos o eventos especiales que se ofrezcan en la plataforma. */
+    PROMOTION
+
+}
+
+entity AdminEmailConfigs {
+    title String required
+    subject String required
+    content String required
+    mailTemplateType EmailTemplateType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isActive Boolean required
+
+}
+
+// Tabla de configuraciones generales.
+entity AdminSystemConfigs {
+    configKey String required maxlength(255)
+    configValue String required
+    description String maxlength(500)
+    configValueType ConfigurationValueType
+    configCategory ConfigurationCategory
+    configFile AnyBlob
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isActive Boolean
+
+}
+enum ConfigurationValueType {
+
+    /* Valor de configuración en formato de cadena de texto. */
+    STRING("configuration.value.type.string"),
+
+    /* Valor de configuración en formato numérico entero. */
+    INTEGER("configuration.value.type.integer"),
+
+    /* Valor de configuración en formato booleano (verdadero/falso). */
+    BOOLEAN("configuration.value.type.boolean"),
+
+    /* Valor de configuración en formato de punto flotante. */
+    FLOAT("configuration.value.type.float"),
+
+    /* Valor de configuración en formato de fecha. */
+    DATE("configuration.value.type.date"),
+
+    /* Valor de configuración en formato JSON. */
+    JSON("configuration.value.type.json"),
+
+    /* Valor de configuración en formato de texto largo. */
+    TEXT("configuration.value.type.text")
+}
+
+enum ConfigurationCategory {
+
+    /* Configuraciones generales de la plataforma. */
+    GENERAL("configuration.category.general"),
+
+    /* Configuraciones relacionadas con la seguridad. */
+    SECURITY("configuration.category.security"),
+
+    /* Configuraciones de notificaciones. */
+    NOTIFICATIONS("configuration.category.notifications"),
+
+    /* Configuraciones de la interfaz de usuario. */
+    USER_INTERFACE("configuration.category.user_interface"),
+
+    /* Configuraciones relacionadas con métodos de pago. */
+    PAYMENT("configuration.category.payment"),
+
+    /* Configuraciones de integraciones externas. */
+    INTEGRATIONS("configuration.category.integrations"),
+
+    /* Configuraciones de contenido. */
+    CONTENT("configuration.category.content"),
+
+    /* Configuraciones de SEO. */
+    SEO("configuration.category.seo")
+}
+
+relationship OneToMany {
+    // Establece la relación entre Categoría y Subcategoría
+    HelpCategory{subCategories} to HelpSubcategory{category}
+    // Establece la relación entre Subcategoría y Pregunta
+    HelpSubcategory{questions} to HelpQuestion{subcategory}
+    AdminUzer{announcements} to AdminAnnouncement{admin required}
+}
+// Establece la relación entre Preguntas y Artículos Relacionados
+relationship ManyToMany {
+    HelpQuestion{question} to HelpRelatedArticle{relatedArticle}
+}
+
+relationship OneToOne {
+    AssistanceTicket{moderationAction} to ModerationAction,
+
+    UserReport{ticket required} to AssistanceTicket{report},
+    IdentityDocumentReview{ticket required} to AssistanceTicket{documentsReview}
+}
+// Relaciones
+relationship OneToMany {
+    AdminUzer{assignedTickets} to AssistanceTicket{assignedAdmin},
+    IdentityDocumentReview{documents} to IdentityDocument{review}
+    IdentityDocumentReview{observations} to DocumentReviewObservation{review}
+
+}
+
+relationship OneToMany {
+    // Establece la relación entre Categoría y Subcategoría
+    HelpCategory{subCategories} to HelpSubcategory{category}
+    // Establece la relación entre Subcategoría y Pregunta
+    HelpSubcategory{questions} to HelpQuestion{subcategory}
+    AdminUzer{announcements} to AdminAnnouncement{admin required}
+}
+// Establece la relación entre Preguntas y Artículos Relacionados
+relationship ManyToMany {
+    HelpQuestion{question} to HelpRelatedArticle{relatedArticle}
+}
+
+
+
+
+relationship OneToOne {
+    //  Relacion con los cada parte
+
+    Uzer{settings required} to UserSettings,
+    Uzer{profile required} to UserProfile,
+
+    //las uniones de pagos y donde se genera vinculo del viewer con el creator
+    PostFeed{poll(question)} to PostPoll{post(postContent) required},
+    MoneyGift{payment(amount) required} to Payment,
+    PurchasedContent{payment(amount) required} to Payment,
+    PurchasedSubscription{payment(amount) required} to Payment,
+    ViewerWallet{payment(amount) required} to Payment,
+    // estas desaparecerian y se modifiarian si adoptaramos microservicios
+    ContentPackage{audio} to SingleAudio{ContentPackage required},
+    PersonalSocialLinks{socialNetwork(thumbnail)} to SocialNetwork
+
+}
+
+relationship OneToMany {
+    ChatRoom{sentMessages(messageContent)} to DirectMessage,
+    PostFeed{comments(commentContent)} to PostComment{post(postContent) required},
+    PostComment{responses(commentContent)} to PostComment{responseTo(commentContent)},
+    DirectMessage{responses(messageContent)} to DirectMessage{responseTo(messageContent)},
+    PostPoll{options(optionDescription)} to PollOption{poll(question) required},
+    Uzer{socialNetworks} to PersonalSocialLinks{user required},
+    PostFeed{commentMentions(createdDate)} to PostMention{originPost(postContent)},
+    PostComment{commentMentions(createdDate)} to CommentMention{originPostComment(commentContent)},
+    ContentPackage{videos(duration)} to SingleVideo{belongPackage(amount)},
+    ContentPackage{photos} to SinglePhoto{belongPackage(amount)},
+
+}
+relationship ManyToOne {
+    UserProfile{stateOfResidence(stateName)} to State,
+    Uzer{countryOfBirth(name)} to Country,
+    State{country(name) required} to Country,
+
+
+    Notification{comment(commentContent) required} to PostComment{commentNotifications(readDate)},
+    Notification{post(postContent) required} to PostFeed{postNotifications(readDate)},
+    Notification{message(messageContent) required} to DirectMessage{messageNotifications(readDate)},
+    Notification{postMention(postContent)} to PostFeed{postMentionNotifications(readDate)},
+    Notification{commentMention(commentContent)} to PostComment{commentMentionNotifications(readDate)},
+//    UserReport{post(postContent)} to PostFeed{reports(reportCategory)},
+//    UserReport{comment(commentContent)} to PostComment{reports(reportCategory)},
+//    UserReport{message(messageContent)} to DirectMessage{reports(reportCategory)},
+
+
+    PurchasedSubscription{appliedPromotion(promotionType)} to SubscriptionPlanOffer{purchasedSubscription(subscriptionStatus)},
+
+    Payment{method(methodName)} to PaymentMethod{payment(amount)},
+    Payment{provider(providerName)} to PaymentProvider{payment(amount)},
+    PollVote{pollOption(optionDescription) required} to PollOption{votes(createdDate)}
+}
+relationship ManyToMany {
+    Uzer{followed} to Uzer{followers},
+    Uzer{blockedList} to Uzer{blockers},
+    PostFeed{hashTags} to HashTag{posts},
+    Uzer{subscribed} to Uzer{subscriptions},
+
+    Uzer{blockedUbications} to State{blockers},
+    Uzer{joinedEvents(startDate)} to UserEvent{members}
+}
+deployment {
+    deploymentType docker-compose
+    serviceDiscoveryType consul
+    appsFolders [gateway, finance, multimedia, interactions, profile, admin]
+    dockerRepositoryName "fanflip"
+}
+deployment {
+    deploymentType kubernetes
+    appsFolders [gateway, finance, multimedia, interactions, profile, admin]
+    clusteredDbApps [finance, multimedia, interactions, profile]
+    kubernetesNamespace demo
+    kubernetesUseDynamicStorage true
+    kubernetesStorageClassName ""
+    serviceDiscoveryType consul
+    dockerRepositoryName "fanflip"
+}
+search  Country, State, PostFeed, PostComment, DirectMessage, HashTag with elasticsearch
+
+dto all with mapstruct // except UserProfile
+
+paginate PostFeed, PostComment, DirectMessage with infinite-scroll
+
+paginate * with pagination except PostFeed, PostComment, DirectMessage
+
+service * with serviceImpl

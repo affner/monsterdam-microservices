@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "userMention": {
+      "home": {
+        "title": "User Mentions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new User Mention",
+        "createOrEditLabel": "Create or edit a User Mention",
+        "search": "Search for User Mention",
+        "notFound": "No User Mentions found"
+      },
+      "created": "A new User Mention is created with identifier {{ param }}",
+      "updated": "A User Mention is updated with identifier {{ param }}",
+      "deleted": "A User Mention is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete User Mention {{ id }}?"
+      },
+      "detail": {
+        "title": "User Mention"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "originPost": "Origin Post",
+      "originPostComment": "Origin Post Comment",
+      "mentionedUser": "Mentioned User"
+    }
+  }
+}

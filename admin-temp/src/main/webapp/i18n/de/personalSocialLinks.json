@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "personalSocialLinks": {
+      "home": {
+        "title": "Personal Social Links",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Personal Social Links erstellen",
+        "createOrEditLabel": "Personal Social Links erstellen oder bearbeiten",
+        "search": "Suche nach Personal Social Links",
+        "notFound": "Keine Personal Social Links gefunden"
+      },
+      "created": "Personal Social Links erstellt mit ID {{ param }}",
+      "updated": "Personal Social Links aktualisiert mit ID {{ param }}",
+      "deleted": "Personal Social Links gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Personal Social Links {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Personal Social Links"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "normalImage": "Normal Image",
+      "normalImageS3Key": "Normal Image S 3 Key",
+      "thumbnailIconS3Key": "Thumbnail Icon S 3 Key",
+      "socialLink": "Social Link",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "socialNetwork": "Social Network",
+      "user": "User"
+    }
+  }
+}

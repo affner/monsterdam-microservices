@@ -1,0 +1,37 @@
+{
+  "annotations": {
+    "changelogDate": "20240302141817"
+  },
+  "applications": ["fanflip"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_ui_preferences",
+  "fields": [
+    {
+      "fieldName": "preferences",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    }
+  ],
+  "name": "UserUIPreferences",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

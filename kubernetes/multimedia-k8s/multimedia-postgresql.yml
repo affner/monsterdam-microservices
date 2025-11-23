@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: multimedia-postgresql-pvc
+  namespace: demo
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: multimedia-postgresql
+  namespace: demo
+  labels:
+    app: multimedia-postgresql
+type: Opaque
+data:
+  postgresql-password: ZGVlZTlhODM0Yzc2YzkyYTg1NDc5ZTYzYzAyNmQ1YjUyYzdiZjI3ZDNjMWU4NjZiYzIwZjllYmFlNjVl
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multimedia-postgresql
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multimedia-postgresql
+  template:
+    metadata:
+      labels:
+        app: multimedia-postgresql
+    spec:
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: multimedia-postgresql-pvc
+      containers:
+        - name: postgres
+          image: postgres:16.1
+          env:
+            - name: POSTGRES_USER
+              value: multimedia
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: multimedia-postgresql
+                  key: postgresql-password
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+              subPath: postgres
+          resources:
+            requests:
+              memory: '512Mi'
+              cpu: '500m'
+            limits:
+              memory: '1Gi'
+              cpu: '1'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: multimedia-postgresql
+  namespace: demo
+spec:
+  selector:
+    app: multimedia-postgresql
+  ports:
+    - port: 5432

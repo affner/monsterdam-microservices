@@ -1,0 +1,43 @@
+{
+  "adminApp": {
+    "userReport": {
+      "home": {
+        "title": "User Reports",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo User Report",
+        "createOrEditLabel": "Criar ou editar User Report",
+        "search": "Pesquisar por User Report",
+        "notFound": "Nenhum User Report encontrado"
+      },
+      "created": "Um novo User Report foi criado com o identificador {{ param }}",
+      "updated": "Um User Report foi atualizado com o identificador {{ param }}",
+      "deleted": "Um User Report foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir User Report {{ id }}?"
+      },
+      "detail": {
+        "title": "User Report"
+      },
+      "id": "ID",
+      "reportDescription": "Report Description",
+      "status": "Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reportCategory": "Report Category",
+      "ticket": "Ticket",
+      "reporter": "Reporter",
+      "reported": "Reported",
+      "story": "Story",
+      "video": "Video",
+      "photo": "Photo",
+      "audio": "Audio",
+      "liveStream": "Live Stream",
+      "message": "Message",
+      "post": "Post",
+      "postComment": "Post Comment"
+    }
+  }
+}

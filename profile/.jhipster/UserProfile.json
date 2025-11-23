@@ -1,0 +1,190 @@
+{
+  "annotations": {
+    "changelogDate": "20240302180400"
+  },
+  "applications": ["profile"],
+  "clientRootFolder": "profile",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_profile",
+  "fields": [
+    {
+      "fieldName": "emailContact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "profilePhoto",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "coverPhoto",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "profilePhotoS3Key",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coverPhotoS3Key",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mainContentUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobilePhone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "websiteUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amazonWishlistUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastLoginDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "biography",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "isFree",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stateOfResidenceId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "profile",
+  "name": "UserProfile",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "userSettings",
+      "relationshipName": "settings",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "personalSocialLinks",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "socialNetworks",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "stateUserRelation",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "blockedUbications",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "followers",
+      "relationshipName": "followed",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "blockers",
+      "relationshipName": "blockedList",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "awards",
+      "relationshipName": "loyaLists",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "subscriptions",
+      "relationshipName": "subscribed",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "startDate",
+      "otherEntityName": "userEvent",
+      "otherEntityRelationshipName": "members",
+      "relationshipName": "joinedEvents",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "hashtags",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "followed",
+      "relationshipName": "followers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "blockedList",
+      "relationshipName": "blockers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "loyaLists",
+      "relationshipName": "awards",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "subscribed",
+      "relationshipName": "subscriptions",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

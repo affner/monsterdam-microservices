@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "currency": {
+      "home": {
+        "title": "Currencies",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Currency",
+        "createOrEditLabel": "Создать или отредактировать Currency",
+        "search": "Найти Currency",
+        "notFound": "Currencies не найдено"
+      },
+      "created": "Новый Currency создан с идентификатором {{ param }}",
+      "updated": "Currency обновлен с идентификатором {{ param }}",
+      "deleted": "Currency удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Currency {{ id }}?"
+      },
+      "detail": {
+        "title": "Currency"
+      },
+      "id": "ID",
+      "name": "Name",
+      "symbol": "Symbol",
+      "code": "Code",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

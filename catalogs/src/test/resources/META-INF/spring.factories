@@ -1,0 +1,5 @@
+org.springframework.test.context.ContextCustomizerFactory = com.fanflip.\
+    catalogs.config.TestContainersSpringContextCustomizerFactory,com.fanflip.\
+    catalogs.config.SqlTestContainersSpringContextCustomizerFactory,com.fanflip.\
+    catalogs.config.KafkaTestContainersSpringContextCustomizerFactory,com.\
+    fanflip.catalogs.config.RedisTestContainersSpringContextCustomizerFactory

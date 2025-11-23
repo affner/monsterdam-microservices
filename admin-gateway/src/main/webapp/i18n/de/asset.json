@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "asset": {
+      "home": {
+        "title": "Assets",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Asset erstellen",
+        "createOrEditLabel": "Asset erstellen oder bearbeiten",
+        "search": "Suche nach Asset",
+        "notFound": "Keine Assets gefunden"
+      },
+      "created": "Asset erstellt mit ID {{ param }}",
+      "updated": "Asset aktualisiert mit ID {{ param }}",
+      "deleted": "Asset gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Asset {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Asset"
+      },
+      "id": "ID",
+      "name": "Name",
+      "value": "Value",
+      "acquisitionDate": "Acquisition Date",
+      "type": "Type",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

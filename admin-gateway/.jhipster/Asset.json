@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20240302144155"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "asset",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "value",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "acquisitionDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "AssetType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "CURRENT,FIXED,INTANGIBLE"
+    }
+  ],
+  "name": "Asset",
+  "relationships": [
+    {
+      "otherEntityName": "accountingRecord",
+      "otherEntityRelationshipName": "asset",
+      "relationshipName": "accountingRecords",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

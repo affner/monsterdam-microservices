@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "singleVideo": {
+      "home": {
+        "title": "SingleVideos",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Single Video",
+        "createOrEditLabel": "Créer ou éditer un Single Video",
+        "search": "Recherche pour Single Video",
+        "notFound": "Aucun Single Video trouvé"
+      },
+      "created": "Un nouveau Single Video a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Single Video avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Single Video avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Single Video {{ id }} ?"
+      },
+      "detail": {
+        "title": "Single Video"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "duration": "Duration",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "belongPackage": "Belong Package"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235803"
+  },
+  "applications": ["multimedia"],
+  "clientRootFolder": "multimedia",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "content_package",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "videoCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "imageCount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "isPaidContent",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "messageId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "postId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "multimedia",
+  "name": "ContentPackage",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "singleAudio",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "audio",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "singleLiveStream",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "liveliveStream",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "duration",
+      "otherEntityName": "singleVideo",
+      "otherEntityRelationshipName": "belongPackage",
+      "relationshipName": "videos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "singlePhoto",
+      "otherEntityRelationshipName": "belongPackage",
+      "relationshipName": "photos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userTagRelation",
+      "otherEntityRelationshipName": "contentPackage",
+      "relationshipName": "tags",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

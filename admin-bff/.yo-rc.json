@@ -1,0 +1,29 @@
+{
+  "generator-jhipster": {
+    "applicationIndex": 0,
+    "applicationType": "microservice",
+    "authenticationType": "jwt",
+    "baseName": "adminbff",
+    "buildTool": "maven",
+    "cacheProvider": "redis",
+    "enableSwaggerCodegen": true,
+    "enableTranslation": true,
+    "entities": [],
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "YTFjNGI5NWRkNWI2OGJkZGM4ZGUwNWYwZGYzMTk4YTlkYTY1MTk2MmQxODI2OTUwNDg5NWM3ZmVjZjNiNTBkM2FiZTZiYzM4MGE1ZDMwMDJjYTQ4ZjgzYzY3ZmNkNTBjNTBhZmI4N2VlZDNjZDQ1OWQzNzA1ZmQ3ZDY2MzhjODE=",
+    "languages": ["es", "en", "fr", "de", "pt-br", "ru"],
+    "messageBroker": "kafka",
+    "monorepository": true,
+    "nativeLanguage": "es",
+    "packageFolder": "com/fanflip/bff",
+    "packageName": "com.fanflip.bff",
+    "reactive": false,
+    "searchEngine": "elasticsearch",
+    "serverPort": "8091",
+    "serviceDiscoveryType": "consul",
+    "skipClient": true,
+    "skipCommitHook": true,
+    "skipUserManagement": true,
+    "testFrameworks": ["gatling"]
+  }
+}

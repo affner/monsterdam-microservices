@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "singleAudio": {
+      "home": {
+        "title": "Single Audios",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Single Audio",
+        "createOrEditLabel": "Crear o editar Single Audio",
+        "search": "Buscar Single Audio",
+        "notFound": "Ningún Single Audios encontrado"
+      },
+      "created": "Un nuevo Single Audio ha sido creado con el identificador {{ param }}",
+      "updated": "Un Single Audio ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Single Audio ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Single Audio {{ id }}?"
+      },
+      "detail": {
+        "title": "Single Audio"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "duration": "Duration",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "contentPackage": "Content Package"
+    }
+  }
+}

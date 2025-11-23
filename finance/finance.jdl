@@ -1,0 +1,243 @@
+application {
+    config {
+        baseName finance
+        packageName com.fanflip.finance
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serverPort 8081
+        serviceDiscoveryType consul
+    }
+    entities MoneyPayout, CreatorEarning, SubscriptionBundle, WalletTransaction, PaymentTransaction, PurchasedTip, OfferPromotion, PurchasedContent, PurchasedSubscription
+}
+
+entity MoneyPayout{
+    amount BigDecimal required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    withdrawStatus PayoutStatus required
+    // oneTomany UzerFinance{withdraws(amount)} to MoneyPayout{creator required},
+    creatorId Long required
+}
+enum PayoutStatus {
+
+    /* El retiro de dinero está pendiente de procesar. */
+    WITHDRAW_PENDING("money.withdraw.status.pending"),
+
+    /* El retiro de dinero ha sido procesado. */
+    WITHDRAW_PROCESSED("money.withdraw.status.processed"),
+
+    /* El retiro de dinero ha sido rechazado. */
+    WITHDRAW_DECLINED("money.withdraw.status.declined")
+}
+entity CreatorEarning{
+    amount BigDecimal required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerFinance{earnings(amount)} to CreatorEarning{creator required},
+    creatorId Long required
+
+}
+entity SubscriptionBundle{
+    amount BigDecimal min(0) max(1000) required
+    duration Duration required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerFinance{subscriptionBundles(amount)} to SubscriptionBundle{creator required},
+    creatorId Long required
+}
+entity PaymentTransaction {
+    amount BigDecimal required
+    paymentDate Instant required
+    paymentStatus GenericStatus required
+    paymentReference String maxlength(100)
+    cloudTransactionId String maxlength(100)
+    // oneTomany UzerFinance{payments(amount)} to PaymentTransaction{viewer required},
+    viewerId Long required
+    // PaymentTransaction{method(methodName)} to PaymentMethod{payment(amount)},
+    paymentMethodId Long
+    // PaymentTransaction{provider(providerName)} to PaymentProvider{payment(amount)},
+    paymentProviderId Long
+}
+enum GenericStatus {
+
+    /* El estado genérico de una acción o solicitud está pendiente. */
+    PENDING("generic.status.pending"),
+
+    /* Una acción o solicitud ha sido completada. */
+    COMPLETED("generic.status.completed"),
+
+    /* Una acción o solicitud ha sido rechazada. */
+    DECLINED("generic.status.declined"),
+
+    /* Se ha procesado un reembolso. */
+    REFUNDED("generic.status.refunded"),
+
+    /* Una acción o solicitud ha sido cancelada. */
+    CANCELED("generic.status.canceled")
+}
+
+entity OfferPromotion {
+    freeDaysDuration Duration
+    discountPercentage Float min(0) max(100)
+    startDate LocalDate required
+    endDate LocalDate required
+    subscriptionsLimit Integer
+    linkCode String required
+    isFinished Boolean required
+    promotionType OfferPromotionType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+enum OfferPromotionType {
+
+    /* link de promo individual. */
+    SPECIAL("offer.promotion.type.special"),
+
+    /* link de promo individual. */
+    TRIAL_LINK("offer.promotion.type.trial-link"),
+
+    /* Promoción general de descuento. */
+    DISCOUNT("offer.promotion.type.discount"),
+
+    /* Promoción general de días gratuitos. */
+    FREE_DAYS("offer.promotion.type.free-days")
+}
+
+entity PurchasedContent {
+    rating Float
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany  UzerMultimedia{purchasedContent} to PurchasedContent{viewer required},
+    viewerId Long required
+    // oneTomany ContentPackage{selledPackages} to PurchasedContent{purchasedContentPackage required}
+    contentPackageId Long required
+}
+entity PurchasedSubscription {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    endDate LocalDate required
+    subscriptionStatus PurchasedSubscriptionStatus required
+    // oneTomany  UzerMultimedia{purchasedSubscriptions} to PurchasedSubscription{viewer required},
+    viewerId Long required
+    creatorId Long required
+}
+entity WalletTransaction{
+    amount BigDecimal required
+    lastModifiedDate Instant
+    transactionType WalletTransactionType required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneTomany UzerFinance{wallet(amount)} to WalletTransaction{viewer required},
+    viewerId Long required
+}
+enum WalletTransactionType {
+
+    /* Se ha añadido dinero a la cartera. */
+    TOP_UP("viewer.wallet.transaction.type.deposit"),
+
+    /* Se ha utilizado el saldo de la cartera para hacer una compra. */
+    PURCHASE("viewer.wallet.transaction.type.purchase"),
+
+    /* Se ha procesado un reembolso a la cartera. */
+    REFUND("viewer.wallet.transaction.type.refund"),
+
+    /* Se ha retirado dinero de la cartera, posiblemente para un caso de uso futuro. */
+    WITHDRAWAL("viewer.wallet.transaction.type.withdrawal")
+}
+entity PurchasedTip{
+    amount BigDecimal required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //deben ser mas porque hay gifts de post tambien
+    //   DirectMessage{gift(createdDate)} to PurchasedTip{message(messageContent) required},
+    messageId Long
+
+}
+enum PurchasedSubscriptionStatus {
+
+    /* Suscripción adquirida por primera vez. */
+    PURCHASED("subscription.status.purchased"),
+
+    /* Suscripción pendiente de procesar. */
+    PENDING("subscription.status.pending"),
+
+    /* La suscripción ha expirado. */
+    EXPIRED("subscription.status.expired"),
+
+    /* La suscripción ha sido cancelada. */
+    CANCELLED("subscription.status.cancelled"),
+
+    /* La suscripción ha sido suspendida. */
+    SUSPENDED("subscription.status.suspended")
+}
+
+relationship OneToOne {
+    //pagos con tarjeta
+    PurchasedTip{payment(amount)} to PaymentTransaction,
+    PurchasedContent{payment(amount)} to PaymentTransaction,
+    PurchasedSubscription{payment(amount)} to PaymentTransaction,
+    WalletTransaction{payment(amount)} to PaymentTransaction, // recarga de wallet
+    //compras con wallet
+    PurchasedTip{walletTransaction(amount)} to WalletTransaction,
+    PurchasedContent{walletTransaction(amount)} to WalletTransaction,
+    PurchasedSubscription{walletTransaction(amount)} to WalletTransaction,
+
+    //resultando en ganancias del creador
+    PurchasedTip{creatorEarning(amount) required} to CreatorEarning,
+    PurchasedContent{creatorEarning(amount) required} to CreatorEarning,
+    PurchasedSubscription{creatorEarning(amount) required} to CreatorEarning,
+    MoneyPayout{creatorEarning(amount) required} to CreatorEarning //retiro del creador.
+
+}
+
+relationship OneToMany {
+    SubscriptionBundle{selledSubscriptions} to PurchasedSubscription{subscriptionBundle required},
+    OfferPromotion{purchasedSubscriptions} to PurchasedSubscription{appliedPromotion(promotionType)},
+}
+
+
+
+dto all with mapstruct
+
+paginate * with pagination
+
+service * with serviceImpl

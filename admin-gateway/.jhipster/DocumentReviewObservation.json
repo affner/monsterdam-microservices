@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240302143155"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "document_review_observation",
+  "fields": [
+    {
+      "fieldName": "commentDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "DocumentReviewObservation",
+  "relationships": [
+    {
+      "otherEntityName": "identityDocumentReview",
+      "otherEntityRelationshipName": "observations",
+      "relationshipName": "review",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

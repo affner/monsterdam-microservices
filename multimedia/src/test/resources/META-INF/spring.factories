@@ -1,0 +1,6 @@
+org.springframework.test.context.ContextCustomizerFactory = com.fanflip.\
+    multimedia.config.TestContainersSpringContextCustomizerFactory,com.fanflip.\
+    multimedia.config.SqlTestContainersSpringContextCustomizerFactory,com.\
+    fanflip.multimedia.config.\
+    KafkaTestContainersSpringContextCustomizerFactory,com.fanflip.multimedia.\
+    config.RedisTestContainersSpringContextCustomizerFactory

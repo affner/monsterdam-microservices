@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "liability": {
+      "home": {
+        "title": "Liabilities",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Liability",
+        "createOrEditLabel": "Crear o editar Liability",
+        "search": "Buscar Liability",
+        "notFound": "Ningún Liabilities encontrado"
+      },
+      "created": "Un nuevo Liability ha sido creado con el identificador {{ param }}",
+      "updated": "Un Liability ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Liability ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Liability {{ id }}?"
+      },
+      "detail": {
+        "title": "Liability"
+      },
+      "id": "ID",
+      "name": "Name",
+      "amount": "Amount",
+      "dueDate": "Due Date",
+      "type": "Type",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

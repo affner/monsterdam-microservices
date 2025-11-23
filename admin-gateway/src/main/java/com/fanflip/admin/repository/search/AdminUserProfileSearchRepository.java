@@ -1,0 +1,42 @@
+package com.fanflip.admin.repository.search;
+
+import co.elastic.clients.elasticsearch._types.query_dsl.QueryStringQuery;
+import com.fanflip.admin.domain.AdminUserProfile;
+import org.springframework.data.elasticsearch.client.elc.NativeQuery;
+import org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate;
+import org.springframework.data.elasticsearch.core.SearchHit;
+import org.springframework.data.elasticsearch.core.query.Query;
+import org.springframework.data.elasticsearch.repository.ReactiveElasticsearchRepository;
+import reactor.core.publisher.Flux;
+
+/**
+ * Spring Data Elasticsearch repository for the {@link AdminUserProfile} entity.
+ */
+public interface AdminUserProfileSearchRepository
+    extends ReactiveElasticsearchRepository<AdminUserProfile, Long>, AdminUserProfileSearchRepositoryInternal {}
+
+interface AdminUserProfileSearchRepositoryInternal {
+    Flux<AdminUserProfile> search(String query);
+
+    Flux<AdminUserProfile> search(Query query);
+}
+
+class AdminUserProfileSearchRepositoryInternalImpl implements AdminUserProfileSearchRepositoryInternal {
+
+    private final ReactiveElasticsearchTemplate reactiveElasticsearchTemplate;
+
+    AdminUserProfileSearchRepositoryInternalImpl(ReactiveElasticsearchTemplate reactiveElasticsearchTemplate) {
+        this.reactiveElasticsearchTemplate = reactiveElasticsearchTemplate;
+    }
+
+    @Override
+    public Flux<AdminUserProfile> search(String query) {
+        NativeQuery nativeQuery = new NativeQuery(QueryStringQuery.of(qs -> qs.query(query))._toQuery());
+        return search(nativeQuery);
+    }
+
+    @Override
+    public Flux<AdminUserProfile> search(Query query) {
+        return reactiveElasticsearchTemplate.search(query, AdminUserProfile.class).map(SearchHit::getContent);
+    }
+}

@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "identityDocumentReview": {
+      "home": {
+        "title": "Identity Document Reviews",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Identity Document Review",
+        "createOrEditLabel": "Crear o editar Identity Document Review",
+        "search": "Buscar Identity Document Review",
+        "notFound": "Ningún Identity Document Reviews encontrado"
+      },
+      "created": "Un nuevo Identity Document Review ha sido creado con el identificador {{ param }}",
+      "updated": "Un Identity Document Review ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Identity Document Review ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Identity Document Review {{ id }}?"
+      },
+      "detail": {
+        "title": "Identity Document Review"
+      },
+      "id": "ID",
+      "documentStatus": "Document Status",
+      "resolutionDate": "Resolution Date",
+      "reviewStatus": "Review Status",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "ticket": "Ticket",
+      "documents": "Documents",
+      "observations": "Observations"
+    }
+  }
+}

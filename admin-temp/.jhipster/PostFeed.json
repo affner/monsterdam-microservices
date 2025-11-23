@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "changelogDate": "20240229234545"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "post_feed",
+  "fields": [
+    {
+      "fieldName": "postContent",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isHidden",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "pinnedPost",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "likeCount",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "PostFeed",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityField": "question",
+      "otherEntityName": "postPoll",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "poll",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "contentPackage",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "contentPackage",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "userReport",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "reports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "comments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "userMention",
+      "otherEntityRelationshipName": "originPost",
+      "relationshipName": "commentMentions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "posts",
+      "relationshipName": "hashTags",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "feeds",
+      "relationshipName": "creator",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "bookMark",
+      "otherEntityRelationshipName": "post",
+      "relationshipName": "bookMarks",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl"
+}

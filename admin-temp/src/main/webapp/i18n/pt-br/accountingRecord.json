@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "accountingRecord": {
+      "home": {
+        "title": "Accounting Records",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Accounting Record",
+        "createOrEditLabel": "Criar ou editar Accounting Record",
+        "search": "Pesquisar por Accounting Record",
+        "notFound": "Nenhum Accounting Record encontrado"
+      },
+      "created": "Um novo Accounting Record foi criado com o identificador {{ param }}",
+      "updated": "Um Accounting Record foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Accounting Record foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Accounting Record {{ id }}?"
+      },
+      "detail": {
+        "title": "Accounting Record"
+      },
+      "id": "ID",
+      "date": "Date",
+      "description": "Description",
+      "debit": "Debit",
+      "credit": "Credit",
+      "balance": "Balance",
+      "accountType": "Account Type",
+      "payment": "Payment",
+      "budget": "Budget",
+      "asset": "Asset",
+      "liability": "Liability",
+      "taxDeclarations": "Tax Declarations",
+      "financialStatements": "Financial Statements"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+package com.fanflip.profile.service.mapper;
+
+import org.junit.jupiter.api.BeforeEach;
+
+class UserAssociationMapperTest {
+
+    private UserAssociationMapper userAssociationMapper;
+
+    @BeforeEach
+    public void setUp() {
+        userAssociationMapper = new UserAssociationMapperImpl();
+    }
+}

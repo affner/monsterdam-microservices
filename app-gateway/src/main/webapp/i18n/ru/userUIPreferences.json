@@ -1,0 +1,29 @@
+{
+  "fanflipApp": {
+    "userUIPreferences": {
+      "home": {
+        "title": "User UI Preferences",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый User UI Preferences",
+        "createOrEditLabel": "Создать или отредактировать User UI Preferences",
+        "search": "Найти User UI Preferences",
+        "notFound": "User UI Preferences не найдено"
+      },
+      "created": "Новый User UI Preferences создан с идентификатором {{ param }}",
+      "updated": "User UI Preferences обновлен с идентификатором {{ param }}",
+      "deleted": "User UI Preferences удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить User UI Preferences {{ id }}?"
+      },
+      "detail": {
+        "title": "User UI Preferences"
+      },
+      "id": "ID",
+      "preferences": "Preferences",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+application {
+    config {
+        baseName fanflip
+        packageName com.fanflip.app
+        applicationType gateway
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        clientFramework react
+        clientTheme minty
+        clientThemeVariant primary
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling, cypress]
+        searchEngine elasticsearch
+        messageBroker kafka
+        clientPackageManager npm
+        serviceDiscoveryType consul
+        serverPort 8080
+    }
+    entities *
+}
+
+entity UserUIPreferences {
+    preferences TextBlob
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+}
+
+dto all with mapstruct
+service * with serviceImpl
+paginate UserUIPreferences with pagination

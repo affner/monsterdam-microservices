@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "helpQuestion": {
+      "home": {
+        "title": "Help Questions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Help Question",
+        "createOrEditLabel": "Create or edit a Help Question",
+        "search": "Search for Help Question",
+        "notFound": "No Help Questions found"
+      },
+      "created": "A new Help Question is created with identifier {{ param }}",
+      "updated": "A Help Question is updated with identifier {{ param }}",
+      "deleted": "A Help Question is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Help Question {{ id }}?"
+      },
+      "detail": {
+        "title": "Help Question"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "isDeleted": "Is Deleted",
+      "question": "Question",
+      "subcategory": "Subcategory"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PurchasedTip.
+    -->
+    <changeSet id="20240221235116-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="payment_id"
+                                 baseTableName="purchased_tip"
+                                 constraintName="fk_purchased_tip__payment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="payment_transaction"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="wallet_transaction_id"
+                                 baseTableName="purchased_tip"
+                                 constraintName="fk_purchased_tip__wallet_transaction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="wallet_transaction"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="creator_earning_id"
+                                 baseTableName="purchased_tip"
+                                 constraintName="fk_purchased_tip__creator_earning_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="creator_earning"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,10 @@
+{
+  "adminApp": {
+    "TaxDeclarationType": {
+      "null": "",
+      "INCOME_TAX": "INCOME_TAX",
+      "VAT": "VAT",
+      "OTHER": "OTHER"
+    }
+  }
+}

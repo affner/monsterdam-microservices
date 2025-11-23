@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="floatType" value="float4" dbms="h2"/>
+    <property name="uuidType" value="uuid" dbms="h2"/>
+    <property name="datetimeType" value="datetime(6)" dbms="h2"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="blobType" value="blob" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql"/>
+    <property name="clobType" value="clob" dbms="postgresql"/>
+    <property name="blobType" value="blob" dbms="postgresql"/>
+    <property name="uuidType" value="uuid" dbms="postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235012_added_entity_PostFeed.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235112_added_entity_PostComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235212_added_entity_ChatRoom.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235312_added_entity_DirectMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235412_added_entity_UserMention.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235512_added_entity_LikeMark.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235612_added_entity_PollVote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235712_added_entity_PollOption.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235812_added_entity_PostPoll.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20240221235012_added_entity_constraints_PostFeed.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235112_added_entity_constraints_PostComment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235212_added_entity_constraints_ChatRoom.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235312_added_entity_constraints_DirectMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235412_added_entity_constraints_UserMention.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235612_added_entity_constraints_PollVote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240221235712_added_entity_constraints_PollOption.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

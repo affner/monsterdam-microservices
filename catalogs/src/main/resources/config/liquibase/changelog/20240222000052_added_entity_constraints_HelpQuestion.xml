@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity HelpQuestion.
+    -->
+    <changeSet id="20240222000052-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="help_question_id"
+                                 baseTableName="rel_help_question__question"
+                                 constraintName="fk_rel_help_question__question__help_question_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="help_question"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="question_id"
+                                 baseTableName="rel_help_question__question"
+                                 constraintName="fk_rel_help_question__question__question_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="help_related_article"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="subcategory_id"
+                                 baseTableName="help_question"
+                                 constraintName="fk_help_question__subcategory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="help_subcategory"
+                                 />
+    </changeSet>
+</databaseChangeLog>

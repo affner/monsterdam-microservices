@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fanflip</groupId>
+    <artifactId>fanflip</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Fanflip</name>
+    <description>Description for Fanflip</description>
+
+    <!-- Agregar módulos (microservicios y gateway) aquí -->
+    <modules>
+        <module>app-gateway</module>
+        <module>admin-gateway</module>
+        <module>finance</module>
+        <module>multimedia</module>
+        <module>interactions</module>
+        <module>profile</module>
+        <module>catalogs</module>
+        <module>notifications</module>
+        <module>admin-bff</module>
+        <module>user-bff</module>
+
+        <!-- Cualquier otro microservicio que hayas creado -->
+    </modules>
+
+    <properties>
+        <!-- Tus propiedades existentes... -->
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Tus dependencias existentes... -->
+
+            <!-- Agregar dependencias comunes para los microservicios y el gateway si es necesario -->
+            <!-- Esto ayuda a mantener una versión consistente de las dependencias a través de todos los módulos -->
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!-- Dependencias comunes para todos los módulos, si las hay -->
+    </dependencies>
+
+    <!-- Agregar otros elementos de configuración Maven relevantes aquí, como build plugins, etc. -->
+
+</project>

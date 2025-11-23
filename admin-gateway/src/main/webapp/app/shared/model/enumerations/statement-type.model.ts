@@ -1,0 +1,7 @@
+export enum StatementType {
+  BALANCE_SHEET = 'BALANCE_SHEET',
+
+  INCOME_STATEMENT = 'INCOME_STATEMENT',
+
+  CASH_FLOW = 'CASH_FLOW',
+}

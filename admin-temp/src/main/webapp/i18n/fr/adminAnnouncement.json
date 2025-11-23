@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "adminAnnouncement": {
+      "home": {
+        "title": "AdminAnnouncements",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Admin Announcement",
+        "createOrEditLabel": "Créer ou éditer un Admin Announcement",
+        "search": "Recherche pour Admin Announcement",
+        "notFound": "Aucun Admin Announcement trouvé"
+      },
+      "created": "Un nouveau Admin Announcement a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Admin Announcement avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Admin Announcement avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Admin Announcement {{ id }} ?"
+      },
+      "detail": {
+        "title": "Admin Announcement"
+      },
+      "id": "ID",
+      "announcementType": "Announcement Type",
+      "title": "Title",
+      "content": "Content",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "announcerMessage": "Announcer Message",
+      "admin": "Admin"
+    }
+  }
+}

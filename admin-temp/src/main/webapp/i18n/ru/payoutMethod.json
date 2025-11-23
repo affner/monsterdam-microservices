@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "payoutMethod": {
+      "home": {
+        "title": "Payout Methods",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Payout Method",
+        "createOrEditLabel": "Создать или отредактировать Payout Method",
+        "search": "Найти Payout Method",
+        "notFound": "Payout Methods не найдено"
+      },
+      "created": "Новый Payout Method создан с идентификатором {{ param }}",
+      "updated": "Payout Method обновлен с идентификатором {{ param }}",
+      "deleted": "Payout Method удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Payout Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Payout Method"
+      },
+      "id": "ID",
+      "methodName": "Method Name",
+      "tokenText": "Token Text",
+      "expirationDate": "Expiration Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

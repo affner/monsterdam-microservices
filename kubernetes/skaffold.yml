@@ -1,0 +1,27 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: fanflip/gateway
+      context: ../gateway
+      jib: {}
+    - image: fanflip/finance
+      context: ../finance
+      jib: {}
+    - image: fanflip/multimedia
+      context: ../multimedia
+      jib: {}
+    - image: fanflip/interactions
+      context: ../interactions
+      jib: {}
+    - image: fanflip/profile
+      context: ../profile
+      jib: {}
+    - image: fanflip/admin
+      context: ../admin
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: '{{.IMAGE_NAME}}:latest'
+deploy:
+  kustomize: {}

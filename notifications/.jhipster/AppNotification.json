@@ -1,0 +1,64 @@
+{
+  "annotations": {
+    "changelogDate": "20240302122924"
+  },
+  "applications": ["notifications"],
+  "clientRootFolder": "notifications",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "app_notification",
+  "fields": [
+    {
+      "fieldName": "readDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postCommentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "postFeedId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "directMessageId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "targetUserId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "likeMark",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "notifications",
+  "name": "AppNotification",
+  "pagination": "infinite-scroll",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

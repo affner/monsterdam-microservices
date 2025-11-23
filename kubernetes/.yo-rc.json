@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["gateway", "finance", "multimedia", "interactions", "profile", "admin"],
+    "clusteredDbApps": ["finance", "multimedia", "interactions", "profile"],
+    "dbRandomPassword": "deee9a834c76c92a85479e63c026d5b52c7bf27d3c1e866bc20f9ebae65e",
+    "deploymentType": "kubernetes",
+    "directoryPath": "../",
+    "dockerPushCommand": "docker push",
+    "dockerRepositoryName": "fanflip",
+    "ingressDomain": "",
+    "istio": false,
+    "jhipsterVersion": "8.1.0",
+    "jwtSecretKey": "YWJkN2RiMjdjMzA0NmRlMDBlMGM1ZjhiOGVhZjJlMjY0Nzk5M2NjNDUxMTkzZmRlN2U4ZTg3ZTI4MjAzNjk4Yzk2ZmFhZTA1ZDNhNzAyNWQ2ZjM4ZDE0MGM5ODA2NGE1YzE5ZQ==",
+    "kubernetesNamespace": "demo",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesStorageClassName": "",
+    "kubernetesUseDynamicStorage": true,
+    "monitoring": "no",
+    "serviceDiscoveryType": "consul"
+  }
+}

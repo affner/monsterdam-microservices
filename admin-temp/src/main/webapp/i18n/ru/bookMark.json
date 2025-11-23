@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "bookMark": {
+      "home": {
+        "title": "Book Marks",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Book Mark",
+        "createOrEditLabel": "Создать или отредактировать Book Mark",
+        "search": "Найти Book Mark",
+        "notFound": "Book Marks не найдено"
+      },
+      "created": "Новый Book Mark создан с идентификатором {{ param }}",
+      "updated": "Book Mark обновлен с идентификатором {{ param }}",
+      "deleted": "Book Mark удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Book Mark {{ id }}?"
+      },
+      "detail": {
+        "title": "Book Mark"
+      },
+      "id": "ID",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "post": "Post",
+      "message": "Message",
+      "user": "User"
+    }
+  }
+}

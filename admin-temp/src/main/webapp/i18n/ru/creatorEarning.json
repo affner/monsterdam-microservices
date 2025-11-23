@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "creatorEarning": {
+      "home": {
+        "title": "Creator Earnings",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Creator Earning",
+        "createOrEditLabel": "Создать или отредактировать Creator Earning",
+        "search": "Найти Creator Earning",
+        "notFound": "Creator Earnings не найдено"
+      },
+      "created": "Новый Creator Earning создан с идентификатором {{ param }}",
+      "updated": "Creator Earning обновлен с идентификатором {{ param }}",
+      "deleted": "Creator Earning удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Creator Earning {{ id }}?"
+      },
+      "detail": {
+        "title": "Creator Earning"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "creator": "Creator",
+      "moneyPayout": "Money Payout",
+      "purchasedContent": "Purchased Content",
+      "purchasedSubscription": "Purchased Subscription",
+      "purchasedTip": "Purchased Tip"
+    }
+  }
+}

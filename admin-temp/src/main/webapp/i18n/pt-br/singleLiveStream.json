@@ -1,0 +1,40 @@
+{
+  "adminApp": {
+    "singleLiveStream": {
+      "home": {
+        "title": "Single Live Streams",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Single Live Stream",
+        "createOrEditLabel": "Criar ou editar Single Live Stream",
+        "search": "Pesquisar por Single Live Stream",
+        "notFound": "Nenhum Single Live Stream encontrado"
+      },
+      "created": "Um novo Single Live Stream foi criado com o identificador {{ param }}",
+      "updated": "Um Single Live Stream foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Single Live Stream foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Single Live Stream {{ id }}?"
+      },
+      "detail": {
+        "title": "Single Live Stream"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "liveContent": "Live Content",
+      "liveContentS3Key": "Live Content S 3 Key",
+      "isRecorded": "Is Recorded",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports"
+    }
+  }
+}

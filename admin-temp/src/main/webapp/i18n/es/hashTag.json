@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "hashTag": {
+      "home": {
+        "title": "Hash Tags",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Hash Tag",
+        "createOrEditLabel": "Crear o editar Hash Tag",
+        "search": "Buscar Hash Tag",
+        "notFound": "Ningún Hash Tags encontrado"
+      },
+      "created": "Un nuevo Hash Tag ha sido creado con el identificador {{ param }}",
+      "updated": "Un Hash Tag ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Hash Tag ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Hash Tag {{ id }}?"
+      },
+      "detail": {
+        "title": "Hash Tag"
+      },
+      "id": "ID",
+      "tagName": "Tag Name",
+      "hashtagType": "Hashtag Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "posts": "Posts",
+      "profiles": "Profiles"
+    }
+  }
+}

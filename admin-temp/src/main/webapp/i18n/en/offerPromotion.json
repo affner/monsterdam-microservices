@@ -1,0 +1,39 @@
+{
+  "adminApp": {
+    "offerPromotion": {
+      "home": {
+        "title": "Offer Promotions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Offer Promotion",
+        "createOrEditLabel": "Create or edit a Offer Promotion",
+        "search": "Search for Offer Promotion",
+        "notFound": "No Offer Promotions found"
+      },
+      "created": "A new Offer Promotion is created with identifier {{ param }}",
+      "updated": "A Offer Promotion is updated with identifier {{ param }}",
+      "deleted": "A Offer Promotion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Offer Promotion {{ id }}?"
+      },
+      "detail": {
+        "title": "Offer Promotion"
+      },
+      "id": "ID",
+      "freeDaysDuration": "Free Days Duration",
+      "discountPercentage": "Discount Percentage",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "subscriptionsLimit": "Subscriptions Limit",
+      "linkCode": "Link Code",
+      "isFinished": "Is Finished",
+      "promotionType": "Promotion Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "purchasedSubscriptions": "Purchased Subscriptions",
+      "creator": "Creator"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240302144055"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "budget",
+  "fields": [
+    {
+      "fieldName": "year",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "totalBudget",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "spentAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "remainingAmount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "budgetDetails",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Budget",
+  "relationships": [
+    {
+      "otherEntityName": "accountingRecord",
+      "otherEntityRelationshipName": "budget",
+      "relationshipName": "accountingRecords",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

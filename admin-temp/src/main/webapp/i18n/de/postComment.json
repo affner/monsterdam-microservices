@@ -1,0 +1,37 @@
+{
+  "adminApp": {
+    "postComment": {
+      "home": {
+        "title": "Post Comments",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Post Comment erstellen",
+        "createOrEditLabel": "Post Comment erstellen oder bearbeiten",
+        "search": "Suche nach Post Comment",
+        "notFound": "Keine Post Comments gefunden"
+      },
+      "created": "Post Comment erstellt mit ID {{ param }}",
+      "updated": "Post Comment aktualisiert mit ID {{ param }}",
+      "deleted": "Post Comment gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Post Comment {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Post Comment"
+      },
+      "id": "ID",
+      "commentContent": "Comment Content",
+      "likeCount": "Like Count",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "responses": "Responses",
+      "commentMentions": "Comment Mentions",
+      "post": "Post",
+      "responseTo": "Response To",
+      "commenter": "Commenter"
+    }
+  }
+}

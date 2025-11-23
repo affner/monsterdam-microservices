@@ -1,0 +1,428 @@
+{
+  "annotations": {
+    "changelogDate": "20240229233745"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_profile",
+  "fields": [
+    {
+      "fieldName": "emailContact",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[a-z0-9_-]+$"
+    },
+    {
+      "fieldName": "profilePhoto",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "coverPhoto",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "profilePhotoS3Key",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coverPhotoS3Key",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mainContentUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobilePhone",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "^\\+?[0-9]{10,15}$"
+    },
+    {
+      "fieldName": "websiteUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "^[^@]+@[^@]+\\.[^@]+$"
+    },
+    {
+      "fieldName": "amazonWishlistUrl",
+      "fieldType": "String",
+      "fieldValidateRules": ["pattern"],
+      "fieldValidateRulesPattern": "^[^@]+@[^@]+\\.[^@]+$"
+    },
+    {
+      "fieldName": "lastLoginDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "biography",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "isFree",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "UserProfile",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "userLite",
+      "relationshipName": "userLite",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "userSettings",
+      "relationshipName": "settings",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "reportDescription",
+      "otherEntityName": "userReport",
+      "otherEntityRelationshipName": "reporter",
+      "relationshipName": "makedReports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "reportDescription",
+      "otherEntityName": "userReport",
+      "otherEntityRelationshipName": "reported",
+      "relationshipName": "receivedReports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "assistanceTicket",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "assistanceTickets",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "moneyPayout",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "withdraws",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "subscriptionBundle",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "subscriptionBundles",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "creatorEarning",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "earnings",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "paymentTransaction",
+      "otherEntityRelationshipName": "viewer",
+      "relationshipName": "payments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "endDate",
+      "otherEntityName": "offerPromotion",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "planOffers",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "purchasedContent",
+      "otherEntityRelationshipName": "viewer",
+      "relationshipName": "purchasedContent",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "purchasedSubscription",
+      "otherEntityRelationshipName": "viewer",
+      "relationshipName": "purchasedSubscriptions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "amount",
+      "otherEntityName": "walletTransaction",
+      "otherEntityRelationshipName": "viewer",
+      "relationshipName": "wallet",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "personalSocialLinks",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "socialNetworks",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "commentedUser",
+      "relationshipName": "commentNotifications",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "messagedUser",
+      "relationshipName": "messageNotifications",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "mentionerUserInPost",
+      "relationshipName": "userMentionNotifications",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "mentionerUserInComment",
+      "relationshipName": "commentMentionNotifications",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userAssociation",
+      "otherEntityRelationshipName": "owner",
+      "relationshipName": "ownAccountsAssociations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "title",
+      "otherEntityName": "userEvent",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "createdEvents",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "bookMark",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "bookMarks",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "feedbackRating",
+      "otherEntityName": "feedback",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "feedback",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "messageContent",
+      "otherEntityName": "directMessage",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "sentMessages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "lastMessage",
+      "otherEntityName": "chatRoom",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "chats",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "userMention",
+      "otherEntityRelationshipName": "mentionedUser",
+      "relationshipName": "mentions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "commentContent",
+      "otherEntityName": "postComment",
+      "otherEntityRelationshipName": "commenter",
+      "relationshipName": "comments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "postContent",
+      "otherEntityName": "postFeed",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "feeds",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "pollVote",
+      "otherEntityRelationshipName": "votingUser",
+      "relationshipName": "votedPolls",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "duration",
+      "otherEntityName": "videoStory",
+      "otherEntityRelationshipName": "creator",
+      "relationshipName": "videoStories",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "singleDocument",
+      "otherEntityRelationshipName": "user",
+      "relationshipName": "documents",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "country",
+      "relationshipName": "countryOfBirth",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "stateName",
+      "otherEntityName": "state",
+      "relationshipName": "stateOfResidence",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "followers",
+      "relationshipName": "followed",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "blockers",
+      "relationshipName": "blockedList",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "awards",
+      "relationshipName": "loyaLists",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "subscriptions",
+      "relationshipName": "subscribed",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityField": "startDate",
+      "otherEntityName": "userEvent",
+      "otherEntityRelationshipName": "members",
+      "relationshipName": "joinedEvents",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "state",
+      "otherEntityRelationshipName": "blockers",
+      "relationshipName": "blockedUbications",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "hashTag",
+      "otherEntityRelationshipName": "profiles",
+      "relationshipName": "hashTags",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "followed",
+      "relationshipName": "followers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "blockedList",
+      "relationshipName": "blockers",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "loyaLists",
+      "relationshipName": "awards",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "subscribed",
+      "relationshipName": "subscriptions",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "contentPackage",
+      "otherEntityRelationshipName": "usersTagged",
+      "relationshipName": "contentPackageTags",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

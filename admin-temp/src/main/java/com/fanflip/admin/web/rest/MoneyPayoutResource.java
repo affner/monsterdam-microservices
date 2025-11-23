@@ -1,0 +1,261 @@
+package com.fanflip.admin.web.rest;
+
+import com.fanflip.admin.repository.MoneyPayoutRepository;
+import com.fanflip.admin.service.MoneyPayoutService;
+import com.fanflip.admin.service.dto.MoneyPayoutDTO;
+import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.util.ForwardedHeaderUtils;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import tech.jhipster.web.util.HeaderUtil;
+import tech.jhipster.web.util.PaginationUtil;
+import tech.jhipster.web.util.reactive.ResponseUtil;
+
+/**
+ * REST controller for managing {@link com.fanflip.admin.domain.MoneyPayout}.
+ */
+@RestController
+@RequestMapping("/api/money-payouts")
+public class MoneyPayoutResource {
+
+    private final Logger log = LoggerFactory.getLogger(MoneyPayoutResource.class);
+
+    private static final String ENTITY_NAME = "moneyPayout";
+
+    @Value("${jhipster.clientApp.name}")
+    private String applicationName;
+
+    private final MoneyPayoutService moneyPayoutService;
+
+    private final MoneyPayoutRepository moneyPayoutRepository;
+
+    public MoneyPayoutResource(MoneyPayoutService moneyPayoutService, MoneyPayoutRepository moneyPayoutRepository) {
+        this.moneyPayoutService = moneyPayoutService;
+        this.moneyPayoutRepository = moneyPayoutRepository;
+    }
+
+    /**
+     * {@code POST  /money-payouts} : Create a new moneyPayout.
+     *
+     * @param moneyPayoutDTO the moneyPayoutDTO to create.
+     * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new moneyPayoutDTO, or with status {@code 400 (Bad Request)} if the moneyPayout has already an ID.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PostMapping("")
+    public Mono<ResponseEntity<MoneyPayoutDTO>> createMoneyPayout(@Valid @RequestBody MoneyPayoutDTO moneyPayoutDTO)
+        throws URISyntaxException {
+        log.debug("REST request to save MoneyPayout : {}", moneyPayoutDTO);
+        if (moneyPayoutDTO.getId() != null) {
+            throw new BadRequestAlertException("A new moneyPayout cannot already have an ID", ENTITY_NAME, "idexists");
+        }
+        return moneyPayoutService
+            .save(moneyPayoutDTO)
+            .map(result -> {
+                try {
+                    return ResponseEntity
+                        .created(new URI("/api/money-payouts/" + result.getId()))
+                        .headers(HeaderUtil.createEntityCreationAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+                        .body(result);
+                } catch (URISyntaxException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+    }
+
+    /**
+     * {@code PUT  /money-payouts/:id} : Updates an existing moneyPayout.
+     *
+     * @param id the id of the moneyPayoutDTO to save.
+     * @param moneyPayoutDTO the moneyPayoutDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated moneyPayoutDTO,
+     * or with status {@code 400 (Bad Request)} if the moneyPayoutDTO is not valid,
+     * or with status {@code 500 (Internal Server Error)} if the moneyPayoutDTO couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PutMapping("/{id}")
+    public Mono<ResponseEntity<MoneyPayoutDTO>> updateMoneyPayout(
+        @PathVariable(value = "id", required = false) final Long id,
+        @Valid @RequestBody MoneyPayoutDTO moneyPayoutDTO
+    ) throws URISyntaxException {
+        log.debug("REST request to update MoneyPayout : {}, {}", id, moneyPayoutDTO);
+        if (moneyPayoutDTO.getId() == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        if (!Objects.equals(id, moneyPayoutDTO.getId())) {
+            throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
+        }
+
+        return moneyPayoutRepository
+            .existsById(id)
+            .flatMap(exists -> {
+                if (!exists) {
+                    return Mono.error(new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound"));
+                }
+
+                return moneyPayoutService
+                    .update(moneyPayoutDTO)
+                    .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))
+                    .map(result ->
+                        ResponseEntity
+                            .ok()
+                            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, result.getId().toString()))
+                            .body(result)
+                    );
+            });
+    }
+
+    /**
+     * {@code PATCH  /money-payouts/:id} : Partial updates given fields of an existing moneyPayout, field will ignore if it is null
+     *
+     * @param id the id of the moneyPayoutDTO to save.
+     * @param moneyPayoutDTO the moneyPayoutDTO to update.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the updated moneyPayoutDTO,
+     * or with status {@code 400 (Bad Request)} if the moneyPayoutDTO is not valid,
+     * or with status {@code 404 (Not Found)} if the moneyPayoutDTO is not found,
+     * or with status {@code 500 (Internal Server Error)} if the moneyPayoutDTO couldn't be updated.
+     * @throws URISyntaxException if the Location URI syntax is incorrect.
+     */
+    @PatchMapping(value = "/{id}", consumes = { "application/json", "application/merge-patch+json" })
+    public Mono<ResponseEntity<MoneyPayoutDTO>> partialUpdateMoneyPayout(
+        @PathVariable(value = "id", required = false) final Long id,
+        @NotNull @RequestBody MoneyPayoutDTO moneyPayoutDTO
+    ) throws URISyntaxException {
+        log.debug("REST request to partial update MoneyPayout partially : {}, {}", id, moneyPayoutDTO);
+        if (moneyPayoutDTO.getId() == null) {
+            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
+        }
+        if (!Objects.equals(id, moneyPayoutDTO.getId())) {
+            throw new BadRequestAlertException("Invalid ID", ENTITY_NAME, "idinvalid");
+        }
+
+        return moneyPayoutRepository
+            .existsById(id)
+            .flatMap(exists -> {
+                if (!exists) {
+                    return Mono.error(new BadRequestAlertException("Entity not found", ENTITY_NAME, "idnotfound"));
+                }
+
+                Mono<MoneyPayoutDTO> result = moneyPayoutService.partialUpdate(moneyPayoutDTO);
+
+                return result
+                    .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))
+                    .map(res ->
+                        ResponseEntity
+                            .ok()
+                            .headers(HeaderUtil.createEntityUpdateAlert(applicationName, true, ENTITY_NAME, res.getId().toString()))
+                            .body(res)
+                    );
+            });
+    }
+
+    /**
+     * {@code GET  /money-payouts} : get all the moneyPayouts.
+     *
+     * @param pageable the pagination information.
+     * @param request a {@link ServerHttpRequest} request.
+     * @param eagerload flag to eager load entities from relationships (This is applicable for many-to-many).
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of moneyPayouts in body.
+     */
+    @GetMapping(value = "", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<ResponseEntity<List<MoneyPayoutDTO>>> getAllMoneyPayouts(
+        @org.springdoc.core.annotations.ParameterObject Pageable pageable,
+        ServerHttpRequest request,
+        @RequestParam(name = "eagerload", required = false, defaultValue = "true") boolean eagerload
+    ) {
+        log.debug("REST request to get a page of MoneyPayouts");
+        return moneyPayoutService
+            .countAll()
+            .zipWith(moneyPayoutService.findAll(pageable).collectList())
+            .map(countWithEntities ->
+                ResponseEntity
+                    .ok()
+                    .headers(
+                        PaginationUtil.generatePaginationHttpHeaders(
+                            ForwardedHeaderUtils.adaptFromForwardedHeaders(request.getURI(), request.getHeaders()),
+                            new PageImpl<>(countWithEntities.getT2(), pageable, countWithEntities.getT1())
+                        )
+                    )
+                    .body(countWithEntities.getT2())
+            );
+    }
+
+    /**
+     * {@code GET  /money-payouts/:id} : get the "id" moneyPayout.
+     *
+     * @param id the id of the moneyPayoutDTO to retrieve.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the moneyPayoutDTO, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping("/{id}")
+    public Mono<ResponseEntity<MoneyPayoutDTO>> getMoneyPayout(@PathVariable("id") Long id) {
+        log.debug("REST request to get MoneyPayout : {}", id);
+        Mono<MoneyPayoutDTO> moneyPayoutDTO = moneyPayoutService.findOne(id);
+        return ResponseUtil.wrapOrNotFound(moneyPayoutDTO);
+    }
+
+    /**
+     * {@code DELETE  /money-payouts/:id} : delete the "id" moneyPayout.
+     *
+     * @param id the id of the moneyPayoutDTO to delete.
+     * @return the {@link ResponseEntity} with status {@code 204 (NO_CONTENT)}.
+     */
+    @DeleteMapping("/{id}")
+    public Mono<ResponseEntity<Void>> deleteMoneyPayout(@PathVariable("id") Long id) {
+        log.debug("REST request to delete MoneyPayout : {}", id);
+        return moneyPayoutService
+            .delete(id)
+            .then(
+                Mono.just(
+                    ResponseEntity
+                        .noContent()
+                        .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
+                        .build()
+                )
+            );
+    }
+
+    /**
+     * {@code SEARCH  /money-payouts/_search?query=:query} : search for the moneyPayout corresponding
+     * to the query.
+     *
+     * @param query the query of the moneyPayout search.
+     * @param pageable the pagination information.
+     * @param request a {@link ServerHttpRequest} request.
+     * @return the result of the search.
+     */
+    @GetMapping("/_search")
+    public Mono<ResponseEntity<Flux<MoneyPayoutDTO>>> searchMoneyPayouts(
+        @RequestParam("query") String query,
+        @org.springdoc.core.annotations.ParameterObject Pageable pageable,
+        ServerHttpRequest request
+    ) {
+        log.debug("REST request to search for a page of MoneyPayouts for query {}", query);
+        return moneyPayoutService
+            .searchCount()
+            .map(total -> new PageImpl<>(new ArrayList<>(), pageable, total))
+            .map(page ->
+                PaginationUtil.generatePaginationHttpHeaders(
+                    ForwardedHeaderUtils.adaptFromForwardedHeaders(request.getURI(), request.getHeaders()),
+                    page
+                )
+            )
+            .map(headers -> ResponseEntity.ok().headers(headers).body(moneyPayoutService.search(query, pageable)));
+    }
+}

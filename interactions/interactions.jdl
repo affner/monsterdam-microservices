@@ -1,0 +1,181 @@
+application {
+    config {
+        baseName interactions
+        packageName com.fanflip.interactions
+        applicationType microservice
+        authenticationType jwt
+        reactive false
+        databaseType sql
+        devDatabaseType h2Memory
+        prodDatabaseType postgresql
+        cacheProvider redis
+        buildTool maven
+        serviceDiscoveryType consul
+        enableHibernateCache true
+        enableSwaggerCodegen true
+        enableTranslation true
+        nativeLanguage es
+        languages [es, en, fr, de, pt-br, ru]
+        testFrameworks [gatling]
+        searchEngine elasticsearch
+        messageBroker kafka
+        serverPort 8083
+    }
+    entities PostFeed, PostComment, ChatRoom, DirectMessage, UserMention, LikeMark, PollVote, PollOption, PostPoll, ChatRoomGroup
+}
+
+entity PostFeed{
+    postContent TextBlob required
+    isHidden Boolean
+    pinnedPost Boolean
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //  onetomany UserMultimedia{feed(postContent)} to PostFeed{creator required},
+    creatorUserId Long required
+}
+entity PostComment {
+    commentContent TextBlob required
+    likeCount Integer
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany UserMultimedia{commented(commentContent)} to PostComment{commenter required},
+    commenterUserId Long required
+}
+entity PostPoll {
+    question TextBlob required
+    isMultiChoice Boolean required
+    lastModifiedDate Instant
+    endDate LocalDate required
+    PostPollDuration Duration required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+}
+entity ChatRoom {
+    lastAction String
+    lastConnectionDate Instant
+    muted Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany UserInteractions{chats(lastMessage)} to ChatRoom{user required},
+    participantUserId Long
+}
+
+entity DirectMessage {
+    messageContent TextBlob required
+    readDate Instant
+    likeCount Integer
+    isHidden Boolean
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // oneToMany  VideoStory{messages(messageContent)} to DirectMessage{repliedStory(duration)},
+    repliedStoryId Long
+    // oneToMany UserInteractions{sentMessages(messageContent)} to DirectMessage{user required},
+    senderUserId Long required
+}
+entity ChatRoomGroup {
+    creatorUserId Long
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    memberUserId Long
+}
+entity UserMention {
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    //  Mention{mentionedUser} to User
+    mentionedUserId Long required
+}
+
+
+entity LikeMark {
+    emojiTypeId Long required
+    createdDate Instant required
+    lastModifiedDate Instant
+    createdBy String
+    lastModifiedBy String
+    isDeleted Boolean required
+    // ManyToOne LikeMark{videoStory(duration) required} to VideoStory{likeMarks},
+    // ManyToOne LikeMark{photo required} to SinglePhoto{likeMarks},
+    // ManyToOne LikeMark{video(duration) required} to SingleVideo{likeMarks},
+    multimediaId Long
+    //OnetoMany LikeMark{message(messageContent) required} to DirectMessage{likeMarks},
+    messageId Long
+    //OnetoMany LikeMark{post(postContent) required} to PostFeed{likeMarks},
+    postId Long
+    // ManyToOne LikeMark{comment(commentContent) required} to PostComment{likeMarks}
+    commentId Long
+    // OneToMany
+    //User{likedVideoStories} to LikeMark{storyLiker required},
+    //User{likedComments} to LikeMark{commentLiker required},
+    //UserInteractions{likedPhotos} to LikeMark{photoLiker required},
+    //UserInteractions{likedVideos} to LikeMark{videoLiker required},
+    //UserInteractions{likedMessages} to LikeMark{messageLiker},
+    //UserInteractions{likedPosts} to LikeMark{postLiker required},
+    likerUserId Long
+}
+
+entity PollVote {
+    createdDate Instant required
+    //     User{votedPolls(createdDate)} to PollVote{votingUsers},
+    votingUserId Long required
+}
+entity PollOption {
+    optionDescription TextBlob required
+    voteCount Integer required
+}
+
+relationship OneToOne {
+
+    //las uniones de pagos y donde se genera vinculo del viewer con el creator
+    PostFeed{poll(question)} to PostPoll{post(postContent) required},
+
+}
+relationship OneToMany {
+
+    PostFeed{comments(commentContent)} to PostComment{post(postContent) required},
+    PostComment{responses(commentContent)} to PostComment{responseTo(commentContent)},
+    DirectMessage{responses(messageContent)} to DirectMessage{responseTo(messageContent)},
+    PostPoll{options(optionDescription)} to PollOption{poll(question) required},
+    PostFeed{commentMentions(createdDate)} to UserMention{originPost(postContent)},
+    PostComment{commentMentions(createdDate)} to UserMention{originPostComment(commentContent)}
+}
+relationship ManyToOne {
+
+    PollVote{pollOption(optionDescription) required} to PollOption{votes(createdDate)}
+}
+relationship ManyToMany {
+    ChatRoom{sentMessages(messageContent)} to DirectMessage{chatRooms(lastAction)},
+  //  PostFeed{hashTags} to HashTag{posts}
+
+}
+
+search PostFeed, PostComment, DirectMessage with elasticsearch
+
+dto all with mapstruct
+
+paginate PostFeed, PostComment, DirectMessage with infinite-scroll
+
+paginate * with pagination except PostFeed, PostComment, DirectMessage
+
+service * with serviceImpl

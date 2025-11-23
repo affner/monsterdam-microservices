@@ -1,0 +1,13 @@
+id;thumbnail_content_type;thumbnail_s_3_key;content_content_type;content_s_3_key;duration;like_count;created_date;last_modified_date;created_by;last_modified_by;is_deleted;creator_id;multimedia_kind
+1;image/png;sadfas;video/mp4;video18;151;17770;2023-08-30T07:43:05;;System;;false;2;STORY
+2;image/png;asdfdf;video/mp4;video19;201;492;2023-08-19T04:50:46;;System;;true;2;STORY
+3;image/png;Magrta;video/mp4;video20;168;3812;2023-08-27T04:18:42;;System;;false;2;VIDEO
+4;image/png;aasdas;audio/mpeg;audio1;168;;2023-09-09T17:41:08;;System;;true;;AUDIO
+5;image/png;asdasd;audio/mpeg;audio2;168;;2023-09-09T16:28:14;;System;;true;;AUDIO
+6;image/png;sdsdff;audio/mpeg;audio3;168;;2023-09-09T11:36:31;;System;;true;;AUDIO
+7;image/png;asdasd;image/png;asdasd;168;284;2023-09-09T07:48:39;;System;;true;;PHOTO
+8;image/png;aasdas;image/png;asdas;168;286;2023-09-09T08:42:30;;System;;false;;PHOTO
+9;image/png;asdfdf;image/png;asdadf;168;88;2023-09-09T14:00:56;;System;;true;;PHOTO
+10;image/png;aasdas;image/png;asdadf;18275;2108;2023-09-09T08:37:01;;System;;true;;VIDEO
+11;image/png;aasdas;image/png;asdadf;7805;30572;2023-09-09T15:34:21;;System;;true;;VIDEO
+12;image/png;waasas;image/png;asdadf;24051;14065;2023-09-09T06:55:38;;System;;true;;VIDEO

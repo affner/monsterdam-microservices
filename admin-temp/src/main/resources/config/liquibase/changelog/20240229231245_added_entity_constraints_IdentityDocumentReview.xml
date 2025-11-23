@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity IdentityDocumentReview.
+    -->
+    <changeSet id="20240229231245-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="ticket_id"
+                                 baseTableName="identity_document_review"
+                                 constraintName="fk_identity_document_review__ticket_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="assistance_ticket"
+                                 />
+    </changeSet>
+</databaseChangeLog>

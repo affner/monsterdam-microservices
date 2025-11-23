@@ -1,0 +1,94 @@
+{
+  "annotations": {
+    "changelogDate": "20240229234445"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "notification",
+  "fields": [
+    {
+      "fieldName": "readDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "postCommentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "postFeedId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "directMessageId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "userMentionId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "likeMarkId",
+      "fieldType": "Long"
+    }
+  ],
+  "name": "Notification",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "commentNotifications",
+      "relationshipName": "commentedUser",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "messageNotifications",
+      "relationshipName": "messagedUser",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "userMentionNotifications",
+      "relationshipName": "mentionerUserInPost",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "commentMentionNotifications",
+      "relationshipName": "mentionerUserInComment",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceImpl"
+}

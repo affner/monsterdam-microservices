@@ -1,0 +1,4 @@
+org.springframework.test.context.ContextCustomizerFactory = com.fanflip.admin.\
+    config.TestContainersSpringContextCustomizerFactory,com.fanflip.admin.\
+    config.SqlTestContainersSpringContextCustomizerFactory,com.fanflip.admin.\
+    config.KafkaTestContainersSpringContextCustomizerFactory

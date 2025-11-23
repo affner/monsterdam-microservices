@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "changelogDate": "20240229234945"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "direct_message",
+  "fields": [
+    {
+      "fieldName": "messageContent",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "readDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "likeCount",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "isHidden",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "DirectMessage",
+  "pagination": "infinite-scroll",
+  "relationships": [
+    {
+      "otherEntityName": "contentPackage",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "contentPackage",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "userReport",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "reports",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "messageContent",
+      "otherEntityName": "directMessage",
+      "otherEntityRelationshipName": "responseTo",
+      "relationshipName": "responses",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "messageContent",
+      "otherEntityName": "directMessage",
+      "otherEntityRelationshipName": "responses",
+      "relationshipName": "responseTo",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "videoStory",
+      "otherEntityRelationshipName": "messages",
+      "relationshipName": "repliedStory",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "userProfile",
+      "otherEntityRelationshipName": "sentMessages",
+      "relationshipName": "user",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "bookMark",
+      "otherEntityRelationshipName": "message",
+      "relationshipName": "bookMarks",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "lastAction",
+      "otherEntityName": "chatRoom",
+      "otherEntityRelationshipName": "sentMessages",
+      "relationshipName": "chatRooms",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "elasticsearch",
+  "service": "serviceImpl"
+}

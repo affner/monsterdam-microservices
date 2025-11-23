@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "singleAudio": {
+      "home": {
+        "title": "Single Audios",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Single Audio erstellen",
+        "createOrEditLabel": "Single Audio erstellen oder bearbeiten",
+        "search": "Suche nach Single Audio",
+        "notFound": "Keine Single Audios gefunden"
+      },
+      "created": "Single Audio erstellt mit ID {{ param }}",
+      "updated": "Single Audio aktualisiert mit ID {{ param }}",
+      "deleted": "Single Audio gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Single Audio {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Single Audio"
+      },
+      "id": "ID",
+      "thumbnail": "Thumbnail",
+      "thumbnailS3Key": "Thumbnail S 3 Key",
+      "content": "Content",
+      "contentS3Key": "Content S 3 Key",
+      "duration": "Duration",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "reports": "Reports",
+      "contentPackage": "Content Package"
+    }
+  }
+}

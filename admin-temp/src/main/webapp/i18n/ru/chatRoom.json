@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "chatRoom": {
+      "home": {
+        "title": "Chat Rooms",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Chat Room",
+        "createOrEditLabel": "Создать или отредактировать Chat Room",
+        "search": "Найти Chat Room",
+        "notFound": "Chat Rooms не найдено"
+      },
+      "created": "Новый Chat Room создан с идентификатором {{ param }}",
+      "updated": "Chat Room обновлен с идентификатором {{ param }}",
+      "deleted": "Chat Room удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Chat Room {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat Room"
+      },
+      "id": "ID",
+      "lastAction": "Last Action",
+      "lastConnectionDate": "Last Connection Date",
+      "muted": "Muted",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "sentMessages": "Sent Messages",
+      "user": "User"
+    }
+  }
+}

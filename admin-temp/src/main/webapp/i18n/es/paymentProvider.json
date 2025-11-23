@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "paymentProvider": {
+      "home": {
+        "title": "Payment Providers",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Payment Provider",
+        "createOrEditLabel": "Crear o editar Payment Provider",
+        "search": "Buscar Payment Provider",
+        "notFound": "Ningún Payment Providers encontrado"
+      },
+      "created": "Un nuevo Payment Provider ha sido creado con el identificador {{ param }}",
+      "updated": "Un Payment Provider ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Payment Provider ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Payment Provider {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment Provider"
+      },
+      "id": "ID",
+      "providerName": "Provider Name",
+      "description": "Description",
+      "apiKeyText": "Api Key Text",
+      "apiSecretText": "Api Secret Text",
+      "endpointText": "Endpoint Text",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payments": "Payments"
+    }
+  }
+}

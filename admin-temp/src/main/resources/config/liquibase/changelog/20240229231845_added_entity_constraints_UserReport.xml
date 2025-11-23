@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity UserReport.
+    -->
+    <changeSet id="20240229231845-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="ticket_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__ticket_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="assistance_ticket"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="reporter_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__reporter_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="reported_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__reported_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="story_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__story_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="video_story"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="video_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__video_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="single_video"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="photo_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__photo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="single_photo"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="audio_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__audio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="single_audio"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="live_stream_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__live_stream_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="single_live_stream"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="message_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__message_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="direct_message"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="post_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__post_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="post_feed"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="post_comment_id"
+                                 baseTableName="user_report"
+                                 constraintName="fk_user_report__post_comment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="post_comment"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "taxDeclaration": {
+      "home": {
+        "title": "Tax Declarations",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Tax Declaration",
+        "createOrEditLabel": "Создать или отредактировать Tax Declaration",
+        "search": "Найти Tax Declaration",
+        "notFound": "Tax Declarations не найдено"
+      },
+      "created": "Новый Tax Declaration создан с идентификатором {{ param }}",
+      "updated": "Tax Declaration обновлен с идентификатором {{ param }}",
+      "deleted": "Tax Declaration удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Tax Declaration {{ id }}?"
+      },
+      "detail": {
+        "title": "Tax Declaration"
+      },
+      "id": "ID",
+      "year": "Year",
+      "declarationType": "Declaration Type",
+      "submittedDate": "Submitted Date",
+      "status": "Status",
+      "totalIncome": "Total Income",
+      "totalTaxableIncome": "Total Taxable Income",
+      "totalTaxPaid": "Total Tax Paid",
+      "supportingDocumentsKey": "Supporting Documents Key",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "adminApp": {
+    "accountingRecord": {
+      "home": {
+        "title": "Accounting Records",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Accounting Record erstellen",
+        "createOrEditLabel": "Accounting Record erstellen oder bearbeiten",
+        "search": "Suche nach Accounting Record",
+        "notFound": "Keine Accounting Records gefunden"
+      },
+      "created": "Accounting Record erstellt mit ID {{ param }}",
+      "updated": "Accounting Record aktualisiert mit ID {{ param }}",
+      "deleted": "Accounting Record gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Accounting Record {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Accounting Record"
+      },
+      "id": "ID",
+      "date": "Date",
+      "description": "Description",
+      "debit": "Debit",
+      "credit": "Credit",
+      "balance": "Balance",
+      "accountType": "Account Type",
+      "paymentId": "Payment Id",
+      "budget": "Budget",
+      "asset": "Asset",
+      "liability": "Liability",
+      "taxDeclarations": "Tax Declarations",
+      "financialStatements": "Financial Statements"
+    }
+  }
+}

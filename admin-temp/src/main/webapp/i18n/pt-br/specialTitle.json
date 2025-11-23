@@ -1,0 +1,30 @@
+{
+  "adminApp": {
+    "specialTitle": {
+      "home": {
+        "title": "Special Titles",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Special Title",
+        "createOrEditLabel": "Criar ou editar Special Title",
+        "search": "Pesquisar por Special Title",
+        "notFound": "Nenhum Special Title encontrado"
+      },
+      "created": "Um novo Special Title foi criado com o identificador {{ param }}",
+      "updated": "Um Special Title foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Special Title foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Special Title {{ id }}?"
+      },
+      "detail": {
+        "title": "Special Title"
+      },
+      "id": "ID",
+      "description": "Description",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

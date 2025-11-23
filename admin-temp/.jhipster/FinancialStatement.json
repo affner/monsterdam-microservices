@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240229232045"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "financial_statement",
+  "fields": [
+    {
+      "fieldName": "statementType",
+      "fieldType": "StatementType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "BALANCE_SHEET,INCOME_STATEMENT,CASH_FLOW"
+    },
+    {
+      "fieldName": "periodStartDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "periodEndDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "FinancialStatement",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "accountingRecord",
+      "otherEntityRelationshipName": "financialStatements",
+      "relationshipName": "accountingRecords",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "singleDocument": {
+      "home": {
+        "title": "Single Documents",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Single Document erstellen",
+        "createOrEditLabel": "Single Document erstellen oder bearbeiten",
+        "search": "Suche nach Single Document",
+        "notFound": "Keine Single Documents gefunden"
+      },
+      "created": "Single Document erstellt mit ID {{ param }}",
+      "updated": "Single Document aktualisiert mit ID {{ param }}",
+      "deleted": "Single Document gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Single Document {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Single Document"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "documentFile": "Document File",
+      "documentFileS3Key": "Document File S 3 Key",
+      "documentType": "Document Type",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "user": "User"
+    }
+  }
+}

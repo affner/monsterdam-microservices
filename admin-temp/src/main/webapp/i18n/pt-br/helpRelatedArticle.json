@@ -1,0 +1,27 @@
+{
+  "adminApp": {
+    "helpRelatedArticle": {
+      "home": {
+        "title": "Help Related Articles",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Help Related Article",
+        "createOrEditLabel": "Criar ou editar Help Related Article",
+        "search": "Pesquisar por Help Related Article",
+        "notFound": "Nenhum Help Related Article encontrado"
+      },
+      "created": "Um novo Help Related Article foi criado com o identificador {{ param }}",
+      "updated": "Um Help Related Article foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Help Related Article foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Help Related Article {{ id }}?"
+      },
+      "detail": {
+        "title": "Help Related Article"
+      },
+      "id": "ID",
+      "title": "Title",
+      "content": "Content",
+      "relatedArticle": "Related Article"
+    }
+  }
+}

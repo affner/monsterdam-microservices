@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "moderationAction": {
+      "home": {
+        "title": "Moderation Actions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Moderation Action",
+        "createOrEditLabel": "Create or edit a Moderation Action",
+        "search": "Search for Moderation Action",
+        "notFound": "No Moderation Actions found"
+      },
+      "created": "A new Moderation Action is created with identifier {{ param }}",
+      "updated": "A Moderation Action is updated with identifier {{ param }}",
+      "deleted": "A Moderation Action is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Moderation Action {{ id }}?"
+      },
+      "detail": {
+        "title": "Moderation Action"
+      },
+      "id": "ID",
+      "actionType": "Action Type",
+      "reason": "Reason",
+      "actionDate": "Action Date",
+      "durationDays": "Duration Days",
+      "assistanceTicket": "Assistance Ticket"
+    }
+  }
+}

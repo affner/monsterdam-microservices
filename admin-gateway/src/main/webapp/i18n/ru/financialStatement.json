@@ -1,0 +1,29 @@
+{
+  "adminApp": {
+    "financialStatement": {
+      "home": {
+        "title": "Financial Statements",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Financial Statement",
+        "createOrEditLabel": "Создать или отредактировать Financial Statement",
+        "search": "Найти Financial Statement",
+        "notFound": "Financial Statements не найдено"
+      },
+      "created": "Новый Financial Statement создан с идентификатором {{ param }}",
+      "updated": "Financial Statement обновлен с идентификатором {{ param }}",
+      "deleted": "Financial Statement удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Financial Statement {{ id }}?"
+      },
+      "detail": {
+        "title": "Financial Statement"
+      },
+      "id": "ID",
+      "statementType": "Statement Type",
+      "periodStartDate": "Period Start Date",
+      "periodEndDate": "Period End Date",
+      "createdDate": "Created Date",
+      "accountingRecords": "Accounting Records"
+    }
+  }
+}

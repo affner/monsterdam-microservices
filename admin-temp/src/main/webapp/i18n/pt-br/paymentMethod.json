@@ -1,0 +1,33 @@
+{
+  "adminApp": {
+    "paymentMethod": {
+      "home": {
+        "title": "Payment Methods",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Payment Method",
+        "createOrEditLabel": "Criar ou editar Payment Method",
+        "search": "Pesquisar por Payment Method",
+        "notFound": "Nenhum Payment Method encontrado"
+      },
+      "created": "Um novo Payment Method foi criado com o identificador {{ param }}",
+      "updated": "Um Payment Method foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Payment Method foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Payment Method {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment Method"
+      },
+      "id": "ID",
+      "methodName": "Method Name",
+      "tokenText": "Token Text",
+      "expirationDate": "Expiration Date",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payments": "Payments"
+    }
+  }
+}

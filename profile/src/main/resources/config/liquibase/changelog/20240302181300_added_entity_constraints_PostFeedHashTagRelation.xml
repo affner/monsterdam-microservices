@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity PostFeedHashTagRelation.
+    -->
+    <changeSet id="20240302181300-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="hashtag_id"
+                                 baseTableName="rel_postfeed_hashtag"
+                                 constraintName="fk_rel_postfeed_hashtag__hashtag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hash_tag"
+                                 />
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,35 @@
+{
+  "adminApp": {
+    "likeMark": {
+      "home": {
+        "title": "Like Marks",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Like Mark",
+        "createOrEditLabel": "Crear o editar Like Mark",
+        "search": "Buscar Like Mark",
+        "notFound": "Ningún Like Marks encontrado"
+      },
+      "created": "Un nuevo Like Mark ha sido creado con el identificador {{ param }}",
+      "updated": "Un Like Mark ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Like Mark ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Like Mark {{ id }}?"
+      },
+      "detail": {
+        "title": "Like Mark"
+      },
+      "id": "ID",
+      "emojiTypeId": "Emoji Type Id",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "multimediaId": "Multimedia Id",
+      "messageId": "Message Id",
+      "postId": "Post Id",
+      "commentId": "Comment Id",
+      "likerUserId": "Liker User Id"
+    }
+  }
+}

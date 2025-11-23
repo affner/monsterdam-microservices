@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "changelogDate": "20240221235612"
+  },
+  "applications": ["interactions"],
+  "clientRootFolder": "interactions",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "poll_vote",
+  "fields": [
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "votingUserId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "microserviceName": "interactions",
+  "name": "PollVote",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "optionDescription",
+      "otherEntityName": "pollOption",
+      "otherEntityRelationshipName": "votes",
+      "relationshipName": "pollOption",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

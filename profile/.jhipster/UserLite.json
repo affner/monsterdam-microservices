@@ -1,0 +1,82 @@
+{
+  "annotations": {
+    "changelogDate": "20240302180300"
+  },
+  "applications": ["profile"],
+  "clientRootFolder": "profile",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "user_lite",
+  "fields": [
+    {
+      "fieldName": "thumbnail",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "thumbnailS3Key",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "birthDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "gender",
+      "fieldType": "UserGender",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "MALE (user.gender.male),FEMALE (user.gender.female),TRANS_FEMALE (user.gender.trans-female),TRANS_MALE (user.gender.trans-male)"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleted",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nickName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[a-z0-9_-]{3,16}$"
+    },
+    {
+      "fieldName": "fullName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "pattern"],
+      "fieldValidateRulesPattern": "^[a-zA-Z0-9 ]*$"
+    },
+    {
+      "fieldName": "contentPreference",
+      "fieldType": "ContentPreference",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "ALL (content.preference.all),STRAIGHT (content.preference.straight),GAY (content.preference.gay),TRANS (content.preference.trans)"
+    },
+    {
+      "fieldName": "countryOfBirthId",
+      "fieldType": "Long"
+    }
+  ],
+  "microserviceName": "profile",
+  "name": "UserLite",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

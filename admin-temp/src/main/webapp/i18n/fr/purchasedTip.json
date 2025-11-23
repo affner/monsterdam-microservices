@@ -1,0 +1,34 @@
+{
+  "adminApp": {
+    "purchasedTip": {
+      "home": {
+        "title": "PurchasedTips",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Purchased Tip",
+        "createOrEditLabel": "Créer ou éditer un Purchased Tip",
+        "search": "Recherche pour Purchased Tip",
+        "notFound": "Aucun Purchased Tip trouvé"
+      },
+      "created": "Un nouveau Purchased Tip a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Purchased Tip avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Purchased Tip avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Purchased Tip {{ id }} ?"
+      },
+      "detail": {
+        "title": "Purchased Tip"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted",
+      "payment": "Payment",
+      "walletTransaction": "Wallet Transaction",
+      "creatorEarning": "Creator Earning",
+      "message": "Message"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "annotations": {
+    "changelogDate": "20240229235445"
+  },
+  "applications": ["admin"],
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "entityTableName": "poll_option",
+  "fields": [
+    {
+      "fieldName": "optionDescription",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "voteCount",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "PollOption",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "question",
+      "otherEntityName": "postPoll",
+      "otherEntityRelationshipName": "options",
+      "relationshipName": "poll",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "createdDate",
+      "otherEntityName": "pollVote",
+      "otherEntityRelationshipName": "pollOption",
+      "relationshipName": "votes",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

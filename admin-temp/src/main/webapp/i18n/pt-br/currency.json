@@ -1,0 +1,32 @@
+{
+  "adminApp": {
+    "currency": {
+      "home": {
+        "title": "Currencies",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Currency",
+        "createOrEditLabel": "Criar ou editar Currency",
+        "search": "Pesquisar por Currency",
+        "notFound": "Nenhum Currency encontrado"
+      },
+      "created": "Um novo Currency foi criado com o identificador {{ param }}",
+      "updated": "Um Currency foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Currency foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Currency {{ id }}?"
+      },
+      "detail": {
+        "title": "Currency"
+      },
+      "id": "ID",
+      "name": "Name",
+      "symbol": "Symbol",
+      "code": "Code",
+      "createdDate": "Created Date",
+      "lastModifiedDate": "Last Modified Date",
+      "createdBy": "Created By",
+      "lastModifiedBy": "Last Modified By",
+      "isDeleted": "Is Deleted"
+    }
+  }
+}

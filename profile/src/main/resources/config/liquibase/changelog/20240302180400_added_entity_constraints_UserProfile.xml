@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity UserProfile.
+    -->
+    <changeSet id="20240302180400-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="settings_id"
+                                 baseTableName="user_profile"
+                                 constraintName="fk_user_profile__settings_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_settings"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__followed"
+                                 constraintName="fk_rel_user_profile__followed__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="followed_id"
+                                 baseTableName="rel_user_profile__followed"
+                                 constraintName="fk_rel_user_profile__followed__followed_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__blocked_list"
+                                 constraintName="fk_rel_user_profile__blocked_list__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="blocked_list_id"
+                                 baseTableName="rel_user_profile__blocked_list"
+                                 constraintName="fk_rel_user_profile__blocked_list__blocked_list_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__loya_lists"
+                                 constraintName="fk_rel_user_profile__loya_lists__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="loya_lists_id"
+                                 baseTableName="rel_user_profile__loya_lists"
+                                 constraintName="fk_rel_user_profile__loya_lists__loya_lists_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__subscribed"
+                                 constraintName="fk_rel_user_profile__subscribed__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="subscribed_id"
+                                 baseTableName="rel_user_profile__subscribed"
+                                 constraintName="fk_rel_user_profile__subscribed__subscribed_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__joined_events"
+                                 constraintName="fk_rel_user_profile__joined_events__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="joined_events_id"
+                                 baseTableName="rel_user_profile__joined_events"
+                                 constraintName="fk_rel_user_profile__joined_events__joined_events_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_event"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__hashtags"
+                                 constraintName="fk_rel_user_profile__hashtags__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="hashtags_id"
+                                 baseTableName="rel_user_profile__hashtags"
+                                 constraintName="fk_rel_user_profile__hashtags__hashtags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hash_tag"
+                                 />
+    </changeSet>
+</databaseChangeLog>

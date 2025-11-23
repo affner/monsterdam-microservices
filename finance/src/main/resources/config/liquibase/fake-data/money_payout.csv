@@ -1,0 +1,11 @@
+id;amount;created_date;last_modified_date;created_by;last_modified_by;is_deleted;withdraw_status;creator_id;creator_earning_id
+1;14173.81;2024-02-21T09:08:33;2024-02-21T11:58:42;whoa within fitting;shrilly;true;WITHDRAW_PROCESSED;16952;1
+2;14314.29;2024-02-21T05:14:03;2024-02-21T21:22:14;derogate;oof;true;WITHDRAW_PENDING;1552;2
+3;15889.01;2024-02-21T15:48:52;2024-02-21T20:29:16;dentist pixelate writhe;above whose;true;WITHDRAW_PROCESSED;1974;3
+4;13462.74;2024-02-21T19:32:00;2024-02-21T05:31:17;ack;uselessly furiously;true;WITHDRAW_PROCESSED;32456;4
+5;14559.92;2024-02-21T08:08:55;2024-02-21T15:12:01;outside;anthologize before contaminate;false;WITHDRAW_PROCESSED;11774;5
+6;13202.46;2024-02-21T00:47:48;2024-02-21T18:16:22;gerrymander jealously jolly;penicillin louse;true;WITHDRAW_PROCESSED;31727;6
+7;6544.13;2024-02-21T11:30:16;2024-02-21T07:00:32;raiment without amid;and;true;WITHDRAW_DECLINED;11599;7
+8;4297.26;2024-02-21T08:09:24;2024-02-21T03:58:49;cheek;ribbon woot;false;WITHDRAW_PENDING;5670;8
+9;32021.68;2024-02-21T19:41:47;2024-02-21T04:20:18;soliloquize separately;warlike around overlook;true;WITHDRAW_PENDING;24176;9
+10;27160.86;2024-02-21T10:05:03;2024-02-21T22:03:22;flustered likely;whether;false;WITHDRAW_PROCESSED;1969;10
