@@ -1,4 +1,4 @@
-package com.fanflip.finance.broker;
+package com.monsterdam.finance.broker;
 
 import static org.springframework.web.servlet.mvc.method.annotation.SseEmitter.event;
 

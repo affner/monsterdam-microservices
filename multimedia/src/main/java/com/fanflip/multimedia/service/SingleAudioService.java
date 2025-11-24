@@ -1,13 +1,13 @@
-package com.fanflip.multimedia.service;
+package com.monsterdam.multimedia.service;
 
-import com.fanflip.multimedia.service.dto.SingleAudioDTO;
+import com.monsterdam.multimedia.service.dto.SingleAudioDTO;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.multimedia.domain.SingleAudio}.
+ * Service Interface for managing {@link com.monsterdam.multimedia.domain.SingleAudio}.
  */
 public interface SingleAudioService {
     /**

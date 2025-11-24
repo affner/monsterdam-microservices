@@ -1,15 +1,15 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.CreatorEarningTestSamples.*;
-import static com.fanflip.admin.domain.OfferPromotionTestSamples.*;
-import static com.fanflip.admin.domain.PaymentTransactionTestSamples.*;
-import static com.fanflip.admin.domain.PurchasedSubscriptionTestSamples.*;
-import static com.fanflip.admin.domain.SubscriptionBundleTestSamples.*;
-import static com.fanflip.admin.domain.UserProfileTestSamples.*;
-import static com.fanflip.admin.domain.WalletTransactionTestSamples.*;
+import static com.monsterdam.admin.domain.CreatorEarningTestSamples.*;
+import static com.monsterdam.admin.domain.OfferPromotionTestSamples.*;
+import static com.monsterdam.admin.domain.PaymentTransactionTestSamples.*;
+import static com.monsterdam.admin.domain.PurchasedSubscriptionTestSamples.*;
+import static com.monsterdam.admin.domain.SubscriptionBundleTestSamples.*;
+import static com.monsterdam.admin.domain.UserProfileTestSamples.*;
+import static com.monsterdam.admin.domain.WalletTransactionTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class PurchasedSubscriptionTest {

@@ -1,15 +1,15 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.security.AuthoritiesConstants;
-import com.fanflip.app.service.MailService;
-import com.fanflip.app.service.UserService;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.web.rest.errors.BadRequestAlertException;
-import com.fanflip.app.web.rest.errors.EmailAlreadyUsedException;
-import com.fanflip.app.web.rest.errors.LoginAlreadyUsedException;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.security.AuthoritiesConstants;
+import com.monsterdam.app.service.MailService;
+import com.monsterdam.app.service.UserService;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.app.web.rest.errors.EmailAlreadyUsedException;
+import com.monsterdam.app.web.rest.errors.LoginAlreadyUsedException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import java.net.URI;
@@ -39,7 +39,7 @@ import tech.jhipster.web.util.PaginationUtil;
 /**
  * REST controller for managing users.
  * <p>
- * This class accesses the {@link com.fanflip.app.domain.User} entity, and needs to fetch its collection of authorities.
+ * This class accesses the {@link com.monsterdam.app.domain.User} entity, and needs to fetch its collection of authorities.
  * <p>
  * For a normal use-case, it would be better to have an eager relationship between User and Authority,
  * and send everything to the client side: there would be no View Model and DTO, a lot less code, and an outer-join

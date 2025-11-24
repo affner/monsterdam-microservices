@@ -1,6 +1,6 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.SingleDocument;
+import com.monsterdam.admin.domain.SingleDocument;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;

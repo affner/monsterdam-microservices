@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PostFeedRepository;
-import com.fanflip.admin.repository.search.PostFeedSearchRepository;
-import com.fanflip.admin.service.PostFeedService;
-import com.fanflip.admin.service.dto.PostFeedDTO;
-import com.fanflip.admin.service.mapper.PostFeedMapper;
+import com.monsterdam.admin.repository.PostFeedRepository;
+import com.monsterdam.admin.repository.search.PostFeedSearchRepository;
+import com.monsterdam.admin.service.PostFeedService;
+import com.monsterdam.admin.service.dto.PostFeedDTO;
+import com.monsterdam.admin.service.mapper.PostFeedMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PostFeed}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PostFeed}.
  */
 @Service
 @Transactional

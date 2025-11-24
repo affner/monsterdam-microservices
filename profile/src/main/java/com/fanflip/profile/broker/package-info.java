@@ -1,4 +1,4 @@
 /**
  * Spring cloud consumers and providers
  */
-package com.fanflip.profile.broker;
+package com.monsterdam.profile.broker;

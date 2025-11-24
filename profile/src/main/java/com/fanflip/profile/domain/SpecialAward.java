@@ -1,4 +1,4 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

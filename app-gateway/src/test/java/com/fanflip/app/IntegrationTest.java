@@ -1,9 +1,9 @@
-package com.fanflip.app;
+package com.monsterdam.app;
 
-import com.fanflip.app.config.AsyncSyncConfiguration;
-import com.fanflip.app.config.EmbeddedElasticsearch;
-import com.fanflip.app.config.EmbeddedKafka;
-import com.fanflip.app.config.EmbeddedSQL;
+import com.monsterdam.app.config.AsyncSyncConfiguration;
+import com.monsterdam.app.config.EmbeddedElasticsearch;
+import com.monsterdam.app.config.EmbeddedKafka;
+import com.monsterdam.app.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -16,7 +16,7 @@ import org.springframework.test.annotation.DirtiesContext;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@SpringBootTest(classes = { FanflipApp.class, AsyncSyncConfiguration.class })
+@SpringBootTest(classes = { MonsterdamApp.class, AsyncSyncConfiguration.class })
 @EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)

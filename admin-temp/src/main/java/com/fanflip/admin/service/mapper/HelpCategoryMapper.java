@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.HelpCategory;
-import com.fanflip.admin.service.dto.HelpCategoryDTO;
+import com.monsterdam.admin.domain.HelpCategory;
+import com.monsterdam.admin.service.dto.HelpCategoryDTO;
 import org.mapstruct.*;
 
 /**

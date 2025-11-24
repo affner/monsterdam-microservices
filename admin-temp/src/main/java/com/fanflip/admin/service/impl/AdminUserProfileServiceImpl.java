@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.AdminUserProfileRepository;
-import com.fanflip.admin.repository.search.AdminUserProfileSearchRepository;
-import com.fanflip.admin.service.AdminUserProfileService;
-import com.fanflip.admin.service.dto.AdminUserProfileDTO;
-import com.fanflip.admin.service.mapper.AdminUserProfileMapper;
+import com.monsterdam.admin.repository.AdminUserProfileRepository;
+import com.monsterdam.admin.repository.search.AdminUserProfileSearchRepository;
+import com.monsterdam.admin.service.AdminUserProfileService;
+import com.monsterdam.admin.service.dto.AdminUserProfileDTO;
+import com.monsterdam.admin.service.mapper.AdminUserProfileMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.AdminUserProfile}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.AdminUserProfile}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.notifications;
+package com.monsterdam.notifications;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.Country;
-import com.fanflip.catalogs.domain.State;
-import com.fanflip.catalogs.service.dto.CountryDTO;
-import com.fanflip.catalogs.service.dto.StateDTO;
+import com.monsterdam.catalogs.domain.Country;
+import com.monsterdam.catalogs.domain.State;
+import com.monsterdam.catalogs.service.dto.CountryDTO;
+import com.monsterdam.catalogs.service.dto.StateDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.fanflip.interactions.repository;
+package com.monsterdam.interactions.repository;

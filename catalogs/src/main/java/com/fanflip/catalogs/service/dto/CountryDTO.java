@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.Country} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.Country} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class CountryDTO implements Serializable {

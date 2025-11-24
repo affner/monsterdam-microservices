@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.domain;
+package com.monsterdam.multimedia.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

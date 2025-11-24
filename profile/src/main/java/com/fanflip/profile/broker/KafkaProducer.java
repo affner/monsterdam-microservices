@@ -1,4 +1,4 @@
-package com.fanflip.profile.broker;
+package com.monsterdam.profile.broker;
 
 import java.util.function.Supplier;
 import org.springframework.stereotype.Component;

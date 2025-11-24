@@ -1,4 +1,4 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

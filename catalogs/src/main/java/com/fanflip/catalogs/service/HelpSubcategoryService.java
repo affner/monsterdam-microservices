@@ -1,12 +1,12 @@
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;
 
-import com.fanflip.catalogs.service.dto.HelpSubcategoryDTO;
+import com.monsterdam.catalogs.service.dto.HelpSubcategoryDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.catalogs.domain.HelpSubcategory}.
+ * Service Interface for managing {@link com.monsterdam.catalogs.domain.HelpSubcategory}.
  */
 public interface HelpSubcategoryService {
     /**

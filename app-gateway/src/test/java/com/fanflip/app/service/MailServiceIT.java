@@ -1,12 +1,12 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
 import jakarta.mail.Multipart;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeBodyPart;

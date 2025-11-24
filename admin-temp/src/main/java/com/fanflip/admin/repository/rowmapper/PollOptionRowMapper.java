@@ -1,6 +1,6 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.PollOption;
+import com.monsterdam.admin.domain.PollOption;
 import io.r2dbc.spi.Row;
 import java.util.function.BiFunction;
 import org.springframework.stereotype.Service;

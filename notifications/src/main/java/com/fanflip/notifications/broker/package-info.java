@@ -1,4 +1,4 @@
 /**
  * Spring cloud consumers and providers
  */
-package com.fanflip.notifications.broker;
+package com.monsterdam.notifications.broker;

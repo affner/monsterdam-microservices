@@ -1,6 +1,6 @@
-package com.fanflip.notifications.security;
+package com.monsterdam.notifications.security;
 
-import com.fanflip.notifications.config.Constants;
+import com.monsterdam.notifications.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

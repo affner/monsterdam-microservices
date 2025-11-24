@@ -1,4 +1,4 @@
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.dto;
+package com.monsterdam.interactions.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * A DTO for the {@link com.fanflip.interactions.domain.ChatRoom} entity.
+ * A DTO for the {@link com.monsterdam.interactions.domain.ChatRoom} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class ChatRoomDTO implements Serializable {

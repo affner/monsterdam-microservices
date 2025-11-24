@@ -33,4 +33,4 @@ file_env 'SPRING_DATASOURCE_USERNAME'
 file_env 'SPRING_DATASOURCE_PASSWORD'
 file_env 'JHIPSTER_REGISTRY_PASSWORD'
 
-exec java ${JAVA_OPTS} -noverify -XX:+AlwaysPreTouch -Djava.security.egd=file:/dev/./urandom -cp /app/resources/:/app/classes/:/app/libs/* "com.fanflip.bff.UserbffApp"  "$@"
+exec java ${JAVA_OPTS} -noverify -XX:+AlwaysPreTouch -Djava.security.egd=file:/dev/./urandom -cp /app/resources/:/app/classes/:/app/libs/* "com.monsterdam.bff.UserbffApp"  "$@"

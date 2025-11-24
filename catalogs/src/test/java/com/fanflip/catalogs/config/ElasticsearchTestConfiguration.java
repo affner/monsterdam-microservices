@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

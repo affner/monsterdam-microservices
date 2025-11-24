@@ -1,14 +1,14 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.security.SecurityUtils;
-import com.fanflip.app.service.MailService;
-import com.fanflip.app.service.UserService;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.service.dto.PasswordChangeDTO;
-import com.fanflip.app.web.rest.errors.*;
-import com.fanflip.app.web.rest.vm.KeyAndPasswordVM;
-import com.fanflip.app.web.rest.vm.ManagedUserVM;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.security.SecurityUtils;
+import com.monsterdam.app.service.MailService;
+import com.monsterdam.app.service.UserService;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.PasswordChangeDTO;
+import com.monsterdam.app.web.rest.errors.*;
+import com.monsterdam.app.web.rest.vm.KeyAndPasswordVM;
+import com.monsterdam.app.web.rest.vm.ManagedUserVM;
 import jakarta.validation.Valid;
 import java.util.Objects;
 import org.apache.commons.lang3.StringUtils;

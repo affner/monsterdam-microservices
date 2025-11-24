@@ -1,6 +1,6 @@
-package com.fanflip.app.repository;
+package com.monsterdam.app.repository;
 
-import com.fanflip.app.domain.Authority;
+import com.monsterdam.app.domain.Authority;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
 
 /**

@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.EmojiType;
-import com.fanflip.admin.repository.rowmapper.EmojiTypeRowMapper;
+import com.monsterdam.admin.domain.EmojiType;
+import com.monsterdam.admin.repository.rowmapper.EmojiTypeRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

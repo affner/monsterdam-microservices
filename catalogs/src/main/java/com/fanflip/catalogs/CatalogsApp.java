@@ -1,7 +1,7 @@
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;
 
-import com.fanflip.catalogs.config.ApplicationProperties;
-import com.fanflip.catalogs.config.CRLFLogConverter;
+import com.monsterdam.catalogs.config.ApplicationProperties;
+import com.monsterdam.catalogs.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

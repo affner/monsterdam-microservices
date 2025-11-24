@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.security;
+package com.monsterdam.catalogs.security;
 
-import com.fanflip.catalogs.config.Constants;
+import com.monsterdam.catalogs.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

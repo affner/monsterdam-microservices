@@ -1,6 +1,6 @@
-package com.fanflip.profile.service.dto;
+package com.monsterdam.profile.service.dto;
 
-import com.fanflip.profile.domain.enumeration.UserEventStatus;
+import com.monsterdam.profile.domain.enumeration.UserEventStatus;
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.profile.domain.UserEvent} entity.
+ * A DTO for the {@link com.monsterdam.profile.domain.UserEvent} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserEventDTO implements Serializable {

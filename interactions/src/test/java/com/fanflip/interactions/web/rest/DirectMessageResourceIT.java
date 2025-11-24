@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -7,13 +7,13 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.DirectMessage;
-import com.fanflip.interactions.repository.DirectMessageRepository;
-import com.fanflip.interactions.repository.search.DirectMessageSearchRepository;
-import com.fanflip.interactions.service.DirectMessageService;
-import com.fanflip.interactions.service.dto.DirectMessageDTO;
-import com.fanflip.interactions.service.mapper.DirectMessageMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.DirectMessage;
+import com.monsterdam.interactions.repository.DirectMessageRepository;
+import com.monsterdam.interactions.repository.search.DirectMessageSearchRepository;
+import com.monsterdam.interactions.service.DirectMessageService;
+import com.monsterdam.interactions.service.dto.DirectMessageDTO;
+import com.monsterdam.interactions.service.mapper.DirectMessageMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

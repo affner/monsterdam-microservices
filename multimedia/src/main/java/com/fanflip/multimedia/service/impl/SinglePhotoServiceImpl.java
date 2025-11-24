@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.SinglePhoto;
-import com.fanflip.multimedia.repository.SinglePhotoRepository;
-import com.fanflip.multimedia.service.SinglePhotoService;
-import com.fanflip.multimedia.service.dto.SinglePhotoDTO;
-import com.fanflip.multimedia.service.mapper.SinglePhotoMapper;
+import com.monsterdam.multimedia.domain.SinglePhoto;
+import com.monsterdam.multimedia.repository.SinglePhotoRepository;
+import com.monsterdam.multimedia.service.SinglePhotoService;
+import com.monsterdam.multimedia.service.dto.SinglePhotoDTO;
+import com.monsterdam.multimedia.service.mapper.SinglePhotoMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.SinglePhoto}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.SinglePhoto}.
  */
 @Service
 @Transactional

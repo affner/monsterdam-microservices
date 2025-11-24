@@ -1,4 +1,4 @@
-package com.fanflip.interactions.security;
+package com.monsterdam.interactions.security;
 
 import java.util.Arrays;
 import java.util.Optional;

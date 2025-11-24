@@ -1,6 +1,6 @@
-package com.fanflip.finance.repository;
+package com.monsterdam.finance.repository;
 
-import com.fanflip.finance.domain.MoneyPayout;
+import com.monsterdam.finance.domain.MoneyPayout;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

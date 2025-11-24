@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.HashTag;
-import com.fanflip.admin.repository.rowmapper.HashTagRowMapper;
+import com.monsterdam.admin.domain.HashTag;
+import com.monsterdam.admin.repository.rowmapper.HashTagRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

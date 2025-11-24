@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,14 +6,14 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.SinglePhoto;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.SinglePhotoRepository;
-import com.fanflip.admin.repository.search.SinglePhotoSearchRepository;
-import com.fanflip.admin.service.SinglePhotoService;
-import com.fanflip.admin.service.dto.SinglePhotoDTO;
-import com.fanflip.admin.service.mapper.SinglePhotoMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.SinglePhoto;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.SinglePhotoRepository;
+import com.monsterdam.admin.repository.search.SinglePhotoSearchRepository;
+import com.monsterdam.admin.service.SinglePhotoService;
+import com.monsterdam.admin.service.dto.SinglePhotoDTO;
+import com.monsterdam.admin.service.mapper.SinglePhotoMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Base64;

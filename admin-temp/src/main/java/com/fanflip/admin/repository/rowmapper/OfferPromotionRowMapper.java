@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.OfferPromotion;
-import com.fanflip.admin.domain.enumeration.OfferPromotionType;
+import com.monsterdam.admin.domain.OfferPromotion;
+import com.monsterdam.admin.domain.enumeration.OfferPromotionType;
 import io.r2dbc.spi.Row;
 import java.time.Duration;
 import java.time.Instant;

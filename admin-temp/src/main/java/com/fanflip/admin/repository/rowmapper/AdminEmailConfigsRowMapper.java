@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.AdminEmailConfigs;
-import com.fanflip.admin.domain.enumeration.EmailTemplateType;
+import com.monsterdam.admin.domain.AdminEmailConfigs;
+import com.monsterdam.admin.domain.enumeration.EmailTemplateType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

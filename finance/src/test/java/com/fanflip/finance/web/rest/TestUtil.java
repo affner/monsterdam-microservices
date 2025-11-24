@@ -1,4 +1,4 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

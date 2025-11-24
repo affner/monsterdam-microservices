@@ -1,13 +1,13 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
-import com.fanflip.catalogs.domain.enumeration.TaxType;
+import com.monsterdam.catalogs.domain.enumeration.TaxType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.TaxInfo} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.TaxInfo} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class TaxInfoDTO implements Serializable {

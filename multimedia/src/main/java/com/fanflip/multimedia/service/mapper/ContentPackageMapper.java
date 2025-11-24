@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.domain.SingleAudio;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.service.dto.SingleAudioDTO;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.domain.SingleAudio;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.dto.SingleAudioDTO;
 import org.mapstruct.*;
 
 /**

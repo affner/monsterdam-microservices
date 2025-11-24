@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,13 +6,13 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.EmojiType;
-import com.fanflip.admin.repository.EmojiTypeRepository;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.search.EmojiTypeSearchRepository;
-import com.fanflip.admin.service.dto.EmojiTypeDTO;
-import com.fanflip.admin.service.mapper.EmojiTypeMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.EmojiType;
+import com.monsterdam.admin.repository.EmojiTypeRepository;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.search.EmojiTypeSearchRepository;
+import com.monsterdam.admin.service.dto.EmojiTypeDTO;
+import com.monsterdam.admin.service.mapper.EmojiTypeMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Base64;

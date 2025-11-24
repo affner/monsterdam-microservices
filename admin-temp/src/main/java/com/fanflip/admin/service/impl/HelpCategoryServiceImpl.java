@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.HelpCategoryRepository;
-import com.fanflip.admin.repository.search.HelpCategorySearchRepository;
-import com.fanflip.admin.service.HelpCategoryService;
-import com.fanflip.admin.service.dto.HelpCategoryDTO;
-import com.fanflip.admin.service.mapper.HelpCategoryMapper;
+import com.monsterdam.admin.repository.HelpCategoryRepository;
+import com.monsterdam.admin.repository.search.HelpCategorySearchRepository;
+import com.monsterdam.admin.service.HelpCategoryService;
+import com.monsterdam.admin.service.dto.HelpCategoryDTO;
+import com.monsterdam.admin.service.mapper.HelpCategoryMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.HelpCategory}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.HelpCategory}.
  */
 @Service
 @Transactional

@@ -1,12 +1,12 @@
-package com.fanflip.profile.service;
+package com.monsterdam.profile.service;
 
-import com.fanflip.profile.service.dto.StateUserRelationDTO;
+import com.monsterdam.profile.service.dto.StateUserRelationDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.profile.domain.StateUserRelation}.
+ * Service Interface for managing {@link com.monsterdam.profile.domain.StateUserRelation}.
  */
 public interface StateUserRelationService {
     /**

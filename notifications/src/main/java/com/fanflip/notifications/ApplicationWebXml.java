@@ -1,4 +1,4 @@
-package com.fanflip.notifications;
+package com.monsterdam.notifications;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

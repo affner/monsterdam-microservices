@@ -1,4 +1,4 @@
 /**
  * Logging aspect.
  */
-package com.fanflip.catalogs.aop.logging;
+package com.monsterdam.catalogs.aop.logging;

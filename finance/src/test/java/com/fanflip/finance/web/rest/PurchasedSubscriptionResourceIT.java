@@ -1,4 +1,4 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -6,15 +6,15 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.finance.IntegrationTest;
-import com.fanflip.finance.domain.CreatorEarning;
-import com.fanflip.finance.domain.PurchasedSubscription;
-import com.fanflip.finance.domain.SubscriptionBundle;
-import com.fanflip.finance.domain.enumeration.PurchasedSubscriptionStatus;
-import com.fanflip.finance.repository.PurchasedSubscriptionRepository;
-import com.fanflip.finance.service.PurchasedSubscriptionService;
-import com.fanflip.finance.service.dto.PurchasedSubscriptionDTO;
-import com.fanflip.finance.service.mapper.PurchasedSubscriptionMapper;
+import com.monsterdam.finance.IntegrationTest;
+import com.monsterdam.finance.domain.CreatorEarning;
+import com.monsterdam.finance.domain.PurchasedSubscription;
+import com.monsterdam.finance.domain.SubscriptionBundle;
+import com.monsterdam.finance.domain.enumeration.PurchasedSubscriptionStatus;
+import com.monsterdam.finance.repository.PurchasedSubscriptionRepository;
+import com.monsterdam.finance.service.PurchasedSubscriptionService;
+import com.monsterdam.finance.service.dto.PurchasedSubscriptionDTO;
+import com.monsterdam.finance.service.mapper.PurchasedSubscriptionMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.LocalDate;

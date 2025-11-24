@@ -1,4 +1,4 @@
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

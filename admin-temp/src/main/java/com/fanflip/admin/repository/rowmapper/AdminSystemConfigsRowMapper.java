@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.AdminSystemConfigs;
-import com.fanflip.admin.domain.enumeration.ConfigurationCategory;
-import com.fanflip.admin.domain.enumeration.ConfigurationValueType;
+import com.monsterdam.admin.domain.AdminSystemConfigs;
+import com.monsterdam.admin.domain.enumeration.ConfigurationCategory;
+import com.monsterdam.admin.domain.enumeration.ConfigurationValueType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

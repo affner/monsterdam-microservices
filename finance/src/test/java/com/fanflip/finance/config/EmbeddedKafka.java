@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

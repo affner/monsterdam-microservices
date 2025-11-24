@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;

@@ -1,4 +1,4 @@
-package com.fanflip.notifications;
+package com.monsterdam.notifications;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(NotificationsApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.notifications.config.Constants.class,
-            com.fanflip.notifications.config.ApplicationProperties.class
+            com.monsterdam.notifications.config.Constants.class,
+            com.monsterdam.notifications.config.ApplicationProperties.class
         ));
 }

@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.AdminAnnouncement;
-import com.fanflip.admin.domain.AdminUserProfile;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.service.dto.AdminAnnouncementDTO;
-import com.fanflip.admin.service.dto.AdminUserProfileDTO;
-import com.fanflip.admin.service.dto.DirectMessageDTO;
+import com.monsterdam.admin.domain.AdminAnnouncement;
+import com.monsterdam.admin.domain.AdminUserProfile;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.service.dto.AdminAnnouncementDTO;
+import com.monsterdam.admin.service.dto.AdminUserProfileDTO;
+import com.monsterdam.admin.service.dto.DirectMessageDTO;
 import org.mapstruct.*;
 
 /**

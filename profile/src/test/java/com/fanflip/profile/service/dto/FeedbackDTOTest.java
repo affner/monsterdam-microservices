@@ -1,8 +1,8 @@
-package com.fanflip.profile.service.dto;
+package com.monsterdam.profile.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.profile.web.rest.TestUtil;
+import com.monsterdam.profile.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class FeedbackDTOTest {

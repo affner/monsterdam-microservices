@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.PostFeedHashTagRelation;
-import com.fanflip.profile.repository.PostFeedHashTagRelationRepository;
-import com.fanflip.profile.service.PostFeedHashTagRelationService;
-import com.fanflip.profile.service.dto.PostFeedHashTagRelationDTO;
-import com.fanflip.profile.service.mapper.PostFeedHashTagRelationMapper;
+import com.monsterdam.profile.domain.PostFeedHashTagRelation;
+import com.monsterdam.profile.repository.PostFeedHashTagRelationRepository;
+import com.monsterdam.profile.service.PostFeedHashTagRelationService;
+import com.monsterdam.profile.service.dto.PostFeedHashTagRelationDTO;
+import com.monsterdam.profile.service.mapper.PostFeedHashTagRelationMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.PostFeedHashTagRelation}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.PostFeedHashTagRelation}.
  */
 @Service
 @Transactional

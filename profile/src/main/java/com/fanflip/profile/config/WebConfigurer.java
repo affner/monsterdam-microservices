@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import jakarta.servlet.*;
 import org.slf4j.Logger;

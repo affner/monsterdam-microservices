@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.AssistanceTicket;
-import com.fanflip.admin.domain.enumeration.TicketStatus;
-import com.fanflip.admin.domain.enumeration.TicketType;
+import com.monsterdam.admin.domain.AssistanceTicket;
+import com.monsterdam.admin.domain.enumeration.TicketStatus;
+import com.monsterdam.admin.domain.enumeration.TicketType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

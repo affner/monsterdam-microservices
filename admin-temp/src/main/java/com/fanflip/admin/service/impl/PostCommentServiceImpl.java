@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PostCommentRepository;
-import com.fanflip.admin.repository.search.PostCommentSearchRepository;
-import com.fanflip.admin.service.PostCommentService;
-import com.fanflip.admin.service.dto.PostCommentDTO;
-import com.fanflip.admin.service.mapper.PostCommentMapper;
+import com.monsterdam.admin.repository.PostCommentRepository;
+import com.monsterdam.admin.repository.search.PostCommentSearchRepository;
+import com.monsterdam.admin.service.PostCommentService;
+import com.monsterdam.admin.service.dto.PostCommentDTO;
+import com.monsterdam.admin.service.mapper.PostCommentMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PostComment}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PostComment}.
  */
 @Service
 @Transactional

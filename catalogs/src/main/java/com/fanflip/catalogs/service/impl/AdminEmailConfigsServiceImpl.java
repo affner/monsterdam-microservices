@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.AdminEmailConfigs;
-import com.fanflip.catalogs.repository.AdminEmailConfigsRepository;
-import com.fanflip.catalogs.service.AdminEmailConfigsService;
-import com.fanflip.catalogs.service.dto.AdminEmailConfigsDTO;
-import com.fanflip.catalogs.service.mapper.AdminEmailConfigsMapper;
+import com.monsterdam.catalogs.domain.AdminEmailConfigs;
+import com.monsterdam.catalogs.repository.AdminEmailConfigsRepository;
+import com.monsterdam.catalogs.service.AdminEmailConfigsService;
+import com.monsterdam.catalogs.service.dto.AdminEmailConfigsDTO;
+import com.monsterdam.catalogs.service.mapper.AdminEmailConfigsMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.AdminEmailConfigs}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.AdminEmailConfigs}.
  */
 @Service
 @Transactional

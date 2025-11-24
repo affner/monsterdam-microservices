@@ -1,6 +1,6 @@
-package com.fanflip.app.web.rest.errors;
+package com.monsterdam.app.web.rest.errors;
 
-import com.fanflip.app.IntegrationTest;
+import com.monsterdam.app.IntegrationTest;
 import org.hamcrest.core.AnyOf;
 import org.hamcrest.core.IsEqual;
 import org.junit.jupiter.api.Test;

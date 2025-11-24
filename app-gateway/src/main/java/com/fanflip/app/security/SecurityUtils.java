@@ -1,4 +1,4 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
 import java.util.Arrays;
 import org.springframework.security.core.Authentication;

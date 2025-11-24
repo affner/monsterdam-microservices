@@ -1,7 +1,7 @@
 application {
     config {
-        baseName fanflip
-        packageName com.fanflip.app
+        baseName monsterdam
+        packageName com.monsterdam.app
         applicationType gateway
         authenticationType jwt
         reactive false

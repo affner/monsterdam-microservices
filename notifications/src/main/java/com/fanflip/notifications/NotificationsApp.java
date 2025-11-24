@@ -1,7 +1,7 @@
-package com.fanflip.notifications;
+package com.monsterdam.notifications;
 
-import com.fanflip.notifications.config.ApplicationProperties;
-import com.fanflip.notifications.config.CRLFLogConverter;
+import com.monsterdam.notifications.config.ApplicationProperties;
+import com.monsterdam.notifications.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

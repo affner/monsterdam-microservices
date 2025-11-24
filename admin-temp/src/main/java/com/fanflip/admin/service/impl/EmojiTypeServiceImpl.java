@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.EmojiTypeRepository;
-import com.fanflip.admin.repository.search.EmojiTypeSearchRepository;
-import com.fanflip.admin.service.EmojiTypeService;
-import com.fanflip.admin.service.dto.EmojiTypeDTO;
-import com.fanflip.admin.service.mapper.EmojiTypeMapper;
+import com.monsterdam.admin.repository.EmojiTypeRepository;
+import com.monsterdam.admin.repository.search.EmojiTypeSearchRepository;
+import com.monsterdam.admin.service.EmojiTypeService;
+import com.monsterdam.admin.service.dto.EmojiTypeDTO;
+import com.monsterdam.admin.service.mapper.EmojiTypeMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.EmojiType}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.EmojiType}.
  */
 @Service
 @Transactional

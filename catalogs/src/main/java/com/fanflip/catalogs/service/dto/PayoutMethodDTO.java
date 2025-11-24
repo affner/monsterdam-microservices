@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.PayoutMethod} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.PayoutMethod} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PayoutMethodDTO implements Serializable {

@@ -1,4 +1,4 @@
-package com.fanflip.app.domain;
+package com.monsterdam.app.domain;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;

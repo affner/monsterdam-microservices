@@ -1,8 +1,8 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.fanflip.finance.security.*;
+import com.monsterdam.finance.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

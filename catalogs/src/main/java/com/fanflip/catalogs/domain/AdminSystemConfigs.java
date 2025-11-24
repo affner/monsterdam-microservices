@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
-import com.fanflip.catalogs.domain.enumeration.ConfigurationCategory;
-import com.fanflip.catalogs.domain.enumeration.ConfigurationValueType;
+import com.monsterdam.catalogs.domain.enumeration.ConfigurationCategory;
+import com.monsterdam.catalogs.domain.enumeration.ConfigurationValueType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

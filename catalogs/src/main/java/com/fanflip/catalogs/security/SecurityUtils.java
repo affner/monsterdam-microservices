@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.security;
+package com.monsterdam.catalogs.security;
 
 import java.util.Arrays;
 import java.util.Optional;

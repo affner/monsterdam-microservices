@@ -1,10 +1,10 @@
-package com.fanflip.finance;
+package com.monsterdam.finance;
 
-import com.fanflip.finance.config.AsyncSyncConfiguration;
-import com.fanflip.finance.config.EmbeddedElasticsearch;
-import com.fanflip.finance.config.EmbeddedKafka;
-import com.fanflip.finance.config.EmbeddedRedis;
-import com.fanflip.finance.config.EmbeddedSQL;
+import com.monsterdam.finance.config.AsyncSyncConfiguration;
+import com.monsterdam.finance.config.EmbeddedElasticsearch;
+import com.monsterdam.finance.config.EmbeddedKafka;
+import com.monsterdam.finance.config.EmbeddedRedis;
+import com.monsterdam.finance.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

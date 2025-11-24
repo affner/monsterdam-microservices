@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.EmailTemplateType;
+import com.monsterdam.admin.domain.enumeration.EmailTemplateType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.AdminEmailConfigs} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.AdminEmailConfigs} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class AdminEmailConfigsDTO implements Serializable {

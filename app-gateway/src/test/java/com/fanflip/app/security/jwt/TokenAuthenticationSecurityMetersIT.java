@@ -1,9 +1,9 @@
-package com.fanflip.app.security.jwt;
+package com.monsterdam.app.security.jwt;
 
-import static com.fanflip.app.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.monsterdam.app.security.jwt.JwtAuthenticationTestUtils.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.app.IntegrationTest;
+import com.monsterdam.app.IntegrationTest;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
 import java.util.Collection;

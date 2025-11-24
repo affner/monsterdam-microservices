@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.PaymentTransactionRepository;
-import com.fanflip.admin.service.PaymentTransactionService;
-import com.fanflip.admin.service.dto.PaymentTransactionDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.PaymentTransactionRepository;
+import com.monsterdam.admin.service.PaymentTransactionService;
+import com.monsterdam.admin.service.dto.PaymentTransactionDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.PaymentTransaction}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.PaymentTransaction}.
  */
 @RestController
 @RequestMapping("/api/payment-transactions")

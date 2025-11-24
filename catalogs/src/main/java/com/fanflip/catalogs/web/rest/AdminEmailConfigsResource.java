@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.AdminEmailConfigsRepository;
-import com.fanflip.catalogs.service.AdminEmailConfigsService;
-import com.fanflip.catalogs.service.dto.AdminEmailConfigsDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.AdminEmailConfigsRepository;
+import com.monsterdam.catalogs.service.AdminEmailConfigsService;
+import com.monsterdam.catalogs.service.dto.AdminEmailConfigsDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.AdminEmailConfigs}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.AdminEmailConfigs}.
  */
 @RestController
 @RequestMapping("/api/admin-email-configs")

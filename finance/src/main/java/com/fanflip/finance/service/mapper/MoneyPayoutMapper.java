@@ -1,9 +1,9 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
-import com.fanflip.finance.domain.CreatorEarning;
-import com.fanflip.finance.domain.MoneyPayout;
-import com.fanflip.finance.service.dto.CreatorEarningDTO;
-import com.fanflip.finance.service.dto.MoneyPayoutDTO;
+import com.monsterdam.finance.domain.CreatorEarning;
+import com.monsterdam.finance.domain.MoneyPayout;
+import com.monsterdam.finance.service.dto.CreatorEarningDTO;
+import com.monsterdam.finance.service.dto.MoneyPayoutDTO;
 import org.mapstruct.*;
 
 /**

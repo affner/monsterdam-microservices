@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.SingleAudioRepository;
-import com.fanflip.admin.repository.search.SingleAudioSearchRepository;
-import com.fanflip.admin.service.SingleAudioService;
-import com.fanflip.admin.service.dto.SingleAudioDTO;
-import com.fanflip.admin.service.mapper.SingleAudioMapper;
+import com.monsterdam.admin.repository.SingleAudioRepository;
+import com.monsterdam.admin.repository.search.SingleAudioSearchRepository;
+import com.monsterdam.admin.service.SingleAudioService;
+import com.monsterdam.admin.service.dto.SingleAudioDTO;
+import com.monsterdam.admin.service.mapper.SingleAudioMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.SingleAudio}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.SingleAudio}.
  */
 @Service
 @Transactional

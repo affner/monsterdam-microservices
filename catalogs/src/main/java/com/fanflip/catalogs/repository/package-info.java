@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;

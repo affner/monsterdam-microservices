@@ -1,10 +1,10 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.LikeMark;
-import com.fanflip.interactions.repository.LikeMarkRepository;
-import com.fanflip.interactions.service.LikeMarkService;
-import com.fanflip.interactions.service.dto.LikeMarkDTO;
-import com.fanflip.interactions.service.mapper.LikeMarkMapper;
+import com.monsterdam.interactions.domain.LikeMark;
+import com.monsterdam.interactions.repository.LikeMarkRepository;
+import com.monsterdam.interactions.service.LikeMarkService;
+import com.monsterdam.interactions.service.dto.LikeMarkDTO;
+import com.monsterdam.interactions.service.mapper.LikeMarkMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.LikeMark}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.LikeMark}.
  */
 @Service
 @Transactional

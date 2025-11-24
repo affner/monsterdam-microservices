@@ -1,4 +1,4 @@
 /**
  * Data transfer objects mappers.
  */
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;

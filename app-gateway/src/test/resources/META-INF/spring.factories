@@ -1,4 +1,4 @@
-org.springframework.test.context.ContextCustomizerFactory = com.fanflip.app.\
-    config.TestContainersSpringContextCustomizerFactory,com.fanflip.app.config.\
-    SqlTestContainersSpringContextCustomizerFactory,com.fanflip.app.config.\
+org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.app.\
+    config.TestContainersSpringContextCustomizerFactory,com.monsterdam.app.config.\
+    SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.app.config.\
     KafkaTestContainersSpringContextCustomizerFactory

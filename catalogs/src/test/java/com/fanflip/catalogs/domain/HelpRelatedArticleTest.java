@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
-import static com.fanflip.catalogs.domain.HelpQuestionTestSamples.*;
-import static com.fanflip.catalogs.domain.HelpRelatedArticleTestSamples.*;
+import static com.monsterdam.catalogs.domain.HelpQuestionTestSamples.*;
+import static com.monsterdam.catalogs.domain.HelpRelatedArticleTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.catalogs.web.rest.TestUtil;
+import com.monsterdam.catalogs.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

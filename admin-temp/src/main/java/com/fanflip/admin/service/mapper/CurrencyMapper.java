@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.Currency;
-import com.fanflip.admin.service.dto.CurrencyDTO;
+import com.monsterdam.admin.domain.Currency;
+import com.monsterdam.admin.service.dto.CurrencyDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,6 +1,6 @@
-package com.fanflip.finance.repository;
+package com.monsterdam.finance.repository;
 
-import com.fanflip.finance.domain.PurchasedSubscription;
+import com.monsterdam.finance.domain.PurchasedSubscription;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

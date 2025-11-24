@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.repository.timezone;
+package com.monsterdam.multimedia.repository.timezone;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

@@ -1,6 +1,6 @@
-package com.fanflip.app.web.rest.vm;
+package com.monsterdam.app.web.rest.vm;
 
-import com.fanflip.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.AdminUserDTO;
 import jakarta.validation.constraints.Size;
 
 /**

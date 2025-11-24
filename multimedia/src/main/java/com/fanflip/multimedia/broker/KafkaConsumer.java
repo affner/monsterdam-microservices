@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.broker;
+package com.monsterdam.multimedia.broker;
 
 import static org.springframework.web.servlet.mvc.method.annotation.SseEmitter.event;
 

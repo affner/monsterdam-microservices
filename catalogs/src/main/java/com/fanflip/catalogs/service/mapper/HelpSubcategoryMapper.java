@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.HelpCategory;
-import com.fanflip.catalogs.domain.HelpSubcategory;
-import com.fanflip.catalogs.service.dto.HelpCategoryDTO;
-import com.fanflip.catalogs.service.dto.HelpSubcategoryDTO;
+import com.monsterdam.catalogs.domain.HelpCategory;
+import com.monsterdam.catalogs.domain.HelpSubcategory;
+import com.monsterdam.catalogs.service.dto.HelpCategoryDTO;
+import com.monsterdam.catalogs.service.dto.HelpSubcategoryDTO;
 import org.mapstruct.*;
 
 /**

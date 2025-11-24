@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.Country;
-import com.fanflip.admin.service.dto.CountryDTO;
+import com.monsterdam.admin.domain.Country;
+import com.monsterdam.admin.service.dto.CountryDTO;
 import org.mapstruct.*;
 
 /**

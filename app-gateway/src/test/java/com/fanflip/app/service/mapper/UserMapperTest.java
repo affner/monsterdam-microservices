@@ -1,10 +1,10 @@
-package com.fanflip.app.service.mapper;
+package com.monsterdam.app.service.mapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.app.domain.User;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.service.dto.UserDTO;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.UserDTO;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;

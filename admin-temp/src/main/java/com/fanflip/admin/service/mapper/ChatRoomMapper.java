@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.ChatRoom;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.ChatRoomDTO;
-import com.fanflip.admin.service.dto.DirectMessageDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.ChatRoom;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.ChatRoomDTO;
+import com.monsterdam.admin.service.dto.DirectMessageDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

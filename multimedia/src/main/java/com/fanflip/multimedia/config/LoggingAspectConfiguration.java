@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
-import com.fanflip.multimedia.aop.logging.LoggingAspect;
+import com.monsterdam.multimedia.aop.logging.LoggingAspect;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import tech.jhipster.config.JHipsterConstants;

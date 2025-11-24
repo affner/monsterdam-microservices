@@ -1,16 +1,16 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import static com.fanflip.finance.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.finance.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.finance.IntegrationTest;
-import com.fanflip.finance.domain.CreatorEarning;
-import com.fanflip.finance.repository.CreatorEarningRepository;
-import com.fanflip.finance.service.dto.CreatorEarningDTO;
-import com.fanflip.finance.service.mapper.CreatorEarningMapper;
+import com.monsterdam.finance.IntegrationTest;
+import com.monsterdam.finance.domain.CreatorEarning;
+import com.monsterdam.finance.repository.CreatorEarningRepository;
+import com.monsterdam.finance.service.dto.CreatorEarningDTO;
+import com.monsterdam.finance.service.mapper.CreatorEarningMapper;
 import jakarta.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.time.Instant;

@@ -1,4 +1,4 @@
 /**
  * Spring cloud consumers and providers
  */
-package com.fanflip.multimedia.broker;
+package com.monsterdam.multimedia.broker;

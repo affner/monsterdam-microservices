@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.PostPoll;
-import com.fanflip.admin.service.dto.PostPollDTO;
+import com.monsterdam.admin.domain.PostPoll;
+import com.monsterdam.admin.service.dto.PostPollDTO;
 import org.mapstruct.*;
 
 /**

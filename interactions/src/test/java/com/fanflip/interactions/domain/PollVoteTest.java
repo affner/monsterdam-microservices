@@ -1,10 +1,10 @@
-package com.fanflip.interactions.domain;
+package com.monsterdam.interactions.domain;
 
-import static com.fanflip.interactions.domain.PollOptionTestSamples.*;
-import static com.fanflip.interactions.domain.PollVoteTestSamples.*;
+import static com.monsterdam.interactions.domain.PollOptionTestSamples.*;
+import static com.monsterdam.interactions.domain.PollVoteTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.web.rest.TestUtil;
+import com.monsterdam.interactions.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class PollVoteTest {

@@ -1,7 +1,7 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.UserSettings;
-import com.fanflip.profile.service.dto.UserSettingsDTO;
+import com.monsterdam.profile.domain.UserSettings;
+import com.monsterdam.profile.service.dto.UserSettingsDTO;
 import org.mapstruct.*;
 
 /**

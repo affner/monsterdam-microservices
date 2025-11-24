@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,13 +6,13 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.SpecialAward;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.SpecialAwardRepository;
-import com.fanflip.admin.repository.search.SpecialAwardSearchRepository;
-import com.fanflip.admin.service.dto.SpecialAwardDTO;
-import com.fanflip.admin.service.mapper.SpecialAwardMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.SpecialAward;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.SpecialAwardRepository;
+import com.monsterdam.admin.repository.search.SpecialAwardSearchRepository;
+import com.monsterdam.admin.service.dto.SpecialAwardDTO;
+import com.monsterdam.admin.service.mapper.SpecialAwardMapper;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;

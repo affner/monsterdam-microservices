@@ -1,18 +1,18 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.AdminAnnouncementTestSamples.*;
-import static com.fanflip.admin.domain.BookMarkTestSamples.*;
-import static com.fanflip.admin.domain.ChatRoomTestSamples.*;
-import static com.fanflip.admin.domain.ContentPackageTestSamples.*;
-import static com.fanflip.admin.domain.DirectMessageTestSamples.*;
-import static com.fanflip.admin.domain.DirectMessageTestSamples.*;
-import static com.fanflip.admin.domain.PurchasedTipTestSamples.*;
-import static com.fanflip.admin.domain.UserProfileTestSamples.*;
-import static com.fanflip.admin.domain.UserReportTestSamples.*;
-import static com.fanflip.admin.domain.VideoStoryTestSamples.*;
+import static com.monsterdam.admin.domain.AdminAnnouncementTestSamples.*;
+import static com.monsterdam.admin.domain.BookMarkTestSamples.*;
+import static com.monsterdam.admin.domain.ChatRoomTestSamples.*;
+import static com.monsterdam.admin.domain.ContentPackageTestSamples.*;
+import static com.monsterdam.admin.domain.DirectMessageTestSamples.*;
+import static com.monsterdam.admin.domain.DirectMessageTestSamples.*;
+import static com.monsterdam.admin.domain.PurchasedTipTestSamples.*;
+import static com.monsterdam.admin.domain.UserProfileTestSamples.*;
+import static com.monsterdam.admin.domain.UserReportTestSamples.*;
+import static com.monsterdam.admin.domain.VideoStoryTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

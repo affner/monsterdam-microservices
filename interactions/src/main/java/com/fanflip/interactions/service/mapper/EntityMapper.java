@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

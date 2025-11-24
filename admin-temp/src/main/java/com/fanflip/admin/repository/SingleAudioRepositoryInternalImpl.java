@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.SingleAudio;
-import com.fanflip.admin.repository.rowmapper.SingleAudioRowMapper;
+import com.monsterdam.admin.domain.SingleAudio;
+import com.monsterdam.admin.repository.rowmapper.SingleAudioRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

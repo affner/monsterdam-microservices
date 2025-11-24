@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.FeedbackRepository;
-import com.fanflip.admin.repository.search.FeedbackSearchRepository;
-import com.fanflip.admin.service.FeedbackService;
-import com.fanflip.admin.service.dto.FeedbackDTO;
-import com.fanflip.admin.service.mapper.FeedbackMapper;
+import com.monsterdam.admin.repository.FeedbackRepository;
+import com.monsterdam.admin.repository.search.FeedbackSearchRepository;
+import com.monsterdam.admin.service.FeedbackService;
+import com.monsterdam.admin.service.dto.FeedbackDTO;
+import com.monsterdam.admin.service.mapper.FeedbackMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.Feedback}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.Feedback}.
  */
 @Service
 @Transactional

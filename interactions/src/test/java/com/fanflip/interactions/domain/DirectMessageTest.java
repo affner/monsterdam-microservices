@@ -1,11 +1,11 @@
-package com.fanflip.interactions.domain;
+package com.monsterdam.interactions.domain;
 
-import static com.fanflip.interactions.domain.ChatRoomTestSamples.*;
-import static com.fanflip.interactions.domain.DirectMessageTestSamples.*;
-import static com.fanflip.interactions.domain.DirectMessageTestSamples.*;
+import static com.monsterdam.interactions.domain.ChatRoomTestSamples.*;
+import static com.monsterdam.interactions.domain.DirectMessageTestSamples.*;
+import static com.monsterdam.interactions.domain.DirectMessageTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.web.rest.TestUtil;
+import com.monsterdam.interactions.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

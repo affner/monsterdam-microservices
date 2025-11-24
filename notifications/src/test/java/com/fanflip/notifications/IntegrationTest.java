@@ -1,10 +1,10 @@
-package com.fanflip.notifications;
+package com.monsterdam.notifications;
 
-import com.fanflip.notifications.config.AsyncSyncConfiguration;
-import com.fanflip.notifications.config.EmbeddedElasticsearch;
-import com.fanflip.notifications.config.EmbeddedKafka;
-import com.fanflip.notifications.config.EmbeddedRedis;
-import com.fanflip.notifications.config.EmbeddedSQL;
+import com.monsterdam.notifications.config.AsyncSyncConfiguration;
+import com.monsterdam.notifications.config.EmbeddedElasticsearch;
+import com.monsterdam.notifications.config.EmbeddedKafka;
+import com.monsterdam.notifications.config.EmbeddedRedis;
+import com.monsterdam.notifications.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

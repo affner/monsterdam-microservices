@@ -1,9 +1,9 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.EmbeddedKafka;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.EmbeddedKafka;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,9 +27,9 @@ import org.springframework.util.MimeTypeUtils;
 @EmbeddedKafka
 @IntegrationTest
 @ImportAutoConfiguration(TestChannelBinderConfiguration.class)
-class FanflipKafkaResourceIT {
+class MonsterdamKafkaResourceIT {
 
-    private static String KAFKA_API = "/api/fanflip-kafka/{command}";
+    private static String KAFKA_API = "/api/monsterdam-kafka/{command}";
 
     @Autowired
     private WebTestClient client;

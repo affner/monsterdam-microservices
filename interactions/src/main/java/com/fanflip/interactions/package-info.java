@@ -1,4 +1,4 @@
 /**
  * Application root.
  */
-package com.fanflip.interactions;
+package com.monsterdam.interactions;

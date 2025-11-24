@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.HelpQuestion;
-import com.fanflip.catalogs.repository.HelpQuestionRepository;
-import com.fanflip.catalogs.service.HelpQuestionService;
-import com.fanflip.catalogs.service.dto.HelpQuestionDTO;
-import com.fanflip.catalogs.service.mapper.HelpQuestionMapper;
+import com.monsterdam.catalogs.domain.HelpQuestion;
+import com.monsterdam.catalogs.repository.HelpQuestionRepository;
+import com.monsterdam.catalogs.service.HelpQuestionService;
+import com.monsterdam.catalogs.service.dto.HelpQuestionDTO;
+import com.monsterdam.catalogs.service.mapper.HelpQuestionMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.HelpQuestion}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.HelpQuestion}.
  */
 @Service
 @Transactional

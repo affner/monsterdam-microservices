@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

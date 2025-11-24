@@ -1,15 +1,15 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.LikeMark;
-import com.fanflip.interactions.repository.LikeMarkRepository;
-import com.fanflip.interactions.service.dto.LikeMarkDTO;
-import com.fanflip.interactions.service.mapper.LikeMarkMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.LikeMark;
+import com.monsterdam.interactions.repository.LikeMarkRepository;
+import com.monsterdam.interactions.service.dto.LikeMarkDTO;
+import com.monsterdam.interactions.service.mapper.LikeMarkMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

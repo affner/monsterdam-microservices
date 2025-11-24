@@ -1,4 +1,4 @@
 /**
  * Application root.
  */
-package com.fanflip.notifications;
+package com.monsterdam.notifications;

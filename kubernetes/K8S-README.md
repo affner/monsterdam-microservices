@@ -5,18 +5,18 @@
 You will need to push your image to a registry. If you have not done so, use the following commands to tag and push the images:
 
 ```
-$ docker image tag gateway fanflip/gateway
-$ docker push fanflip/gateway
-$ docker image tag finance fanflip/finance
-$ docker push fanflip/finance
-$ docker image tag multimedia fanflip/multimedia
-$ docker push fanflip/multimedia
-$ docker image tag interactions fanflip/interactions
-$ docker push fanflip/interactions
-$ docker image tag profile fanflip/profile
-$ docker push fanflip/profile
-$ docker image tag admin fanflip/admin
-$ docker push fanflip/admin
+$ docker image tag gateway monsterdam/gateway
+$ docker push monsterdam/gateway
+$ docker image tag finance monsterdam/finance
+$ docker push monsterdam/finance
+$ docker image tag multimedia monsterdam/multimedia
+$ docker push monsterdam/multimedia
+$ docker image tag interactions monsterdam/interactions
+$ docker push monsterdam/interactions
+$ docker image tag profile monsterdam/profile
+$ docker push monsterdam/profile
+$ docker image tag admin monsterdam/admin
+$ docker push monsterdam/admin
 ```
 
 ## Deployment

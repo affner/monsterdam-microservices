@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.PaymentTransaction;
-import com.fanflip.finance.repository.PaymentTransactionRepository;
-import com.fanflip.finance.service.PaymentTransactionService;
-import com.fanflip.finance.service.dto.PaymentTransactionDTO;
-import com.fanflip.finance.service.mapper.PaymentTransactionMapper;
+import com.monsterdam.finance.domain.PaymentTransaction;
+import com.monsterdam.finance.repository.PaymentTransactionRepository;
+import com.monsterdam.finance.service.PaymentTransactionService;
+import com.monsterdam.finance.service.dto.PaymentTransactionDTO;
+import com.monsterdam.finance.service.mapper.PaymentTransactionMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.PaymentTransaction}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.PaymentTransaction}.
  */
 @Service
 @Transactional

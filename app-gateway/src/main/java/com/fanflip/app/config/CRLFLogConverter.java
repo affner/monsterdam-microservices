@@ -1,4 +1,4 @@
-package com.fanflip.app.config;
+package com.monsterdam.app.config;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.pattern.CompositeConverter;

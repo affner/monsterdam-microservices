@@ -1,6 +1,6 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.SubscriptionBundle;
+import com.monsterdam.admin.domain.SubscriptionBundle;
 import io.r2dbc.spi.Row;
 import java.math.BigDecimal;
 import java.time.Duration;

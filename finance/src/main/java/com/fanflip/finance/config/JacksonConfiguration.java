@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import com.fasterxml.jackson.datatype.hibernate6.Hibernate6Module;
 import com.fasterxml.jackson.datatype.hibernate6.Hibernate6Module.Feature;

@@ -1,15 +1,15 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.Authority;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.AuthorityRepository;
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.repository.search.UserSearchRepository;
-import com.fanflip.app.security.AuthoritiesConstants;
-import com.fanflip.app.security.SecurityUtils;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.service.dto.UserDTO;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.Authority;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.AuthorityRepository;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.repository.search.UserSearchRepository;
+import com.monsterdam.app.security.AuthoritiesConstants;
+import com.monsterdam.app.security.SecurityUtils;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.UserDTO;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;

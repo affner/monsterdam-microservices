@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.UserEvent;
-import com.fanflip.admin.domain.enumeration.UserEventStatus;
+import com.monsterdam.admin.domain.UserEvent;
+import com.monsterdam.admin.domain.enumeration.UserEventStatus;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.time.LocalDate;

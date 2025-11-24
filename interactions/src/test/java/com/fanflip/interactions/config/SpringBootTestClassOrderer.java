@@ -1,6 +1,6 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
-import com.fanflip.interactions.IntegrationTest;
+import com.monsterdam.interactions.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

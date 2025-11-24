@@ -1,4 +1,4 @@
-package com.fanflip.interactions;
+package com.monsterdam.interactions;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

@@ -1,4 +1,4 @@
-package com.fanflip.finance.security.jwt;
+package com.monsterdam.finance.security.jwt;
 
 import org.springframework.web.bind.annotation.*;
 

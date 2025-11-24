@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.AssociationStatus;
+import com.monsterdam.admin.domain.enumeration.AssociationStatus;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.UserAssociation} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.UserAssociation} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserAssociationDTO implements Serializable {

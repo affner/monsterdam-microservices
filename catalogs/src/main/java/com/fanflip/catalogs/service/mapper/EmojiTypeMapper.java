@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.EmojiType;
-import com.fanflip.catalogs.service.dto.EmojiTypeDTO;
+import com.monsterdam.catalogs.domain.EmojiType;
+import com.monsterdam.catalogs.service.dto.EmojiTypeDTO;
 import org.mapstruct.*;
 
 /**

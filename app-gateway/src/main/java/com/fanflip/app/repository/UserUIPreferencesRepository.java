@@ -1,6 +1,6 @@
-package com.fanflip.app.repository;
+package com.monsterdam.app.repository;
 
-import com.fanflip.app.domain.UserUIPreferences;
+import com.monsterdam.app.domain.UserUIPreferences;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;

@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.TaxInfo;
-import com.fanflip.catalogs.repository.TaxInfoRepository;
-import com.fanflip.catalogs.service.TaxInfoService;
-import com.fanflip.catalogs.service.dto.TaxInfoDTO;
-import com.fanflip.catalogs.service.mapper.TaxInfoMapper;
+import com.monsterdam.catalogs.domain.TaxInfo;
+import com.monsterdam.catalogs.repository.TaxInfoRepository;
+import com.monsterdam.catalogs.service.TaxInfoService;
+import com.monsterdam.catalogs.service.dto.TaxInfoDTO;
+import com.monsterdam.catalogs.service.mapper.TaxInfoMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.TaxInfo}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.TaxInfo}.
  */
 @Service
 @Transactional

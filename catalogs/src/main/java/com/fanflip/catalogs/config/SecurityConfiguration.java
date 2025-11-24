@@ -1,8 +1,8 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.fanflip.catalogs.security.*;
+import com.monsterdam.catalogs.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

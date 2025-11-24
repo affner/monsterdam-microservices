@@ -6,7 +6,7 @@
     "deploymentType": "kubernetes",
     "directoryPath": "../",
     "dockerPushCommand": "docker push",
-    "dockerRepositoryName": "fanflip",
+    "dockerRepositoryName": "monsterdam",
     "ingressDomain": "",
     "istio": false,
     "jhipsterVersion": "8.1.0",

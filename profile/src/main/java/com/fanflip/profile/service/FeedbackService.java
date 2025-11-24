@@ -1,12 +1,12 @@
-package com.fanflip.profile.service;
+package com.monsterdam.profile.service;
 
-import com.fanflip.profile.service.dto.FeedbackDTO;
+import com.monsterdam.profile.service.dto.FeedbackDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.profile.domain.Feedback}.
+ * Service Interface for managing {@link com.monsterdam.profile.domain.Feedback}.
  */
 public interface FeedbackService {
     /**

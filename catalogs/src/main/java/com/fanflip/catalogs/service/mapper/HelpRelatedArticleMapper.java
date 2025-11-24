@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.HelpRelatedArticle;
-import com.fanflip.catalogs.service.dto.HelpRelatedArticleDTO;
+import com.monsterdam.catalogs.domain.HelpRelatedArticle;
+import com.monsterdam.catalogs.service.dto.HelpRelatedArticleDTO;
 import org.mapstruct.*;
 
 /**

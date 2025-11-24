@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.broker;
+package com.monsterdam.multimedia.broker;
 
 import java.util.function.Supplier;
 import org.springframework.stereotype.Component;

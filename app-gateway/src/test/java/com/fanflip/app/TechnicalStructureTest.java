@@ -1,4 +1,4 @@
-package com.fanflip.app;
+package com.monsterdam.app;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -9,7 +9,7 @@ import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;
 
-@AnalyzeClasses(packagesOf = FanflipApp.class, importOptions = DoNotIncludeTests.class)
+@AnalyzeClasses(packagesOf = MonsterdamApp.class, importOptions = DoNotIncludeTests.class)
 class TechnicalStructureTest {
 
     // prettier-ignore
@@ -30,9 +30,9 @@ class TechnicalStructureTest {
         .whereLayer("Persistence").mayOnlyBeAccessedByLayers("Service", "Security", "Web", "Config")
         .whereLayer("Domain").mayOnlyBeAccessedByLayers("Persistence", "Service", "Security", "Web", "Config")
 
-        .ignoreDependency(belongToAnyOf(FanflipApp.class), alwaysTrue())
+        .ignoreDependency(belongToAnyOf(MonsterdamApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.app.config.Constants.class,
-            com.fanflip.app.config.ApplicationProperties.class
+            com.monsterdam.app.config.Constants.class,
+            com.monsterdam.app.config.ApplicationProperties.class
         ));
 }

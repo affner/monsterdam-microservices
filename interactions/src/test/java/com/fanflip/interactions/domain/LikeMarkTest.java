@@ -1,9 +1,9 @@
-package com.fanflip.interactions.domain;
+package com.monsterdam.interactions.domain;
 
-import static com.fanflip.interactions.domain.LikeMarkTestSamples.*;
+import static com.monsterdam.interactions.domain.LikeMarkTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.web.rest.TestUtil;
+import com.monsterdam.interactions.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class LikeMarkTest {

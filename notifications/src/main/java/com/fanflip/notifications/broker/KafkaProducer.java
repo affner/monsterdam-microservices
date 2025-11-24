@@ -1,4 +1,4 @@
-package com.fanflip.notifications.broker;
+package com.monsterdam.notifications.broker;
 
 import java.util.function.Supplier;
 import org.springframework.stereotype.Component;

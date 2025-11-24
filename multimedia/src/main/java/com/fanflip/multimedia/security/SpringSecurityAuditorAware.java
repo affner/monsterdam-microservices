@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.security;
+package com.monsterdam.multimedia.security;
 
-import com.fanflip.multimedia.config.Constants;
+import com.monsterdam.multimedia.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

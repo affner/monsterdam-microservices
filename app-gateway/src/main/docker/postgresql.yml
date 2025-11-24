@@ -1,12 +1,12 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: fanflip
+name: monsterdam
 services:
   postgresql:
     image: postgres:16.1
     # volumes:
-    #   - ~/volumes/jhipster/fanflip/postgresql/:/var/lib/postgresql/data/
+    #   - ~/volumes/jhipster/monsterdam/postgresql/:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=fanflip
+      - POSTGRES_USER=monsterdam
       - POSTGRES_PASSWORD=
       - POSTGRES_HOST_AUTH_METHOD=trust
     healthcheck:

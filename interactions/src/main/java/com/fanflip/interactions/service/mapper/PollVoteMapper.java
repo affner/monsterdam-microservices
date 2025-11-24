@@ -1,9 +1,9 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
-import com.fanflip.interactions.domain.PollOption;
-import com.fanflip.interactions.domain.PollVote;
-import com.fanflip.interactions.service.dto.PollOptionDTO;
-import com.fanflip.interactions.service.dto.PollVoteDTO;
+import com.monsterdam.interactions.domain.PollOption;
+import com.monsterdam.interactions.domain.PollVote;
+import com.monsterdam.interactions.service.dto.PollOptionDTO;
+import com.monsterdam.interactions.service.dto.PollVoteDTO;
 import org.mapstruct.*;
 
 /**

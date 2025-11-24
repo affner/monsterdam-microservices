@@ -1,4 +1,4 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
 import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.pattern.CompositeConverter;

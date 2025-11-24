@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

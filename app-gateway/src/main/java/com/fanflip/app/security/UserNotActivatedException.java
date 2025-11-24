@@ -1,4 +1,4 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
 import org.springframework.security.core.AuthenticationException;
 

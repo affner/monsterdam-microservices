@@ -1,6 +1,6 @@
-package com.fanflip.app.repository.rowmapper;
+package com.monsterdam.app.repository.rowmapper;
 
-import com.fanflip.app.domain.UserUIPreferences;
+import com.monsterdam.app.domain.UserUIPreferences;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

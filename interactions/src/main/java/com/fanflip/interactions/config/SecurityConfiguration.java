@@ -1,8 +1,8 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.fanflip.interactions.security.*;
+import com.monsterdam.interactions.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

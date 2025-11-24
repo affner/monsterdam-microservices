@@ -1,6 +1,6 @@
-package com.fanflip.finance.service.dto;
+package com.monsterdam.finance.service.dto;
 
-import com.fanflip.finance.domain.enumeration.PurchasedSubscriptionStatus;
+import com.monsterdam.finance.domain.enumeration.PurchasedSubscriptionStatus;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.finance.domain.PurchasedSubscription} entity.
+ * A DTO for the {@link com.monsterdam.finance.domain.PurchasedSubscription} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PurchasedSubscriptionDTO implements Serializable {

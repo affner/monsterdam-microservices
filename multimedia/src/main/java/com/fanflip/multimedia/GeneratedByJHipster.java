@@ -1,4 +1,4 @@
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

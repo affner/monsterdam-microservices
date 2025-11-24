@@ -1,9 +1,9 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
-import com.fanflip.profile.repository.UserAssociationRepository;
-import com.fanflip.profile.service.UserAssociationService;
-import com.fanflip.profile.service.dto.UserAssociationDTO;
-import com.fanflip.profile.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.profile.repository.UserAssociationRepository;
+import com.monsterdam.profile.service.UserAssociationService;
+import com.monsterdam.profile.service.dto.UserAssociationDTO;
+import com.monsterdam.profile.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.profile.domain.UserAssociation}.
+ * REST controller for managing {@link com.monsterdam.profile.domain.UserAssociation}.
  */
 @RestController
 @RequestMapping("/api/user-associations")

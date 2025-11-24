@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
 import java.util.Random;
 import java.util.UUID;

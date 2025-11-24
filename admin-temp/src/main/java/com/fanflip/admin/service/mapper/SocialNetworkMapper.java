@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.SocialNetwork;
-import com.fanflip.admin.service.dto.SocialNetworkDTO;
+import com.monsterdam.admin.domain.SocialNetwork;
+import com.monsterdam.admin.service.dto.SocialNetworkDTO;
 import org.mapstruct.*;
 
 /**

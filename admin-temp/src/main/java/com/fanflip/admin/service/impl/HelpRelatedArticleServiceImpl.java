@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.HelpRelatedArticleRepository;
-import com.fanflip.admin.repository.search.HelpRelatedArticleSearchRepository;
-import com.fanflip.admin.service.HelpRelatedArticleService;
-import com.fanflip.admin.service.dto.HelpRelatedArticleDTO;
-import com.fanflip.admin.service.mapper.HelpRelatedArticleMapper;
+import com.monsterdam.admin.repository.HelpRelatedArticleRepository;
+import com.monsterdam.admin.repository.search.HelpRelatedArticleSearchRepository;
+import com.monsterdam.admin.service.HelpRelatedArticleService;
+import com.monsterdam.admin.service.dto.HelpRelatedArticleDTO;
+import com.monsterdam.admin.service.mapper.HelpRelatedArticleMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.HelpRelatedArticle}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.HelpRelatedArticle}.
  */
 @Service
 @Transactional

@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.StateRepository;
-import com.fanflip.catalogs.service.StateService;
-import com.fanflip.catalogs.service.dto.StateDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
-import com.fanflip.catalogs.web.rest.errors.ElasticsearchExceptionMapper;
+import com.monsterdam.catalogs.repository.StateRepository;
+import com.monsterdam.catalogs.service.StateService;
+import com.monsterdam.catalogs.service.dto.StateDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -26,7 +26,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.State}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.State}.
  */
 @RestController
 @RequestMapping("/api/states")

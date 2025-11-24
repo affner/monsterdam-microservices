@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import jakarta.servlet.*;
 import org.slf4j.Logger;

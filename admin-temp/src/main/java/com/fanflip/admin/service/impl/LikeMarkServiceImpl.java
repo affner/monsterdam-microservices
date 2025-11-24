@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.LikeMarkRepository;
-import com.fanflip.admin.repository.search.LikeMarkSearchRepository;
-import com.fanflip.admin.service.LikeMarkService;
-import com.fanflip.admin.service.dto.LikeMarkDTO;
-import com.fanflip.admin.service.mapper.LikeMarkMapper;
+import com.monsterdam.admin.repository.LikeMarkRepository;
+import com.monsterdam.admin.repository.search.LikeMarkSearchRepository;
+import com.monsterdam.admin.service.LikeMarkService;
+import com.monsterdam.admin.service.dto.LikeMarkDTO;
+import com.monsterdam.admin.service.mapper.LikeMarkMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.LikeMark}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.LikeMark}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.dto;
+package com.monsterdam.interactions.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.interactions.domain.PostPoll} entity.
+ * A DTO for the {@link com.monsterdam.interactions.domain.PostPoll} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PostPollDTO implements Serializable {

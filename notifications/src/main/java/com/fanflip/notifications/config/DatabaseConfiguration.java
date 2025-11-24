@@ -1,4 +1,4 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
 import java.sql.SQLException;
 import org.slf4j.Logger;
@@ -15,10 +15,10 @@ import tech.jhipster.config.JHipsterConstants;
 import tech.jhipster.config.h2.H2ConfigurationHelper;
 
 @Configuration
-@EnableJpaRepositories({ "com.fanflip.notifications.repository" })
+@EnableJpaRepositories({ "com.monsterdam.notifications.repository" })
 @EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 @EnableTransactionManagement
-@EnableElasticsearchRepositories("com.fanflip.notifications.repository.search")
+@EnableElasticsearchRepositories("com.monsterdam.notifications.repository.search")
 public class DatabaseConfiguration {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);

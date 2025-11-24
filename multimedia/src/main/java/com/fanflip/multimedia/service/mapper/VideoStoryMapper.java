@@ -1,7 +1,7 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
-import com.fanflip.multimedia.domain.VideoStory;
-import com.fanflip.multimedia.service.dto.VideoStoryDTO;
+import com.monsterdam.multimedia.domain.VideoStory;
+import com.monsterdam.multimedia.service.dto.VideoStoryDTO;
 import org.mapstruct.*;
 
 /**

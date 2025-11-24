@@ -1,9 +1,9 @@
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;
 
-import com.fanflip.notifications.repository.AppNotificationRepository;
-import com.fanflip.notifications.service.AppNotificationService;
-import com.fanflip.notifications.service.dto.AppNotificationDTO;
-import com.fanflip.notifications.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.notifications.repository.AppNotificationRepository;
+import com.monsterdam.notifications.service.AppNotificationService;
+import com.monsterdam.notifications.service.dto.AppNotificationDTO;
+import com.monsterdam.notifications.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.notifications.domain.AppNotification}.
+ * REST controller for managing {@link com.monsterdam.notifications.domain.AppNotification}.
  */
 @RestController
 @RequestMapping("/api/app-notifications")

@@ -1,4 +1,4 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.VideoStory} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.VideoStory} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class VideoStoryDTO implements Serializable {

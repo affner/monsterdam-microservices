@@ -1,4 +1,4 @@
-package com.fanflip.profile.repository.timezone;
+package com.monsterdam.profile.repository.timezone;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

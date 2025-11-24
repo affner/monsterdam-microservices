@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.AdminEmailConfigsRepository;
-import com.fanflip.admin.repository.search.AdminEmailConfigsSearchRepository;
-import com.fanflip.admin.service.AdminEmailConfigsService;
-import com.fanflip.admin.service.dto.AdminEmailConfigsDTO;
-import com.fanflip.admin.service.mapper.AdminEmailConfigsMapper;
+import com.monsterdam.admin.repository.AdminEmailConfigsRepository;
+import com.monsterdam.admin.repository.search.AdminEmailConfigsSearchRepository;
+import com.monsterdam.admin.service.AdminEmailConfigsService;
+import com.monsterdam.admin.service.dto.AdminEmailConfigsDTO;
+import com.monsterdam.admin.service.mapper.AdminEmailConfigsMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.AdminEmailConfigs}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.AdminEmailConfigs}.
  */
 @Service
 @Transactional

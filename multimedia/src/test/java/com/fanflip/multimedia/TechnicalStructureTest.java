@@ -1,4 +1,4 @@
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(MultimediaApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.multimedia.config.Constants.class,
-            com.fanflip.multimedia.config.ApplicationProperties.class
+            com.monsterdam.multimedia.config.Constants.class,
+            com.monsterdam.multimedia.config.ApplicationProperties.class
         ));
 }

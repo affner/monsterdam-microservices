@@ -1,12 +1,12 @@
-package com.fanflip.notifications.service;
+package com.monsterdam.notifications.service;
 
-import com.fanflip.notifications.service.dto.AppNotificationDTO;
+import com.monsterdam.notifications.service.dto.AppNotificationDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.notifications.domain.AppNotification}.
+ * Service Interface for managing {@link com.monsterdam.notifications.domain.AppNotification}.
  */
 public interface AppNotificationService {
     /**

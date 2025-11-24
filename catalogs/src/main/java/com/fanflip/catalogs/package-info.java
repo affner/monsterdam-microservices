@@ -1,4 +1,4 @@
 /**
  * Application root.
  */
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;

@@ -1,16 +1,16 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.multimedia.IntegrationTest;
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.domain.SingleAudio;
-import com.fanflip.multimedia.repository.SingleAudioRepository;
-import com.fanflip.multimedia.service.dto.SingleAudioDTO;
-import com.fanflip.multimedia.service.mapper.SingleAudioMapper;
+import com.monsterdam.multimedia.IntegrationTest;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.domain.SingleAudio;
+import com.monsterdam.multimedia.repository.SingleAudioRepository;
+import com.monsterdam.multimedia.service.dto.SingleAudioDTO;
+import com.monsterdam.multimedia.service.mapper.SingleAudioMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Duration;
 import java.time.Instant;

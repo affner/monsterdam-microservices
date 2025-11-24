@@ -1,4 +1,4 @@
-package com.fanflip.profile.service.dto;
+package com.monsterdam.profile.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * A DTO for the {@link com.fanflip.profile.domain.UserProfile} entity.
+ * A DTO for the {@link com.monsterdam.profile.domain.UserProfile} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserProfileDTO implements Serializable {

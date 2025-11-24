@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.LiabilityRepository;
-import com.fanflip.admin.repository.search.LiabilitySearchRepository;
-import com.fanflip.admin.service.LiabilityService;
-import com.fanflip.admin.service.dto.LiabilityDTO;
-import com.fanflip.admin.service.mapper.LiabilityMapper;
+import com.monsterdam.admin.repository.LiabilityRepository;
+import com.monsterdam.admin.repository.search.LiabilitySearchRepository;
+import com.monsterdam.admin.service.LiabilityService;
+import com.monsterdam.admin.service.dto.LiabilityDTO;
+import com.monsterdam.admin.service.mapper.LiabilityMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.Liability}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.Liability}.
  */
 @Service
 @Transactional

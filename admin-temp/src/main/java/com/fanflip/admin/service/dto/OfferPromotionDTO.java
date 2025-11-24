@@ -1,6 +1,6 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.OfferPromotionType;
+import com.monsterdam.admin.domain.enumeration.OfferPromotionType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Duration;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.OfferPromotion} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.OfferPromotion} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class OfferPromotionDTO implements Serializable {

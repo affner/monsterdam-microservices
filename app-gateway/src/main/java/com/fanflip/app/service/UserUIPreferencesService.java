@@ -1,12 +1,12 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
-import com.fanflip.app.service.dto.UserUIPreferencesDTO;
+import com.monsterdam.app.service.dto.UserUIPreferencesDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.app.domain.UserUIPreferences}.
+ * Service Interface for managing {@link com.monsterdam.app.domain.UserUIPreferences}.
  */
 public interface UserUIPreferencesService {
     /**

@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;

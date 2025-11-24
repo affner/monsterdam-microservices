@@ -1,4 +1,4 @@
-package com.fanflip.finance.management;
+package com.monsterdam.finance.management;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;

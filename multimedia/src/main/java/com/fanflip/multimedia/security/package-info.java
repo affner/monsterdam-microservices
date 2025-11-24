@@ -1,4 +1,4 @@
 /**
  * Application security utilities.
  */
-package com.fanflip.multimedia.security;
+package com.monsterdam.multimedia.security;

@@ -21,8 +21,8 @@ export const UserUIPreferencesDeleteDialog = () => {
     setLoadModal(true);
   }, []);
 
-  const userUIPreferencesEntity = useAppSelector(state => state.fanflip.userUIPreferences.entity);
-  const updateSuccess = useAppSelector(state => state.fanflip.userUIPreferences.updateSuccess);
+  const userUIPreferencesEntity = useAppSelector(state => state.monsterdam.userUIPreferences.entity);
+  const updateSuccess = useAppSelector(state => state.monsterdam.userUIPreferences.updateSuccess);
 
   const handleClose = () => {
     navigate('/user-ui-preferences' + pageLocation.search);
@@ -44,8 +44,8 @@ export const UserUIPreferencesDeleteDialog = () => {
       <ModalHeader toggle={handleClose} data-cy="userUIPreferencesDeleteDialogHeading">
         <Translate contentKey="entity.delete.title">Confirm delete operation</Translate>
       </ModalHeader>
-      <ModalBody id="fanflipApp.userUIPreferences.delete.question">
-        <Translate contentKey="fanflipApp.userUIPreferences.delete.question" interpolate={{ id: userUIPreferencesEntity.id }}>
+      <ModalBody id="monsterdamApp.userUIPreferences.delete.question">
+        <Translate contentKey="monsterdamApp.userUIPreferences.delete.question" interpolate={{ id: userUIPreferencesEntity.id }}>
           Are you sure you want to delete this UserUIPreferences?
         </Translate>
       </ModalBody>

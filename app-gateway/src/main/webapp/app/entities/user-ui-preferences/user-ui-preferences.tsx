@@ -22,9 +22,9 @@ export const UserUIPreferences = () => {
     overridePaginationStateWithQueryParams(getPaginationState(pageLocation, ITEMS_PER_PAGE, 'id'), pageLocation.search),
   );
 
-  const userUIPreferencesList = useAppSelector(state => state.fanflip.userUIPreferences.entities);
-  const loading = useAppSelector(state => state.fanflip.userUIPreferences.loading);
-  const totalItems = useAppSelector(state => state.fanflip.userUIPreferences.totalItems);
+  const userUIPreferencesList = useAppSelector(state => state.monsterdam.userUIPreferences.entities);
+  const loading = useAppSelector(state => state.monsterdam.userUIPreferences.loading);
+  const totalItems = useAppSelector(state => state.monsterdam.userUIPreferences.totalItems);
 
   const getAllEntities = () => {
     if (search) {
@@ -134,11 +134,11 @@ export const UserUIPreferences = () => {
   return (
     <div>
       <h2 id="user-ui-preferences-heading" data-cy="UserUIPreferencesHeading">
-        <Translate contentKey="fanflipApp.userUIPreferences.home.title">User UI Preferences</Translate>
+        <Translate contentKey="monsterdamApp.userUIPreferences.home.title">User UI Preferences</Translate>
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
-            <Translate contentKey="fanflipApp.userUIPreferences.home.refreshListLabel">Refresh List</Translate>
+            <Translate contentKey="monsterdamApp.userUIPreferences.home.refreshListLabel">Refresh List</Translate>
           </Button>
           <Link
             to="/user-ui-preferences/new"
@@ -148,7 +148,7 @@ export const UserUIPreferences = () => {
           >
             <FontAwesomeIcon icon="plus" />
             &nbsp;
-            <Translate contentKey="fanflipApp.userUIPreferences.home.createLabel">Create new User UI Preferences</Translate>
+            <Translate contentKey="monsterdamApp.userUIPreferences.home.createLabel">Create new User UI Preferences</Translate>
           </Link>
         </div>
       </h2>
@@ -162,7 +162,7 @@ export const UserUIPreferences = () => {
                   name="search"
                   defaultValue={search}
                   onChange={handleSearch}
-                  placeholder={translate('fanflipApp.userUIPreferences.home.search')}
+                  placeholder={translate('monsterdamApp.userUIPreferences.home.search')}
                 />
                 <Button className="input-group-addon">
                   <FontAwesomeIcon icon="search" />
@@ -181,27 +181,27 @@ export const UserUIPreferences = () => {
             <thead>
               <tr>
                 <th className="hand" onClick={sort('id')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.id">ID</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.id">ID</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
                 </th>
                 <th className="hand" onClick={sort('preferences')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.preferences">Preferences</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.preferences">Preferences</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('preferences')} />
                 </th>
                 <th className="hand" onClick={sort('createdDate')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.createdDate">Created Date</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.createdDate">Created Date</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('createdDate')} />
                 </th>
                 <th className="hand" onClick={sort('lastModifiedDate')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.lastModifiedDate">Last Modified Date</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.lastModifiedDate">Last Modified Date</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('lastModifiedDate')} />
                 </th>
                 <th className="hand" onClick={sort('createdBy')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.createdBy">Created By</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.createdBy">Created By</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('createdBy')} />
                 </th>
                 <th className="hand" onClick={sort('lastModifiedBy')}>
-                  <Translate contentKey="fanflipApp.userUIPreferences.lastModifiedBy">Last Modified By</Translate>{' '}
+                  <Translate contentKey="monsterdamApp.userUIPreferences.lastModifiedBy">Last Modified By</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('lastModifiedBy')} />
                 </th>
                 <th />
@@ -276,7 +276,7 @@ export const UserUIPreferences = () => {
         ) : (
           !loading && (
             <div className="alert alert-warning">
-              <Translate contentKey="fanflipApp.userUIPreferences.home.notFound">No User UI Preferences found</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.home.notFound">No User UI Preferences found</Translate>
             </div>
           )
         )}

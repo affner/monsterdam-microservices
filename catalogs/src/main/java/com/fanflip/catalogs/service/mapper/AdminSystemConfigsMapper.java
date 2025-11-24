@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.AdminSystemConfigs;
-import com.fanflip.catalogs.service.dto.AdminSystemConfigsDTO;
+import com.monsterdam.catalogs.domain.AdminSystemConfigs;
+import com.monsterdam.catalogs.service.dto.AdminSystemConfigsDTO;
 import org.mapstruct.*;
 
 /**

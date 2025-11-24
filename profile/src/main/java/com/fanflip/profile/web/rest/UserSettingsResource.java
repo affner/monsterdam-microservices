@@ -1,9 +1,9 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
-import com.fanflip.profile.repository.UserSettingsRepository;
-import com.fanflip.profile.service.UserSettingsService;
-import com.fanflip.profile.service.dto.UserSettingsDTO;
-import com.fanflip.profile.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.profile.repository.UserSettingsRepository;
+import com.monsterdam.profile.service.UserSettingsService;
+import com.monsterdam.profile.service.dto.UserSettingsDTO;
+import com.monsterdam.profile.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -26,7 +26,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.profile.domain.UserSettings}.
+ * REST controller for managing {@link com.monsterdam.profile.domain.UserSettings}.
  */
 @RestController
 @RequestMapping("/api/user-settings")

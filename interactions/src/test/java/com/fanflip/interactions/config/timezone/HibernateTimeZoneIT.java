@@ -1,11 +1,11 @@
-package com.fanflip.interactions.config.timezone;
+package com.monsterdam.interactions.config.timezone;
 
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.repository.timezone.DateTimeWrapper;
-import com.fanflip.interactions.repository.timezone.DateTimeWrapperRepository;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.repository.timezone.DateTimeWrapper;
+import com.monsterdam.interactions.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import org.junit.jupiter.api.BeforeEach;

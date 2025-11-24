@@ -1,4 +1,4 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;

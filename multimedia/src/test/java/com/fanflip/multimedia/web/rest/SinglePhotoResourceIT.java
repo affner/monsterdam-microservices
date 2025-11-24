@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -6,12 +6,12 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.multimedia.IntegrationTest;
-import com.fanflip.multimedia.domain.SinglePhoto;
-import com.fanflip.multimedia.repository.SinglePhotoRepository;
-import com.fanflip.multimedia.service.SinglePhotoService;
-import com.fanflip.multimedia.service.dto.SinglePhotoDTO;
-import com.fanflip.multimedia.service.mapper.SinglePhotoMapper;
+import com.monsterdam.multimedia.IntegrationTest;
+import com.monsterdam.multimedia.domain.SinglePhoto;
+import com.monsterdam.multimedia.repository.SinglePhotoRepository;
+import com.monsterdam.multimedia.service.SinglePhotoService;
+import com.monsterdam.multimedia.service.dto.SinglePhotoDTO;
+import com.monsterdam.multimedia.service.mapper.SinglePhotoMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

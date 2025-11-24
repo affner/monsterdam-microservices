@@ -1,7 +1,7 @@
-package com.fanflip.interactions;
+package com.monsterdam.interactions;
 
-import com.fanflip.interactions.config.ApplicationProperties;
-import com.fanflip.interactions.config.CRLFLogConverter;
+import com.monsterdam.interactions.config.ApplicationProperties;
+import com.monsterdam.interactions.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

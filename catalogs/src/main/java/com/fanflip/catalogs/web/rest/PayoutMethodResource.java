@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.PayoutMethodRepository;
-import com.fanflip.catalogs.service.PayoutMethodService;
-import com.fanflip.catalogs.service.dto.PayoutMethodDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.PayoutMethodRepository;
+import com.monsterdam.catalogs.service.PayoutMethodService;
+import com.monsterdam.catalogs.service.dto.PayoutMethodDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.PayoutMethod}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.PayoutMethod}.
  */
 @RestController
 @RequestMapping("/api/payout-methods")

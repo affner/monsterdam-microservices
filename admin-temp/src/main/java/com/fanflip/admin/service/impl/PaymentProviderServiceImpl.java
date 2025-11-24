@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PaymentProviderRepository;
-import com.fanflip.admin.repository.search.PaymentProviderSearchRepository;
-import com.fanflip.admin.service.PaymentProviderService;
-import com.fanflip.admin.service.dto.PaymentProviderDTO;
-import com.fanflip.admin.service.mapper.PaymentProviderMapper;
+import com.monsterdam.admin.repository.PaymentProviderRepository;
+import com.monsterdam.admin.repository.search.PaymentProviderSearchRepository;
+import com.monsterdam.admin.service.PaymentProviderService;
+import com.monsterdam.admin.service.dto.PaymentProviderDTO;
+import com.monsterdam.admin.service.mapper.PaymentProviderMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PaymentProvider}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PaymentProvider}.
  */
 @Service
 @Transactional

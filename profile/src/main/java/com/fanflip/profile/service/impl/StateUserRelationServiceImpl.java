@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.StateUserRelation;
-import com.fanflip.profile.repository.StateUserRelationRepository;
-import com.fanflip.profile.service.StateUserRelationService;
-import com.fanflip.profile.service.dto.StateUserRelationDTO;
-import com.fanflip.profile.service.mapper.StateUserRelationMapper;
+import com.monsterdam.profile.domain.StateUserRelation;
+import com.monsterdam.profile.repository.StateUserRelationRepository;
+import com.monsterdam.profile.service.StateUserRelationService;
+import com.monsterdam.profile.service.dto.StateUserRelationDTO;
+import com.monsterdam.profile.service.mapper.StateUserRelationMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.StateUserRelation}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.StateUserRelation}.
  */
 @Service
 @Transactional

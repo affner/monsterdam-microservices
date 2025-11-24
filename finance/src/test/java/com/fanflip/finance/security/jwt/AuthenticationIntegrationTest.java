@@ -1,9 +1,9 @@
-package com.fanflip.finance.security.jwt;
+package com.monsterdam.finance.security.jwt;
 
-import com.fanflip.finance.config.SecurityConfiguration;
-import com.fanflip.finance.config.SecurityJwtConfiguration;
-import com.fanflip.finance.config.WebConfigurer;
-import com.fanflip.finance.management.SecurityMetersService;
+import com.monsterdam.finance.config.SecurityConfiguration;
+import com.monsterdam.finance.config.SecurityJwtConfiguration;
+import com.monsterdam.finance.config.WebConfigurer;
+import com.monsterdam.finance.management.SecurityMetersService;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

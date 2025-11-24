@@ -1,4 +1,4 @@
 /**
  * Application configuration.
  */
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;

@@ -1,9 +1,9 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.AdminAnnouncement;
-import com.fanflip.admin.repository.rowmapper.AdminAnnouncementRowMapper;
-import com.fanflip.admin.repository.rowmapper.AdminUserProfileRowMapper;
-import com.fanflip.admin.repository.rowmapper.DirectMessageRowMapper;
+import com.monsterdam.admin.domain.AdminAnnouncement;
+import com.monsterdam.admin.repository.rowmapper.AdminAnnouncementRowMapper;
+import com.monsterdam.admin.repository.rowmapper.AdminUserProfileRowMapper;
+import com.monsterdam.admin.repository.rowmapper.DirectMessageRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

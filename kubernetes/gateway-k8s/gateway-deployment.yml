@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: gateway-app
-          image: fanflip/gateway
+          image: monsterdam/gateway
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

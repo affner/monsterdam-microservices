@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -13,7 +13,7 @@ import tech.jhipster.config.apidoc.customizer.JHipsterOpenApiCustomizer;
 @Profile(JHipsterConstants.SPRING_PROFILE_API_DOCS)
 public class OpenApiConfiguration {
 
-    public static final String API_FIRST_PACKAGE = "com.fanflip.catalogs.web.api";
+    public static final String API_FIRST_PACKAGE = "com.monsterdam.catalogs.web.api";
 
     @Bean
     @ConditionalOnMissingBean(name = "apiFirstGroupedOpenAPI")

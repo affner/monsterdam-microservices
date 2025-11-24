@@ -1,4 +1,4 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -7,13 +7,13 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.domain.HashTag;
-import com.fanflip.profile.domain.UserProfile;
-import com.fanflip.profile.repository.HashTagRepository;
-import com.fanflip.profile.repository.search.HashTagSearchRepository;
-import com.fanflip.profile.service.dto.HashTagDTO;
-import com.fanflip.profile.service.mapper.HashTagMapper;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.domain.HashTag;
+import com.monsterdam.profile.domain.UserProfile;
+import com.monsterdam.profile.repository.HashTagRepository;
+import com.monsterdam.profile.repository.search.HashTagSearchRepository;
+import com.monsterdam.profile.service.dto.HashTagDTO;
+import com.monsterdam.profile.service.mapper.HashTagMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

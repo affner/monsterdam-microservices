@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.PaymentMethod;
-import com.fanflip.catalogs.service.dto.PaymentMethodDTO;
+import com.monsterdam.catalogs.domain.PaymentMethod;
+import com.monsterdam.catalogs.service.dto.PaymentMethodDTO;
 import org.mapstruct.*;
 
 /**

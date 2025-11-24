@@ -1,10 +1,10 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import static com.fanflip.profile.domain.UserEventTestSamples.*;
-import static com.fanflip.profile.domain.UserProfileTestSamples.*;
+import static com.monsterdam.profile.domain.UserEventTestSamples.*;
+import static com.monsterdam.profile.domain.UserProfileTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.profile.web.rest.TestUtil;
+import com.monsterdam.profile.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

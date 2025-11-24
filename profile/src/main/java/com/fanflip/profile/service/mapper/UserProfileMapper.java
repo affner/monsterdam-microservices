@@ -1,13 +1,13 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.HashTag;
-import com.fanflip.profile.domain.UserEvent;
-import com.fanflip.profile.domain.UserProfile;
-import com.fanflip.profile.domain.UserSettings;
-import com.fanflip.profile.service.dto.HashTagDTO;
-import com.fanflip.profile.service.dto.UserEventDTO;
-import com.fanflip.profile.service.dto.UserProfileDTO;
-import com.fanflip.profile.service.dto.UserSettingsDTO;
+import com.monsterdam.profile.domain.HashTag;
+import com.monsterdam.profile.domain.UserEvent;
+import com.monsterdam.profile.domain.UserProfile;
+import com.monsterdam.profile.domain.UserSettings;
+import com.monsterdam.profile.service.dto.HashTagDTO;
+import com.monsterdam.profile.service.dto.UserEventDTO;
+import com.monsterdam.profile.service.dto.UserProfileDTO;
+import com.monsterdam.profile.service.dto.UserSettingsDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

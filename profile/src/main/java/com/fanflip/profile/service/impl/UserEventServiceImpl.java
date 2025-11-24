@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.UserEvent;
-import com.fanflip.profile.repository.UserEventRepository;
-import com.fanflip.profile.service.UserEventService;
-import com.fanflip.profile.service.dto.UserEventDTO;
-import com.fanflip.profile.service.mapper.UserEventMapper;
+import com.monsterdam.profile.domain.UserEvent;
+import com.monsterdam.profile.repository.UserEventRepository;
+import com.monsterdam.profile.service.UserEventService;
+import com.monsterdam.profile.service.dto.UserEventDTO;
+import com.monsterdam.profile.service.mapper.UserEventMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.UserEvent}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.UserEvent}.
  */
 @Service
 @Transactional

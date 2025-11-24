@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.EmojiType} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.EmojiType} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class EmojiTypeDTO implements Serializable {

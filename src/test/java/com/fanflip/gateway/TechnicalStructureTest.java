@@ -1,4 +1,4 @@
-package com.fanflip.gateway;
+package com.monsterdam.gateway;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(GatewayApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.gateway.config.Constants.class,
-            com.fanflip.gateway.config.ApplicationProperties.class
+            com.monsterdam.gateway.config.Constants.class,
+            com.monsterdam.gateway.config.ApplicationProperties.class
         ));
 }

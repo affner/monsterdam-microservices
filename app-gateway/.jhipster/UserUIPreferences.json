@@ -2,7 +2,7 @@
   "annotations": {
     "changelogDate": "20240302141817"
   },
-  "applications": ["fanflip"],
+  "applications": ["monsterdam"],
   "databaseType": "sql",
   "dto": "mapstruct",
   "entityTableName": "user_ui_preferences",

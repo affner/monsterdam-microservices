@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.security.jwt;
+package com.monsterdam.catalogs.security.jwt;
 
-import static com.fanflip.catalogs.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.catalogs.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.catalogs.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.catalogs.security.SecurityUtils.JWT_ALGORITHM;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;

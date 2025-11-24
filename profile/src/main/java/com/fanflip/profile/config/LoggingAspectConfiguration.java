@@ -1,6 +1,6 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
-import com.fanflip.profile.aop.logging.LoggingAspect;
+import com.monsterdam.profile.aop.logging.LoggingAspect;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import tech.jhipster.config.JHipsterConstants;

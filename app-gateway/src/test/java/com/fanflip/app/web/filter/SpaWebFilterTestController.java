@@ -1,4 +1,4 @@
-package com.fanflip.app.web.filter;
+package com.monsterdam.app.web.filter;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;

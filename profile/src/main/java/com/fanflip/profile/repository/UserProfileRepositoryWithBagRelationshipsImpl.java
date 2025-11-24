@@ -1,6 +1,6 @@
-package com.fanflip.profile.repository;
+package com.monsterdam.profile.repository;
 
-import com.fanflip.profile.domain.UserProfile;
+import com.monsterdam.profile.domain.UserProfile;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.Collections;

@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.PollOption;
-import com.fanflip.admin.domain.PollVote;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.PollOptionDTO;
-import com.fanflip.admin.service.dto.PollVoteDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.PollOption;
+import com.monsterdam.admin.domain.PollVote;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.PollOptionDTO;
+import com.monsterdam.admin.service.dto.PollVoteDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

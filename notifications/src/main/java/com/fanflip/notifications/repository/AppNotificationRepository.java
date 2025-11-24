@@ -1,6 +1,6 @@
-package com.fanflip.notifications.repository;
+package com.monsterdam.notifications.repository;
 
-import com.fanflip.notifications.domain.AppNotification;
+import com.monsterdam.notifications.domain.AppNotification;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

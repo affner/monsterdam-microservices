@@ -1,7 +1,7 @@
-package com.fanflip.notifications.security.jwt;
+package com.monsterdam.notifications.security.jwt;
 
-import static com.fanflip.notifications.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.notifications.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.notifications.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.notifications.security.SecurityUtils.JWT_ALGORITHM;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;

@@ -1,8 +1,8 @@
-package com.fanflip.finance.service.dto;
+package com.monsterdam.finance.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.finance.web.rest.TestUtil;
+import com.monsterdam.finance.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class MoneyPayoutDTOTest {

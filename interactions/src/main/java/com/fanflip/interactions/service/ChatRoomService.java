@@ -1,12 +1,12 @@
-package com.fanflip.interactions.service;
+package com.monsterdam.interactions.service;
 
-import com.fanflip.interactions.service.dto.ChatRoomDTO;
+import com.monsterdam.interactions.service.dto.ChatRoomDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.interactions.domain.ChatRoom}.
+ * Service Interface for managing {@link com.monsterdam.interactions.domain.ChatRoom}.
  */
 public interface ChatRoomService {
     /**

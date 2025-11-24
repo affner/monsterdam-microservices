@@ -1,9 +1,9 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import static com.fanflip.profile.domain.UserAssociationTestSamples.*;
+import static com.monsterdam.profile.domain.UserAssociationTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.profile.web.rest.TestUtil;
+import com.monsterdam.profile.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class UserAssociationTest {

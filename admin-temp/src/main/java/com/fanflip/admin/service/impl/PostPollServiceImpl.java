@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PostPollRepository;
-import com.fanflip.admin.repository.search.PostPollSearchRepository;
-import com.fanflip.admin.service.PostPollService;
-import com.fanflip.admin.service.dto.PostPollDTO;
-import com.fanflip.admin.service.mapper.PostPollMapper;
+import com.monsterdam.admin.repository.PostPollRepository;
+import com.monsterdam.admin.repository.search.PostPollSearchRepository;
+import com.monsterdam.admin.service.PostPollService;
+import com.monsterdam.admin.service.dto.PostPollDTO;
+import com.monsterdam.admin.service.mapper.PostPollMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PostPoll}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PostPoll}.
  */
 @Service
 @Transactional

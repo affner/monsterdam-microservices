@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.broker;
+package com.monsterdam.catalogs.broker;
 
 import java.util.function.Supplier;
 import org.springframework.stereotype.Component;

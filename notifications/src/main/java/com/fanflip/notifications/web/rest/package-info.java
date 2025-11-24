@@ -1,4 +1,4 @@
 /**
  * Rest layer.
  */
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;

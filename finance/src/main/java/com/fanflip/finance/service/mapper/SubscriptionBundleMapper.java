@@ -1,7 +1,7 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
-import com.fanflip.finance.domain.SubscriptionBundle;
-import com.fanflip.finance.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.finance.domain.SubscriptionBundle;
+import com.monsterdam.finance.service.dto.SubscriptionBundleDTO;
 import org.mapstruct.*;
 
 /**

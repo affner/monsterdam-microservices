@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.HelpQuestionRepository;
-import com.fanflip.admin.repository.search.HelpQuestionSearchRepository;
-import com.fanflip.admin.service.HelpQuestionService;
-import com.fanflip.admin.service.dto.HelpQuestionDTO;
-import com.fanflip.admin.service.mapper.HelpQuestionMapper;
+import com.monsterdam.admin.repository.HelpQuestionRepository;
+import com.monsterdam.admin.repository.search.HelpQuestionSearchRepository;
+import com.monsterdam.admin.service.HelpQuestionService;
+import com.monsterdam.admin.service.dto.HelpQuestionDTO;
+import com.monsterdam.admin.service.mapper.HelpQuestionMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.HelpQuestion}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.HelpQuestion}.
  */
 @Service
 @Transactional

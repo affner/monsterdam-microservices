@@ -1,19 +1,19 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.Budget;
-import com.fanflip.admin.repository.BudgetRepository;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.search.BudgetSearchRepository;
-import com.fanflip.admin.service.dto.BudgetDTO;
-import com.fanflip.admin.service.mapper.BudgetMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.Budget;
+import com.monsterdam.admin.repository.BudgetRepository;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.search.BudgetSearchRepository;
+import com.monsterdam.admin.service.dto.BudgetDTO;
+import com.monsterdam.admin.service.mapper.BudgetMapper;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Random;

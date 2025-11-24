@@ -1,4 +1,4 @@
-package com.fanflip.profile.domain.enumeration;
+package com.monsterdam.profile.domain.enumeration;
 
 /**
  * The ContentPreference enumeration.

@@ -1,8 +1,8 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.catalogs.web.rest.TestUtil;
+import com.monsterdam.catalogs.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class GlobalEventDTOTest {

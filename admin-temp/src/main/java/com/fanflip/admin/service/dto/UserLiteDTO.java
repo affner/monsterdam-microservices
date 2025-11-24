@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.ContentPreference;
-import com.fanflip.admin.domain.enumeration.UserGender;
+import com.monsterdam.admin.domain.enumeration.ContentPreference;
+import com.monsterdam.admin.domain.enumeration.UserGender;
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.UserLite} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.UserLite} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserLiteDTO implements Serializable {

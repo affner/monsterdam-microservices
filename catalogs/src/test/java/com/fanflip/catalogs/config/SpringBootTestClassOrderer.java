@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
-import com.fanflip.catalogs.IntegrationTest;
+import com.monsterdam.catalogs.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

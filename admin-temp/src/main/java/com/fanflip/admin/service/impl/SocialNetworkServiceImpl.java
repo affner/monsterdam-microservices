@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.SocialNetworkRepository;
-import com.fanflip.admin.repository.search.SocialNetworkSearchRepository;
-import com.fanflip.admin.service.SocialNetworkService;
-import com.fanflip.admin.service.dto.SocialNetworkDTO;
-import com.fanflip.admin.service.mapper.SocialNetworkMapper;
+import com.monsterdam.admin.repository.SocialNetworkRepository;
+import com.monsterdam.admin.repository.search.SocialNetworkSearchRepository;
+import com.monsterdam.admin.service.SocialNetworkService;
+import com.monsterdam.admin.service.dto.SocialNetworkDTO;
+import com.monsterdam.admin.service.mapper.SocialNetworkMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.SocialNetwork}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.SocialNetwork}.
  */
 @Service
 @Transactional

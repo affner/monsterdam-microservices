@@ -1,4 +1,4 @@
-package com.fanflip.notifications.broker;
+package com.monsterdam.notifications.broker;
 
 import static org.springframework.web.servlet.mvc.method.annotation.SseEmitter.event;
 

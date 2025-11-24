@@ -1,4 +1,4 @@
-package com.fanflip.app.web.filter;
+package com.monsterdam.app.web.filter;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;

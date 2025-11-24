@@ -1,8 +1,8 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
-import com.fanflip.multimedia.domain.SingleAudio;
-import com.fanflip.multimedia.service.dto.SingleAudioDTO;
-import com.fanflip.multimedia.util.S3Utils;
+import com.monsterdam.multimedia.domain.SingleAudio;
+import com.monsterdam.multimedia.service.dto.SingleAudioDTO;
+import com.monsterdam.multimedia.util.S3Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Objects;

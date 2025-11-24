@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.dto;
+package com.monsterdam.interactions.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.interactions.domain.UserMention} entity.
+ * A DTO for the {@link com.monsterdam.interactions.domain.UserMention} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserMentionDTO implements Serializable {

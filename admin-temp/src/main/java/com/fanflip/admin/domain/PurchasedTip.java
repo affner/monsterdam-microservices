@@ -1,4 +1,4 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

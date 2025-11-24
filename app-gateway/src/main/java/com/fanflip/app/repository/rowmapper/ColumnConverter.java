@@ -1,4 +1,4 @@
-package com.fanflip.app.repository.rowmapper;
+package com.monsterdam.app.repository.rowmapper;
 
 import io.r2dbc.spi.Row;
 import org.springframework.core.convert.ConversionService;

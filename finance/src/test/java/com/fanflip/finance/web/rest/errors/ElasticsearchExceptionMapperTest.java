@@ -1,4 +1,4 @@
-package com.fanflip.finance.web.rest.errors;
+package com.monsterdam.finance.web.rest.errors;
 
 import static org.junit.jupiter.api.Assertions.*;
 

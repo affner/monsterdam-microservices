@@ -1,4 +1,4 @@
-package com.fanflip.app.web.filter;
+package com.monsterdam.app.web.filter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;

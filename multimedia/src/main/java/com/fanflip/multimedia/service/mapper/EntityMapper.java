@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

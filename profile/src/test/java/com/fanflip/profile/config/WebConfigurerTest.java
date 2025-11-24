@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;

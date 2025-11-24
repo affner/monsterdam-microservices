@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.HelpSubcategoryRepository;
-import com.fanflip.catalogs.service.HelpSubcategoryService;
-import com.fanflip.catalogs.service.dto.HelpSubcategoryDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.HelpSubcategoryRepository;
+import com.monsterdam.catalogs.service.HelpSubcategoryService;
+import com.monsterdam.catalogs.service.dto.HelpSubcategoryDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.HelpSubcategory}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.HelpSubcategory}.
  */
 @RestController
 @RequestMapping("/api/help-subcategories")

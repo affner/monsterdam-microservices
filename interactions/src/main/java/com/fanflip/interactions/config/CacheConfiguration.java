@@ -1,4 +1,4 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,24 +76,24 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.interactions.domain.PostFeed.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostFeed.class.getName() + ".comments", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostFeed.class.getName() + ".commentMentions", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostComment.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostComment.class.getName() + ".responses", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostComment.class.getName() + ".commentMentions", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.ChatRoom.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.ChatRoom.class.getName() + ".sentMessages", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.DirectMessage.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.DirectMessage.class.getName() + ".responses", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.DirectMessage.class.getName() + ".chatRooms", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.UserMention.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.LikeMark.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PollVote.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PollOption.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PollOption.class.getName() + ".votes", jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostPoll.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.interactions.domain.PostPoll.class.getName() + ".options", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostFeed.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostFeed.class.getName() + ".comments", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostFeed.class.getName() + ".commentMentions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostComment.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostComment.class.getName() + ".responses", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostComment.class.getName() + ".commentMentions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.ChatRoom.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.ChatRoom.class.getName() + ".sentMessages", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.DirectMessage.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.DirectMessage.class.getName() + ".responses", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.DirectMessage.class.getName() + ".chatRooms", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.UserMention.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.LikeMark.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PollVote.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PollOption.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PollOption.class.getName() + ".votes", jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostPoll.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.interactions.domain.PostPoll.class.getName() + ".options", jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

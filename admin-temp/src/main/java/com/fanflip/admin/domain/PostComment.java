@@ -1,4 +1,4 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.*;

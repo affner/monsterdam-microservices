@@ -1,10 +1,10 @@
-package com.fanflip.interactions;
+package com.monsterdam.interactions;
 
-import com.fanflip.interactions.config.AsyncSyncConfiguration;
-import com.fanflip.interactions.config.EmbeddedElasticsearch;
-import com.fanflip.interactions.config.EmbeddedKafka;
-import com.fanflip.interactions.config.EmbeddedRedis;
-import com.fanflip.interactions.config.EmbeddedSQL;
+import com.monsterdam.interactions.config.AsyncSyncConfiguration;
+import com.monsterdam.interactions.config.EmbeddedElasticsearch;
+import com.monsterdam.interactions.config.EmbeddedKafka;
+import com.monsterdam.interactions.config.EmbeddedRedis;
+import com.monsterdam.interactions.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

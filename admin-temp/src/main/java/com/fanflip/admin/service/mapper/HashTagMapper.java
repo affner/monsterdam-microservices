@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.HashTag;
-import com.fanflip.admin.service.dto.HashTagDTO;
+import com.monsterdam.admin.domain.HashTag;
+import com.monsterdam.admin.service.dto.HashTagDTO;
 import org.mapstruct.*;
 
 /**

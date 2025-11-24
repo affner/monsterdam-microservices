@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
-import com.fanflip.multimedia.IntegrationTest;
+import com.monsterdam.multimedia.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

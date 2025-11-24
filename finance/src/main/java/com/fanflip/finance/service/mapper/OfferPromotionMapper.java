@@ -1,7 +1,7 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
-import com.fanflip.finance.domain.OfferPromotion;
-import com.fanflip.finance.service.dto.OfferPromotionDTO;
+import com.monsterdam.finance.domain.OfferPromotion;
+import com.monsterdam.finance.service.dto.OfferPromotionDTO;
 import org.mapstruct.*;
 
 /**

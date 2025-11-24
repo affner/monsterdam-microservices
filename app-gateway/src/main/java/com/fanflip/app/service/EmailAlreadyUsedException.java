@@ -1,4 +1,4 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
 public class EmailAlreadyUsedException extends RuntimeException {
 

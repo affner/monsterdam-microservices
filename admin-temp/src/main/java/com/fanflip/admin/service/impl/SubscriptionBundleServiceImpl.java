@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.SubscriptionBundleRepository;
-import com.fanflip.admin.repository.search.SubscriptionBundleSearchRepository;
-import com.fanflip.admin.service.SubscriptionBundleService;
-import com.fanflip.admin.service.dto.SubscriptionBundleDTO;
-import com.fanflip.admin.service.mapper.SubscriptionBundleMapper;
+import com.monsterdam.admin.repository.SubscriptionBundleRepository;
+import com.monsterdam.admin.repository.search.SubscriptionBundleSearchRepository;
+import com.monsterdam.admin.service.SubscriptionBundleService;
+import com.monsterdam.admin.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.admin.service.mapper.SubscriptionBundleMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.SubscriptionBundle}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.SubscriptionBundle}.
  */
 @Service
 @Transactional

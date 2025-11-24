@@ -1,4 +1,4 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -6,8 +6,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.config.EmbeddedKafka;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.config.EmbeddedKafka;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.jupiter.api.Test;

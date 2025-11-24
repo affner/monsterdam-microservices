@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.dto;
+package com.monsterdam.interactions.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.interactions.domain.PollOption} entity.
+ * A DTO for the {@link com.monsterdam.interactions.domain.PollOption} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PollOptionDTO implements Serializable {

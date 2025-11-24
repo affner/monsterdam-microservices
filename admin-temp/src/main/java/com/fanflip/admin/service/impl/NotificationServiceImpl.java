@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.NotificationRepository;
-import com.fanflip.admin.repository.search.NotificationSearchRepository;
-import com.fanflip.admin.service.NotificationService;
-import com.fanflip.admin.service.dto.NotificationDTO;
-import com.fanflip.admin.service.mapper.NotificationMapper;
+import com.monsterdam.admin.repository.NotificationRepository;
+import com.monsterdam.admin.repository.search.NotificationSearchRepository;
+import com.monsterdam.admin.service.NotificationService;
+import com.monsterdam.admin.service.dto.NotificationDTO;
+import com.monsterdam.admin.service.mapper.NotificationMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.Notification}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.Notification}.
  */
 @Service
 @Transactional

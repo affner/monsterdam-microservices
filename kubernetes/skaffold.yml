@@ -2,22 +2,22 @@ apiVersion: skaffold/v1
 kind: Config
 build:
   artifacts:
-    - image: fanflip/gateway
+    - image: monsterdam/gateway
       context: ../gateway
       jib: {}
-    - image: fanflip/finance
+    - image: monsterdam/finance
       context: ../finance
       jib: {}
-    - image: fanflip/multimedia
+    - image: monsterdam/multimedia
       context: ../multimedia
       jib: {}
-    - image: fanflip/interactions
+    - image: monsterdam/interactions
       context: ../interactions
       jib: {}
-    - image: fanflip/profile
+    - image: monsterdam/profile
       context: ../profile
       jib: {}
-    - image: fanflip/admin
+    - image: monsterdam/admin
       context: ../admin
       jib: {}
   tagPolicy:

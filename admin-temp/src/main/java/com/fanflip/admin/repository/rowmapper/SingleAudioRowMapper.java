@@ -1,6 +1,6 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.SingleAudio;
+import com.monsterdam.admin.domain.SingleAudio;
 import io.r2dbc.spi.Row;
 import java.time.Duration;
 import java.time.Instant;

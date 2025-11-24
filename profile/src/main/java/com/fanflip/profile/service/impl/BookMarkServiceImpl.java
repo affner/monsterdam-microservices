@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.BookMark;
-import com.fanflip.profile.repository.BookMarkRepository;
-import com.fanflip.profile.service.BookMarkService;
-import com.fanflip.profile.service.dto.BookMarkDTO;
-import com.fanflip.profile.service.mapper.BookMarkMapper;
+import com.monsterdam.profile.domain.BookMark;
+import com.monsterdam.profile.repository.BookMarkRepository;
+import com.monsterdam.profile.service.BookMarkService;
+import com.monsterdam.profile.service.dto.BookMarkDTO;
+import com.monsterdam.profile.service.mapper.BookMarkMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.BookMark}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.BookMark}.
  */
 @Service
 @Transactional

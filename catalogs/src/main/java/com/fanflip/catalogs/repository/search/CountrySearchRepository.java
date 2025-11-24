@@ -1,8 +1,8 @@
-package com.fanflip.catalogs.repository.search;
+package com.monsterdam.catalogs.repository.search;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.QueryStringQuery;
-import com.fanflip.catalogs.domain.Country;
-import com.fanflip.catalogs.repository.CountryRepository;
+import com.monsterdam.catalogs.domain.Country;
+import com.monsterdam.catalogs.repository.CountryRepository;
 import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

@@ -1,4 +1,4 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

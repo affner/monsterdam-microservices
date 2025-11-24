@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.UserReport;
-import com.fanflip.admin.domain.enumeration.ReportCategory;
-import com.fanflip.admin.domain.enumeration.ReportStatus;
+import com.monsterdam.admin.domain.UserReport;
+import com.monsterdam.admin.domain.enumeration.ReportCategory;
+import com.monsterdam.admin.domain.enumeration.ReportStatus;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

@@ -1,4 +1,4 @@
-package com.fanflip.profile.web.rest.errors;
+package com.monsterdam.profile.web.rest.errors;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

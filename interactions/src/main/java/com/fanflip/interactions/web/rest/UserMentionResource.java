@@ -1,9 +1,9 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
-import com.fanflip.interactions.repository.UserMentionRepository;
-import com.fanflip.interactions.service.UserMentionService;
-import com.fanflip.interactions.service.dto.UserMentionDTO;
-import com.fanflip.interactions.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.interactions.repository.UserMentionRepository;
+import com.monsterdam.interactions.service.UserMentionService;
+import com.monsterdam.interactions.service.dto.UserMentionDTO;
+import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.interactions.domain.UserMention}.
+ * REST controller for managing {@link com.monsterdam.interactions.domain.UserMention}.
  */
 @RestController
 @RequestMapping("/api/user-mentions")

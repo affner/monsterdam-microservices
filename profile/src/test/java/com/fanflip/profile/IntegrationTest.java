@@ -1,10 +1,10 @@
-package com.fanflip.profile;
+package com.monsterdam.profile;
 
-import com.fanflip.profile.config.AsyncSyncConfiguration;
-import com.fanflip.profile.config.EmbeddedElasticsearch;
-import com.fanflip.profile.config.EmbeddedKafka;
-import com.fanflip.profile.config.EmbeddedRedis;
-import com.fanflip.profile.config.EmbeddedSQL;
+import com.monsterdam.profile.config.AsyncSyncConfiguration;
+import com.monsterdam.profile.config.EmbeddedElasticsearch;
+import com.monsterdam.profile.config.EmbeddedKafka;
+import com.monsterdam.profile.config.EmbeddedRedis;
+import com.monsterdam.profile.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

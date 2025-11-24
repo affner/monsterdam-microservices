@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.SpecialAwardRepository;
-import com.fanflip.admin.repository.search.SpecialAwardSearchRepository;
-import com.fanflip.admin.service.SpecialAwardService;
-import com.fanflip.admin.service.dto.SpecialAwardDTO;
-import com.fanflip.admin.service.mapper.SpecialAwardMapper;
+import com.monsterdam.admin.repository.SpecialAwardRepository;
+import com.monsterdam.admin.repository.search.SpecialAwardSearchRepository;
+import com.monsterdam.admin.service.SpecialAwardService;
+import com.monsterdam.admin.service.dto.SpecialAwardDTO;
+import com.monsterdam.admin.service.mapper.SpecialAwardMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.SpecialAward}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.SpecialAward}.
  */
 @Service
 @Transactional

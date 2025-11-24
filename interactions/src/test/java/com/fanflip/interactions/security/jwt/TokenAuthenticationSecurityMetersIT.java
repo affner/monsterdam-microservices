@@ -1,6 +1,6 @@
-package com.fanflip.interactions.security.jwt;
+package com.monsterdam.interactions.security.jwt;
 
-import static com.fanflip.interactions.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.monsterdam.interactions.security.jwt.JwtAuthenticationTestUtils.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 

@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.VideoStory;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
-import com.fanflip.admin.repository.rowmapper.VideoStoryRowMapper;
+import com.monsterdam.admin.domain.VideoStory;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.repository.rowmapper.VideoStoryRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

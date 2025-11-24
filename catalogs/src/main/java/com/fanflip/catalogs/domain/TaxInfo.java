@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
-import com.fanflip.catalogs.domain.enumeration.TaxType;
+import com.monsterdam.catalogs.domain.enumeration.TaxType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

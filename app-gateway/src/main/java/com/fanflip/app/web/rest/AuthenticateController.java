@@ -1,9 +1,9 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import static com.fanflip.app.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.app.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.app.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.app.security.SecurityUtils.JWT_ALGORITHM;
 
-import com.fanflip.app.web.rest.vm.LoginVM;
+import com.monsterdam.app.web.rest.vm.LoginVM;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.Valid;
 import java.security.Principal;

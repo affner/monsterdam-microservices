@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.AdminAnnouncement;
-import com.fanflip.admin.domain.enumeration.AdminAnnouncementType;
+import com.monsterdam.admin.domain.AdminAnnouncement;
+import com.monsterdam.admin.domain.enumeration.AdminAnnouncementType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

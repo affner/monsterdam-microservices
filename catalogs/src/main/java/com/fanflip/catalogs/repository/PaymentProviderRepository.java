@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.PaymentProvider;
+import com.monsterdam.catalogs.domain.PaymentProvider;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

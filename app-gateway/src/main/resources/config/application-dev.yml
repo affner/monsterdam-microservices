@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    com.fanflip.app: DEBUG
+    com.monsterdam.app: DEBUG
 
 management:
   health:
@@ -66,7 +66,7 @@ spring:
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
-    url: jdbc:h2:mem:fanflip;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:monsterdam;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
   mail:
     host: localhost
     port: 25
@@ -75,8 +75,8 @@ spring:
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   r2dbc:
-    url: r2dbc:h2:mem:///fanflip;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    username: fanflip
+    url: r2dbc:h2:mem:///monsterdam;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: monsterdam
     password:
   thymeleaf:
     cache: false

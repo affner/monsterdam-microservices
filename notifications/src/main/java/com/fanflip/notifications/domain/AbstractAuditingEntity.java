@@ -1,4 +1,4 @@
-package com.fanflip.notifications.domain;
+package com.monsterdam.notifications.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;

@@ -1,4 +1,4 @@
 /**
  * Application management.
  */
-package com.fanflip.multimedia.management;
+package com.monsterdam.multimedia.management;

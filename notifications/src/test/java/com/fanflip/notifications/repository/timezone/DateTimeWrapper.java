@@ -1,4 +1,4 @@
-package com.fanflip.notifications.repository.timezone;
+package com.monsterdam.notifications.repository.timezone;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

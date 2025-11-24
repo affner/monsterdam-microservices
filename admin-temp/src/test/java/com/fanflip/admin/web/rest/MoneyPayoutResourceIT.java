@@ -1,23 +1,23 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.CreatorEarning;
-import com.fanflip.admin.domain.MoneyPayout;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.enumeration.PayoutStatus;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.MoneyPayoutRepository;
-import com.fanflip.admin.repository.search.MoneyPayoutSearchRepository;
-import com.fanflip.admin.service.MoneyPayoutService;
-import com.fanflip.admin.service.dto.MoneyPayoutDTO;
-import com.fanflip.admin.service.mapper.MoneyPayoutMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.CreatorEarning;
+import com.monsterdam.admin.domain.MoneyPayout;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.enumeration.PayoutStatus;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.MoneyPayoutRepository;
+import com.monsterdam.admin.repository.search.MoneyPayoutSearchRepository;
+import com.monsterdam.admin.service.MoneyPayoutService;
+import com.monsterdam.admin.service.dto.MoneyPayoutDTO;
+import com.monsterdam.admin.service.mapper.MoneyPayoutMapper;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

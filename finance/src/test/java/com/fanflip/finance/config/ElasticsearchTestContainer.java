@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;

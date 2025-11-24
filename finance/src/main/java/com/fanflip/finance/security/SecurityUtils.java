@@ -1,4 +1,4 @@
-package com.fanflip.finance.security;
+package com.monsterdam.finance.security;
 
 import java.util.Arrays;
 import java.util.Optional;

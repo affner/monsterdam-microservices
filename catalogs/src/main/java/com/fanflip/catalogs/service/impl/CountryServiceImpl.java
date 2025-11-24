@@ -1,11 +1,11 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.Country;
-import com.fanflip.catalogs.repository.CountryRepository;
-import com.fanflip.catalogs.repository.search.CountrySearchRepository;
-import com.fanflip.catalogs.service.CountryService;
-import com.fanflip.catalogs.service.dto.CountryDTO;
-import com.fanflip.catalogs.service.mapper.CountryMapper;
+import com.monsterdam.catalogs.domain.Country;
+import com.monsterdam.catalogs.repository.CountryRepository;
+import com.monsterdam.catalogs.repository.search.CountrySearchRepository;
+import com.monsterdam.catalogs.service.CountryService;
+import com.monsterdam.catalogs.service.dto.CountryDTO;
+import com.monsterdam.catalogs.service.mapper.CountryMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.Country}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.Country}.
  */
 @Service
 @Transactional

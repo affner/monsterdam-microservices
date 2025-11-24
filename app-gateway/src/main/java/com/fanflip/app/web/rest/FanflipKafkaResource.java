@@ -1,6 +1,6 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.broker.KafkaConsumer;
+import com.monsterdam.app.broker.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.stream.function.StreamBridge;
@@ -10,16 +10,16 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/api/fanflip-kafka")
-public class FanflipKafkaResource {
+@RequestMapping("/api/monsterdam-kafka")
+public class MonsterdamKafkaResource {
 
     private static final String PRODUCER_BINDING_NAME = "binding-out-0";
 
-    private final Logger log = LoggerFactory.getLogger(FanflipKafkaResource.class);
+    private final Logger log = LoggerFactory.getLogger(MonsterdamKafkaResource.class);
     private final KafkaConsumer kafkaConsumer;
     private final StreamBridge streamBridge;
 
-    public FanflipKafkaResource(StreamBridge streamBridge, KafkaConsumer kafkaConsumer) {
+    public MonsterdamKafkaResource(StreamBridge streamBridge, KafkaConsumer kafkaConsumer) {
         this.streamBridge = streamBridge;
         this.kafkaConsumer = kafkaConsumer;
     }

@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.AdminAnnouncementType;
+import com.monsterdam.admin.domain.enumeration.AdminAnnouncementType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.AdminAnnouncement} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.AdminAnnouncement} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class AdminAnnouncementDTO implements Serializable {

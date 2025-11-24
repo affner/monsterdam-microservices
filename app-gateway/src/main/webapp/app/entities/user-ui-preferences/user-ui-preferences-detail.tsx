@@ -18,12 +18,12 @@ export const UserUIPreferencesDetail = () => {
     dispatch(getEntity(id));
   }, []);
 
-  const userUIPreferencesEntity = useAppSelector(state => state.fanflip.userUIPreferences.entity);
+  const userUIPreferencesEntity = useAppSelector(state => state.monsterdam.userUIPreferences.entity);
   return (
     <Row>
       <Col md="8">
         <h2 data-cy="userUIPreferencesDetailsHeading">
-          <Translate contentKey="fanflipApp.userUIPreferences.detail.title">UserUIPreferences</Translate>
+          <Translate contentKey="monsterdamApp.userUIPreferences.detail.title">UserUIPreferences</Translate>
         </h2>
         <dl className="jh-entity-details">
           <dt>
@@ -34,13 +34,13 @@ export const UserUIPreferencesDetail = () => {
           <dd>{userUIPreferencesEntity.id}</dd>
           <dt>
             <span id="preferences">
-              <Translate contentKey="fanflipApp.userUIPreferences.preferences">Preferences</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.preferences">Preferences</Translate>
             </span>
           </dt>
           <dd>{userUIPreferencesEntity.preferences}</dd>
           <dt>
             <span id="createdDate">
-              <Translate contentKey="fanflipApp.userUIPreferences.createdDate">Created Date</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.createdDate">Created Date</Translate>
             </span>
           </dt>
           <dd>
@@ -50,7 +50,7 @@ export const UserUIPreferencesDetail = () => {
           </dd>
           <dt>
             <span id="lastModifiedDate">
-              <Translate contentKey="fanflipApp.userUIPreferences.lastModifiedDate">Last Modified Date</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.lastModifiedDate">Last Modified Date</Translate>
             </span>
           </dt>
           <dd>
@@ -60,13 +60,13 @@ export const UserUIPreferencesDetail = () => {
           </dd>
           <dt>
             <span id="createdBy">
-              <Translate contentKey="fanflipApp.userUIPreferences.createdBy">Created By</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.createdBy">Created By</Translate>
             </span>
           </dt>
           <dd>{userUIPreferencesEntity.createdBy}</dd>
           <dt>
             <span id="lastModifiedBy">
-              <Translate contentKey="fanflipApp.userUIPreferences.lastModifiedBy">Last Modified By</Translate>
+              <Translate contentKey="monsterdamApp.userUIPreferences.lastModifiedBy">Last Modified By</Translate>
             </span>
           </dt>
           <dd>{userUIPreferencesEntity.lastModifiedBy}</dd>

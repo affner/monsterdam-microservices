@@ -1,4 +1,4 @@
 /**
  * Logging aspect.
  */
-package com.fanflip.notifications.aop.logging;
+package com.monsterdam.notifications.aop.logging;

@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.SingleAudio;
-import com.fanflip.multimedia.repository.SingleAudioRepository;
-import com.fanflip.multimedia.service.SingleAudioService;
-import com.fanflip.multimedia.service.dto.SingleAudioDTO;
-import com.fanflip.multimedia.service.mapper.SingleAudioMapper;
+import com.monsterdam.multimedia.domain.SingleAudio;
+import com.monsterdam.multimedia.repository.SingleAudioRepository;
+import com.monsterdam.multimedia.service.SingleAudioService;
+import com.monsterdam.multimedia.service.dto.SingleAudioDTO;
+import com.monsterdam.multimedia.service.mapper.SingleAudioMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.SingleAudio}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.SingleAudio}.
  */
 @Service
 @Transactional

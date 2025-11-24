@@ -1,20 +1,20 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.multimedia.IntegrationTest;
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.domain.SingleLiveStream;
-import com.fanflip.multimedia.domain.SingleLiveStream;
-import com.fanflip.multimedia.repository.SingleLiveStreamRepository;
-import com.fanflip.multimedia.repository.SingleLiveStreamRepository;
-import com.fanflip.multimedia.service.dto.SingleLiveStreamDTO;
-import com.fanflip.multimedia.service.dto.SingleLiveStreamDTO;
-import com.fanflip.multimedia.service.mapper.SingleLiveStreamMapper;
-import com.fanflip.multimedia.service.mapper.SingleLiveStreamMapper;
+import com.monsterdam.multimedia.IntegrationTest;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.domain.SingleLiveStream;
+import com.monsterdam.multimedia.domain.SingleLiveStream;
+import com.monsterdam.multimedia.repository.SingleLiveStreamRepository;
+import com.monsterdam.multimedia.repository.SingleLiveStreamRepository;
+import com.monsterdam.multimedia.service.dto.SingleLiveStreamDTO;
+import com.monsterdam.multimedia.service.dto.SingleLiveStreamDTO;
+import com.monsterdam.multimedia.service.mapper.SingleLiveStreamMapper;
+import com.monsterdam.multimedia.service.mapper.SingleLiveStreamMapper;
 import jakarta.persistence.EntityManager;
 
 import java.time.Duration;

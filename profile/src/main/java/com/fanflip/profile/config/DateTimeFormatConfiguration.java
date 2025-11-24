@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;

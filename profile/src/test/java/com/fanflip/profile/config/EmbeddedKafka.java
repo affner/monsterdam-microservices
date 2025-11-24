@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

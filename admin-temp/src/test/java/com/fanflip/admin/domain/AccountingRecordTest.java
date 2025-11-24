@@ -1,15 +1,15 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.AccountingRecordTestSamples.*;
-import static com.fanflip.admin.domain.AssetTestSamples.*;
-import static com.fanflip.admin.domain.BudgetTestSamples.*;
-import static com.fanflip.admin.domain.FinancialStatementTestSamples.*;
-import static com.fanflip.admin.domain.LiabilityTestSamples.*;
-import static com.fanflip.admin.domain.PaymentTransactionTestSamples.*;
-import static com.fanflip.admin.domain.TaxDeclarationTestSamples.*;
+import static com.monsterdam.admin.domain.AccountingRecordTestSamples.*;
+import static com.monsterdam.admin.domain.AssetTestSamples.*;
+import static com.monsterdam.admin.domain.BudgetTestSamples.*;
+import static com.monsterdam.admin.domain.FinancialStatementTestSamples.*;
+import static com.monsterdam.admin.domain.LiabilityTestSamples.*;
+import static com.monsterdam.admin.domain.PaymentTransactionTestSamples.*;
+import static com.monsterdam.admin.domain.TaxDeclarationTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

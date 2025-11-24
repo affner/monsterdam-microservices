@@ -1,8 +1,8 @@
-package com.fanflip.profile.repository.search;
+package com.monsterdam.profile.repository.search;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.QueryStringQuery;
-import com.fanflip.profile.domain.HashTag;
-import com.fanflip.profile.repository.HashTagRepository;
+import com.monsterdam.profile.domain.HashTag;
+import com.monsterdam.profile.repository.HashTagRepository;
 import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

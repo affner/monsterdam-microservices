@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.domain.SpecialReward;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.service.dto.SpecialRewardDTO;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.domain.SpecialReward;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.dto.SpecialRewardDTO;
 import org.mapstruct.*;
 
 /**

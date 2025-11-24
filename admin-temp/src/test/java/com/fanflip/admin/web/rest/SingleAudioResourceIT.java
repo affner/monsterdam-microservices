@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,14 +6,14 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.SingleAudio;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.SingleAudioRepository;
-import com.fanflip.admin.repository.search.SingleAudioSearchRepository;
-import com.fanflip.admin.service.dto.SingleAudioDTO;
-import com.fanflip.admin.service.mapper.SingleAudioMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.SingleAudio;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.SingleAudioRepository;
+import com.monsterdam.admin.repository.search.SingleAudioSearchRepository;
+import com.monsterdam.admin.service.dto.SingleAudioDTO;
+import com.monsterdam.admin.service.mapper.SingleAudioMapper;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

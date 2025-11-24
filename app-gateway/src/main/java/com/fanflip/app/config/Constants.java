@@ -1,4 +1,4 @@
-package com.fanflip.app.config;
+package com.monsterdam.app.config;
 
 /**
  * Application constants.

@@ -1,9 +1,9 @@
-package com.fanflip.notifications.domain;
+package com.monsterdam.notifications.domain;
 
-import static com.fanflip.notifications.domain.AppNotificationTestSamples.*;
+import static com.monsterdam.notifications.domain.AppNotificationTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.notifications.web.rest.TestUtil;
+import com.monsterdam.notifications.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class AppNotificationTest {

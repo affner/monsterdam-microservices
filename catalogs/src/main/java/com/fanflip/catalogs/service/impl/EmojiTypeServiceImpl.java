@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.EmojiType;
-import com.fanflip.catalogs.repository.EmojiTypeRepository;
-import com.fanflip.catalogs.service.EmojiTypeService;
-import com.fanflip.catalogs.service.dto.EmojiTypeDTO;
-import com.fanflip.catalogs.service.mapper.EmojiTypeMapper;
+import com.monsterdam.catalogs.domain.EmojiType;
+import com.monsterdam.catalogs.repository.EmojiTypeRepository;
+import com.monsterdam.catalogs.service.EmojiTypeService;
+import com.monsterdam.catalogs.service.dto.EmojiTypeDTO;
+import com.monsterdam.catalogs.service.mapper.EmojiTypeMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.EmojiType}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.EmojiType}.
  */
 @Service
 @Transactional

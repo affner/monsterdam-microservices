@@ -1,4 +1,4 @@
 /**
  * Domain objects.
  */
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;

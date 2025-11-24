@@ -1,4 +1,4 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
 import org.junit.jupiter.api.BeforeEach;
 

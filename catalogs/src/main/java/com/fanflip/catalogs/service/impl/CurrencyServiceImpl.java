@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.Currency;
-import com.fanflip.catalogs.repository.CurrencyRepository;
-import com.fanflip.catalogs.service.CurrencyService;
-import com.fanflip.catalogs.service.dto.CurrencyDTO;
-import com.fanflip.catalogs.service.mapper.CurrencyMapper;
+import com.monsterdam.catalogs.domain.Currency;
+import com.monsterdam.catalogs.repository.CurrencyRepository;
+import com.monsterdam.catalogs.service.CurrencyService;
+import com.monsterdam.catalogs.service.dto.CurrencyDTO;
+import com.monsterdam.catalogs.service.mapper.CurrencyMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.Currency}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.Currency}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;

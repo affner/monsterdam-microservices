@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.HashTag;
-import com.fanflip.admin.domain.enumeration.HashtagType;
+import com.monsterdam.admin.domain.HashTag;
+import com.monsterdam.admin.domain.enumeration.HashtagType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

@@ -1,12 +1,12 @@
-package com.fanflip.admin.service;
+package com.monsterdam.admin.service;
 
-import com.fanflip.admin.service.dto.PurchasedTipDTO;
+import com.monsterdam.admin.service.dto.PurchasedTipDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.admin.domain.PurchasedTip}.
+ * Service Interface for managing {@link com.monsterdam.admin.domain.PurchasedTip}.
  */
 public interface PurchasedTipService {
     /**

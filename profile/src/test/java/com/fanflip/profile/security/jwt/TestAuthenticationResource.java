@@ -1,4 +1,4 @@
-package com.fanflip.profile.security.jwt;
+package com.monsterdam.profile.security.jwt;
 
 import org.springframework.web.bind.annotation.*;
 

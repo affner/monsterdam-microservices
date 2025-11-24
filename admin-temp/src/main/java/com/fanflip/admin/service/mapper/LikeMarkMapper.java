@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.LikeMark;
-import com.fanflip.admin.service.dto.LikeMarkDTO;
+import com.monsterdam.admin.domain.LikeMark;
+import com.monsterdam.admin.service.dto.LikeMarkDTO;
 import org.mapstruct.*;
 
 /**

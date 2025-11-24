@@ -1,4 +1,4 @@
-package com.fanflip.admin.domain.enumeration;
+package com.monsterdam.admin.domain.enumeration;
 
 /**
  * The UserGender enumeration.

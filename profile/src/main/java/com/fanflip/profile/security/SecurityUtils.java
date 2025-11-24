@@ -1,4 +1,4 @@
-package com.fanflip.profile.security;
+package com.monsterdam.profile.security;
 
 import java.util.Arrays;
 import java.util.Optional;

@@ -3,12 +3,12 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.fanflip.app</groupId>
-    <artifactId>fanflip</artifactId>
+    <groupId>com.monsterdam.app</groupId>
+    <artifactId>monsterdam</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Fanflip</name>
-    <description>Description for Fanflip</description>
+    <name>Monsterdam</name>
+    <description>Description for Monsterdam</description>
 
     <properties>
         <!--
@@ -24,7 +24,7 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <start-class>com.fanflip.app.FanflipApp</start-class>
+        <start-class>com.monsterdam.app.MonsterdamApp</start-class>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
@@ -518,7 +518,7 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>fanflip:latest</image>
+                            <image>monsterdam:latest</image>
                         </to>
                         <container>
                             <entrypoint>
@@ -946,14 +946,14 @@
                             <configuration>
                                 <inputSpec>${project.basedir}/src/main/resources/swagger/api.yml</inputSpec>
                                 <generatorName>spring</generatorName>
-                                <apiPackage>com.fanflip.app.web.api</apiPackage>
-                                <modelPackage>com.fanflip.app.service.api.dto</modelPackage>
+                                <apiPackage>com.monsterdam.app.web.api</apiPackage>
+                                <modelPackage>com.monsterdam.app.service.api.dto</modelPackage>
                                 <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                                 <skipValidateSpec>false</skipValidateSpec>
                                 <configOptions>
                                     <reactive>true</reactive>
                                     <delegatePattern>true</delegatePattern>
-                                    <title>fanflip</title>
+                                    <title>monsterdam</title>
                                     <useSpringBoot3>true</useSpringBoot3>
                                 </configOptions>
                             </configuration>
@@ -987,8 +987,8 @@
                 <profile.test>testdev</profile.test>
                 <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.H2Dialect</liquibase-plugin.hibernate-dialect>
                 <liquibase-plugin.driver>org.h2.Driver</liquibase-plugin.driver>
-                <liquibase-plugin.url>jdbc:h2:tcp://localhost:18080/mem:fanflip</liquibase-plugin.url>
-                <liquibase-plugin.username>fanflip</liquibase-plugin.username>
+                <liquibase-plugin.url>jdbc:h2:tcp://localhost:18080/mem:monsterdam</liquibase-plugin.url>
+                <liquibase-plugin.username>monsterdam</liquibase-plugin.username>
                 <liquibase-plugin.password/>
             </properties>
             <dependencies>
@@ -1013,7 +1013,7 @@
                         <artifactId>maven-compiler-plugin</artifactId>
                         <configuration>
                             <testExcludes>
-                                <testExclude>com/fanflip/app/config/PostgreSqlTestContainer.java</testExclude>
+                                <testExclude>com/monsterdam/app/config/PostgreSqlTestContainer.java</testExclude>
                             </testExcludes>
                         </configuration>
                     </plugin>
@@ -1152,8 +1152,8 @@
                 <profile.test>testprod</profile.test>
                 <liquibase-plugin.hibernate-dialect>org.hibernate.dialect.PostgreSQLDialect</liquibase-plugin.hibernate-dialect>
                 <liquibase-plugin.driver>org.postgresql.Driver</liquibase-plugin.driver>
-                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/fanflip</liquibase-plugin.url>
-                <liquibase-plugin.username>fanflip</liquibase-plugin.username>
+                <liquibase-plugin.url>jdbc:postgresql://localhost:5432/monsterdam</liquibase-plugin.url>
+                <liquibase-plugin.username>monsterdam</liquibase-plugin.username>
                 <liquibase-plugin.password/>
             </properties>
             <build>

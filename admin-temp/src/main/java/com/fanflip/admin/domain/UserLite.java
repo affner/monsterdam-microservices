@@ -1,7 +1,7 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.ContentPreference;
-import com.fanflip.admin.domain.enumeration.UserGender;
+import com.monsterdam.admin.domain.enumeration.ContentPreference;
+import com.monsterdam.admin.domain.enumeration.UserGender;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

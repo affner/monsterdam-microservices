@@ -1,15 +1,15 @@
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.notifications.IntegrationTest;
-import com.fanflip.notifications.domain.AppNotification;
-import com.fanflip.notifications.repository.AppNotificationRepository;
-import com.fanflip.notifications.service.dto.AppNotificationDTO;
-import com.fanflip.notifications.service.mapper.AppNotificationMapper;
+import com.monsterdam.notifications.IntegrationTest;
+import com.monsterdam.notifications.domain.AppNotification;
+import com.monsterdam.notifications.repository.AppNotificationRepository;
+import com.monsterdam.notifications.service.dto.AppNotificationDTO;
+import com.monsterdam.notifications.service.mapper.AppNotificationMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

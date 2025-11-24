@@ -1,12 +1,12 @@
-package com.fanflip.interactions.domain;
+package com.monsterdam.interactions.domain;
 
-import static com.fanflip.interactions.domain.PostCommentTestSamples.*;
-import static com.fanflip.interactions.domain.PostFeedTestSamples.*;
-import static com.fanflip.interactions.domain.PostPollTestSamples.*;
-import static com.fanflip.interactions.domain.UserMentionTestSamples.*;
+import static com.monsterdam.interactions.domain.PostCommentTestSamples.*;
+import static com.monsterdam.interactions.domain.PostFeedTestSamples.*;
+import static com.monsterdam.interactions.domain.PostPollTestSamples.*;
+import static com.monsterdam.interactions.domain.UserMentionTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.web.rest.TestUtil;
+import com.monsterdam.interactions.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

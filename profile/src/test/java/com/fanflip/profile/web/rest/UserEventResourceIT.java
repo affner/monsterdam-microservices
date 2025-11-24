@@ -1,16 +1,16 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.domain.UserEvent;
-import com.fanflip.profile.domain.enumeration.UserEventStatus;
-import com.fanflip.profile.repository.UserEventRepository;
-import com.fanflip.profile.service.dto.UserEventDTO;
-import com.fanflip.profile.service.mapper.UserEventMapper;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.domain.UserEvent;
+import com.monsterdam.profile.domain.enumeration.UserEventStatus;
+import com.monsterdam.profile.repository.UserEventRepository;
+import com.monsterdam.profile.service.dto.UserEventDTO;
+import com.monsterdam.profile.service.mapper.UserEventMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.LocalDate;

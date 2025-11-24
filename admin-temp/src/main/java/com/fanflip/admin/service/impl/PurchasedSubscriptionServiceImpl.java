@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PurchasedSubscriptionRepository;
-import com.fanflip.admin.repository.search.PurchasedSubscriptionSearchRepository;
-import com.fanflip.admin.service.PurchasedSubscriptionService;
-import com.fanflip.admin.service.dto.PurchasedSubscriptionDTO;
-import com.fanflip.admin.service.mapper.PurchasedSubscriptionMapper;
+import com.monsterdam.admin.repository.PurchasedSubscriptionRepository;
+import com.monsterdam.admin.repository.search.PurchasedSubscriptionSearchRepository;
+import com.monsterdam.admin.service.PurchasedSubscriptionService;
+import com.monsterdam.admin.service.dto.PurchasedSubscriptionDTO;
+import com.monsterdam.admin.service.mapper.PurchasedSubscriptionMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PurchasedSubscription}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PurchasedSubscription}.
  */
 @Service
 @Transactional

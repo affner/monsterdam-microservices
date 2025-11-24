@@ -1,10 +1,10 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
-import com.fanflip.interactions.repository.PostFeedRepository;
-import com.fanflip.interactions.service.PostFeedService;
-import com.fanflip.interactions.service.dto.PostFeedDTO;
-import com.fanflip.interactions.web.rest.errors.BadRequestAlertException;
-import com.fanflip.interactions.web.rest.errors.ElasticsearchExceptionMapper;
+import com.monsterdam.interactions.repository.PostFeedRepository;
+import com.monsterdam.interactions.service.PostFeedService;
+import com.monsterdam.interactions.service.dto.PostFeedDTO;
+import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.interactions.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -27,7 +27,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.interactions.domain.PostFeed}.
+ * REST controller for managing {@link com.monsterdam.interactions.domain.PostFeed}.
  */
 @RestController
 @RequestMapping("/api/post-feeds")

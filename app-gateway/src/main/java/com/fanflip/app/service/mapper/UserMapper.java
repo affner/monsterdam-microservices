@@ -1,9 +1,9 @@
-package com.fanflip.app.service.mapper;
+package com.monsterdam.app.service.mapper;
 
-import com.fanflip.app.domain.Authority;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.service.dto.UserDTO;
+import com.monsterdam.app.domain.Authority;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.UserDTO;
 import java.util.*;
 import java.util.stream.Collectors;
 import org.mapstruct.BeanMapping;

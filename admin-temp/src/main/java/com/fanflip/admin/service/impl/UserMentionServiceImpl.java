@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.UserMentionRepository;
-import com.fanflip.admin.repository.search.UserMentionSearchRepository;
-import com.fanflip.admin.service.UserMentionService;
-import com.fanflip.admin.service.dto.UserMentionDTO;
-import com.fanflip.admin.service.mapper.UserMentionMapper;
+import com.monsterdam.admin.repository.UserMentionRepository;
+import com.monsterdam.admin.repository.search.UserMentionSearchRepository;
+import com.monsterdam.admin.service.UserMentionService;
+import com.monsterdam.admin.service.dto.UserMentionDTO;
+import com.monsterdam.admin.service.mapper.UserMentionMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.UserMention}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.UserMention}.
  */
 @Service
 @Transactional

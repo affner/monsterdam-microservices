@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.HelpQuestion} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.HelpQuestion} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class HelpQuestionDTO implements Serializable {

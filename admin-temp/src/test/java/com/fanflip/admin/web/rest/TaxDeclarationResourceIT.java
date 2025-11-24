@@ -1,22 +1,22 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.TaxDeclaration;
-import com.fanflip.admin.domain.enumeration.TaxDeclarationStatus;
-import com.fanflip.admin.domain.enumeration.TaxDeclarationType;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.TaxDeclarationRepository;
-import com.fanflip.admin.repository.search.TaxDeclarationSearchRepository;
-import com.fanflip.admin.service.TaxDeclarationService;
-import com.fanflip.admin.service.dto.TaxDeclarationDTO;
-import com.fanflip.admin.service.mapper.TaxDeclarationMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.TaxDeclaration;
+import com.monsterdam.admin.domain.enumeration.TaxDeclarationStatus;
+import com.monsterdam.admin.domain.enumeration.TaxDeclarationType;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.TaxDeclarationRepository;
+import com.monsterdam.admin.repository.search.TaxDeclarationSearchRepository;
+import com.monsterdam.admin.service.TaxDeclarationService;
+import com.monsterdam.admin.service.dto.TaxDeclarationDTO;
+import com.monsterdam.admin.service.mapper.TaxDeclarationMapper;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

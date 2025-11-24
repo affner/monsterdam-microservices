@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
-import com.fanflip.multimedia.repository.SingleDocumentRepository;
-import com.fanflip.multimedia.service.SingleDocumentService;
-import com.fanflip.multimedia.service.dto.SingleDocumentDTO;
-import com.fanflip.multimedia.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.multimedia.repository.SingleDocumentRepository;
+import com.monsterdam.multimedia.service.SingleDocumentService;
+import com.monsterdam.multimedia.service.dto.SingleDocumentDTO;
+import com.monsterdam.multimedia.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.multimedia.domain.SingleDocument}.
+ * REST controller for managing {@link com.monsterdam.multimedia.domain.SingleDocument}.
  */
 @RestController
 @RequestMapping("/api/single-documents")

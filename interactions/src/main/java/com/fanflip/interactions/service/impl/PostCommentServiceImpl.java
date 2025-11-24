@@ -1,11 +1,11 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.PostComment;
-import com.fanflip.interactions.repository.PostCommentRepository;
-import com.fanflip.interactions.repository.search.PostCommentSearchRepository;
-import com.fanflip.interactions.service.PostCommentService;
-import com.fanflip.interactions.service.dto.PostCommentDTO;
-import com.fanflip.interactions.service.mapper.PostCommentMapper;
+import com.monsterdam.interactions.domain.PostComment;
+import com.monsterdam.interactions.repository.PostCommentRepository;
+import com.monsterdam.interactions.repository.search.PostCommentSearchRepository;
+import com.monsterdam.interactions.service.PostCommentService;
+import com.monsterdam.interactions.service.dto.PostCommentDTO;
+import com.monsterdam.interactions.service.mapper.PostCommentMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.PostComment}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.PostComment}.
  */
 @Service
 @Transactional

@@ -19,10 +19,10 @@ export const UserUIPreferencesUpdate = () => {
   const { id } = useParams<'id'>();
   const isNew = id === undefined;
 
-  const userUIPreferencesEntity = useAppSelector(state => state.fanflip.userUIPreferences.entity);
-  const loading = useAppSelector(state => state.fanflip.userUIPreferences.loading);
-  const updating = useAppSelector(state => state.fanflip.userUIPreferences.updating);
-  const updateSuccess = useAppSelector(state => state.fanflip.userUIPreferences.updateSuccess);
+  const userUIPreferencesEntity = useAppSelector(state => state.monsterdam.userUIPreferences.entity);
+  const loading = useAppSelector(state => state.monsterdam.userUIPreferences.loading);
+  const updating = useAppSelector(state => state.monsterdam.userUIPreferences.updating);
+  const updateSuccess = useAppSelector(state => state.monsterdam.userUIPreferences.updateSuccess);
 
   const handleClose = () => {
     navigate('/user-ui-preferences' + location.search);
@@ -78,8 +78,8 @@ export const UserUIPreferencesUpdate = () => {
     <div>
       <Row className="justify-content-center">
         <Col md="8">
-          <h2 id="fanflipApp.userUIPreferences.home.createOrEditLabel" data-cy="UserUIPreferencesCreateUpdateHeading">
-            <Translate contentKey="fanflipApp.userUIPreferences.home.createOrEditLabel">Create or edit a UserUIPreferences</Translate>
+          <h2 id="monsterdamApp.userUIPreferences.home.createOrEditLabel" data-cy="UserUIPreferencesCreateUpdateHeading">
+            <Translate contentKey="monsterdamApp.userUIPreferences.home.createOrEditLabel">Create or edit a UserUIPreferences</Translate>
           </h2>
         </Col>
       </Row>
@@ -100,14 +100,14 @@ export const UserUIPreferencesUpdate = () => {
                 />
               ) : null}
               <ValidatedField
-                label={translate('fanflipApp.userUIPreferences.preferences')}
+                label={translate('monsterdamApp.userUIPreferences.preferences')}
                 id="user-ui-preferences-preferences"
                 name="preferences"
                 data-cy="preferences"
                 type="textarea"
               />
               <ValidatedField
-                label={translate('fanflipApp.userUIPreferences.createdDate')}
+                label={translate('monsterdamApp.userUIPreferences.createdDate')}
                 id="user-ui-preferences-createdDate"
                 name="createdDate"
                 data-cy="createdDate"
@@ -118,7 +118,7 @@ export const UserUIPreferencesUpdate = () => {
                 }}
               />
               <ValidatedField
-                label={translate('fanflipApp.userUIPreferences.lastModifiedDate')}
+                label={translate('monsterdamApp.userUIPreferences.lastModifiedDate')}
                 id="user-ui-preferences-lastModifiedDate"
                 name="lastModifiedDate"
                 data-cy="lastModifiedDate"
@@ -126,14 +126,14 @@ export const UserUIPreferencesUpdate = () => {
                 placeholder="YYYY-MM-DD HH:mm"
               />
               <ValidatedField
-                label={translate('fanflipApp.userUIPreferences.createdBy')}
+                label={translate('monsterdamApp.userUIPreferences.createdBy')}
                 id="user-ui-preferences-createdBy"
                 name="createdBy"
                 data-cy="createdBy"
                 type="text"
               />
               <ValidatedField
-                label={translate('fanflipApp.userUIPreferences.lastModifiedBy')}
+                label={translate('monsterdamApp.userUIPreferences.lastModifiedBy')}
                 id="user-ui-preferences-lastModifiedBy"
                 name="lastModifiedBy"
                 data-cy="lastModifiedBy"

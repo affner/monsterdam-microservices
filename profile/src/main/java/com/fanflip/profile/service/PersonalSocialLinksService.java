@@ -1,12 +1,12 @@
-package com.fanflip.profile.service;
+package com.monsterdam.profile.service;
 
-import com.fanflip.profile.service.dto.PersonalSocialLinksDTO;
+import com.monsterdam.profile.service.dto.PersonalSocialLinksDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.profile.domain.PersonalSocialLinks}.
+ * Service Interface for managing {@link com.monsterdam.profile.domain.PersonalSocialLinks}.
  */
 public interface PersonalSocialLinksService {
     /**

@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.AdminSystemConfigsRepository;
-import com.fanflip.catalogs.service.AdminSystemConfigsService;
-import com.fanflip.catalogs.service.dto.AdminSystemConfigsDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.AdminSystemConfigsRepository;
+import com.monsterdam.catalogs.service.AdminSystemConfigsService;
+import com.monsterdam.catalogs.service.dto.AdminSystemConfigsDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.AdminSystemConfigs}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.AdminSystemConfigs}.
  */
 @RestController
 @RequestMapping("/api/admin-system-configs")

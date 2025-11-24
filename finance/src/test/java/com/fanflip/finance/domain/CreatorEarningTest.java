@@ -1,13 +1,13 @@
-package com.fanflip.finance.domain;
+package com.monsterdam.finance.domain;
 
-import static com.fanflip.finance.domain.CreatorEarningTestSamples.*;
-import static com.fanflip.finance.domain.MoneyPayoutTestSamples.*;
-import static com.fanflip.finance.domain.PurchasedContentTestSamples.*;
-import static com.fanflip.finance.domain.PurchasedSubscriptionTestSamples.*;
-import static com.fanflip.finance.domain.PurchasedTipTestSamples.*;
+import static com.monsterdam.finance.domain.CreatorEarningTestSamples.*;
+import static com.monsterdam.finance.domain.MoneyPayoutTestSamples.*;
+import static com.monsterdam.finance.domain.PurchasedContentTestSamples.*;
+import static com.monsterdam.finance.domain.PurchasedSubscriptionTestSamples.*;
+import static com.monsterdam.finance.domain.PurchasedTipTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.finance.web.rest.TestUtil;
+import com.monsterdam.finance.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class CreatorEarningTest {

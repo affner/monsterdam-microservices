@@ -1,15 +1,15 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.catalogs.IntegrationTest;
-import com.fanflip.catalogs.domain.SocialNetwork;
-import com.fanflip.catalogs.repository.SocialNetworkRepository;
-import com.fanflip.catalogs.service.dto.SocialNetworkDTO;
-import com.fanflip.catalogs.service.mapper.SocialNetworkMapper;
+import com.monsterdam.catalogs.IntegrationTest;
+import com.monsterdam.catalogs.domain.SocialNetwork;
+import com.monsterdam.catalogs.repository.SocialNetworkRepository;
+import com.monsterdam.catalogs.service.dto.SocialNetworkDTO;
+import com.monsterdam.catalogs.service.mapper.SocialNetworkMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

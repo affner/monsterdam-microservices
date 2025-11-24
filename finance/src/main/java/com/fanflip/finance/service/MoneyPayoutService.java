@@ -1,12 +1,12 @@
-package com.fanflip.finance.service;
+package com.monsterdam.finance.service;
 
-import com.fanflip.finance.service.dto.MoneyPayoutDTO;
+import com.monsterdam.finance.service.dto.MoneyPayoutDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.finance.domain.MoneyPayout}.
+ * Service Interface for managing {@link com.monsterdam.finance.domain.MoneyPayout}.
  */
 public interface MoneyPayoutService {
     /**

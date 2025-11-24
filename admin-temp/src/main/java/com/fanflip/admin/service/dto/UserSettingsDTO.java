@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.UserLanguage;
+import com.monsterdam.admin.domain.enumeration.UserLanguage;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.UserSettings} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.UserSettings} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserSettingsDTO implements Serializable {

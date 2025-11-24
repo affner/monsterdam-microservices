@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.HelpQuestion;
+import com.monsterdam.catalogs.domain.HelpQuestion;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.Collections;

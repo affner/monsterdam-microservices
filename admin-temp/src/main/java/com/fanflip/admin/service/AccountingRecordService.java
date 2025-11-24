@@ -1,12 +1,12 @@
-package com.fanflip.admin.service;
+package com.monsterdam.admin.service;
 
-import com.fanflip.admin.service.dto.AccountingRecordDTO;
+import com.monsterdam.admin.service.dto.AccountingRecordDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.admin.domain.AccountingRecord}.
+ * Service Interface for managing {@link com.monsterdam.admin.domain.AccountingRecord}.
  */
 public interface AccountingRecordService {
     /**

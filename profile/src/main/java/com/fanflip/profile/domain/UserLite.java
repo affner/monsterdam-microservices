@@ -1,7 +1,7 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import com.fanflip.profile.domain.enumeration.ContentPreference;
-import com.fanflip.profile.domain.enumeration.UserGender;
+import com.monsterdam.profile.domain.enumeration.ContentPreference;
+import com.monsterdam.profile.domain.enumeration.UserGender;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

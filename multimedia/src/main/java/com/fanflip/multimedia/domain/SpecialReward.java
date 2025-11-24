@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.domain;
+package com.monsterdam.multimedia.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

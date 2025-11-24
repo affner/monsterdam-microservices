@@ -1,7 +1,7 @@
-package com.fanflip.app;
+package com.monsterdam.app;
 
-import com.fanflip.app.config.ApplicationProperties;
-import com.fanflip.app.config.CRLFLogConverter;
+import com.monsterdam.app.config.ApplicationProperties;
+import com.monsterdam.app.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -21,18 +21,18 @@ import tech.jhipster.config.JHipsterConstants;
 
 @SpringBootApplication
 @EnableConfigurationProperties({ LiquibaseProperties.class, ApplicationProperties.class })
-public class FanflipApp {
+public class MonsterdamApp {
 
-    private static final Logger log = LoggerFactory.getLogger(FanflipApp.class);
+    private static final Logger log = LoggerFactory.getLogger(MonsterdamApp.class);
 
     private final Environment env;
 
-    public FanflipApp(Environment env) {
+    public MonsterdamApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes fanflip.
+     * Initializes monsterdam.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -65,7 +65,7 @@ public class FanflipApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(FanflipApp.class);
+        SpringApplication app = new SpringApplication(MonsterdamApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

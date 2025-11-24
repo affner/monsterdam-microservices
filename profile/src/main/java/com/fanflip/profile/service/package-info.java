@@ -1,4 +1,4 @@
 /**
  * Service layer.
  */
-package com.fanflip.profile.service;
+package com.monsterdam.profile.service;

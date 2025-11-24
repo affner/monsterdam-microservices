@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.GlobalEventRepository;
-import com.fanflip.admin.repository.search.GlobalEventSearchRepository;
-import com.fanflip.admin.service.GlobalEventService;
-import com.fanflip.admin.service.dto.GlobalEventDTO;
-import com.fanflip.admin.service.mapper.GlobalEventMapper;
+import com.monsterdam.admin.repository.GlobalEventRepository;
+import com.monsterdam.admin.repository.search.GlobalEventSearchRepository;
+import com.monsterdam.admin.service.GlobalEventService;
+import com.monsterdam.admin.service.dto.GlobalEventDTO;
+import com.monsterdam.admin.service.mapper.GlobalEventMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.GlobalEvent}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.GlobalEvent}.
  */
 @Service
 @Transactional

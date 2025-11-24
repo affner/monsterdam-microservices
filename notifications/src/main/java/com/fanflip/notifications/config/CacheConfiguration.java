@@ -1,4 +1,4 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,7 +76,7 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.notifications.domain.AppNotification.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.notifications.domain.AppNotification.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

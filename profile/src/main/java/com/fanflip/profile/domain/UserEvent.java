@@ -1,6 +1,6 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import com.fanflip.profile.domain.enumeration.UserEventStatus;
+import com.monsterdam.profile.domain.enumeration.UserEventStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

@@ -1,9 +1,9 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
-import com.fanflip.finance.domain.PaymentTransaction;
-import com.fanflip.finance.domain.WalletTransaction;
-import com.fanflip.finance.service.dto.PaymentTransactionDTO;
-import com.fanflip.finance.service.dto.WalletTransactionDTO;
+import com.monsterdam.finance.domain.PaymentTransaction;
+import com.monsterdam.finance.domain.WalletTransaction;
+import com.monsterdam.finance.service.dto.PaymentTransactionDTO;
+import com.monsterdam.finance.service.dto.WalletTransactionDTO;
 import org.mapstruct.*;
 
 /**

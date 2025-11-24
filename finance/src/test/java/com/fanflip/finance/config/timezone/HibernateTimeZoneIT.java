@@ -1,11 +1,11 @@
-package com.fanflip.finance.config.timezone;
+package com.monsterdam.finance.config.timezone;
 
 import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.finance.IntegrationTest;
-import com.fanflip.finance.repository.timezone.DateTimeWrapper;
-import com.fanflip.finance.repository.timezone.DateTimeWrapperRepository;
+import com.monsterdam.finance.IntegrationTest;
+import com.monsterdam.finance.repository.timezone.DateTimeWrapper;
+import com.monsterdam.finance.repository.timezone.DateTimeWrapperRepository;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import org.junit.jupiter.api.BeforeEach;

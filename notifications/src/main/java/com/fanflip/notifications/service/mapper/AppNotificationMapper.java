@@ -1,7 +1,7 @@
-package com.fanflip.notifications.service.mapper;
+package com.monsterdam.notifications.service.mapper;
 
-import com.fanflip.notifications.domain.AppNotification;
-import com.fanflip.notifications.service.dto.AppNotificationDTO;
+import com.monsterdam.notifications.domain.AppNotification;
+import com.monsterdam.notifications.service.dto.AppNotificationDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,9 +1,9 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.PersonalSocialLinks;
-import com.fanflip.admin.repository.rowmapper.PersonalSocialLinksRowMapper;
-import com.fanflip.admin.repository.rowmapper.SocialNetworkRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.domain.PersonalSocialLinks;
+import com.monsterdam.admin.repository.rowmapper.PersonalSocialLinksRowMapper;
+import com.monsterdam.admin.repository.rowmapper.SocialNetworkRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,18 +6,18 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.AssistanceTicket;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.UserReport;
-import com.fanflip.admin.domain.enumeration.ReportCategory;
-import com.fanflip.admin.domain.enumeration.ReportStatus;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.UserReportRepository;
-import com.fanflip.admin.repository.search.UserReportSearchRepository;
-import com.fanflip.admin.service.UserReportService;
-import com.fanflip.admin.service.dto.UserReportDTO;
-import com.fanflip.admin.service.mapper.UserReportMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.AssistanceTicket;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.UserReport;
+import com.monsterdam.admin.domain.enumeration.ReportCategory;
+import com.monsterdam.admin.domain.enumeration.ReportStatus;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.UserReportRepository;
+import com.monsterdam.admin.repository.search.UserReportSearchRepository;
+import com.monsterdam.admin.service.UserReportService;
+import com.monsterdam.admin.service.dto.UserReportDTO;
+import com.monsterdam.admin.service.mapper.UserReportMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

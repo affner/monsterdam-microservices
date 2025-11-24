@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.broker;
+package com.monsterdam.catalogs.broker;
 
 import static org.springframework.web.servlet.mvc.method.annotation.SseEmitter.event;
 

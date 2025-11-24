@@ -1,6 +1,6 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
-import com.fanflip.interactions.aop.logging.LoggingAspect;
+import com.monsterdam.interactions.aop.logging.LoggingAspect;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
 import tech.jhipster.config.JHipsterConstants;

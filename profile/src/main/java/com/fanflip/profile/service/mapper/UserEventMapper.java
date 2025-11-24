@@ -1,7 +1,7 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.UserEvent;
-import com.fanflip.profile.service.dto.UserEventDTO;
+import com.monsterdam.profile.domain.UserEvent;
+import com.monsterdam.profile.service.dto.UserEventDTO;
 import org.mapstruct.*;
 
 /**

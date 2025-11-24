@@ -1,6 +1,6 @@
-package com.fanflip.app.domain;
+package com.monsterdam.app.domain;
 
-import com.fanflip.app.config.Constants;
+import com.monsterdam.app.config.Constants;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

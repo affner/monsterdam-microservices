@@ -1,6 +1,6 @@
-package com.fanflip.profile.repository;
+package com.monsterdam.profile.repository;
 
-import com.fanflip.profile.domain.UserProfile;
+import com.monsterdam.profile.domain.UserProfile;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

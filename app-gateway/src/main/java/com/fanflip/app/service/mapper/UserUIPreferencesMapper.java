@@ -1,7 +1,7 @@
-package com.fanflip.app.service.mapper;
+package com.monsterdam.app.service.mapper;
 
-import com.fanflip.app.domain.UserUIPreferences;
-import com.fanflip.app.service.dto.UserUIPreferencesDTO;
+import com.monsterdam.app.domain.UserUIPreferences;
+import com.monsterdam.app.service.dto.UserUIPreferencesDTO;
 import org.mapstruct.*;
 
 /**

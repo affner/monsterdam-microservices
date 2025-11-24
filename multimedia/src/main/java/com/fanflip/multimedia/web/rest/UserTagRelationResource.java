@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
-import com.fanflip.multimedia.repository.UserTagRelationRepository;
-import com.fanflip.multimedia.service.UserTagRelationService;
-import com.fanflip.multimedia.service.dto.UserTagRelationDTO;
-import com.fanflip.multimedia.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.multimedia.repository.UserTagRelationRepository;
+import com.monsterdam.multimedia.service.UserTagRelationService;
+import com.monsterdam.multimedia.service.dto.UserTagRelationDTO;
+import com.monsterdam.multimedia.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.multimedia.domain.UserTagRelation}.
+ * REST controller for managing {@link com.monsterdam.multimedia.domain.UserTagRelation}.
  */
 @RestController
 @RequestMapping("/api/user-tag-relations")

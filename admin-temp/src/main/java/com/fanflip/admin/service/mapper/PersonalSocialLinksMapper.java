@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.PersonalSocialLinks;
-import com.fanflip.admin.domain.SocialNetwork;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.PersonalSocialLinksDTO;
-import com.fanflip.admin.service.dto.SocialNetworkDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.PersonalSocialLinks;
+import com.monsterdam.admin.domain.SocialNetwork;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.PersonalSocialLinksDTO;
+import com.monsterdam.admin.service.dto.SocialNetworkDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

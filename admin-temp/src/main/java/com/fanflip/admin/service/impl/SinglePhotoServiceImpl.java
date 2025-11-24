@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.SinglePhotoRepository;
-import com.fanflip.admin.repository.search.SinglePhotoSearchRepository;
-import com.fanflip.admin.service.SinglePhotoService;
-import com.fanflip.admin.service.dto.SinglePhotoDTO;
-import com.fanflip.admin.service.mapper.SinglePhotoMapper;
+import com.monsterdam.admin.repository.SinglePhotoRepository;
+import com.monsterdam.admin.repository.search.SinglePhotoSearchRepository;
+import com.monsterdam.admin.service.SinglePhotoService;
+import com.monsterdam.admin.service.dto.SinglePhotoDTO;
+import com.monsterdam.admin.service.mapper.SinglePhotoMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.SinglePhoto}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.SinglePhoto}.
  */
 @Service
 @Transactional

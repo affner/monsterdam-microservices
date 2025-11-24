@@ -1,8 +1,8 @@
-package com.fanflip.app.security.jwt;
+package com.monsterdam.app.security.jwt;
 
-import static com.fanflip.app.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.monsterdam.app.security.jwt.JwtAuthenticationTestUtils.*;
 
-import com.fanflip.app.IntegrationTest;
+import com.monsterdam.app.IntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

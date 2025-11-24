@@ -1,4 +1,4 @@
 /**
  * Rest layer error handling.
  */
-package com.fanflip.catalogs.web.rest.errors;
+package com.monsterdam.catalogs.web.rest.errors;

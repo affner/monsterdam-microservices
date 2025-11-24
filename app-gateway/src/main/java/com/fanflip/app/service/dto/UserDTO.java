@@ -1,6 +1,6 @@
-package com.fanflip.app.service.dto;
+package com.monsterdam.app.service.dto;
 
-import com.fanflip.app.domain.User;
+import com.monsterdam.app.domain.User;
 import java.io.Serializable;
 
 /**

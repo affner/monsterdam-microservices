@@ -1,15 +1,15 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.catalogs.IntegrationTest;
-import com.fanflip.catalogs.domain.Currency;
-import com.fanflip.catalogs.repository.CurrencyRepository;
-import com.fanflip.catalogs.service.dto.CurrencyDTO;
-import com.fanflip.catalogs.service.mapper.CurrencyMapper;
+import com.monsterdam.catalogs.IntegrationTest;
+import com.monsterdam.catalogs.domain.Currency;
+import com.monsterdam.catalogs.repository.CurrencyRepository;
+import com.monsterdam.catalogs.service.dto.CurrencyDTO;
+import com.monsterdam.catalogs.service.mapper.CurrencyMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

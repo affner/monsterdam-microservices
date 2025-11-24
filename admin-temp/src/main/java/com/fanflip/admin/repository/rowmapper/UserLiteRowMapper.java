@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.UserLite;
-import com.fanflip.admin.domain.enumeration.ContentPreference;
-import com.fanflip.admin.domain.enumeration.UserGender;
+import com.monsterdam.admin.domain.UserLite;
+import com.monsterdam.admin.domain.enumeration.ContentPreference;
+import com.monsterdam.admin.domain.enumeration.UserGender;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.time.LocalDate;

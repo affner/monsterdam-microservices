@@ -1,13 +1,13 @@
-package com.fanflip.interactions.service;
+package com.monsterdam.interactions.service;
 
-import com.fanflip.interactions.service.dto.PostPollDTO;
+import com.monsterdam.interactions.service.dto.PostPollDTO;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.interactions.domain.PostPoll}.
+ * Service Interface for managing {@link com.monsterdam.interactions.domain.PostPoll}.
  */
 public interface PostPollService {
     /**

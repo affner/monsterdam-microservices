@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.WalletTransaction;
-import com.fanflip.admin.domain.enumeration.WalletTransactionType;
+import com.monsterdam.admin.domain.WalletTransaction;
+import com.monsterdam.admin.domain.enumeration.WalletTransactionType;
 import io.r2dbc.spi.Row;
 import java.math.BigDecimal;
 import java.time.Instant;

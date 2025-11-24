@@ -1,16 +1,16 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.catalogs.IntegrationTest;
-import com.fanflip.catalogs.domain.AdminEmailConfigs;
-import com.fanflip.catalogs.domain.enumeration.EmailTemplateType;
-import com.fanflip.catalogs.repository.AdminEmailConfigsRepository;
-import com.fanflip.catalogs.service.dto.AdminEmailConfigsDTO;
-import com.fanflip.catalogs.service.mapper.AdminEmailConfigsMapper;
+import com.monsterdam.catalogs.IntegrationTest;
+import com.monsterdam.catalogs.domain.AdminEmailConfigs;
+import com.monsterdam.catalogs.domain.enumeration.EmailTemplateType;
+import com.monsterdam.catalogs.repository.AdminEmailConfigsRepository;
+import com.monsterdam.catalogs.service.dto.AdminEmailConfigsDTO;
+import com.monsterdam.catalogs.service.mapper.AdminEmailConfigsMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

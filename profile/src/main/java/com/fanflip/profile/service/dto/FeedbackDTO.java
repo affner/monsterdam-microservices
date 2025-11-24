@@ -1,13 +1,13 @@
-package com.fanflip.profile.service.dto;
+package com.monsterdam.profile.service.dto;
 
-import com.fanflip.profile.domain.enumeration.FeedbackType;
+import com.monsterdam.profile.domain.enumeration.FeedbackType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.profile.domain.Feedback} entity.
+ * A DTO for the {@link com.monsterdam.profile.domain.Feedback} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class FeedbackDTO implements Serializable {

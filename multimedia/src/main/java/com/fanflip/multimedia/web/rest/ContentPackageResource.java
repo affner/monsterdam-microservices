@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
-import com.fanflip.multimedia.repository.ContentPackageRepository;
-import com.fanflip.multimedia.service.ContentPackageService;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.multimedia.repository.ContentPackageRepository;
+import com.monsterdam.multimedia.service.ContentPackageService;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -26,7 +26,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.multimedia.domain.ContentPackage}.
+ * REST controller for managing {@link com.monsterdam.multimedia.domain.ContentPackage}.
  */
 @RestController
 @RequestMapping("/api/content-packages")

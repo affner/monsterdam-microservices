@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.AssetRepository;
-import com.fanflip.admin.repository.search.AssetSearchRepository;
-import com.fanflip.admin.service.AssetService;
-import com.fanflip.admin.service.dto.AssetDTO;
-import com.fanflip.admin.service.mapper.AssetMapper;
+import com.monsterdam.admin.repository.AssetRepository;
+import com.monsterdam.admin.repository.search.AssetSearchRepository;
+import com.monsterdam.admin.service.AssetService;
+import com.monsterdam.admin.service.dto.AssetDTO;
+import com.monsterdam.admin.service.mapper.AssetMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.Asset}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.Asset}.
  */
 @Service
 @Transactional

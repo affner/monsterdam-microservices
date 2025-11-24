@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -6,13 +6,13 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.PollOption;
-import com.fanflip.interactions.domain.PostPoll;
-import com.fanflip.interactions.repository.PollOptionRepository;
-import com.fanflip.interactions.service.PollOptionService;
-import com.fanflip.interactions.service.dto.PollOptionDTO;
-import com.fanflip.interactions.service.mapper.PollOptionMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.PollOption;
+import com.monsterdam.interactions.domain.PostPoll;
+import com.monsterdam.interactions.repository.PollOptionRepository;
+import com.monsterdam.interactions.service.PollOptionService;
+import com.monsterdam.interactions.service.dto.PollOptionDTO;
+import com.monsterdam.interactions.service.mapper.PollOptionMapper;
 import jakarta.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.List;

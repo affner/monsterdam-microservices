@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.PollOption;
-import com.fanflip.admin.domain.PostPoll;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.PollOptionRepository;
-import com.fanflip.admin.repository.search.PollOptionSearchRepository;
-import com.fanflip.admin.service.PollOptionService;
-import com.fanflip.admin.service.dto.PollOptionDTO;
-import com.fanflip.admin.service.mapper.PollOptionMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.PollOption;
+import com.monsterdam.admin.domain.PostPoll;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.PollOptionRepository;
+import com.monsterdam.admin.repository.search.PollOptionSearchRepository;
+import com.monsterdam.admin.service.PollOptionService;
+import com.monsterdam.admin.service.dto.PollOptionDTO;
+import com.monsterdam.admin.service.mapper.PollOptionMapper;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;

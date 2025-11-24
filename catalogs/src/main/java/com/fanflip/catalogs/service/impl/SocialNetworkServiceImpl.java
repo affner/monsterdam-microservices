@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.SocialNetwork;
-import com.fanflip.catalogs.repository.SocialNetworkRepository;
-import com.fanflip.catalogs.service.SocialNetworkService;
-import com.fanflip.catalogs.service.dto.SocialNetworkDTO;
-import com.fanflip.catalogs.service.mapper.SocialNetworkMapper;
+import com.monsterdam.catalogs.domain.SocialNetwork;
+import com.monsterdam.catalogs.repository.SocialNetworkRepository;
+import com.monsterdam.catalogs.service.SocialNetworkService;
+import com.monsterdam.catalogs.service.dto.SocialNetworkDTO;
+import com.monsterdam.catalogs.service.mapper.SocialNetworkMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.SocialNetwork}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.SocialNetwork}.
  */
 @Service
 @Transactional

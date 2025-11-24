@@ -1,4 +1,4 @@
 /**
  * Application root.
  */
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;

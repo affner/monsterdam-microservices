@@ -1,4 +1,4 @@
 /**
  * Domain objects.
  */
-package com.fanflip.interactions.domain;
+package com.monsterdam.interactions.domain;

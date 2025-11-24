@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.OfferPromotion;
-import com.fanflip.finance.repository.OfferPromotionRepository;
-import com.fanflip.finance.service.OfferPromotionService;
-import com.fanflip.finance.service.dto.OfferPromotionDTO;
-import com.fanflip.finance.service.mapper.OfferPromotionMapper;
+import com.monsterdam.finance.domain.OfferPromotion;
+import com.monsterdam.finance.repository.OfferPromotionRepository;
+import com.monsterdam.finance.service.OfferPromotionService;
+import com.monsterdam.finance.service.dto.OfferPromotionDTO;
+import com.monsterdam.finance.service.mapper.OfferPromotionMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.OfferPromotion}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.OfferPromotion}.
  */
 @Service
 @Transactional

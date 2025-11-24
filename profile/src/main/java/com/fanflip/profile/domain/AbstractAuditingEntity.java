@@ -1,4 +1,4 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.Column;

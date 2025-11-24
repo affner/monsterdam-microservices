@@ -1,4 +1,4 @@
-package com.fanflip.finance.domain;
+package com.monsterdam.finance.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;

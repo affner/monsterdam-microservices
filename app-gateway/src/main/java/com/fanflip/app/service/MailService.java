@@ -1,6 +1,6 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
-import com.fanflip.app.domain.User;
+import com.monsterdam.app.domain.User;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import java.nio.charset.StandardCharsets;

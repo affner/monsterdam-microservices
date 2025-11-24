@@ -1,10 +1,10 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
-import com.fanflip.interactions.repository.DirectMessageRepository;
-import com.fanflip.interactions.service.DirectMessageService;
-import com.fanflip.interactions.service.dto.DirectMessageDTO;
-import com.fanflip.interactions.web.rest.errors.BadRequestAlertException;
-import com.fanflip.interactions.web.rest.errors.ElasticsearchExceptionMapper;
+import com.monsterdam.interactions.repository.DirectMessageRepository;
+import com.monsterdam.interactions.service.DirectMessageService;
+import com.monsterdam.interactions.service.dto.DirectMessageDTO;
+import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.interactions.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -26,7 +26,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.interactions.domain.DirectMessage}.
+ * REST controller for managing {@link com.monsterdam.interactions.domain.DirectMessage}.
  */
 @RestController
 @RequestMapping("/api/direct-messages")

@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.service.dto;
+package com.monsterdam.multimedia.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.multimedia.domain.ContentPackage} entity.
+ * A DTO for the {@link com.monsterdam.multimedia.domain.ContentPackage} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class ContentPackageDTO implements Serializable {

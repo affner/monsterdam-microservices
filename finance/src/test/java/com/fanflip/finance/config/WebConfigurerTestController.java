@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

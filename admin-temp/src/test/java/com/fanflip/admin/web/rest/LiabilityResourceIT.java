@@ -1,20 +1,20 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.Liability;
-import com.fanflip.admin.domain.enumeration.LiabilityType;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.LiabilityRepository;
-import com.fanflip.admin.repository.search.LiabilitySearchRepository;
-import com.fanflip.admin.service.dto.LiabilityDTO;
-import com.fanflip.admin.service.mapper.LiabilityMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.Liability;
+import com.monsterdam.admin.domain.enumeration.LiabilityType;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.LiabilityRepository;
+import com.monsterdam.admin.repository.search.LiabilitySearchRepository;
+import com.monsterdam.admin.service.dto.LiabilityDTO;
+import com.monsterdam.admin.service.mapper.LiabilityMapper;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.ZoneId;

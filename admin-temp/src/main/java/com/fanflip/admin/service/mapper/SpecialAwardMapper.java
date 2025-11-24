@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.SpecialAward;
-import com.fanflip.admin.service.dto.SpecialAwardDTO;
+import com.monsterdam.admin.domain.SpecialAward;
+import com.monsterdam.admin.service.dto.SpecialAwardDTO;
 import org.mapstruct.*;
 
 /**

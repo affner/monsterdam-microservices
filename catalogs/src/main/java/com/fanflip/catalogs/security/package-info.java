@@ -1,4 +1,4 @@
 /**
  * Application security utilities.
  */
-package com.fanflip.catalogs.security;
+package com.monsterdam.catalogs.security;

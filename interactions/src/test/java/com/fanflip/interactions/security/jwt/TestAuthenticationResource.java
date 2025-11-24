@@ -1,4 +1,4 @@
-package com.fanflip.interactions.security.jwt;
+package com.monsterdam.interactions.security.jwt;
 
 import org.springframework.web.bind.annotation.*;
 

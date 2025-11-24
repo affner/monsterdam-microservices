@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.SubscriptionBundle;
-import com.fanflip.finance.repository.SubscriptionBundleRepository;
-import com.fanflip.finance.service.SubscriptionBundleService;
-import com.fanflip.finance.service.dto.SubscriptionBundleDTO;
-import com.fanflip.finance.service.mapper.SubscriptionBundleMapper;
+import com.monsterdam.finance.domain.SubscriptionBundle;
+import com.monsterdam.finance.repository.SubscriptionBundleRepository;
+import com.monsterdam.finance.service.SubscriptionBundleService;
+import com.monsterdam.finance.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.finance.service.mapper.SubscriptionBundleMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.SubscriptionBundle}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.SubscriptionBundle}.
  */
 @Service
 @Transactional

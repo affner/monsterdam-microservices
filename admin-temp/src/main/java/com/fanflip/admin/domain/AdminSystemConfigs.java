@@ -1,7 +1,7 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.ConfigurationCategory;
-import com.fanflip.admin.domain.enumeration.ConfigurationValueType;
+import com.monsterdam.admin.domain.enumeration.ConfigurationCategory;
+import com.monsterdam.admin.domain.enumeration.ConfigurationValueType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

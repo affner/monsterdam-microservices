@@ -1,16 +1,16 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.finance.IntegrationTest;
-import com.fanflip.finance.domain.OfferPromotion;
-import com.fanflip.finance.domain.enumeration.OfferPromotionType;
-import com.fanflip.finance.repository.OfferPromotionRepository;
-import com.fanflip.finance.service.dto.OfferPromotionDTO;
-import com.fanflip.finance.service.mapper.OfferPromotionMapper;
+import com.monsterdam.finance.IntegrationTest;
+import com.monsterdam.finance.domain.OfferPromotion;
+import com.monsterdam.finance.domain.enumeration.OfferPromotionType;
+import com.monsterdam.finance.repository.OfferPromotionRepository;
+import com.monsterdam.finance.service.dto.OfferPromotionDTO;
+import com.monsterdam.finance.service.mapper.OfferPromotionMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Duration;
 import java.time.Instant;

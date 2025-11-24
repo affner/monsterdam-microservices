@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.AdminSystemConfigs;
-import com.fanflip.admin.domain.enumeration.ConfigurationCategory;
-import com.fanflip.admin.domain.enumeration.ConfigurationValueType;
-import com.fanflip.admin.repository.AdminSystemConfigsRepository;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.search.AdminSystemConfigsSearchRepository;
-import com.fanflip.admin.service.dto.AdminSystemConfigsDTO;
-import com.fanflip.admin.service.mapper.AdminSystemConfigsMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.AdminSystemConfigs;
+import com.monsterdam.admin.domain.enumeration.ConfigurationCategory;
+import com.monsterdam.admin.domain.enumeration.ConfigurationValueType;
+import com.monsterdam.admin.repository.AdminSystemConfigsRepository;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.search.AdminSystemConfigsSearchRepository;
+import com.monsterdam.admin.service.dto.AdminSystemConfigsDTO;
+import com.monsterdam.admin.service.mapper.AdminSystemConfigsMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Base64;

@@ -1,6 +1,6 @@
-package com.fanflip.profile.repository;
+package com.monsterdam.profile.repository;
 
-import com.fanflip.profile.domain.PostFeedHashTagRelation;
+import com.monsterdam.profile.domain.PostFeedHashTagRelation;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

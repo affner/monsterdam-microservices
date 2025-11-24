@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.AssistanceTicketRepository;
-import com.fanflip.admin.repository.search.AssistanceTicketSearchRepository;
-import com.fanflip.admin.service.AssistanceTicketService;
-import com.fanflip.admin.service.dto.AssistanceTicketDTO;
-import com.fanflip.admin.service.mapper.AssistanceTicketMapper;
+import com.monsterdam.admin.repository.AssistanceTicketRepository;
+import com.monsterdam.admin.repository.search.AssistanceTicketSearchRepository;
+import com.monsterdam.admin.service.AssistanceTicketService;
+import com.monsterdam.admin.service.dto.AssistanceTicketDTO;
+import com.monsterdam.admin.service.mapper.AssistanceTicketMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.AssistanceTicket}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.AssistanceTicket}.
  */
 @Service
 @Transactional

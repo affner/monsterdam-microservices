@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

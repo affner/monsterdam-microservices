@@ -1,6 +1,6 @@
-package com.fanflip.profile.security.jwt;
+package com.monsterdam.profile.security.jwt;
 
-import static com.fanflip.profile.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.monsterdam.profile.security.jwt.JwtAuthenticationTestUtils.*;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 

@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.management;
+package com.monsterdam.multimedia.management;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

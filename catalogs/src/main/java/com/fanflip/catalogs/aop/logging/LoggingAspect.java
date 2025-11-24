@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.aop.logging;
+package com.monsterdam.catalogs.aop.logging;
 
 import java.util.Arrays;
 import org.aspectj.lang.JoinPoint;
@@ -43,9 +43,9 @@ public class LoggingAspect {
      * Pointcut that matches all Spring beans in the application's main packages.
      */
     @Pointcut(
-        "within(com.fanflip.catalogs.repository..*)" +
-        " || within(com.fanflip.catalogs.service..*)" +
-        " || within(com.fanflip.catalogs.web.rest..*)"
+        "within(com.monsterdam.catalogs.repository..*)" +
+        " || within(com.monsterdam.catalogs.service..*)" +
+        " || within(com.monsterdam.catalogs.web.rest..*)"
     )
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.

@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.GlobalEvent;
-import com.fanflip.admin.service.dto.GlobalEventDTO;
+import com.monsterdam.admin.domain.GlobalEvent;
+import com.monsterdam.admin.service.dto.GlobalEventDTO;
 import org.mapstruct.*;
 
 /**

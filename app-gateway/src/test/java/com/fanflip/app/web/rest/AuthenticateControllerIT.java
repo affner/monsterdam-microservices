@@ -1,10 +1,10 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.web.rest.vm.LoginVM;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.web.rest.vm.LoginVM;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;

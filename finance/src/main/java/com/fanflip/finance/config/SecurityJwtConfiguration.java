@@ -1,9 +1,9 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
-import static com.fanflip.finance.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.finance.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.finance.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.finance.security.SecurityUtils.JWT_ALGORITHM;
 
-import com.fanflip.finance.management.SecurityMetersService;
+import com.monsterdam.finance.management.SecurityMetersService;
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
 import javax.crypto.SecretKey;

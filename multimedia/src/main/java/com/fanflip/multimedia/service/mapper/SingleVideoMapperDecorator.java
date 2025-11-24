@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
 
-import com.fanflip.multimedia.domain.SingleVideo;
-import com.fanflip.multimedia.service.dto.SingleVideoDTO;
-import com.fanflip.multimedia.util.S3Utils;
+import com.monsterdam.multimedia.domain.SingleVideo;
+import com.monsterdam.multimedia.service.dto.SingleVideoDTO;
+import com.monsterdam.multimedia.util.S3Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Objects;

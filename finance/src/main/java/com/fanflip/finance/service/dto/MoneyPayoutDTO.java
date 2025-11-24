@@ -1,6 +1,6 @@
-package com.fanflip.finance.service.dto;
+package com.monsterdam.finance.service.dto;
 
-import com.fanflip.finance.domain.enumeration.PayoutStatus;
+import com.monsterdam.finance.domain.enumeration.PayoutStatus;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.finance.domain.MoneyPayout} entity.
+ * A DTO for the {@link com.monsterdam.finance.domain.MoneyPayout} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class MoneyPayoutDTO implements Serializable {

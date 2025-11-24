@@ -1,9 +1,9 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import com.fanflip.finance.repository.PurchasedSubscriptionRepository;
-import com.fanflip.finance.service.PurchasedSubscriptionService;
-import com.fanflip.finance.service.dto.PurchasedSubscriptionDTO;
-import com.fanflip.finance.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.finance.repository.PurchasedSubscriptionRepository;
+import com.monsterdam.finance.service.PurchasedSubscriptionService;
+import com.monsterdam.finance.service.dto.PurchasedSubscriptionDTO;
+import com.monsterdam.finance.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.finance.domain.PurchasedSubscription}.
+ * REST controller for managing {@link com.monsterdam.finance.domain.PurchasedSubscription}.
  */
 @RestController
 @RequestMapping("/api/purchased-subscriptions")

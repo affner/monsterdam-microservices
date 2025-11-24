@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.IdentityDocumentRepository;
-import com.fanflip.admin.repository.search.IdentityDocumentSearchRepository;
-import com.fanflip.admin.service.IdentityDocumentService;
-import com.fanflip.admin.service.dto.IdentityDocumentDTO;
-import com.fanflip.admin.service.mapper.IdentityDocumentMapper;
+import com.monsterdam.admin.repository.IdentityDocumentRepository;
+import com.monsterdam.admin.repository.search.IdentityDocumentSearchRepository;
+import com.monsterdam.admin.service.IdentityDocumentService;
+import com.monsterdam.admin.service.dto.IdentityDocumentDTO;
+import com.monsterdam.admin.service.mapper.IdentityDocumentMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.IdentityDocument}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.IdentityDocument}.
  */
 @Service
 @Transactional

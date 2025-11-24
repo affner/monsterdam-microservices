@@ -1,19 +1,19 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.CreatorEarning;
-import com.fanflip.admin.domain.OfferPromotion;
-import com.fanflip.admin.domain.PaymentTransaction;
-import com.fanflip.admin.domain.PurchasedSubscription;
-import com.fanflip.admin.domain.SubscriptionBundle;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.WalletTransaction;
-import com.fanflip.admin.service.dto.CreatorEarningDTO;
-import com.fanflip.admin.service.dto.OfferPromotionDTO;
-import com.fanflip.admin.service.dto.PaymentTransactionDTO;
-import com.fanflip.admin.service.dto.PurchasedSubscriptionDTO;
-import com.fanflip.admin.service.dto.SubscriptionBundleDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
-import com.fanflip.admin.service.dto.WalletTransactionDTO;
+import com.monsterdam.admin.domain.CreatorEarning;
+import com.monsterdam.admin.domain.OfferPromotion;
+import com.monsterdam.admin.domain.PaymentTransaction;
+import com.monsterdam.admin.domain.PurchasedSubscription;
+import com.monsterdam.admin.domain.SubscriptionBundle;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.WalletTransaction;
+import com.monsterdam.admin.service.dto.CreatorEarningDTO;
+import com.monsterdam.admin.service.dto.OfferPromotionDTO;
+import com.monsterdam.admin.service.dto.PaymentTransactionDTO;
+import com.monsterdam.admin.service.dto.PurchasedSubscriptionDTO;
+import com.monsterdam.admin.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.service.dto.WalletTransactionDTO;
 import org.mapstruct.*;
 
 /**

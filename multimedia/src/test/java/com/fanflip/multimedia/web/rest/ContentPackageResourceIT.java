@@ -1,16 +1,16 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
-import static com.fanflip.multimedia.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.multimedia.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.multimedia.IntegrationTest;
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.repository.ContentPackageRepository;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.service.mapper.ContentPackageMapper;
+import com.monsterdam.multimedia.IntegrationTest;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.repository.ContentPackageRepository;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.mapper.ContentPackageMapper;
 import jakarta.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.time.Instant;

@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest.errors;
+package com.monsterdam.interactions.web.rest.errors;
 
 import java.io.Serializable;
 

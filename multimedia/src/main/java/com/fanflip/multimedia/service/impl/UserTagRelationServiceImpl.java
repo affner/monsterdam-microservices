@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.UserTagRelation;
-import com.fanflip.multimedia.repository.UserTagRelationRepository;
-import com.fanflip.multimedia.service.UserTagRelationService;
-import com.fanflip.multimedia.service.dto.UserTagRelationDTO;
-import com.fanflip.multimedia.service.mapper.UserTagRelationMapper;
+import com.monsterdam.multimedia.domain.UserTagRelation;
+import com.monsterdam.multimedia.repository.UserTagRelationRepository;
+import com.monsterdam.multimedia.service.UserTagRelationService;
+import com.monsterdam.multimedia.service.dto.UserTagRelationDTO;
+import com.monsterdam.multimedia.service.mapper.UserTagRelationMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.UserTagRelation}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.UserTagRelation}.
  */
 @Service
 @Transactional

@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.domain;
+package com.monsterdam.multimedia.domain;
 
-import com.fanflip.multimedia.domain.enumeration.TagStatus;
+import com.monsterdam.multimedia.domain.enumeration.TagStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

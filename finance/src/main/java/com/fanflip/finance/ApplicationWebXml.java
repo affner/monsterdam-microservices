@@ -1,4 +1,4 @@
-package com.fanflip.finance;
+package com.monsterdam.finance;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

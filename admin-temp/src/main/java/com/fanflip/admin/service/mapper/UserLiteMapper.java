@@ -1,7 +1,7 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.UserLite;
-import com.fanflip.admin.service.dto.UserLiteDTO;
+import com.monsterdam.admin.domain.UserLite;
+import com.monsterdam.admin.service.dto.UserLiteDTO;
 import org.mapstruct.*;
 
 /**

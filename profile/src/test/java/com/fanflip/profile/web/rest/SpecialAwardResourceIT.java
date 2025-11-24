@@ -1,15 +1,15 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.domain.SpecialAward;
-import com.fanflip.profile.repository.SpecialAwardRepository;
-import com.fanflip.profile.service.dto.SpecialAwardDTO;
-import com.fanflip.profile.service.mapper.SpecialAwardMapper;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.domain.SpecialAward;
+import com.monsterdam.profile.repository.SpecialAwardRepository;
+import com.monsterdam.profile.service.dto.SpecialAwardDTO;
+import com.monsterdam.profile.service.mapper.SpecialAwardMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.LocalDate;

@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.WalletTransactionRepository;
-import com.fanflip.admin.service.WalletTransactionService;
-import com.fanflip.admin.service.dto.WalletTransactionDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.WalletTransactionRepository;
+import com.monsterdam.admin.service.WalletTransactionService;
+import com.monsterdam.admin.service.dto.WalletTransactionDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.WalletTransaction}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.WalletTransaction}.
  */
 @RestController
 @RequestMapping("/api/wallet-transactions")

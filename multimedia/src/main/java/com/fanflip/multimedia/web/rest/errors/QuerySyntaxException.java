@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.web.rest.errors;
+package com.monsterdam.multimedia.web.rest.errors;
 
 @SuppressWarnings("java:S110") // Inheritance tree of classes should not be too deep
 public class QuerySyntaxException extends BadRequestAlertException {

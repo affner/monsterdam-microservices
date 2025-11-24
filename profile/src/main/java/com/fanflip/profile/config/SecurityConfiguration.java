@@ -1,8 +1,8 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.fanflip.profile.security.*;
+import com.monsterdam.profile.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

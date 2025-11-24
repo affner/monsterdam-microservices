@@ -1,4 +1,4 @@
-package com.fanflip.profile.broker;
+package com.monsterdam.profile.broker;
 
 import static org.springframework.web.servlet.mvc.method.annotation.SseEmitter.event;
 

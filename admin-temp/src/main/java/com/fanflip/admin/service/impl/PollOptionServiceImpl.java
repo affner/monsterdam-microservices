@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PollOptionRepository;
-import com.fanflip.admin.repository.search.PollOptionSearchRepository;
-import com.fanflip.admin.service.PollOptionService;
-import com.fanflip.admin.service.dto.PollOptionDTO;
-import com.fanflip.admin.service.mapper.PollOptionMapper;
+import com.monsterdam.admin.repository.PollOptionRepository;
+import com.monsterdam.admin.repository.search.PollOptionSearchRepository;
+import com.monsterdam.admin.service.PollOptionService;
+import com.monsterdam.admin.service.dto.PollOptionDTO;
+import com.monsterdam.admin.service.mapper.PollOptionMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PollOption}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PollOption}.
  */
 @Service
 @Transactional

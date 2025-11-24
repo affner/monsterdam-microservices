@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

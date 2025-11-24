@@ -1,6 +1,6 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.EmailTemplateType;
+import com.monsterdam.admin.domain.enumeration.EmailTemplateType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

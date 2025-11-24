@@ -1,4 +1,4 @@
 /**
  * Application configuration.
  */
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;

@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.SocialNetwork;
-import com.fanflip.catalogs.service.dto.SocialNetworkDTO;
+import com.monsterdam.catalogs.domain.SocialNetwork;
+import com.monsterdam.catalogs.service.dto.SocialNetworkDTO;
 import org.mapstruct.*;
 
 /**

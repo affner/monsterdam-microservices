@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,13 +6,13 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.HelpCategory;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.HelpCategoryRepository;
-import com.fanflip.admin.repository.search.HelpCategorySearchRepository;
-import com.fanflip.admin.service.dto.HelpCategoryDTO;
-import com.fanflip.admin.service.mapper.HelpCategoryMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.HelpCategory;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.HelpCategoryRepository;
+import com.monsterdam.admin.repository.search.HelpCategorySearchRepository;
+import com.monsterdam.admin.service.dto.HelpCategoryDTO;
+import com.monsterdam.admin.service.mapper.HelpCategoryMapper;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;

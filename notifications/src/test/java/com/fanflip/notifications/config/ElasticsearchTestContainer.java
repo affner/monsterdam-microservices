@@ -1,4 +1,4 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;

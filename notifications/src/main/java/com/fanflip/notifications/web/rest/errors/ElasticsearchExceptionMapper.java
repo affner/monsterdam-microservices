@@ -1,4 +1,4 @@
-package com.fanflip.notifications.web.rest.errors;
+package com.monsterdam.notifications.web.rest.errors;
 
 import co.elastic.clients.elasticsearch._types.ElasticsearchException;
 import co.elastic.clients.elasticsearch._types.ErrorCause;

@@ -1,7 +1,7 @@
-package com.fanflip.app.web.filter;
+package com.monsterdam.app.web.filter;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.security.AuthoritiesConstants;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.security.AuthoritiesConstants;
 import java.time.Duration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

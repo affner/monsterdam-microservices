@@ -1,9 +1,9 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.SingleVideo;
-import com.fanflip.admin.service.dto.ContentPackageDTO;
-import com.fanflip.admin.service.dto.SingleVideoDTO;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.SingleVideo;
+import com.monsterdam.admin.service.dto.ContentPackageDTO;
+import com.monsterdam.admin.service.dto.SingleVideoDTO;
 import org.mapstruct.*;
 
 /**

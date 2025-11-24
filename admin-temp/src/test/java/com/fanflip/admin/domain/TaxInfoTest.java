@@ -1,10 +1,10 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.CountryTestSamples.*;
-import static com.fanflip.admin.domain.TaxInfoTestSamples.*;
+import static com.monsterdam.admin.domain.CountryTestSamples.*;
+import static com.monsterdam.admin.domain.TaxInfoTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class TaxInfoTest {

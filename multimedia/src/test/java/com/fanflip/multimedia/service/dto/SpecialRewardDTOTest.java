@@ -1,8 +1,8 @@
-package com.fanflip.multimedia.service.dto;
+package com.monsterdam.multimedia.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.multimedia.web.rest.TestUtil;
+import com.monsterdam.multimedia.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class SpecialRewardDTOTest {

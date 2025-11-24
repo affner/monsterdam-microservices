@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.IdentityDocumentReviewRepository;
-import com.fanflip.admin.service.IdentityDocumentReviewService;
-import com.fanflip.admin.service.dto.IdentityDocumentReviewDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.IdentityDocumentReviewRepository;
+import com.monsterdam.admin.service.IdentityDocumentReviewService;
+import com.monsterdam.admin.service.dto.IdentityDocumentReviewDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.IdentityDocumentReview}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.IdentityDocumentReview}.
  */
 @RestController
 @RequestMapping("/api/identity-document-reviews")

@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.security.jwt;
+package com.monsterdam.catalogs.security.jwt;
 
-import com.fanflip.catalogs.config.SecurityConfiguration;
-import com.fanflip.catalogs.config.SecurityJwtConfiguration;
-import com.fanflip.catalogs.config.WebConfigurer;
-import com.fanflip.catalogs.management.SecurityMetersService;
+import com.monsterdam.catalogs.config.SecurityConfiguration;
+import com.monsterdam.catalogs.config.SecurityJwtConfiguration;
+import com.monsterdam.catalogs.config.WebConfigurer;
+import com.monsterdam.catalogs.management.SecurityMetersService;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,12 +1,12 @@
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;
 
-import com.fanflip.catalogs.service.dto.CurrencyDTO;
+import com.monsterdam.catalogs.service.dto.CurrencyDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.catalogs.domain.Currency}.
+ * Service Interface for managing {@link com.monsterdam.catalogs.domain.Currency}.
  */
 public interface CurrencyService {
     /**

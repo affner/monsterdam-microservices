@@ -1,9 +1,9 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import com.fanflip.finance.repository.MoneyPayoutRepository;
-import com.fanflip.finance.service.MoneyPayoutService;
-import com.fanflip.finance.service.dto.MoneyPayoutDTO;
-import com.fanflip.finance.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.finance.repository.MoneyPayoutRepository;
+import com.monsterdam.finance.service.MoneyPayoutService;
+import com.monsterdam.finance.service.dto.MoneyPayoutDTO;
+import com.monsterdam.finance.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.finance.domain.MoneyPayout}.
+ * REST controller for managing {@link com.monsterdam.finance.domain.MoneyPayout}.
  */
 @RestController
 @RequestMapping("/api/money-payouts")

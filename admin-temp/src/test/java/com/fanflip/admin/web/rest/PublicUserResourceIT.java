@@ -1,15 +1,15 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.User;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.UserRepository;
-import com.fanflip.admin.repository.search.UserSearchRepository;
-import com.fanflip.admin.security.AuthoritiesConstants;
-import com.fanflip.admin.service.dto.UserDTO;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.User;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.UserRepository;
+import com.monsterdam.admin.repository.search.UserSearchRepository;
+import com.monsterdam.admin.security.AuthoritiesConstants;
+import com.monsterdam.admin.service.dto.UserDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +32,9 @@ class PublicUserResourceIT {
     private UserRepository userRepository;
 
     /**
-     * This repository is mocked in the com.fanflip.admin.repository.search test package.
+     * This repository is mocked in the com.monsterdam.admin.repository.search test package.
      *
-     * @see com.fanflip.admin.repository.search.UserSearchRepositoryMockConfiguration
+     * @see com.monsterdam.admin.repository.search.UserSearchRepositoryMockConfiguration
      */
     @Autowired
     private UserSearchRepository mockUserSearchRepository;

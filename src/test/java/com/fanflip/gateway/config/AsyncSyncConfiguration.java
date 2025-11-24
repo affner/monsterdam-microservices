@@ -1,4 +1,4 @@
-package com.fanflip.gateway.config;
+package com.monsterdam.gateway.config;
 
 import java.util.concurrent.Executor;
 import org.springframework.context.annotation.Bean;

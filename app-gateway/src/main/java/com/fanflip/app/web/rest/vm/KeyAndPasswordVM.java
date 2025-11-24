@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest.vm;
+package com.monsterdam.app.web.rest.vm;
 
 /**
  * View Model object for storing the user's key and password.

@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.SpecialReward;
-import com.fanflip.multimedia.repository.SpecialRewardRepository;
-import com.fanflip.multimedia.service.SpecialRewardService;
-import com.fanflip.multimedia.service.dto.SpecialRewardDTO;
-import com.fanflip.multimedia.service.mapper.SpecialRewardMapper;
+import com.monsterdam.multimedia.domain.SpecialReward;
+import com.monsterdam.multimedia.repository.SpecialRewardRepository;
+import com.monsterdam.multimedia.service.SpecialRewardService;
+import com.monsterdam.multimedia.service.dto.SpecialRewardDTO;
+import com.monsterdam.multimedia.service.mapper.SpecialRewardMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.SpecialReward}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.SpecialReward}.
  */
 @Service
 @Transactional

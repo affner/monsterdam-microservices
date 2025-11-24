@@ -1,10 +1,10 @@
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;
 
-import com.fanflip.catalogs.config.AsyncSyncConfiguration;
-import com.fanflip.catalogs.config.EmbeddedElasticsearch;
-import com.fanflip.catalogs.config.EmbeddedKafka;
-import com.fanflip.catalogs.config.EmbeddedRedis;
-import com.fanflip.catalogs.config.EmbeddedSQL;
+import com.monsterdam.catalogs.config.AsyncSyncConfiguration;
+import com.monsterdam.catalogs.config.EmbeddedElasticsearch;
+import com.monsterdam.catalogs.config.EmbeddedKafka;
+import com.monsterdam.catalogs.config.EmbeddedRedis;
+import com.monsterdam.catalogs.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

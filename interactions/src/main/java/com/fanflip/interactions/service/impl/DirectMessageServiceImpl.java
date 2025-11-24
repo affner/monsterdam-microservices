@@ -1,11 +1,11 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.DirectMessage;
-import com.fanflip.interactions.repository.DirectMessageRepository;
-import com.fanflip.interactions.repository.search.DirectMessageSearchRepository;
-import com.fanflip.interactions.service.DirectMessageService;
-import com.fanflip.interactions.service.dto.DirectMessageDTO;
-import com.fanflip.interactions.service.mapper.DirectMessageMapper;
+import com.monsterdam.interactions.domain.DirectMessage;
+import com.monsterdam.interactions.repository.DirectMessageRepository;
+import com.monsterdam.interactions.repository.search.DirectMessageSearchRepository;
+import com.monsterdam.interactions.service.DirectMessageService;
+import com.monsterdam.interactions.service.dto.DirectMessageDTO;
+import com.monsterdam.interactions.service.mapper.DirectMessageMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.DirectMessage}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.DirectMessage}.
  */
 @Service
 @Transactional

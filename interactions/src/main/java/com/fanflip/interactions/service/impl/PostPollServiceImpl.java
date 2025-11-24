@@ -1,10 +1,10 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.PostPoll;
-import com.fanflip.interactions.repository.PostPollRepository;
-import com.fanflip.interactions.service.PostPollService;
-import com.fanflip.interactions.service.dto.PostPollDTO;
-import com.fanflip.interactions.service.mapper.PostPollMapper;
+import com.monsterdam.interactions.domain.PostPoll;
+import com.monsterdam.interactions.repository.PostPollRepository;
+import com.monsterdam.interactions.service.PostPollService;
+import com.monsterdam.interactions.service.dto.PostPollDTO;
+import com.monsterdam.interactions.service.mapper.PostPollMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.PostPoll}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.PostPoll}.
  */
 @Service
 @Transactional

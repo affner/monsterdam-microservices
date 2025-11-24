@@ -1,12 +1,12 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.UserRepository;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.UserRepository;
 import java.util.Locale;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.jupiter.api.BeforeEach;

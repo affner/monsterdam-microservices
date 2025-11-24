@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.web.rest.errors;
+package com.monsterdam.catalogs.web.rest.errors;
 
 import static org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation;
 
@@ -249,7 +249,7 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
             "com.",
             "io.",
             "de.",
-            "com.fanflip.catalogs"
+            "com.monsterdam.catalogs"
         );
     }
 }

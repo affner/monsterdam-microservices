@@ -1,7 +1,7 @@
 application {
     config {
         baseName notifications
-        packageName com.fanflip.notifications
+        packageName com.monsterdam.notifications
         applicationType microservice
         authenticationType jwt
         reactive false

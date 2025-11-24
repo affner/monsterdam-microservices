@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,18 +76,18 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.multimedia.domain.SingleVideo.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.SinglePhoto.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.VideoStory.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.SingleAudio.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.ContentPackage.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.ContentPackage.class.getName() + ".videos", jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.ContentPackage.class.getName() + ".photos", jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.ContentPackage.class.getName() + ".tags", jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.SingleDocument.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.SingleLiveStream.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.UserTagRelation.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.multimedia.domain.SpecialReward.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SingleVideo.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SinglePhoto.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.VideoStory.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SingleAudio.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.ContentPackage.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.ContentPackage.class.getName() + ".videos", jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.ContentPackage.class.getName() + ".photos", jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.ContentPackage.class.getName() + ".tags", jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SingleDocument.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SingleLiveStream.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.UserTagRelation.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.multimedia.domain.SpecialReward.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

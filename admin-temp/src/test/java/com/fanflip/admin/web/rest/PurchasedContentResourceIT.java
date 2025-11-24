@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,17 +6,17 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.CreatorEarning;
-import com.fanflip.admin.domain.PurchasedContent;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.PurchasedContentRepository;
-import com.fanflip.admin.repository.search.PurchasedContentSearchRepository;
-import com.fanflip.admin.service.PurchasedContentService;
-import com.fanflip.admin.service.dto.PurchasedContentDTO;
-import com.fanflip.admin.service.mapper.PurchasedContentMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.CreatorEarning;
+import com.monsterdam.admin.domain.PurchasedContent;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.PurchasedContentRepository;
+import com.monsterdam.admin.repository.search.PurchasedContentSearchRepository;
+import com.monsterdam.admin.service.PurchasedContentService;
+import com.monsterdam.admin.service.dto.PurchasedContentDTO;
+import com.monsterdam.admin.service.mapper.PurchasedContentMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

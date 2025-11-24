@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.repository.DirectMessageRepository;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.search.DirectMessageSearchRepository;
-import com.fanflip.admin.service.DirectMessageService;
-import com.fanflip.admin.service.dto.DirectMessageDTO;
-import com.fanflip.admin.service.mapper.DirectMessageMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.repository.DirectMessageRepository;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.search.DirectMessageSearchRepository;
+import com.monsterdam.admin.service.DirectMessageService;
+import com.monsterdam.admin.service.dto.DirectMessageDTO;
+import com.monsterdam.admin.service.mapper.DirectMessageMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

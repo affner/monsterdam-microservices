@@ -1,4 +1,4 @@
 /**
  * Application management.
  */
-package com.fanflip.interactions.management;
+package com.monsterdam.interactions.management;

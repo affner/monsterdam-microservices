@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.service.dto;
+package com.monsterdam.multimedia.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.multimedia.domain.SingleVideo} entity.
+ * A DTO for the {@link com.monsterdam.multimedia.domain.SingleVideo} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class SingleVideoDTO implements Serializable {

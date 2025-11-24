@@ -1,4 +1,4 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
 import static tech.jhipster.config.logging.LoggingUtils.*;
 

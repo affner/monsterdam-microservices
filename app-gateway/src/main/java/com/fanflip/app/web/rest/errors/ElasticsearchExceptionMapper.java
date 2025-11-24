@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest.errors;
+package com.monsterdam.app.web.rest.errors;
 
 import co.elastic.clients.elasticsearch._types.ElasticsearchException;
 import co.elastic.clients.elasticsearch._types.ErrorCause;

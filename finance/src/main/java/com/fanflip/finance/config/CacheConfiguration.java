@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,17 +76,17 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.finance.domain.MoneyPayout.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.CreatorEarning.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.SubscriptionBundle.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.SubscriptionBundle.class.getName() + ".selledSubscriptions", jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.WalletTransaction.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.PaymentTransaction.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.PurchasedTip.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.OfferPromotion.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.OfferPromotion.class.getName() + ".purchasedSubscriptions", jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.PurchasedContent.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.finance.domain.PurchasedSubscription.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.MoneyPayout.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.CreatorEarning.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.SubscriptionBundle.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.SubscriptionBundle.class.getName() + ".selledSubscriptions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.WalletTransaction.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.PaymentTransaction.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.PurchasedTip.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.OfferPromotion.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.OfferPromotion.class.getName() + ".purchasedSubscriptions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.PurchasedContent.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.finance.domain.PurchasedSubscription.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

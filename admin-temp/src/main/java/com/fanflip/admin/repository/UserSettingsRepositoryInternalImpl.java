@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.UserSettings;
-import com.fanflip.admin.repository.rowmapper.UserSettingsRowMapper;
+import com.monsterdam.admin.domain.UserSettings;
+import com.monsterdam.admin.repository.rowmapper.UserSettingsRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

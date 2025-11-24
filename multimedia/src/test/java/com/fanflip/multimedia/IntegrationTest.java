@@ -1,10 +1,10 @@
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;
 
-import com.fanflip.multimedia.config.AsyncSyncConfiguration;
-import com.fanflip.multimedia.config.EmbeddedElasticsearch;
-import com.fanflip.multimedia.config.EmbeddedKafka;
-import com.fanflip.multimedia.config.EmbeddedRedis;
-import com.fanflip.multimedia.config.EmbeddedSQL;
+import com.monsterdam.multimedia.config.AsyncSyncConfiguration;
+import com.monsterdam.multimedia.config.EmbeddedElasticsearch;
+import com.monsterdam.multimedia.config.EmbeddedKafka;
+import com.monsterdam.multimedia.config.EmbeddedRedis;
+import com.monsterdam.multimedia.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

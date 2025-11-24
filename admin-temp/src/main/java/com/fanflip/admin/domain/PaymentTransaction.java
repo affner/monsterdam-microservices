@@ -1,6 +1,6 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.GenericStatus;
+import com.monsterdam.admin.domain.enumeration.GenericStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

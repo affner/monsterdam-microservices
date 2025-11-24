@@ -1,10 +1,10 @@
-package com.fanflip.app.config;
+package com.monsterdam.app.config;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 import static org.springframework.security.web.server.util.matcher.ServerWebExchangeMatchers.pathMatchers;
 
-import com.fanflip.app.security.AuthoritiesConstants;
-import com.fanflip.app.web.filter.SpaWebFilter;
+import com.monsterdam.app.security.AuthoritiesConstants;
+import com.monsterdam.app.web.filter.SpaWebFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;

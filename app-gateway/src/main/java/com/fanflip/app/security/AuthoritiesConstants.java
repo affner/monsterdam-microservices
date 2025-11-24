@@ -1,4 +1,4 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
 /**
  * Constants for Spring Security authorities.

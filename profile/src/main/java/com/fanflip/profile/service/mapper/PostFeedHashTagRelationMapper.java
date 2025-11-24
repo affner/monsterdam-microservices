@@ -1,9 +1,9 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.HashTag;
-import com.fanflip.profile.domain.PostFeedHashTagRelation;
-import com.fanflip.profile.service.dto.HashTagDTO;
-import com.fanflip.profile.service.dto.PostFeedHashTagRelationDTO;
+import com.monsterdam.profile.domain.HashTag;
+import com.monsterdam.profile.domain.PostFeedHashTagRelation;
+import com.monsterdam.profile.service.dto.HashTagDTO;
+import com.monsterdam.profile.service.dto.PostFeedHashTagRelationDTO;
 import org.mapstruct.*;
 
 /**

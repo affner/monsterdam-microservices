@@ -1,4 +1,4 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.GlobalEvent} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.GlobalEvent} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class GlobalEventDTO implements Serializable {

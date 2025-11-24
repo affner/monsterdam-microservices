@@ -1,6 +1,6 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
-import com.fanflip.finance.IntegrationTest;
+import com.monsterdam.finance.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

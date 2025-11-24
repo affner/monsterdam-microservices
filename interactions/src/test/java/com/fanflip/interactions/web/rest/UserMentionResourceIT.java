@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -6,12 +6,12 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.UserMention;
-import com.fanflip.interactions.repository.UserMentionRepository;
-import com.fanflip.interactions.service.UserMentionService;
-import com.fanflip.interactions.service.dto.UserMentionDTO;
-import com.fanflip.interactions.service.mapper.UserMentionMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.UserMention;
+import com.monsterdam.interactions.repository.UserMentionRepository;
+import com.monsterdam.interactions.service.UserMentionService;
+import com.monsterdam.interactions.service.dto.UserMentionDTO;
+import com.monsterdam.interactions.service.mapper.UserMentionMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

@@ -1,8 +1,8 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.repository.search.UserSearchRepository;
-import com.fanflip.app.service.UserService;
-import com.fanflip.app.service.dto.UserDTO;
+import com.monsterdam.app.repository.search.UserSearchRepository;
+import com.monsterdam.app.service.UserService;
+import com.monsterdam.app.service.dto.UserDTO;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

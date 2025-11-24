@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,13 +6,13 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.domain.UserUIPreferences;
-import com.fanflip.app.repository.EntityManager;
-import com.fanflip.app.repository.UserUIPreferencesRepository;
-import com.fanflip.app.repository.search.UserUIPreferencesSearchRepository;
-import com.fanflip.app.service.dto.UserUIPreferencesDTO;
-import com.fanflip.app.service.mapper.UserUIPreferencesMapper;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.domain.UserUIPreferences;
+import com.monsterdam.app.repository.EntityManager;
+import com.monsterdam.app.repository.UserUIPreferencesRepository;
+import com.monsterdam.app.repository.search.UserUIPreferencesSearchRepository;
+import com.monsterdam.app.service.dto.UserUIPreferencesDTO;
+import com.monsterdam.app.service.mapper.UserUIPreferencesMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

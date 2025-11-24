@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.StateRepository;
-import com.fanflip.admin.repository.search.StateSearchRepository;
-import com.fanflip.admin.service.StateService;
-import com.fanflip.admin.service.dto.StateDTO;
-import com.fanflip.admin.service.mapper.StateMapper;
+import com.monsterdam.admin.repository.StateRepository;
+import com.monsterdam.admin.repository.search.StateSearchRepository;
+import com.monsterdam.admin.service.StateService;
+import com.monsterdam.admin.service.dto.StateDTO;
+import com.monsterdam.admin.service.mapper.StateMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.State}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.State}.
  */
 @Service
 @Transactional

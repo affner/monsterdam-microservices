@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.broker.KafkaConsumer;
+import com.monsterdam.catalogs.broker.KafkaConsumer;
 import java.security.Principal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

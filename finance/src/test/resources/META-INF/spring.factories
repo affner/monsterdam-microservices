@@ -1,5 +1,5 @@
-org.springframework.test.context.ContextCustomizerFactory = com.fanflip.finance.\
-    config.TestContainersSpringContextCustomizerFactory,com.fanflip.finance.\
-    config.SqlTestContainersSpringContextCustomizerFactory,com.fanflip.finance.\
-    config.KafkaTestContainersSpringContextCustomizerFactory,com.fanflip.\
+org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.finance.\
+    config.TestContainersSpringContextCustomizerFactory,com.monsterdam.finance.\
+    config.SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.finance.\
+    config.KafkaTestContainersSpringContextCustomizerFactory,com.monsterdam.\
     finance.config.RedisTestContainersSpringContextCustomizerFactory

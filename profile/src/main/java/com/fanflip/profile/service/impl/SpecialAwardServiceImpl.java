@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.SpecialAward;
-import com.fanflip.profile.repository.SpecialAwardRepository;
-import com.fanflip.profile.service.SpecialAwardService;
-import com.fanflip.profile.service.dto.SpecialAwardDTO;
-import com.fanflip.profile.service.mapper.SpecialAwardMapper;
+import com.monsterdam.profile.domain.SpecialAward;
+import com.monsterdam.profile.repository.SpecialAwardRepository;
+import com.monsterdam.profile.service.SpecialAwardService;
+import com.monsterdam.profile.service.dto.SpecialAwardDTO;
+import com.monsterdam.profile.service.mapper.SpecialAwardMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.SpecialAward}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.SpecialAward}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.finance;
+package com.monsterdam.finance;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

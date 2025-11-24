@@ -1,9 +1,9 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.PersonalSocialLinks;
-import com.fanflip.profile.domain.UserProfile;
-import com.fanflip.profile.service.dto.PersonalSocialLinksDTO;
-import com.fanflip.profile.service.dto.UserProfileDTO;
+import com.monsterdam.profile.domain.PersonalSocialLinks;
+import com.monsterdam.profile.domain.UserProfile;
+import com.monsterdam.profile.service.dto.PersonalSocialLinksDTO;
+import com.monsterdam.profile.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

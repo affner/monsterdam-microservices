@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest.errors;
+package com.monsterdam.app.web.rest.errors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.ErrorResponseException;

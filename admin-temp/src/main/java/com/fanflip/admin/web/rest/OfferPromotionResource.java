@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.OfferPromotionRepository;
-import com.fanflip.admin.service.OfferPromotionService;
-import com.fanflip.admin.service.dto.OfferPromotionDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.OfferPromotionRepository;
+import com.monsterdam.admin.service.OfferPromotionService;
+import com.monsterdam.admin.service.dto.OfferPromotionDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.OfferPromotion}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.OfferPromotion}.
  */
 @RestController
 @RequestMapping("/api/offer-promotions")

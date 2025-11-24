@@ -1,9 +1,9 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import com.fanflip.finance.repository.PurchasedTipRepository;
-import com.fanflip.finance.service.PurchasedTipService;
-import com.fanflip.finance.service.dto.PurchasedTipDTO;
-import com.fanflip.finance.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.finance.repository.PurchasedTipRepository;
+import com.monsterdam.finance.service.PurchasedTipService;
+import com.monsterdam.finance.service.dto.PurchasedTipDTO;
+import com.monsterdam.finance.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.finance.domain.PurchasedTip}.
+ * REST controller for managing {@link com.monsterdam.finance.domain.PurchasedTip}.
  */
 @RestController
 @RequestMapping("/api/purchased-tips")

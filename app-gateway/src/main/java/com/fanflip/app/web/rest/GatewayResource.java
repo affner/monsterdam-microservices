@@ -1,7 +1,7 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.security.AuthoritiesConstants;
-import com.fanflip.app.web.rest.vm.RouteVM;
+import com.monsterdam.app.security.AuthoritiesConstants;
+import com.monsterdam.app.web.rest.vm.RouteVM;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.UserSettings;
-import com.fanflip.profile.repository.UserSettingsRepository;
-import com.fanflip.profile.service.UserSettingsService;
-import com.fanflip.profile.service.dto.UserSettingsDTO;
-import com.fanflip.profile.service.mapper.UserSettingsMapper;
+import com.monsterdam.profile.domain.UserSettings;
+import com.monsterdam.profile.repository.UserSettingsRepository;
+import com.monsterdam.profile.service.UserSettingsService;
+import com.monsterdam.profile.service.dto.UserSettingsDTO;
+import com.monsterdam.profile.service.mapper.UserSettingsMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.UserSettings}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.UserSettings}.
  */
 @Service
 @Transactional

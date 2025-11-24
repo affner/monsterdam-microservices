@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.Country;
+import com.monsterdam.catalogs.domain.Country;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

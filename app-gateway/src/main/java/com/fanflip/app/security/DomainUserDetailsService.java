@@ -1,8 +1,8 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
-import com.fanflip.app.domain.Authority;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.UserRepository;
+import com.monsterdam.app.domain.Authority;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.UserRepository;
 import java.util.*;
 import org.hibernate.validator.internal.constraintvalidators.hv.EmailValidator;
 import org.slf4j.Logger;

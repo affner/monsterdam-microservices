@@ -1,12 +1,12 @@
-package com.fanflip.admin.service;
+package com.monsterdam.admin.service;
 
-import com.fanflip.admin.service.dto.VideoStoryDTO;
+import com.monsterdam.admin.service.dto.VideoStoryDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.admin.domain.VideoStory}.
+ * Service Interface for managing {@link com.monsterdam.admin.domain.VideoStory}.
  */
 public interface VideoStoryService {
     /**

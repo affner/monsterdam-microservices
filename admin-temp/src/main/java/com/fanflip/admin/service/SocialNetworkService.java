@@ -1,12 +1,12 @@
-package com.fanflip.admin.service;
+package com.monsterdam.admin.service;
 
-import com.fanflip.admin.service.dto.SocialNetworkDTO;
+import com.monsterdam.admin.service.dto.SocialNetworkDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.admin.domain.SocialNetwork}.
+ * Service Interface for managing {@link com.monsterdam.admin.domain.SocialNetwork}.
  */
 public interface SocialNetworkService {
     /**

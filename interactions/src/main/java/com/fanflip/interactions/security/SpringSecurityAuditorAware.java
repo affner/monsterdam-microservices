@@ -1,6 +1,6 @@
-package com.fanflip.interactions.security;
+package com.monsterdam.interactions.security;
 
-import com.fanflip.interactions.config.Constants;
+import com.monsterdam.interactions.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

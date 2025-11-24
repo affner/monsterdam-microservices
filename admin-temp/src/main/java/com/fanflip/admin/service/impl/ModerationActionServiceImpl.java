@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.ModerationActionRepository;
-import com.fanflip.admin.repository.search.ModerationActionSearchRepository;
-import com.fanflip.admin.service.ModerationActionService;
-import com.fanflip.admin.service.dto.ModerationActionDTO;
-import com.fanflip.admin.service.mapper.ModerationActionMapper;
+import com.monsterdam.admin.repository.ModerationActionRepository;
+import com.monsterdam.admin.repository.search.ModerationActionSearchRepository;
+import com.monsterdam.admin.service.ModerationActionService;
+import com.monsterdam.admin.service.dto.ModerationActionDTO;
+import com.monsterdam.admin.service.mapper.ModerationActionMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.ModerationAction}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.ModerationAction}.
  */
 @Service
 @Transactional

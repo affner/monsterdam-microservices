@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.TaxInfo;
-import com.fanflip.admin.repository.rowmapper.CountryRowMapper;
-import com.fanflip.admin.repository.rowmapper.TaxInfoRowMapper;
+import com.monsterdam.admin.domain.TaxInfo;
+import com.monsterdam.admin.repository.rowmapper.CountryRowMapper;
+import com.monsterdam.admin.repository.rowmapper.TaxInfoRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

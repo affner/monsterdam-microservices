@@ -1,4 +1,4 @@
 /**
  * Service layer.
  */
-package com.fanflip.finance.service;
+package com.monsterdam.finance.service;

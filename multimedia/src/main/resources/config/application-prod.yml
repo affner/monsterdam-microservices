@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    com.fanflip.multimedia: INFO
+    com.monsterdam.multimedia: INFO
 
 management:
   prometheus:
@@ -142,7 +142,7 @@ cloud:
       path-style:
         enabled: true
       bucket:
-        name: fanflip-multimedia
+        name: monsterdam-multimedia
       anonymous-files:
         enabled: false
     credentials:

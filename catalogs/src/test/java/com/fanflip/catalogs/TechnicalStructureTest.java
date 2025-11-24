@@ -1,4 +1,4 @@
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(CatalogsApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.catalogs.config.Constants.class,
-            com.fanflip.catalogs.config.ApplicationProperties.class
+            com.monsterdam.catalogs.config.Constants.class,
+            com.monsterdam.catalogs.config.ApplicationProperties.class
         ));
 }

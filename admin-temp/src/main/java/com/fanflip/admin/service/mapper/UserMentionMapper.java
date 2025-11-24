@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.PostComment;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.domain.UserMention;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.PostCommentDTO;
-import com.fanflip.admin.service.dto.PostFeedDTO;
-import com.fanflip.admin.service.dto.UserMentionDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.PostComment;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.domain.UserMention;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.PostCommentDTO;
+import com.monsterdam.admin.service.dto.PostFeedDTO;
+import com.monsterdam.admin.service.dto.UserMentionDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

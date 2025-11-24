@@ -1,4 +1,4 @@
-package com.fanflip.app.security;
+package com.monsterdam.app.security;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

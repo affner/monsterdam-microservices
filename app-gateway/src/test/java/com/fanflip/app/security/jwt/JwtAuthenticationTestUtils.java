@@ -1,9 +1,9 @@
-package com.fanflip.app.security.jwt;
+package com.monsterdam.app.security.jwt;
 
-import static com.fanflip.app.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.app.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.app.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.app.security.SecurityUtils.JWT_ALGORITHM;
 
-import com.fanflip.app.repository.UserRepository;
+import com.monsterdam.app.repository.UserRepository;
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
 import io.micrometer.core.instrument.MeterRegistry;

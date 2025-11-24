@@ -1,7 +1,7 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.BookMark;
-import com.fanflip.profile.service.dto.BookMarkDTO;
+import com.monsterdam.profile.domain.BookMark;
+import com.monsterdam.profile.service.dto.BookMarkDTO;
 import org.mapstruct.*;
 
 /**

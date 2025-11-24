@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.GlobalEvent;
+import com.monsterdam.catalogs.domain.GlobalEvent;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

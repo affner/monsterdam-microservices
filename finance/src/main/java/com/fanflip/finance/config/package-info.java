@@ -1,4 +1,4 @@
 /**
  * Application configuration.
  */
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;

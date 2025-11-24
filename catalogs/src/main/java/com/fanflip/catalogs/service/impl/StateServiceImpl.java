@@ -1,11 +1,11 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.State;
-import com.fanflip.catalogs.repository.StateRepository;
-import com.fanflip.catalogs.repository.search.StateSearchRepository;
-import com.fanflip.catalogs.service.StateService;
-import com.fanflip.catalogs.service.dto.StateDTO;
-import com.fanflip.catalogs.service.mapper.StateMapper;
+import com.monsterdam.catalogs.domain.State;
+import com.monsterdam.catalogs.repository.StateRepository;
+import com.monsterdam.catalogs.repository.search.StateSearchRepository;
+import com.monsterdam.catalogs.service.StateService;
+import com.monsterdam.catalogs.service.dto.StateDTO;
+import com.monsterdam.catalogs.service.mapper.StateMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.State}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.State}.
  */
 @Service
 @Transactional

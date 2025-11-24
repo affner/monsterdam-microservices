@@ -1,16 +1,16 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.domain.StateUserRelation;
-import com.fanflip.profile.domain.UserProfile;
-import com.fanflip.profile.repository.StateUserRelationRepository;
-import com.fanflip.profile.service.dto.StateUserRelationDTO;
-import com.fanflip.profile.service.mapper.StateUserRelationMapper;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.domain.StateUserRelation;
+import com.monsterdam.profile.domain.UserProfile;
+import com.monsterdam.profile.repository.StateUserRelationRepository;
+import com.monsterdam.profile.service.dto.StateUserRelationDTO;
+import com.monsterdam.profile.service.mapper.StateUserRelationMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

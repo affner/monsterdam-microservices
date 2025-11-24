@@ -1,10 +1,10 @@
-package com.fanflip.app.service.impl;
+package com.monsterdam.app.service.impl;
 
-import com.fanflip.app.repository.UserUIPreferencesRepository;
-import com.fanflip.app.repository.search.UserUIPreferencesSearchRepository;
-import com.fanflip.app.service.UserUIPreferencesService;
-import com.fanflip.app.service.dto.UserUIPreferencesDTO;
-import com.fanflip.app.service.mapper.UserUIPreferencesMapper;
+import com.monsterdam.app.repository.UserUIPreferencesRepository;
+import com.monsterdam.app.repository.search.UserUIPreferencesSearchRepository;
+import com.monsterdam.app.service.UserUIPreferencesService;
+import com.monsterdam.app.service.dto.UserUIPreferencesDTO;
+import com.monsterdam.app.service.mapper.UserUIPreferencesMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.app.domain.UserUIPreferences}.
+ * Service Implementation for managing {@link com.monsterdam.app.domain.UserUIPreferences}.
  */
 @Service
 @Transactional

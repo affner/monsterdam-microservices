@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: finance-app
-          image: fanflip/finance
+          image: monsterdam/finance
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

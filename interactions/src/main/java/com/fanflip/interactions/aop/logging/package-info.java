@@ -1,4 +1,4 @@
 /**
  * Logging aspect.
  */
-package com.fanflip.interactions.aop.logging;
+package com.monsterdam.interactions.aop.logging;

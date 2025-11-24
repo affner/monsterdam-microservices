@@ -1,6 +1,6 @@
-package com.fanflip.interactions.repository;
+package com.monsterdam.interactions.repository;
 
-import com.fanflip.interactions.domain.LikeMark;
+import com.monsterdam.interactions.domain.LikeMark;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

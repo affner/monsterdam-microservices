@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;
 
-import com.fanflip.multimedia.repository.SingleLiveStreamRepository;
-import com.fanflip.multimedia.service.SingleLiveStreamService;
-import com.fanflip.multimedia.service.dto.SingleLiveStreamDTO;
-import com.fanflip.multimedia.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.multimedia.repository.SingleLiveStreamRepository;
+import com.monsterdam.multimedia.service.SingleLiveStreamService;
+import com.monsterdam.multimedia.service.dto.SingleLiveStreamDTO;
+import com.monsterdam.multimedia.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.multimedia.domain.SingleLiveStream}.
+ * REST controller for managing {@link com.monsterdam.multimedia.domain.SingleLiveStream}.
  */
 @RestController
 @RequestMapping("/api/single-live-streams")

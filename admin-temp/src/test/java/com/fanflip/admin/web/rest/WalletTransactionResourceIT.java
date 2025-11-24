@@ -1,22 +1,22 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.WalletTransaction;
-import com.fanflip.admin.domain.enumeration.WalletTransactionType;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.WalletTransactionRepository;
-import com.fanflip.admin.repository.search.WalletTransactionSearchRepository;
-import com.fanflip.admin.service.WalletTransactionService;
-import com.fanflip.admin.service.dto.WalletTransactionDTO;
-import com.fanflip.admin.service.mapper.WalletTransactionMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.WalletTransaction;
+import com.monsterdam.admin.domain.enumeration.WalletTransactionType;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.WalletTransactionRepository;
+import com.monsterdam.admin.repository.search.WalletTransactionSearchRepository;
+import com.monsterdam.admin.service.WalletTransactionService;
+import com.monsterdam.admin.service.dto.WalletTransactionDTO;
+import com.monsterdam.admin.service.mapper.WalletTransactionMapper;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

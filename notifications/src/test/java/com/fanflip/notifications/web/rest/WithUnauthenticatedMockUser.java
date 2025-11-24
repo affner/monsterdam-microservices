@@ -1,4 +1,4 @@
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

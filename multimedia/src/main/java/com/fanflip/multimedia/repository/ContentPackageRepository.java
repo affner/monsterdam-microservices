@@ -1,7 +1,7 @@
-package com.fanflip.multimedia.repository;
+package com.monsterdam.multimedia.repository;
 
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

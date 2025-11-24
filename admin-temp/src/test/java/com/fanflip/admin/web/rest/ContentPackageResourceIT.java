@@ -1,22 +1,22 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.repository.ContentPackageRepository;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.search.ContentPackageSearchRepository;
-import com.fanflip.admin.service.ContentPackageService;
-import com.fanflip.admin.service.dto.ContentPackageDTO;
-import com.fanflip.admin.service.mapper.ContentPackageMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.repository.ContentPackageRepository;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.search.ContentPackageSearchRepository;
+import com.monsterdam.admin.service.ContentPackageService;
+import com.monsterdam.admin.service.dto.ContentPackageDTO;
+import com.monsterdam.admin.service.mapper.ContentPackageMapper;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

@@ -1,7 +1,7 @@
 application {
   config {
     baseName admin
-    packageName com.fanflip.admin
+    packageName com.monsterdam.admin
     applicationType gateway
     authenticationType jwt
     reactive false
@@ -118,7 +118,7 @@ entity ModerationAction {
 
 }
 // mi idea es mensajes como los de telegram, asi les llegan mensajes de anuncios, dados de alta y enviados en forma de mensaje por un Admin
-// Crear el usuario de noticiero en Fanflip, que podra enviar mensajes a todos como anuncios. y a ese user se asociara su chat.
+// Crear el usuario de noticiero en Monsterdam, que podra enviar mensajes a todos como anuncios. y a ese user se asociara su chat.
 
 entity AdminAnnouncement {
   announcementType AdminAnnouncementType required

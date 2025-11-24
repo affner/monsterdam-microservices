@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: admin-app
-          image: fanflip/admin
+          image: monsterdam/admin
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

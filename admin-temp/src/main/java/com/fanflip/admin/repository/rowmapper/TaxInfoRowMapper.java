@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.TaxInfo;
-import com.fanflip.admin.domain.enumeration.TaxType;
+import com.monsterdam.admin.domain.TaxInfo;
+import com.monsterdam.admin.domain.enumeration.TaxType;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

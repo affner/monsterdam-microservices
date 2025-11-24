@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.FeedbackRepository;
-import com.fanflip.admin.service.FeedbackService;
-import com.fanflip.admin.service.dto.FeedbackDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.FeedbackRepository;
+import com.monsterdam.admin.service.FeedbackService;
+import com.monsterdam.admin.service.dto.FeedbackDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.Feedback}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.Feedback}.
  */
 @RestController
 @RequestMapping("/api/feedbacks")

@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.security.jwt;
+package com.monsterdam.catalogs.security.jwt;
 
 import org.springframework.web.bind.annotation.*;
 

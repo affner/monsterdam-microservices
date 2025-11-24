@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,16 +6,16 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.Country;
-import com.fanflip.admin.domain.TaxInfo;
-import com.fanflip.admin.domain.enumeration.TaxType;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.TaxInfoRepository;
-import com.fanflip.admin.repository.search.TaxInfoSearchRepository;
-import com.fanflip.admin.service.TaxInfoService;
-import com.fanflip.admin.service.dto.TaxInfoDTO;
-import com.fanflip.admin.service.mapper.TaxInfoMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.Country;
+import com.monsterdam.admin.domain.TaxInfo;
+import com.monsterdam.admin.domain.enumeration.TaxType;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.TaxInfoRepository;
+import com.monsterdam.admin.repository.search.TaxInfoSearchRepository;
+import com.monsterdam.admin.service.TaxInfoService;
+import com.monsterdam.admin.service.dto.TaxInfoDTO;
+import com.monsterdam.admin.service.mapper.TaxInfoMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

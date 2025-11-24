@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.BookMark;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.BookMarkDTO;
-import com.fanflip.admin.service.dto.DirectMessageDTO;
-import com.fanflip.admin.service.dto.PostFeedDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.BookMark;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.BookMarkDTO;
+import com.monsterdam.admin.service.dto.DirectMessageDTO;
+import com.monsterdam.admin.service.dto.PostFeedDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.domain.enumeration;
+package com.monsterdam.multimedia.domain.enumeration;
 
 /**
  * The MultimediaKind enumeration.

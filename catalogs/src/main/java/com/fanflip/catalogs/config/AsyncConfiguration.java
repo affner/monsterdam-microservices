@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import java.util.concurrent.Executor;
 import org.slf4j.Logger;

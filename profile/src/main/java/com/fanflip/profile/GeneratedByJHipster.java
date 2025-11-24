@@ -1,4 +1,4 @@
-package com.fanflip.profile;
+package com.monsterdam.profile;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

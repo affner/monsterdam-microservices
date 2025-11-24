@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.fanflip.profile.repository;
+package com.monsterdam.profile.repository;

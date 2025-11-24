@@ -1,5 +1,5 @@
-org.springframework.test.context.ContextCustomizerFactory = com.fanflip.\
-    catalogs.config.TestContainersSpringContextCustomizerFactory,com.fanflip.\
-    catalogs.config.SqlTestContainersSpringContextCustomizerFactory,com.fanflip.\
+org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.\
+    catalogs.config.TestContainersSpringContextCustomizerFactory,com.monsterdam.\
+    catalogs.config.SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.\
     catalogs.config.KafkaTestContainersSpringContextCustomizerFactory,com.\
-    fanflip.catalogs.config.RedisTestContainersSpringContextCustomizerFactory
+    monsterdam.catalogs.config.RedisTestContainersSpringContextCustomizerFactory

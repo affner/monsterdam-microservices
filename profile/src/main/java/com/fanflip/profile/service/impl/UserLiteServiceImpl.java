@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.UserLite;
-import com.fanflip.profile.repository.UserLiteRepository;
-import com.fanflip.profile.service.UserLiteService;
-import com.fanflip.profile.service.dto.UserLiteDTO;
-import com.fanflip.profile.service.mapper.UserLiteMapper;
+import com.monsterdam.profile.domain.UserLite;
+import com.monsterdam.profile.repository.UserLiteRepository;
+import com.monsterdam.profile.service.UserLiteService;
+import com.monsterdam.profile.service.dto.UserLiteDTO;
+import com.monsterdam.profile.service.mapper.UserLiteMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.UserLite}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.UserLite}.
  */
 @Service
 @Transactional

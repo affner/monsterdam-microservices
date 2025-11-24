@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

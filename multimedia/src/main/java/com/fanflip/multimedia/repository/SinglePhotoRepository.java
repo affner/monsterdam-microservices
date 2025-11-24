@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.repository;
+package com.monsterdam.multimedia.repository;
 
-import com.fanflip.multimedia.domain.SinglePhoto;
+import com.monsterdam.multimedia.domain.SinglePhoto;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

@@ -1,13 +1,13 @@
-package com.fanflip.finance.service;
+package com.monsterdam.finance.service;
 
-import com.fanflip.finance.service.dto.WalletTransactionDTO;
+import com.monsterdam.finance.service.dto.WalletTransactionDTO;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.finance.domain.WalletTransaction}.
+ * Service Interface for managing {@link com.monsterdam.finance.domain.WalletTransaction}.
  */
 public interface WalletTransactionService {
     /**

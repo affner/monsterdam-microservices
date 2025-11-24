@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import java.util.concurrent.Executor;
 import javax.sql.DataSource;

@@ -1,6 +1,6 @@
-package com.fanflip.finance.domain;
+package com.monsterdam.finance.domain;
 
-import com.fanflip.finance.domain.enumeration.PayoutStatus;
+import com.monsterdam.finance.domain.enumeration.PayoutStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.PayoutMethod;
-import com.fanflip.catalogs.repository.PayoutMethodRepository;
-import com.fanflip.catalogs.service.PayoutMethodService;
-import com.fanflip.catalogs.service.dto.PayoutMethodDTO;
-import com.fanflip.catalogs.service.mapper.PayoutMethodMapper;
+import com.monsterdam.catalogs.domain.PayoutMethod;
+import com.monsterdam.catalogs.repository.PayoutMethodRepository;
+import com.monsterdam.catalogs.service.PayoutMethodService;
+import com.monsterdam.catalogs.service.dto.PayoutMethodDTO;
+import com.monsterdam.catalogs.service.mapper.PayoutMethodMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.PayoutMethod}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.PayoutMethod}.
  */
 @Service
 @Transactional

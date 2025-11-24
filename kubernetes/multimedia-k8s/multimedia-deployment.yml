@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: multimedia-app
-          image: fanflip/multimedia
+          image: monsterdam/multimedia
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

@@ -1,10 +1,10 @@
-package com.fanflip.app.repository;
+package com.monsterdam.app.repository;
 
 import static org.springframework.data.relational.core.query.Criteria.where;
 import static org.springframework.data.relational.core.query.Query.query;
 
-import com.fanflip.app.domain.Authority;
-import com.fanflip.app.domain.User;
+import com.monsterdam.app.domain.Authority;
+import com.monsterdam.app.domain.User;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;

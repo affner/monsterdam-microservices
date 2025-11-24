@@ -1,14 +1,14 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
-import com.fanflip.admin.domain.enumeration.TicketStatus;
-import com.fanflip.admin.domain.enumeration.TicketType;
+import com.monsterdam.admin.domain.enumeration.TicketStatus;
+import com.monsterdam.admin.domain.enumeration.TicketType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.AssistanceTicket} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.AssistanceTicket} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class AssistanceTicketDTO implements Serializable {

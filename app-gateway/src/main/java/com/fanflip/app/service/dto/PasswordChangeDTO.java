@@ -1,4 +1,4 @@
-package com.fanflip.app.service.dto;
+package com.monsterdam.app.service.dto;
 
 import java.io.Serializable;
 

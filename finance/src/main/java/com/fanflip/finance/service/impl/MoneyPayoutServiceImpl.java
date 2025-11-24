@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.MoneyPayout;
-import com.fanflip.finance.repository.MoneyPayoutRepository;
-import com.fanflip.finance.service.MoneyPayoutService;
-import com.fanflip.finance.service.dto.MoneyPayoutDTO;
-import com.fanflip.finance.service.mapper.MoneyPayoutMapper;
+import com.monsterdam.finance.domain.MoneyPayout;
+import com.monsterdam.finance.repository.MoneyPayoutRepository;
+import com.monsterdam.finance.service.MoneyPayoutService;
+import com.monsterdam.finance.service.dto.MoneyPayoutDTO;
+import com.monsterdam.finance.service.mapper.MoneyPayoutMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.MoneyPayout}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.MoneyPayout}.
  */
 @Service
 @Transactional

@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.HelpQuestionRepository;
-import com.fanflip.catalogs.service.HelpQuestionService;
-import com.fanflip.catalogs.service.dto.HelpQuestionDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.HelpQuestionRepository;
+import com.monsterdam.catalogs.service.HelpQuestionService;
+import com.monsterdam.catalogs.service.dto.HelpQuestionDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.HelpQuestion}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.HelpQuestion}.
  */
 @RestController
 @RequestMapping("/api/help-questions")

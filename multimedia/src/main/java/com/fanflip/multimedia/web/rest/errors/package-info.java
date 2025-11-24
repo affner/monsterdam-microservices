@@ -1,4 +1,4 @@
 /**
  * Rest layer error handling.
  */
-package com.fanflip.multimedia.web.rest.errors;
+package com.monsterdam.multimedia.web.rest.errors;

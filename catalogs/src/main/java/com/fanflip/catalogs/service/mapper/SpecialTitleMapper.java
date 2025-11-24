@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.SpecialTitle;
-import com.fanflip.catalogs.service.dto.SpecialTitleDTO;
+import com.monsterdam.catalogs.domain.SpecialTitle;
+import com.monsterdam.catalogs.service.dto.SpecialTitleDTO;
 import org.mapstruct.*;
 
 /**

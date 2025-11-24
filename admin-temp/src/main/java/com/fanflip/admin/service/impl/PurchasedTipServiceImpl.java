@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.PurchasedTipRepository;
-import com.fanflip.admin.repository.search.PurchasedTipSearchRepository;
-import com.fanflip.admin.service.PurchasedTipService;
-import com.fanflip.admin.service.dto.PurchasedTipDTO;
-import com.fanflip.admin.service.mapper.PurchasedTipMapper;
+import com.monsterdam.admin.repository.PurchasedTipRepository;
+import com.monsterdam.admin.repository.search.PurchasedTipSearchRepository;
+import com.monsterdam.admin.service.PurchasedTipService;
+import com.monsterdam.admin.service.dto.PurchasedTipDTO;
+import com.monsterdam.admin.service.mapper.PurchasedTipMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.PurchasedTip}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.PurchasedTip}.
  */
 @Service
 @Transactional

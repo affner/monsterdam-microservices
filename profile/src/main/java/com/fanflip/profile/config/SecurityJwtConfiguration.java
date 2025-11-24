@@ -1,9 +1,9 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
-import static com.fanflip.profile.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.profile.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.profile.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.profile.security.SecurityUtils.JWT_ALGORITHM;
 
-import com.fanflip.profile.management.SecurityMetersService;
+import com.monsterdam.profile.management.SecurityMetersService;
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
 import javax.crypto.SecretKey;

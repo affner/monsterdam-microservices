@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.Currency;
-import com.fanflip.admin.repository.rowmapper.CurrencyRowMapper;
+import com.monsterdam.admin.domain.Currency;
+import com.monsterdam.admin.repository.rowmapper.CurrencyRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

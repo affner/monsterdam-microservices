@@ -1,9 +1,9 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
-import com.fanflip.interactions.repository.PollVoteRepository;
-import com.fanflip.interactions.service.PollVoteService;
-import com.fanflip.interactions.service.dto.PollVoteDTO;
-import com.fanflip.interactions.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.interactions.repository.PollVoteRepository;
+import com.monsterdam.interactions.service.PollVoteService;
+import com.monsterdam.interactions.service.dto.PollVoteDTO;
+import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.interactions.domain.PollVote}.
+ * REST controller for managing {@link com.monsterdam.interactions.domain.PollVote}.
  */
 @RestController
 @RequestMapping("/api/poll-votes")

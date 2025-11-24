@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.Feedback;
-import com.fanflip.profile.repository.FeedbackRepository;
-import com.fanflip.profile.service.FeedbackService;
-import com.fanflip.profile.service.dto.FeedbackDTO;
-import com.fanflip.profile.service.mapper.FeedbackMapper;
+import com.monsterdam.profile.domain.Feedback;
+import com.monsterdam.profile.repository.FeedbackRepository;
+import com.monsterdam.profile.service.FeedbackService;
+import com.monsterdam.profile.service.dto.FeedbackDTO;
+import com.monsterdam.profile.service.mapper.FeedbackMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.Feedback}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.Feedback}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.finance.service.mapper;
+package com.monsterdam.finance.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

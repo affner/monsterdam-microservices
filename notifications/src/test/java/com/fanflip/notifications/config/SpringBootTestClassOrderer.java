@@ -1,6 +1,6 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
-import com.fanflip.notifications.IntegrationTest;
+import com.monsterdam.notifications.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

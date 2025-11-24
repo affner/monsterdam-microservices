@@ -1,15 +1,15 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.catalogs.IntegrationTest;
-import com.fanflip.catalogs.domain.HelpSubcategory;
-import com.fanflip.catalogs.repository.HelpSubcategoryRepository;
-import com.fanflip.catalogs.service.dto.HelpSubcategoryDTO;
-import com.fanflip.catalogs.service.mapper.HelpSubcategoryMapper;
+import com.monsterdam.catalogs.IntegrationTest;
+import com.monsterdam.catalogs.domain.HelpSubcategory;
+import com.monsterdam.catalogs.repository.HelpSubcategoryRepository;
+import com.monsterdam.catalogs.service.dto.HelpSubcategoryDTO;
+import com.monsterdam.catalogs.service.mapper.HelpSubcategoryMapper;
 import jakarta.persistence.EntityManager;
 import java.util.List;
 import java.util.Random;

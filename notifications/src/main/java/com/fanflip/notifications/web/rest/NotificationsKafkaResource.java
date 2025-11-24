@@ -1,6 +1,6 @@
-package com.fanflip.notifications.web.rest;
+package com.monsterdam.notifications.web.rest;
 
-import com.fanflip.notifications.broker.KafkaConsumer;
+import com.monsterdam.notifications.broker.KafkaConsumer;
 import java.security.Principal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

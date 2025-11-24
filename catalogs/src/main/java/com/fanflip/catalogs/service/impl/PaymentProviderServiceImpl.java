@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.PaymentProvider;
-import com.fanflip.catalogs.repository.PaymentProviderRepository;
-import com.fanflip.catalogs.service.PaymentProviderService;
-import com.fanflip.catalogs.service.dto.PaymentProviderDTO;
-import com.fanflip.catalogs.service.mapper.PaymentProviderMapper;
+import com.monsterdam.catalogs.domain.PaymentProvider;
+import com.monsterdam.catalogs.repository.PaymentProviderRepository;
+import com.monsterdam.catalogs.service.PaymentProviderService;
+import com.monsterdam.catalogs.service.dto.PaymentProviderDTO;
+import com.monsterdam.catalogs.service.mapper.PaymentProviderMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.PaymentProvider}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.PaymentProvider}.
  */
 @Service
 @Transactional

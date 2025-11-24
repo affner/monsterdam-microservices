@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.CreatorEarning;
-import com.fanflip.admin.domain.MoneyPayout;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.CreatorEarningDTO;
-import com.fanflip.admin.service.dto.MoneyPayoutDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.CreatorEarning;
+import com.monsterdam.admin.domain.MoneyPayout;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.CreatorEarningDTO;
+import com.monsterdam.admin.service.dto.MoneyPayoutDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

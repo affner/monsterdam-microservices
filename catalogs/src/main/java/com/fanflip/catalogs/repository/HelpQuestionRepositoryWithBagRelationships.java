@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.HelpQuestion;
+import com.monsterdam.catalogs.domain.HelpQuestion;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

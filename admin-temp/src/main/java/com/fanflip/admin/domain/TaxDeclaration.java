@@ -1,7 +1,7 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.TaxDeclarationStatus;
-import com.fanflip.admin.domain.enumeration.TaxDeclarationType;
+import com.monsterdam.admin.domain.enumeration.TaxDeclarationStatus;
+import com.monsterdam.admin.domain.enumeration.TaxDeclarationType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

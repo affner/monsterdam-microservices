@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.SingleLiveStream;
-import com.fanflip.multimedia.repository.SingleLiveStreamRepository;
-import com.fanflip.multimedia.service.SingleLiveStreamService;
-import com.fanflip.multimedia.service.dto.SingleLiveStreamDTO;
-import com.fanflip.multimedia.service.mapper.SingleLiveStreamMapper;
+import com.monsterdam.multimedia.domain.SingleLiveStream;
+import com.monsterdam.multimedia.repository.SingleLiveStreamRepository;
+import com.monsterdam.multimedia.service.SingleLiveStreamService;
+import com.monsterdam.multimedia.service.dto.SingleLiveStreamDTO;
+import com.monsterdam.multimedia.service.mapper.SingleLiveStreamMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.SingleLiveStream}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.SingleLiveStream}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
 /**
  * Rest layer.
  */
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;

@@ -1,11 +1,11 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.repository.rowmapper.ContentPackageRowMapper;
-import com.fanflip.admin.repository.rowmapper.DirectMessageRowMapper;
-import com.fanflip.admin.repository.rowmapper.DirectMessageRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
-import com.fanflip.admin.repository.rowmapper.VideoStoryRowMapper;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.repository.rowmapper.ContentPackageRowMapper;
+import com.monsterdam.admin.repository.rowmapper.DirectMessageRowMapper;
+import com.monsterdam.admin.repository.rowmapper.DirectMessageRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.repository.rowmapper.VideoStoryRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

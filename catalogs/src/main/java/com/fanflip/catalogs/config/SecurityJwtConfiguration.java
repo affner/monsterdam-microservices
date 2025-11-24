@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
-import static com.fanflip.catalogs.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.catalogs.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.catalogs.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.catalogs.security.SecurityUtils.JWT_ALGORITHM;
 
-import com.fanflip.catalogs.management.SecurityMetersService;
+import com.monsterdam.catalogs.management.SecurityMetersService;
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
 import javax.crypto.SecretKey;

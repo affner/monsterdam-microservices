@@ -1,6 +1,6 @@
-package com.fanflip.profile.security;
+package com.monsterdam.profile.security;
 
-import com.fanflip.profile.config.Constants;
+import com.monsterdam.profile.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

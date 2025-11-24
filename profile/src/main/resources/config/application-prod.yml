@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    com.fanflip.profile: INFO
+    com.monsterdam.profile: INFO
 
 management:
   prometheus:

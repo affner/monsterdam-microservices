@@ -1,6 +1,6 @@
-package com.fanflip.interactions.repository;
+package com.monsterdam.interactions.repository;
 
-import com.fanflip.interactions.domain.ChatRoom;
+import com.monsterdam.interactions.domain.ChatRoom;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import java.util.Collections;

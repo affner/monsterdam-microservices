@@ -1,10 +1,10 @@
-package com.fanflip.notifications.service.impl;
+package com.monsterdam.notifications.service.impl;
 
-import com.fanflip.notifications.domain.AppNotification;
-import com.fanflip.notifications.repository.AppNotificationRepository;
-import com.fanflip.notifications.service.AppNotificationService;
-import com.fanflip.notifications.service.dto.AppNotificationDTO;
-import com.fanflip.notifications.service.mapper.AppNotificationMapper;
+import com.monsterdam.notifications.domain.AppNotification;
+import com.monsterdam.notifications.repository.AppNotificationRepository;
+import com.monsterdam.notifications.service.AppNotificationService;
+import com.monsterdam.notifications.service.dto.AppNotificationDTO;
+import com.monsterdam.notifications.service.mapper.AppNotificationMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.notifications.domain.AppNotification}.
+ * Service Implementation for managing {@link com.monsterdam.notifications.domain.AppNotification}.
  */
 @Service
 @Transactional

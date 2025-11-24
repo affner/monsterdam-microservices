@@ -1,12 +1,12 @@
-package com.fanflip.finance.service;
+package com.monsterdam.finance.service;
 
-import com.fanflip.finance.service.dto.PurchasedContentDTO;
+import com.monsterdam.finance.service.dto.PurchasedContentDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.finance.domain.PurchasedContent}.
+ * Service Interface for managing {@link com.monsterdam.finance.domain.PurchasedContent}.
  */
 public interface PurchasedContentService {
     /**

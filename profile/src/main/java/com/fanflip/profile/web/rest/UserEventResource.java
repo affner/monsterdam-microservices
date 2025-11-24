@@ -1,9 +1,9 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
-import com.fanflip.profile.repository.UserEventRepository;
-import com.fanflip.profile.service.UserEventService;
-import com.fanflip.profile.service.dto.UserEventDTO;
-import com.fanflip.profile.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.profile.repository.UserEventRepository;
+import com.monsterdam.profile.service.UserEventService;
+import com.monsterdam.profile.service.dto.UserEventDTO;
+import com.monsterdam.profile.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.profile.domain.UserEvent}.
+ * REST controller for managing {@link com.monsterdam.profile.domain.UserEvent}.
  */
 @RestController
 @RequestMapping("/api/user-events")

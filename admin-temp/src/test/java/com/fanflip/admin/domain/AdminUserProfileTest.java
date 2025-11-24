@@ -1,11 +1,11 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.AdminAnnouncementTestSamples.*;
-import static com.fanflip.admin.domain.AdminUserProfileTestSamples.*;
-import static com.fanflip.admin.domain.AssistanceTicketTestSamples.*;
+import static com.monsterdam.admin.domain.AdminAnnouncementTestSamples.*;
+import static com.monsterdam.admin.domain.AdminUserProfileTestSamples.*;
+import static com.monsterdam.admin.domain.AssistanceTicketTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

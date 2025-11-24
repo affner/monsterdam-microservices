@@ -1,9 +1,9 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
-import com.fanflip.interactions.domain.ChatRoom;
-import com.fanflip.interactions.domain.DirectMessage;
-import com.fanflip.interactions.service.dto.ChatRoomDTO;
-import com.fanflip.interactions.service.dto.DirectMessageDTO;
+import com.monsterdam.interactions.domain.ChatRoom;
+import com.monsterdam.interactions.domain.DirectMessage;
+import com.monsterdam.interactions.service.dto.ChatRoomDTO;
+import com.monsterdam.interactions.service.dto.DirectMessageDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

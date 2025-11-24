@@ -1,4 +1,4 @@
-package com.fanflip.notifications.security.jwt;
+package com.monsterdam.notifications.security.jwt;
 
 import org.springframework.web.bind.annotation.*;
 

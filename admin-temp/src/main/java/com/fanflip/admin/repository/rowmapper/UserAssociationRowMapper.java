@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.UserAssociation;
-import com.fanflip.admin.domain.enumeration.AssociationStatus;
+import com.monsterdam.admin.domain.UserAssociation;
+import com.monsterdam.admin.domain.enumeration.AssociationStatus;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.util.function.BiFunction;

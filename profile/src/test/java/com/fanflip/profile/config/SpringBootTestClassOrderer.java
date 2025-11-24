@@ -1,6 +1,6 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
-import com.fanflip.profile.IntegrationTest;
+import com.monsterdam.profile.IntegrationTest;
 import java.util.Comparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;

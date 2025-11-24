@@ -1,4 +1,4 @@
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

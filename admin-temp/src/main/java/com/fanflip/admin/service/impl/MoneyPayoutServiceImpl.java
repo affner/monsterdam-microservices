@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.MoneyPayoutRepository;
-import com.fanflip.admin.repository.search.MoneyPayoutSearchRepository;
-import com.fanflip.admin.service.MoneyPayoutService;
-import com.fanflip.admin.service.dto.MoneyPayoutDTO;
-import com.fanflip.admin.service.mapper.MoneyPayoutMapper;
+import com.monsterdam.admin.repository.MoneyPayoutRepository;
+import com.monsterdam.admin.repository.search.MoneyPayoutSearchRepository;
+import com.monsterdam.admin.service.MoneyPayoutService;
+import com.monsterdam.admin.service.dto.MoneyPayoutDTO;
+import com.monsterdam.admin.service.mapper.MoneyPayoutMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.MoneyPayout}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.MoneyPayout}.
  */
 @Service
 @Transactional

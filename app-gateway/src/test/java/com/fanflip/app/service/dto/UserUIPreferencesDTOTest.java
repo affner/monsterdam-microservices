@@ -1,8 +1,8 @@
-package com.fanflip.app.service.dto;
+package com.monsterdam.app.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.app.web.rest.TestUtil;
+import com.monsterdam.app.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class UserUIPreferencesDTOTest {

@@ -1,20 +1,20 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import static com.fanflip.admin.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.admin.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.SubscriptionBundle;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.SubscriptionBundleRepository;
-import com.fanflip.admin.repository.search.SubscriptionBundleSearchRepository;
-import com.fanflip.admin.service.dto.SubscriptionBundleDTO;
-import com.fanflip.admin.service.mapper.SubscriptionBundleMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.SubscriptionBundle;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.SubscriptionBundleRepository;
+import com.monsterdam.admin.repository.search.SubscriptionBundleSearchRepository;
+import com.monsterdam.admin.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.admin.service.mapper.SubscriptionBundleMapper;
 import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.Instant;

@@ -1,4 +1,4 @@
-package com.fanflip.finance;
+package com.monsterdam.finance;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(FinanceApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.finance.config.Constants.class,
-            com.fanflip.finance.config.ApplicationProperties.class
+            com.monsterdam.finance.config.Constants.class,
+            com.monsterdam.finance.config.ApplicationProperties.class
         ));
 }

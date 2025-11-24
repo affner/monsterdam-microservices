@@ -1,7 +1,7 @@
-package com.fanflip.multimedia;
+package com.monsterdam.multimedia;
 
-import com.fanflip.multimedia.config.ApplicationProperties;
-import com.fanflip.multimedia.config.CRLFLogConverter;
+import com.monsterdam.multimedia.config.ApplicationProperties;
+import com.monsterdam.multimedia.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

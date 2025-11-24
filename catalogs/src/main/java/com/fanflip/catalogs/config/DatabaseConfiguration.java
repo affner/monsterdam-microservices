@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import java.sql.SQLException;
 import org.slf4j.Logger;
@@ -15,10 +15,10 @@ import tech.jhipster.config.JHipsterConstants;
 import tech.jhipster.config.h2.H2ConfigurationHelper;
 
 @Configuration
-@EnableJpaRepositories({ "com.fanflip.catalogs.repository" })
+@EnableJpaRepositories({ "com.monsterdam.catalogs.repository" })
 @EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 @EnableTransactionManagement
-@EnableElasticsearchRepositories("com.fanflip.catalogs.repository.search")
+@EnableElasticsearchRepositories("com.monsterdam.catalogs.repository.search")
 public class DatabaseConfiguration {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);

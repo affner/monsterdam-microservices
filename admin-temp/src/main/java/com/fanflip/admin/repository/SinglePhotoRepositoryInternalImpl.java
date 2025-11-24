@@ -1,8 +1,8 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.SinglePhoto;
-import com.fanflip.admin.repository.rowmapper.ContentPackageRowMapper;
-import com.fanflip.admin.repository.rowmapper.SinglePhotoRowMapper;
+import com.monsterdam.admin.domain.SinglePhoto;
+import com.monsterdam.admin.repository.rowmapper.ContentPackageRowMapper;
+import com.monsterdam.admin.repository.rowmapper.SinglePhotoRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

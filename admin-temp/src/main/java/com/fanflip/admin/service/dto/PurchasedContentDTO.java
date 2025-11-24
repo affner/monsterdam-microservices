@@ -1,4 +1,4 @@
-package com.fanflip.admin.service.dto;
+package com.monsterdam.admin.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.admin.domain.PurchasedContent} entity.
+ * A DTO for the {@link com.monsterdam.admin.domain.PurchasedContent} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PurchasedContentDTO implements Serializable {

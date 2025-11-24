@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
-import com.fanflip.catalogs.domain.enumeration.EmailTemplateType;
+import com.monsterdam.catalogs.domain.enumeration.EmailTemplateType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

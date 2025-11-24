@@ -1,8 +1,8 @@
-package com.fanflip.interactions.service.dto;
+package com.monsterdam.interactions.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.interactions.web.rest.TestUtil;
+import com.monsterdam.interactions.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class PollOptionDTOTest {

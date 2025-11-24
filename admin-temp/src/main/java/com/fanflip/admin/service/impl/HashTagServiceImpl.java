@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.HashTagRepository;
-import com.fanflip.admin.repository.search.HashTagSearchRepository;
-import com.fanflip.admin.service.HashTagService;
-import com.fanflip.admin.service.dto.HashTagDTO;
-import com.fanflip.admin.service.mapper.HashTagMapper;
+import com.monsterdam.admin.repository.HashTagRepository;
+import com.monsterdam.admin.repository.search.HashTagSearchRepository;
+import com.monsterdam.admin.service.HashTagService;
+import com.monsterdam.admin.service.dto.HashTagDTO;
+import com.monsterdam.admin.service.mapper.HashTagMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.HashTag}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.HashTag}.
  */
 @Service
 @Transactional

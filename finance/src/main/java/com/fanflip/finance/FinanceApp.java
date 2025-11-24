@@ -1,7 +1,7 @@
-package com.fanflip.finance;
+package com.monsterdam.finance;
 
-import com.fanflip.finance.config.ApplicationProperties;
-import com.fanflip.finance.config.CRLFLogConverter;
+import com.monsterdam.finance.config.ApplicationProperties;
+import com.monsterdam.finance.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

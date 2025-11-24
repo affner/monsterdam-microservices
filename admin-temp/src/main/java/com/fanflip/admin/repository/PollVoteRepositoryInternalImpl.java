@@ -1,9 +1,9 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.PollVote;
-import com.fanflip.admin.repository.rowmapper.PollOptionRowMapper;
-import com.fanflip.admin.repository.rowmapper.PollVoteRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.domain.PollVote;
+import com.monsterdam.admin.repository.rowmapper.PollOptionRowMapper;
+import com.monsterdam.admin.repository.rowmapper.PollVoteRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

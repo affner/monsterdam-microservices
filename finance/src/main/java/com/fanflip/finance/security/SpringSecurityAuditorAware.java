@@ -1,6 +1,6 @@
-package com.fanflip.finance.security;
+package com.monsterdam.finance.security;
 
-import com.fanflip.finance.config.Constants;
+import com.monsterdam.finance.config.Constants;
 import java.util.Optional;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.stereotype.Component;

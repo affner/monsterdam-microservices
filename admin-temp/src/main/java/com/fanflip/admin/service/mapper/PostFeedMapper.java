@@ -1,15 +1,15 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.HashTag;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.domain.PostPoll;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.ContentPackageDTO;
-import com.fanflip.admin.service.dto.HashTagDTO;
-import com.fanflip.admin.service.dto.PostFeedDTO;
-import com.fanflip.admin.service.dto.PostPollDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.HashTag;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.domain.PostPoll;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.ContentPackageDTO;
+import com.monsterdam.admin.service.dto.HashTagDTO;
+import com.monsterdam.admin.service.dto.PostFeedDTO;
+import com.monsterdam.admin.service.dto.PostPollDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

@@ -1,4 +1,4 @@
-package com.fanflip.app.config;
+package com.monsterdam.app.config;
 
 import io.r2dbc.spi.ConnectionFactory;
 import java.sql.SQLException;
@@ -33,9 +33,9 @@ import tech.jhipster.config.JHipsterConstants;
 import tech.jhipster.config.h2.H2ConfigurationHelper;
 
 @Configuration
-@EnableR2dbcRepositories({ "com.fanflip.app.repository" })
+@EnableR2dbcRepositories({ "com.monsterdam.app.repository" })
 @EnableTransactionManagement
-@EnableReactiveElasticsearchRepositories("com.fanflip.app.repository.search")
+@EnableReactiveElasticsearchRepositories("com.monsterdam.app.repository.search")
 public class DatabaseConfiguration {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);

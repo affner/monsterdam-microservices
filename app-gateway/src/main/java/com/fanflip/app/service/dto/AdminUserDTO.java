@@ -1,8 +1,8 @@
-package com.fanflip.app.service.dto;
+package com.monsterdam.app.service.dto;
 
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.Authority;
-import com.fanflip.app.domain.User;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.Authority;
+import com.monsterdam.app.domain.User;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

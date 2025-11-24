@@ -1,4 +1,4 @@
-package com.fanflip.app.service.mapper;
+package com.monsterdam.app.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

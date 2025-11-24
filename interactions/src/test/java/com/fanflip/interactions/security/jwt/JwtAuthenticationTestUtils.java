@@ -1,7 +1,7 @@
-package com.fanflip.interactions.security.jwt;
+package com.monsterdam.interactions.security.jwt;
 
-import static com.fanflip.interactions.security.SecurityUtils.AUTHORITIES_KEY;
-import static com.fanflip.interactions.security.SecurityUtils.JWT_ALGORITHM;
+import static com.monsterdam.interactions.security.SecurityUtils.AUTHORITIES_KEY;
+import static com.monsterdam.interactions.security.SecurityUtils.JWT_ALGORITHM;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;

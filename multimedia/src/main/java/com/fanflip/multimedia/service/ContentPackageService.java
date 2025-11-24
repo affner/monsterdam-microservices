@@ -1,13 +1,13 @@
-package com.fanflip.multimedia.service;
+package com.monsterdam.multimedia.service;
 
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.multimedia.domain.ContentPackage}.
+ * Service Interface for managing {@link com.monsterdam.multimedia.domain.ContentPackage}.
  */
 public interface ContentPackageService {
     /**

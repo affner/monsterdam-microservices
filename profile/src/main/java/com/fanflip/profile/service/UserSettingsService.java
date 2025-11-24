@@ -1,13 +1,13 @@
-package com.fanflip.profile.service;
+package com.monsterdam.profile.service;
 
-import com.fanflip.profile.service.dto.UserSettingsDTO;
+import com.monsterdam.profile.service.dto.UserSettingsDTO;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.profile.domain.UserSettings}.
+ * Service Interface for managing {@link com.monsterdam.profile.domain.UserSettings}.
  */
 public interface UserSettingsService {
     /**

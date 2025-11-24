@@ -1,6 +1,6 @@
-package com.fanflip.interactions.repository;
+package com.monsterdam.interactions.repository;
 
-import com.fanflip.interactions.domain.PostPoll;
+import com.monsterdam.interactions.domain.PostPoll;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

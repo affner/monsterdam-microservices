@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.GlobalEvent;
-import com.fanflip.catalogs.service.dto.GlobalEventDTO;
+import com.monsterdam.catalogs.domain.GlobalEvent;
+import com.monsterdam.catalogs.service.dto.GlobalEventDTO;
 import org.mapstruct.*;
 
 /**

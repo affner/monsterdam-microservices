@@ -1,19 +1,19 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.AuthorityRepository;
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.security.AuthoritiesConstants;
-import com.fanflip.app.service.UserService;
-import com.fanflip.app.service.dto.AdminUserDTO;
-import com.fanflip.app.service.dto.PasswordChangeDTO;
-import com.fanflip.app.web.rest.vm.KeyAndPasswordVM;
-import com.fanflip.app.web.rest.vm.ManagedUserVM;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.AuthorityRepository;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.security.AuthoritiesConstants;
+import com.monsterdam.app.service.UserService;
+import com.monsterdam.app.service.dto.AdminUserDTO;
+import com.monsterdam.app.service.dto.PasswordChangeDTO;
+import com.monsterdam.app.web.rest.vm.KeyAndPasswordVM;
+import com.monsterdam.app.web.rest.vm.ManagedUserVM;
 import java.time.Instant;
 import java.util.*;
 import org.apache.commons.lang3.RandomStringUtils;

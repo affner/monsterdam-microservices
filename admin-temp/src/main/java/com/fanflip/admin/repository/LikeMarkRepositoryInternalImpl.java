@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.LikeMark;
-import com.fanflip.admin.repository.rowmapper.LikeMarkRowMapper;
+import com.monsterdam.admin.domain.LikeMark;
+import com.monsterdam.admin.repository.rowmapper.LikeMarkRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

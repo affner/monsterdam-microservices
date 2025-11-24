@@ -1,4 +1,4 @@
-package com.fanflip.notifications.management;
+package com.monsterdam.notifications.management;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;

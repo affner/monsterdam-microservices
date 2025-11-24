@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import static tech.jhipster.config.logging.LoggingUtils.*;
 

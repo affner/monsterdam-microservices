@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.MoneyPayout;
-import com.fanflip.admin.domain.enumeration.PayoutStatus;
+import com.monsterdam.admin.domain.MoneyPayout;
+import com.monsterdam.admin.domain.enumeration.PayoutStatus;
 import io.r2dbc.spi.Row;
 import java.math.BigDecimal;
 import java.time.Instant;

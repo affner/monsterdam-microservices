@@ -1,10 +1,10 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import static com.fanflip.profile.domain.PersonalSocialLinksTestSamples.*;
-import static com.fanflip.profile.domain.UserProfileTestSamples.*;
+import static com.monsterdam.profile.domain.PersonalSocialLinksTestSamples.*;
+import static com.monsterdam.profile.domain.UserProfileTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.profile.web.rest.TestUtil;
+import com.monsterdam.profile.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class PersonalSocialLinksTest {

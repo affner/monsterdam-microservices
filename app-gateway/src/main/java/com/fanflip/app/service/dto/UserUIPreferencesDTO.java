@@ -1,4 +1,4 @@
-package com.fanflip.app.service.dto;
+package com.monsterdam.app.service.dto;
 
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.app.domain.UserUIPreferences} entity.
+ * A DTO for the {@link com.monsterdam.app.domain.UserUIPreferences} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserUIPreferencesDTO implements Serializable {

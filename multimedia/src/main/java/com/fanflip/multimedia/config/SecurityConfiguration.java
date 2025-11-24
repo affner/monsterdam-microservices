@@ -1,8 +1,8 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
 
-import com.fanflip.multimedia.security.*;
+import com.monsterdam.multimedia.security.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;

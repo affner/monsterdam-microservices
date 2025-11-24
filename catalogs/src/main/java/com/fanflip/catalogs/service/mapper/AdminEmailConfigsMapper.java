@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.AdminEmailConfigs;
-import com.fanflip.catalogs.service.dto.AdminEmailConfigsDTO;
+import com.monsterdam.catalogs.domain.AdminEmailConfigs;
+import com.monsterdam.catalogs.service.dto.AdminEmailConfigsDTO;
 import org.mapstruct.*;
 
 /**

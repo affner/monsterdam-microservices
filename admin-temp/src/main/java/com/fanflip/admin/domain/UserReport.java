@@ -1,7 +1,7 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.ReportCategory;
-import com.fanflip.admin.domain.enumeration.ReportStatus;
+import com.monsterdam.admin.domain.enumeration.ReportCategory;
+import com.monsterdam.admin.domain.enumeration.ReportStatus;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

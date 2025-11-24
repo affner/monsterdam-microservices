@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.UserAssociation;
-import com.fanflip.profile.repository.UserAssociationRepository;
-import com.fanflip.profile.service.UserAssociationService;
-import com.fanflip.profile.service.dto.UserAssociationDTO;
-import com.fanflip.profile.service.mapper.UserAssociationMapper;
+import com.monsterdam.profile.domain.UserAssociation;
+import com.monsterdam.profile.repository.UserAssociationRepository;
+import com.monsterdam.profile.service.UserAssociationService;
+import com.monsterdam.profile.service.dto.UserAssociationDTO;
+import com.monsterdam.profile.service.mapper.UserAssociationMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.UserAssociation}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.UserAssociation}.
  */
 @Service
 @Transactional

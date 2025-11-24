@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.fanflip.finance.repository;
+package com.monsterdam.finance.repository;

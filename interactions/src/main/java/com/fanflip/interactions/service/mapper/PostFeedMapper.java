@@ -1,9 +1,9 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
-import com.fanflip.interactions.domain.PostFeed;
-import com.fanflip.interactions.domain.PostPoll;
-import com.fanflip.interactions.service.dto.PostFeedDTO;
-import com.fanflip.interactions.service.dto.PostPollDTO;
+import com.monsterdam.interactions.domain.PostFeed;
+import com.monsterdam.interactions.domain.PostPoll;
+import com.monsterdam.interactions.service.dto.PostFeedDTO;
+import com.monsterdam.interactions.service.dto.PostPollDTO;
 import org.mapstruct.*;
 
 /**

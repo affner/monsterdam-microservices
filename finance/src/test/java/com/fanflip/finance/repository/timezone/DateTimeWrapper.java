@@ -1,4 +1,4 @@
-package com.fanflip.finance.repository.timezone;
+package com.monsterdam.finance.repository.timezone;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: profile-app
-          image: fanflip/profile
+          image: monsterdam/profile
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

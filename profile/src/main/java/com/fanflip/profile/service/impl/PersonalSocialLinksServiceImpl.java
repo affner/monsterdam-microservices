@@ -1,10 +1,10 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.PersonalSocialLinks;
-import com.fanflip.profile.repository.PersonalSocialLinksRepository;
-import com.fanflip.profile.service.PersonalSocialLinksService;
-import com.fanflip.profile.service.dto.PersonalSocialLinksDTO;
-import com.fanflip.profile.service.mapper.PersonalSocialLinksMapper;
+import com.monsterdam.profile.domain.PersonalSocialLinks;
+import com.monsterdam.profile.repository.PersonalSocialLinksRepository;
+import com.monsterdam.profile.service.PersonalSocialLinksService;
+import com.monsterdam.profile.service.dto.PersonalSocialLinksDTO;
+import com.monsterdam.profile.service.mapper.PersonalSocialLinksMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.PersonalSocialLinks}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.PersonalSocialLinks}.
  */
 @Service
 @Transactional

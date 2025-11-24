@@ -1,4 +1,4 @@
 /**
  * Request chain filters.
  */
-package com.fanflip.app.web.filter;
+package com.monsterdam.app.web.filter;

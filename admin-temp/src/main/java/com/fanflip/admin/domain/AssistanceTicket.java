@@ -1,7 +1,7 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.TicketStatus;
-import com.fanflip.admin.domain.enumeration.TicketType;
+import com.monsterdam.admin.domain.enumeration.TicketStatus;
+import com.monsterdam.admin.domain.enumeration.TicketType;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

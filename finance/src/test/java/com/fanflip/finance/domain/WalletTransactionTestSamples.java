@@ -1,4 +1,4 @@
-package com.fanflip.finance.domain;
+package com.monsterdam.finance.domain;
 
 import java.util.Random;
 import java.util.UUID;

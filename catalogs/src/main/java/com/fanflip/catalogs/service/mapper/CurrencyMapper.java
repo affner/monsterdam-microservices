@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.mapper;
+package com.monsterdam.catalogs.service.mapper;
 
-import com.fanflip.catalogs.domain.Currency;
-import com.fanflip.catalogs.service.dto.CurrencyDTO;
+import com.monsterdam.catalogs.domain.Currency;
+import com.monsterdam.catalogs.service.dto.CurrencyDTO;
 import org.mapstruct.*;
 
 /**

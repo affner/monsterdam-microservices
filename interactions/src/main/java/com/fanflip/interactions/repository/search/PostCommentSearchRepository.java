@@ -1,8 +1,8 @@
-package com.fanflip.interactions.repository.search;
+package com.monsterdam.interactions.repository.search;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.QueryStringQuery;
-import com.fanflip.interactions.domain.PostComment;
-import com.fanflip.interactions.repository.PostCommentRepository;
+import com.monsterdam.interactions.domain.PostComment;
+import com.monsterdam.interactions.repository.PostCommentRepository;
 import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;

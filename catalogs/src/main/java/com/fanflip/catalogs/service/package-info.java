@@ -1,4 +1,4 @@
 /**
  * Service layer.
  */
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;

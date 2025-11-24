@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.AdminSystemConfigs;
-import com.fanflip.catalogs.repository.AdminSystemConfigsRepository;
-import com.fanflip.catalogs.service.AdminSystemConfigsService;
-import com.fanflip.catalogs.service.dto.AdminSystemConfigsDTO;
-import com.fanflip.catalogs.service.mapper.AdminSystemConfigsMapper;
+import com.monsterdam.catalogs.domain.AdminSystemConfigs;
+import com.monsterdam.catalogs.repository.AdminSystemConfigsRepository;
+import com.monsterdam.catalogs.service.AdminSystemConfigsService;
+import com.monsterdam.catalogs.service.dto.AdminSystemConfigsDTO;
+import com.monsterdam.catalogs.service.mapper.AdminSystemConfigsMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.AdminSystemConfigs}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.AdminSystemConfigs}.
  */
 @Service
 @Transactional

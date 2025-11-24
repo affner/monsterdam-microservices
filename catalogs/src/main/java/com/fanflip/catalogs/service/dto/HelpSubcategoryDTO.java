@@ -1,11 +1,11 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.HelpSubcategory} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.HelpSubcategory} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class HelpSubcategoryDTO implements Serializable {

@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.service.mapper;
+package com.monsterdam.multimedia.service.mapper;
 
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.domain.UserTagRelation;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.service.dto.UserTagRelationDTO;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.domain.UserTagRelation;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.dto.UserTagRelationDTO;
 import org.mapstruct.*;
 
 /**

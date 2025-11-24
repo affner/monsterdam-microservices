@@ -1,4 +1,4 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
 import java.util.ArrayList;
 import java.util.List;

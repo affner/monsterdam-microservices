@@ -1,15 +1,15 @@
-package com.fanflip.multimedia.domain;
+package com.monsterdam.multimedia.domain;
 
-import static com.fanflip.multimedia.domain.ContentPackageTestSamples.*;
-import static com.fanflip.multimedia.domain.SingleAudioTestSamples.*;
-import static com.fanflip.multimedia.domain.SingleLiveStreamTestSamples.getSingleLiveStreamRandomSampleGenerator;
-import static com.fanflip.multimedia.domain.SinglePhotoTestSamples.*;
-import static com.fanflip.multimedia.domain.SingleVideoTestSamples.*;
-import static com.fanflip.multimedia.domain.SpecialRewardTestSamples.*;
-import static com.fanflip.multimedia.domain.UserTagRelationTestSamples.*;
+import static com.monsterdam.multimedia.domain.ContentPackageTestSamples.*;
+import static com.monsterdam.multimedia.domain.SingleAudioTestSamples.*;
+import static com.monsterdam.multimedia.domain.SingleLiveStreamTestSamples.getSingleLiveStreamRandomSampleGenerator;
+import static com.monsterdam.multimedia.domain.SinglePhotoTestSamples.*;
+import static com.monsterdam.multimedia.domain.SingleVideoTestSamples.*;
+import static com.monsterdam.multimedia.domain.SpecialRewardTestSamples.*;
+import static com.monsterdam.multimedia.domain.UserTagRelationTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.multimedia.web.rest.TestUtil;
+import com.monsterdam.multimedia.web.rest.TestUtil;
 import java.util.HashSet;
 import java.util.Set;
 import org.junit.jupiter.api.Test;

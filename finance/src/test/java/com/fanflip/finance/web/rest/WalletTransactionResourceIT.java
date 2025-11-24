@@ -1,19 +1,19 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import static com.fanflip.finance.web.rest.TestUtil.sameNumber;
+import static com.monsterdam.finance.web.rest.TestUtil.sameNumber;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.finance.IntegrationTest;
-import com.fanflip.finance.domain.WalletTransaction;
-import com.fanflip.finance.domain.enumeration.WalletTransactionType;
-import com.fanflip.finance.repository.WalletTransactionRepository;
-import com.fanflip.finance.service.WalletTransactionService;
-import com.fanflip.finance.service.dto.WalletTransactionDTO;
-import com.fanflip.finance.service.mapper.WalletTransactionMapper;
+import com.monsterdam.finance.IntegrationTest;
+import com.monsterdam.finance.domain.WalletTransaction;
+import com.monsterdam.finance.domain.enumeration.WalletTransactionType;
+import com.monsterdam.finance.repository.WalletTransactionRepository;
+import com.monsterdam.finance.service.WalletTransactionService;
+import com.monsterdam.finance.service.dto.WalletTransactionDTO;
+import com.monsterdam.finance.service.mapper.WalletTransactionMapper;
 import jakarta.persistence.EntityManager;
 import java.math.BigDecimal;
 import java.time.Instant;

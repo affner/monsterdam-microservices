@@ -1,6 +1,6 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import com.fanflip.profile.domain.enumeration.FeedbackType;
+import com.monsterdam.profile.domain.enumeration.FeedbackType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;

@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.PostPollRepository;
-import com.fanflip.admin.service.PostPollService;
-import com.fanflip.admin.service.dto.PostPollDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.PostPollRepository;
+import com.monsterdam.admin.service.PostPollService;
+import com.monsterdam.admin.service.dto.PostPollDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.PostPoll}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.PostPoll}.
  */
 @RestController
 @RequestMapping("/api/post-polls")

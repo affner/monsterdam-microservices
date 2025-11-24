@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -7,13 +7,13 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.PostFeed;
-import com.fanflip.interactions.repository.PostFeedRepository;
-import com.fanflip.interactions.repository.search.PostFeedSearchRepository;
-import com.fanflip.interactions.service.PostFeedService;
-import com.fanflip.interactions.service.dto.PostFeedDTO;
-import com.fanflip.interactions.service.mapper.PostFeedMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.PostFeed;
+import com.monsterdam.interactions.repository.PostFeedRepository;
+import com.monsterdam.interactions.repository.search.PostFeedSearchRepository;
+import com.monsterdam.interactions.service.PostFeedService;
+import com.monsterdam.interactions.service.dto.PostFeedDTO;
+import com.monsterdam.interactions.service.mapper.PostFeedMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

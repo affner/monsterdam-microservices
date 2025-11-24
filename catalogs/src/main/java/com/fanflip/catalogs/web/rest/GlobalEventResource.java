@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
-import com.fanflip.catalogs.repository.GlobalEventRepository;
-import com.fanflip.catalogs.service.GlobalEventService;
-import com.fanflip.catalogs.service.dto.GlobalEventDTO;
-import com.fanflip.catalogs.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.catalogs.repository.GlobalEventRepository;
+import com.monsterdam.catalogs.service.GlobalEventService;
+import com.monsterdam.catalogs.service.dto.GlobalEventDTO;
+import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.catalogs.domain.GlobalEvent}.
+ * REST controller for managing {@link com.monsterdam.catalogs.domain.GlobalEvent}.
  */
 @RestController
 @RequestMapping("/api/global-events")

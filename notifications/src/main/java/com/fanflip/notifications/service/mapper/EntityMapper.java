@@ -1,4 +1,4 @@
-package com.fanflip.notifications.service.mapper;
+package com.monsterdam.notifications.service.mapper;
 
 import java.util.List;
 import org.mapstruct.BeanMapping;

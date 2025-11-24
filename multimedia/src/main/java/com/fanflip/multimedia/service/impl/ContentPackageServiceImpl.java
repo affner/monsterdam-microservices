@@ -1,10 +1,10 @@
-package com.fanflip.multimedia.service.impl;
+package com.monsterdam.multimedia.service.impl;
 
-import com.fanflip.multimedia.domain.ContentPackage;
-import com.fanflip.multimedia.repository.ContentPackageRepository;
-import com.fanflip.multimedia.service.ContentPackageService;
-import com.fanflip.multimedia.service.dto.ContentPackageDTO;
-import com.fanflip.multimedia.service.mapper.ContentPackageMapper;
+import com.monsterdam.multimedia.domain.ContentPackage;
+import com.monsterdam.multimedia.repository.ContentPackageRepository;
+import com.monsterdam.multimedia.service.ContentPackageService;
+import com.monsterdam.multimedia.service.dto.ContentPackageDTO;
+import com.monsterdam.multimedia.service.mapper.ContentPackageMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.multimedia.domain.ContentPackage}.
+ * Service Implementation for managing {@link com.monsterdam.multimedia.domain.ContentPackage}.
  */
 @Service
 @Transactional

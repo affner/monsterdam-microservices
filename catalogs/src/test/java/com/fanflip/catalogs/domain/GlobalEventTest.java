@@ -1,9 +1,9 @@
-package com.fanflip.catalogs.domain;
+package com.monsterdam.catalogs.domain;
 
-import static com.fanflip.catalogs.domain.GlobalEventTestSamples.*;
+import static com.monsterdam.catalogs.domain.GlobalEventTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.catalogs.web.rest.TestUtil;
+import com.monsterdam.catalogs.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class GlobalEventTest {

@@ -1,4 +1,4 @@
-package com.fanflip.notifications.config;
+package com.monsterdam.notifications.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,9 +1,9 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
-import com.fanflip.profile.repository.PostFeedHashTagRelationRepository;
-import com.fanflip.profile.service.PostFeedHashTagRelationService;
-import com.fanflip.profile.service.dto.PostFeedHashTagRelationDTO;
-import com.fanflip.profile.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.profile.repository.PostFeedHashTagRelationRepository;
+import com.monsterdam.profile.service.PostFeedHashTagRelationService;
+import com.monsterdam.profile.service.dto.PostFeedHashTagRelationDTO;
+import com.monsterdam.profile.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.profile.domain.PostFeedHashTagRelation}.
+ * REST controller for managing {@link com.monsterdam.profile.domain.PostFeedHashTagRelation}.
  */
 @RestController
 @RequestMapping("/api/post-feed-hash-tag-relations")

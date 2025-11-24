@@ -1,11 +1,11 @@
-package com.fanflip.multimedia.domain;
+package com.monsterdam.multimedia.domain;
 
-import static com.fanflip.multimedia.domain.ContentPackageTestSamples.getContentPackageRandomSampleGenerator;
-import static com.fanflip.multimedia.domain.SingleLiveStreamTestSamples.*;
-import static com.fanflip.multimedia.domain.SingleLiveStreamTestSamples.*;
+import static com.monsterdam.multimedia.domain.ContentPackageTestSamples.getContentPackageRandomSampleGenerator;
+import static com.monsterdam.multimedia.domain.SingleLiveStreamTestSamples.*;
+import static com.monsterdam.multimedia.domain.SingleLiveStreamTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.multimedia.web.rest.TestUtil;
+import com.monsterdam.multimedia.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class SingleLiveStreamTest {

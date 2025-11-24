@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,33 +76,33 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.profile.domain.UserLite.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".socialNetworks", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".blockedUbications", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".followeds", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".blockedLists", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".loyaLists", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".subscribeds", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".joinedEvents", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".hashtags", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".followers", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".blockers", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".awards", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserProfile.class.getName() + ".subscriptions", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserSettings.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserAssociation.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserEvent.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.UserEvent.class.getName() + ".members", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.BookMark.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.PersonalSocialLinks.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.Feedback.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.StateUserRelation.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.HashTag.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.HashTag.class.getName() + ".postFeeds", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.HashTag.class.getName() + ".users", jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.PostFeedHashTagRelation.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.profile.domain.SpecialAward.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserLite.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".socialNetworks", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".blockedUbications", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".followeds", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".blockedLists", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".loyaLists", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".subscribeds", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".joinedEvents", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".hashtags", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".followers", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".blockers", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".awards", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserProfile.class.getName() + ".subscriptions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserSettings.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserAssociation.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserEvent.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.UserEvent.class.getName() + ".members", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.BookMark.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.PersonalSocialLinks.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.Feedback.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.StateUserRelation.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.HashTag.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.HashTag.class.getName() + ".postFeeds", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.HashTag.class.getName() + ".users", jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.PostFeedHashTagRelation.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.profile.domain.SpecialAward.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

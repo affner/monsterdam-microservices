@@ -1,4 +1,4 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
@@ -6,12 +6,12 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.ChatRoom;
-import com.fanflip.interactions.repository.ChatRoomRepository;
-import com.fanflip.interactions.service.ChatRoomService;
-import com.fanflip.interactions.service.dto.ChatRoomDTO;
-import com.fanflip.interactions.service.mapper.ChatRoomMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.ChatRoom;
+import com.monsterdam.interactions.repository.ChatRoomRepository;
+import com.monsterdam.interactions.service.ChatRoomService;
+import com.monsterdam.interactions.service.dto.ChatRoomDTO;
+import com.monsterdam.interactions.service.mapper.ChatRoomMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

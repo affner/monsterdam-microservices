@@ -1,11 +1,11 @@
-package com.fanflip.profile.service.impl;
+package com.monsterdam.profile.service.impl;
 
-import com.fanflip.profile.domain.HashTag;
-import com.fanflip.profile.repository.HashTagRepository;
-import com.fanflip.profile.repository.search.HashTagSearchRepository;
-import com.fanflip.profile.service.HashTagService;
-import com.fanflip.profile.service.dto.HashTagDTO;
-import com.fanflip.profile.service.mapper.HashTagMapper;
+import com.monsterdam.profile.domain.HashTag;
+import com.monsterdam.profile.repository.HashTagRepository;
+import com.monsterdam.profile.repository.search.HashTagSearchRepository;
+import com.monsterdam.profile.service.HashTagService;
+import com.monsterdam.profile.service.dto.HashTagDTO;
+import com.monsterdam.profile.service.mapper.HashTagMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.profile.domain.HashTag}.
+ * Service Implementation for managing {@link com.monsterdam.profile.domain.HashTag}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.management;
+package com.monsterdam.catalogs.management;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.Currency} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.Currency} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class CurrencyDTO implements Serializable {

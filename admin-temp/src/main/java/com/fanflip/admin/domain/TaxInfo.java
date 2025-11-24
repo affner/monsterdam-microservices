@@ -1,6 +1,6 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import com.fanflip.admin.domain.enumeration.TaxType;
+import com.monsterdam.admin.domain.enumeration.TaxType;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;

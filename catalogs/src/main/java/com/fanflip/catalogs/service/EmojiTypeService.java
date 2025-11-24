@@ -1,12 +1,12 @@
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;
 
-import com.fanflip.catalogs.service.dto.EmojiTypeDTO;
+import com.monsterdam.catalogs.service.dto.EmojiTypeDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.catalogs.domain.EmojiType}.
+ * Service Interface for managing {@link com.monsterdam.catalogs.domain.EmojiType}.
  */
 public interface EmojiTypeService {
     /**

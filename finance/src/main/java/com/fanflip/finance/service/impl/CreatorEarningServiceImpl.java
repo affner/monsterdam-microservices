@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.CreatorEarning;
-import com.fanflip.finance.repository.CreatorEarningRepository;
-import com.fanflip.finance.service.CreatorEarningService;
-import com.fanflip.finance.service.dto.CreatorEarningDTO;
-import com.fanflip.finance.service.mapper.CreatorEarningMapper;
+import com.monsterdam.finance.domain.CreatorEarning;
+import com.monsterdam.finance.repository.CreatorEarningRepository;
+import com.monsterdam.finance.service.CreatorEarningService;
+import com.monsterdam.finance.service.dto.CreatorEarningDTO;
+import com.monsterdam.finance.service.mapper.CreatorEarningMapper;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.CreatorEarning}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.CreatorEarning}.
  */
 @Service
 @Transactional

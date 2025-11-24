@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,14 +6,14 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.domain.PostPoll;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.PostPollRepository;
-import com.fanflip.admin.repository.search.PostPollSearchRepository;
-import com.fanflip.admin.service.dto.PostPollDTO;
-import com.fanflip.admin.service.mapper.PostPollMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.domain.PostPoll;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.PostPollRepository;
+import com.monsterdam.admin.repository.search.PostPollSearchRepository;
+import com.monsterdam.admin.service.dto.PostPollDTO;
+import com.monsterdam.admin.service.mapper.PostPollMapper;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;

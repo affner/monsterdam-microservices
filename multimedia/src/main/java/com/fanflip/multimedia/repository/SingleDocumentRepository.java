@@ -1,6 +1,6 @@
-package com.fanflip.multimedia.repository;
+package com.monsterdam.multimedia.repository;
 
-import com.fanflip.multimedia.domain.SingleDocument;
+import com.monsterdam.multimedia.domain.SingleDocument;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

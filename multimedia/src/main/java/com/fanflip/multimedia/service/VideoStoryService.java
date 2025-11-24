@@ -1,12 +1,12 @@
-package com.fanflip.multimedia.service;
+package com.monsterdam.multimedia.service;
 
-import com.fanflip.multimedia.service.dto.VideoStoryDTO;
+import com.monsterdam.multimedia.service.dto.VideoStoryDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.multimedia.domain.VideoStory}.
+ * Service Interface for managing {@link com.monsterdam.multimedia.domain.VideoStory}.
  */
 public interface VideoStoryService {
     /**

@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;

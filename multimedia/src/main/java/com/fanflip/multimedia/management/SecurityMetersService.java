@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.management;
+package com.monsterdam.multimedia.management;
 
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;

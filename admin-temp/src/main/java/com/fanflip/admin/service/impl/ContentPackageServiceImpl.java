@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.ContentPackageRepository;
-import com.fanflip.admin.repository.search.ContentPackageSearchRepository;
-import com.fanflip.admin.service.ContentPackageService;
-import com.fanflip.admin.service.dto.ContentPackageDTO;
-import com.fanflip.admin.service.mapper.ContentPackageMapper;
+import com.monsterdam.admin.repository.ContentPackageRepository;
+import com.monsterdam.admin.repository.search.ContentPackageSearchRepository;
+import com.monsterdam.admin.service.ContentPackageService;
+import com.monsterdam.admin.service.dto.ContentPackageDTO;
+import com.monsterdam.admin.service.mapper.ContentPackageMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.ContentPackage}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.ContentPackage}.
  */
 @Service
 @Transactional

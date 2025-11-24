@@ -1,12 +1,12 @@
-package com.fanflip.admin.service;
+package com.monsterdam.admin.service;
 
-import com.fanflip.admin.service.dto.IdentityDocumentDTO;
+import com.monsterdam.admin.service.dto.IdentityDocumentDTO;
 import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Interface for managing {@link com.fanflip.admin.domain.IdentityDocument}.
+ * Service Interface for managing {@link com.monsterdam.admin.domain.IdentityDocument}.
  */
 public interface IdentityDocumentService {
     /**

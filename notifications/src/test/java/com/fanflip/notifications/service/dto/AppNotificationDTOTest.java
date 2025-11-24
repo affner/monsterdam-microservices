@@ -1,8 +1,8 @@
-package com.fanflip.notifications.service.dto;
+package com.monsterdam.notifications.service.dto;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.notifications.web.rest.TestUtil;
+import com.monsterdam.notifications.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class AppNotificationDTOTest {

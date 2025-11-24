@@ -1,7 +1,7 @@
 application {
     config {
         baseName finance
-        packageName com.fanflip.finance
+        packageName com.monsterdam.finance
         applicationType microservice
         authenticationType jwt
         reactive false

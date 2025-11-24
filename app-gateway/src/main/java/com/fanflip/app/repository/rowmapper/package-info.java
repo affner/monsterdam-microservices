@@ -1,4 +1,4 @@
 /**
  * Webflux database column mapper.
  */
-package com.fanflip.app.repository.rowmapper;
+package com.monsterdam.app.repository.rowmapper;

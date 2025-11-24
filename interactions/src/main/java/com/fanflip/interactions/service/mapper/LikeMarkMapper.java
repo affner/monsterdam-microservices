@@ -1,7 +1,7 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
-import com.fanflip.interactions.domain.LikeMark;
-import com.fanflip.interactions.service.dto.LikeMarkDTO;
+import com.monsterdam.interactions.domain.LikeMark;
+import com.monsterdam.interactions.service.dto.LikeMarkDTO;
 import org.mapstruct.*;
 
 /**

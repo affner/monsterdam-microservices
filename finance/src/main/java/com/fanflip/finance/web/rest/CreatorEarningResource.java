@@ -1,9 +1,9 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import com.fanflip.finance.repository.CreatorEarningRepository;
-import com.fanflip.finance.service.CreatorEarningService;
-import com.fanflip.finance.service.dto.CreatorEarningDTO;
-import com.fanflip.finance.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.finance.repository.CreatorEarningRepository;
+import com.monsterdam.finance.service.CreatorEarningService;
+import com.monsterdam.finance.service.dto.CreatorEarningDTO;
+import com.monsterdam.finance.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -26,7 +26,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.finance.domain.CreatorEarning}.
+ * REST controller for managing {@link com.monsterdam.finance.domain.CreatorEarning}.
  */
 @RestController
 @RequestMapping("/api/creator-earnings")

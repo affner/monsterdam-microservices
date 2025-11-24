@@ -1,4 +1,4 @@
-package com.fanflip.finance.config;
+package com.monsterdam.finance.config;
 
 import jakarta.servlet.*;
 import org.slf4j.Logger;

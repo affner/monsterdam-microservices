@@ -1,9 +1,9 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
-import com.fanflip.finance.repository.SubscriptionBundleRepository;
-import com.fanflip.finance.service.SubscriptionBundleService;
-import com.fanflip.finance.service.dto.SubscriptionBundleDTO;
-import com.fanflip.finance.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.finance.repository.SubscriptionBundleRepository;
+import com.monsterdam.finance.service.SubscriptionBundleService;
+import com.monsterdam.finance.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.finance.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.finance.domain.SubscriptionBundle}.
+ * REST controller for managing {@link com.monsterdam.finance.domain.SubscriptionBundle}.
  */
 @RestController
 @RequestMapping("/api/subscription-bundles")

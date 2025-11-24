@@ -1,4 +1,4 @@
-package com.fanflip.app.web.rest.errors;
+package com.monsterdam.app.web.rest.errors;
 
 import static org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation;
 
@@ -94,11 +94,11 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler implemen
 
     private ProblemDetailWithCause getProblemDetailWithCause(Throwable ex) {
         if (
-            ex instanceof com.fanflip.app.service.UsernameAlreadyUsedException
+            ex instanceof com.monsterdam.app.service.UsernameAlreadyUsedException
         ) return (ProblemDetailWithCause) new LoginAlreadyUsedException().getBody();
-        if (ex instanceof com.fanflip.app.service.EmailAlreadyUsedException) return (ProblemDetailWithCause) new EmailAlreadyUsedException()
+        if (ex instanceof com.monsterdam.app.service.EmailAlreadyUsedException) return (ProblemDetailWithCause) new EmailAlreadyUsedException()
             .getBody();
-        if (ex instanceof com.fanflip.app.service.InvalidPasswordException) return (ProblemDetailWithCause) new InvalidPasswordException()
+        if (ex instanceof com.monsterdam.app.service.InvalidPasswordException) return (ProblemDetailWithCause) new InvalidPasswordException()
             .getBody();
 
         if (ex instanceof AuthenticationException) {
@@ -274,6 +274,6 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler implemen
 
     private boolean containsPackageName(String message) {
         // This list is for sure not complete
-        return StringUtils.containsAny(message, "org.", "java.", "net.", "jakarta.", "javax.", "com.", "io.", "de.", "com.fanflip.app");
+        return StringUtils.containsAny(message, "org.", "java.", "net.", "jakarta.", "javax.", "com.", "io.", "de.", "com.monsterdam.app");
     }
 }

@@ -1,7 +1,7 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
-import com.fanflip.interactions.domain.DirectMessage;
-import com.fanflip.interactions.service.dto.DirectMessageDTO;
+import com.monsterdam.interactions.domain.DirectMessage;
+import com.monsterdam.interactions.service.dto.DirectMessageDTO;
 import org.mapstruct.*;
 
 /**

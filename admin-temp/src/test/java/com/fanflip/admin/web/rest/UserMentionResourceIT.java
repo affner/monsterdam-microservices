@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.UserMention;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.UserMentionRepository;
-import com.fanflip.admin.repository.search.UserMentionSearchRepository;
-import com.fanflip.admin.service.UserMentionService;
-import com.fanflip.admin.service.dto.UserMentionDTO;
-import com.fanflip.admin.service.mapper.UserMentionMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.UserMention;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.UserMentionRepository;
+import com.monsterdam.admin.repository.search.UserMentionSearchRepository;
+import com.monsterdam.admin.service.UserMentionService;
+import com.monsterdam.admin.service.dto.UserMentionDTO;
+import com.monsterdam.admin.service.mapper.UserMentionMapper;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;

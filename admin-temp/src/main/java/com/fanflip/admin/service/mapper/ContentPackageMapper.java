@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.ContentPackage;
-import com.fanflip.admin.domain.SingleAudio;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.ContentPackageDTO;
-import com.fanflip.admin.service.dto.SingleAudioDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.ContentPackage;
+import com.monsterdam.admin.domain.SingleAudio;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.ContentPackageDTO;
+import com.monsterdam.admin.service.dto.SingleAudioDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

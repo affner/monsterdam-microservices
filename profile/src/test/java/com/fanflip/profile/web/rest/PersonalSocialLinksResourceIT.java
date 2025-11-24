@@ -1,16 +1,16 @@
-package com.fanflip.profile.web.rest;
+package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.profile.IntegrationTest;
-import com.fanflip.profile.domain.PersonalSocialLinks;
-import com.fanflip.profile.domain.UserProfile;
-import com.fanflip.profile.repository.PersonalSocialLinksRepository;
-import com.fanflip.profile.service.dto.PersonalSocialLinksDTO;
-import com.fanflip.profile.service.mapper.PersonalSocialLinksMapper;
+import com.monsterdam.profile.IntegrationTest;
+import com.monsterdam.profile.domain.PersonalSocialLinks;
+import com.monsterdam.profile.domain.UserProfile;
+import com.monsterdam.profile.repository.PersonalSocialLinksRepository;
+import com.monsterdam.profile.service.dto.PersonalSocialLinksDTO;
+import com.monsterdam.profile.service.mapper.PersonalSocialLinksMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;

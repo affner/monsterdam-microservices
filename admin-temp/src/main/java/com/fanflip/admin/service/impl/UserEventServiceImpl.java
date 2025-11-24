@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.UserEventRepository;
-import com.fanflip.admin.repository.search.UserEventSearchRepository;
-import com.fanflip.admin.service.UserEventService;
-import com.fanflip.admin.service.dto.UserEventDTO;
-import com.fanflip.admin.service.mapper.UserEventMapper;
+import com.monsterdam.admin.repository.UserEventRepository;
+import com.monsterdam.admin.repository.search.UserEventSearchRepository;
+import com.monsterdam.admin.service.UserEventService;
+import com.monsterdam.admin.service.dto.UserEventDTO;
+import com.monsterdam.admin.service.mapper.UserEventMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.UserEvent}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.UserEvent}.
  */
 @Service
 @Transactional

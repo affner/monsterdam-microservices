@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.domain.enumeration;
+package com.monsterdam.catalogs.domain.enumeration;
 
 /**
  * The EmailTemplateType enumeration.

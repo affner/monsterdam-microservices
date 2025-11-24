@@ -1,12 +1,12 @@
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;
 
-import com.fanflip.catalogs.service.dto.CountryDTO;
+import com.monsterdam.catalogs.service.dto.CountryDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.catalogs.domain.Country}.
+ * Service Interface for managing {@link com.monsterdam.catalogs.domain.Country}.
  */
 public interface CountryService {
     /**

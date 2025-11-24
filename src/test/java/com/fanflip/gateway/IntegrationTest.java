@@ -1,9 +1,9 @@
-package com.fanflip.gateway;
+package com.monsterdam.gateway;
 
-import com.fanflip.gateway.config.AsyncSyncConfiguration;
-import com.fanflip.gateway.config.EmbeddedElasticsearch;
-import com.fanflip.gateway.config.EmbeddedKafka;
-import com.fanflip.gateway.config.EmbeddedSQL;
+import com.monsterdam.gateway.config.AsyncSyncConfiguration;
+import com.monsterdam.gateway.config.EmbeddedElasticsearch;
+import com.monsterdam.gateway.config.EmbeddedKafka;
+import com.monsterdam.gateway.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

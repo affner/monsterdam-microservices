@@ -1,12 +1,12 @@
-package com.fanflip.admin.domain;
+package com.monsterdam.admin.domain;
 
-import static com.fanflip.admin.domain.PostCommentTestSamples.*;
-import static com.fanflip.admin.domain.PostFeedTestSamples.*;
-import static com.fanflip.admin.domain.UserMentionTestSamples.*;
-import static com.fanflip.admin.domain.UserProfileTestSamples.*;
+import static com.monsterdam.admin.domain.PostCommentTestSamples.*;
+import static com.monsterdam.admin.domain.PostFeedTestSamples.*;
+import static com.monsterdam.admin.domain.UserMentionTestSamples.*;
+import static com.monsterdam.admin.domain.UserProfileTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.admin.web.rest.TestUtil;
+import com.monsterdam.admin.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class UserMentionTest {

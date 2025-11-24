@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.GlobalEvent;
-import com.fanflip.admin.repository.rowmapper.GlobalEventRowMapper;
+import com.monsterdam.admin.domain.GlobalEvent;
+import com.monsterdam.admin.repository.rowmapper.GlobalEventRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

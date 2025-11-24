@@ -1,10 +1,10 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.ChatRoom;
-import com.fanflip.interactions.repository.ChatRoomRepository;
-import com.fanflip.interactions.service.ChatRoomService;
-import com.fanflip.interactions.service.dto.ChatRoomDTO;
-import com.fanflip.interactions.service.mapper.ChatRoomMapper;
+import com.monsterdam.interactions.domain.ChatRoom;
+import com.monsterdam.interactions.repository.ChatRoomRepository;
+import com.monsterdam.interactions.service.ChatRoomService;
+import com.monsterdam.interactions.service.dto.ChatRoomDTO;
+import com.monsterdam.interactions.service.mapper.ChatRoomMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.ChatRoom}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.ChatRoom}.
  */
 @Service
 @Transactional

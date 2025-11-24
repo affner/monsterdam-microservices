@@ -1,6 +1,6 @@
-package com.fanflip.app.config;
+package com.monsterdam.app.config;
 
-import com.fanflip.app.web.rest.errors.ExceptionTranslator;
+import com.monsterdam.app.web.rest.errors.ExceptionTranslator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.concurrent.TimeUnit;
 import org.slf4j.Logger;

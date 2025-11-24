@@ -1,9 +1,9 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
-import com.fanflip.admin.repository.SingleDocumentRepository;
-import com.fanflip.admin.service.SingleDocumentService;
-import com.fanflip.admin.service.dto.SingleDocumentDTO;
-import com.fanflip.admin.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.admin.repository.SingleDocumentRepository;
+import com.monsterdam.admin.service.SingleDocumentService;
+import com.monsterdam.admin.service.dto.SingleDocumentDTO;
+import com.monsterdam.admin.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.admin.domain.SingleDocument}.
+ * REST controller for managing {@link com.monsterdam.admin.domain.SingleDocument}.
  */
 @RestController
 @RequestMapping("/api/single-documents")

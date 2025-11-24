@@ -1,4 +1,4 @@
-package com.fanflip.catalogs;
+package com.monsterdam.catalogs;
 
 import jakarta.annotation.Generated;
 import java.lang.annotation.ElementType;

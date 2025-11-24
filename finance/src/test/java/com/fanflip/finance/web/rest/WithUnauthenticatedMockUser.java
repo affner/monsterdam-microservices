@@ -1,4 +1,4 @@
-package com.fanflip.finance.web.rest;
+package com.monsterdam.finance.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

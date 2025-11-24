@@ -1,6 +1,6 @@
-package com.fanflip.finance.repository;
+package com.monsterdam.finance.repository;
 
-import com.fanflip.finance.domain.OfferPromotion;
+import com.monsterdam.finance.domain.OfferPromotion;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

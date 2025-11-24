@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.config;
+package com.monsterdam.catalogs.config;
 
 import java.net.URI;
 import java.util.concurrent.TimeUnit;
@@ -76,27 +76,27 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer(javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration) {
         return cm -> {
-            createCache(cm, com.fanflip.catalogs.domain.Country.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.State.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.SocialNetwork.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.EmojiType.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.PayoutMethod.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.PaymentMethod.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.PaymentProvider.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.TaxInfo.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.Currency.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.GlobalEvent.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpCategory.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpCategory.class.getName() + ".subCategories", jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpSubcategory.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpSubcategory.class.getName() + ".questions", jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpQuestion.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpQuestion.class.getName() + ".questions", jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpRelatedArticle.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.HelpRelatedArticle.class.getName() + ".relatedArticles", jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.AdminSystemConfigs.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.AdminEmailConfigs.class.getName(), jcacheConfiguration);
-            createCache(cm, com.fanflip.catalogs.domain.SpecialTitle.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.Country.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.State.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.SocialNetwork.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.EmojiType.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.PayoutMethod.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.PaymentMethod.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.PaymentProvider.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.TaxInfo.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.Currency.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.GlobalEvent.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpCategory.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpCategory.class.getName() + ".subCategories", jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpSubcategory.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpSubcategory.class.getName() + ".questions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpQuestion.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpQuestion.class.getName() + ".questions", jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpRelatedArticle.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.HelpRelatedArticle.class.getName() + ".relatedArticles", jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.AdminSystemConfigs.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.AdminEmailConfigs.class.getName(), jcacheConfiguration);
+            createCache(cm, com.monsterdam.catalogs.domain.SpecialTitle.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

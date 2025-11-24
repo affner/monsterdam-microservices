@@ -1,4 +1,4 @@
-package com.fanflip.notifications.domain;
+package com.monsterdam.notifications.domain;
 
 import java.util.Random;
 import java.util.UUID;

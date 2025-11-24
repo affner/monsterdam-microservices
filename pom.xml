@@ -4,12 +4,12 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.fanflip</groupId>
-    <artifactId>fanflip</artifactId>
+    <groupId>com.monsterdam</groupId>
+    <artifactId>monsterdam</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Fanflip</name>
-    <description>Description for Fanflip</description>
+    <name>Monsterdam</name>
+    <description>Description for Monsterdam</description>
 
     <!-- Agregar módulos (microservicios y gateway) aquí -->
     <modules>

@@ -1,13 +1,13 @@
-package com.fanflip.multimedia.service.dto;
+package com.monsterdam.multimedia.service.dto;
 
-import com.fanflip.multimedia.domain.enumeration.TagStatus;
+import com.monsterdam.multimedia.domain.enumeration.TagStatus;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.multimedia.domain.UserTagRelation} entity.
+ * A DTO for the {@link com.monsterdam.multimedia.domain.UserTagRelation} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class UserTagRelationDTO implements Serializable {

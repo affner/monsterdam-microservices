@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.TaxInfoRepository;
-import com.fanflip.admin.repository.search.TaxInfoSearchRepository;
-import com.fanflip.admin.service.TaxInfoService;
-import com.fanflip.admin.service.dto.TaxInfoDTO;
-import com.fanflip.admin.service.mapper.TaxInfoMapper;
+import com.monsterdam.admin.repository.TaxInfoRepository;
+import com.monsterdam.admin.repository.search.TaxInfoSearchRepository;
+import com.monsterdam.admin.service.TaxInfoService;
+import com.monsterdam.admin.service.dto.TaxInfoDTO;
+import com.monsterdam.admin.service.mapper.TaxInfoMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.TaxInfo}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.TaxInfo}.
  */
 @Service
 @Transactional

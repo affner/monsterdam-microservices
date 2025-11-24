@@ -1,9 +1,9 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.HelpQuestion;
-import com.fanflip.admin.domain.HelpRelatedArticle;
-import com.fanflip.admin.repository.rowmapper.HelpQuestionRowMapper;
-import com.fanflip.admin.repository.rowmapper.HelpSubcategoryRowMapper;
+import com.monsterdam.admin.domain.HelpQuestion;
+import com.monsterdam.admin.domain.HelpRelatedArticle;
+import com.monsterdam.admin.repository.rowmapper.HelpQuestionRowMapper;
+import com.monsterdam.admin.repository.rowmapper.HelpSubcategoryRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

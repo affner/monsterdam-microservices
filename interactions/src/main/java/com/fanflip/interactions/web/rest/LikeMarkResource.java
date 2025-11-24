@@ -1,9 +1,9 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
-import com.fanflip.interactions.repository.LikeMarkRepository;
-import com.fanflip.interactions.service.LikeMarkService;
-import com.fanflip.interactions.service.dto.LikeMarkDTO;
-import com.fanflip.interactions.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.interactions.repository.LikeMarkRepository;
+import com.monsterdam.interactions.service.LikeMarkService;
+import com.monsterdam.interactions.service.dto.LikeMarkDTO;
+import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -25,7 +25,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.interactions.domain.LikeMark}.
+ * REST controller for managing {@link com.monsterdam.interactions.domain.LikeMark}.
  */
 @RestController
 @RequestMapping("/api/like-marks")

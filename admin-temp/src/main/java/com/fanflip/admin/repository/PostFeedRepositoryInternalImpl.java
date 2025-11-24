@@ -1,11 +1,11 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.HashTag;
-import com.fanflip.admin.domain.PostFeed;
-import com.fanflip.admin.repository.rowmapper.ContentPackageRowMapper;
-import com.fanflip.admin.repository.rowmapper.PostFeedRowMapper;
-import com.fanflip.admin.repository.rowmapper.PostPollRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.domain.HashTag;
+import com.monsterdam.admin.domain.PostFeed;
+import com.monsterdam.admin.repository.rowmapper.ContentPackageRowMapper;
+import com.monsterdam.admin.repository.rowmapper.PostFeedRowMapper;
+import com.monsterdam.admin.repository.rowmapper.PostPollRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

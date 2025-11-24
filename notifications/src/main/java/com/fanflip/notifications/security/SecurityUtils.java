@@ -1,4 +1,4 @@
-package com.fanflip.notifications.security;
+package com.monsterdam.notifications.security;
 
 import java.util.Arrays;
 import java.util.Optional;

@@ -1,10 +1,10 @@
-package com.fanflip.finance.service.impl;
+package com.monsterdam.finance.service.impl;
 
-import com.fanflip.finance.domain.PurchasedTip;
-import com.fanflip.finance.repository.PurchasedTipRepository;
-import com.fanflip.finance.service.PurchasedTipService;
-import com.fanflip.finance.service.dto.PurchasedTipDTO;
-import com.fanflip.finance.service.mapper.PurchasedTipMapper;
+import com.monsterdam.finance.domain.PurchasedTip;
+import com.monsterdam.finance.repository.PurchasedTipRepository;
+import com.monsterdam.finance.service.PurchasedTipService;
+import com.monsterdam.finance.service.dto.PurchasedTipDTO;
+import com.monsterdam.finance.service.mapper.PurchasedTipMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.finance.domain.PurchasedTip}.
+ * Service Implementation for managing {@link com.monsterdam.finance.domain.PurchasedTip}.
  */
 @Service
 @Transactional

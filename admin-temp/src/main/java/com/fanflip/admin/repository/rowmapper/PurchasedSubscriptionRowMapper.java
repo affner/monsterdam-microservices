@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.rowmapper;
+package com.monsterdam.admin.repository.rowmapper;
 
-import com.fanflip.admin.domain.PurchasedSubscription;
-import com.fanflip.admin.domain.enumeration.PurchasedSubscriptionStatus;
+import com.monsterdam.admin.domain.PurchasedSubscription;
+import com.monsterdam.admin.domain.enumeration.PurchasedSubscriptionStatus;
 import io.r2dbc.spi.Row;
 import java.time.Instant;
 import java.time.LocalDate;

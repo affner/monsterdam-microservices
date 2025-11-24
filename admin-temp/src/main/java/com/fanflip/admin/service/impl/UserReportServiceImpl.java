@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.UserReportRepository;
-import com.fanflip.admin.repository.search.UserReportSearchRepository;
-import com.fanflip.admin.service.UserReportService;
-import com.fanflip.admin.service.dto.UserReportDTO;
-import com.fanflip.admin.service.mapper.UserReportMapper;
+import com.monsterdam.admin.repository.UserReportRepository;
+import com.monsterdam.admin.repository.search.UserReportSearchRepository;
+import com.monsterdam.admin.service.UserReportService;
+import com.monsterdam.admin.service.dto.UserReportDTO;
+import com.monsterdam.admin.service.mapper.UserReportMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.UserReport}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.UserReport}.
  */
 @Service
 @Transactional

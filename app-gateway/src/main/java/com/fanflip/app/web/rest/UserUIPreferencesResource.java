@@ -1,9 +1,9 @@
-package com.fanflip.app.web.rest;
+package com.monsterdam.app.web.rest;
 
-import com.fanflip.app.repository.UserUIPreferencesRepository;
-import com.fanflip.app.service.UserUIPreferencesService;
-import com.fanflip.app.service.dto.UserUIPreferencesDTO;
-import com.fanflip.app.web.rest.errors.BadRequestAlertException;
+import com.monsterdam.app.repository.UserUIPreferencesRepository;
+import com.monsterdam.app.service.UserUIPreferencesService;
+import com.monsterdam.app.service.dto.UserUIPreferencesDTO;
+import com.monsterdam.app.web.rest.errors.BadRequestAlertException;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -30,7 +30,7 @@ import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.reactive.ResponseUtil;
 
 /**
- * REST controller for managing {@link com.fanflip.app.domain.UserUIPreferences}.
+ * REST controller for managing {@link com.monsterdam.app.domain.UserUIPreferences}.
  */
 @RestController
 @RequestMapping("/api/user-ui-preferences")

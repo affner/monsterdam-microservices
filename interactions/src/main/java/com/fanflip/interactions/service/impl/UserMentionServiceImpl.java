@@ -1,10 +1,10 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.UserMention;
-import com.fanflip.interactions.repository.UserMentionRepository;
-import com.fanflip.interactions.service.UserMentionService;
-import com.fanflip.interactions.service.dto.UserMentionDTO;
-import com.fanflip.interactions.service.mapper.UserMentionMapper;
+import com.monsterdam.interactions.domain.UserMention;
+import com.monsterdam.interactions.repository.UserMentionRepository;
+import com.monsterdam.interactions.service.UserMentionService;
+import com.monsterdam.interactions.service.dto.UserMentionDTO;
+import com.monsterdam.interactions.service.mapper.UserMentionMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.UserMention}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.UserMention}.
  */
 @Service
 @Transactional

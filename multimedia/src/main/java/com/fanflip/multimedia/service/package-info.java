@@ -1,4 +1,4 @@
 /**
  * Service layer.
  */
-package com.fanflip.multimedia.service;
+package com.monsterdam.multimedia.service;

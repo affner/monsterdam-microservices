@@ -1,10 +1,10 @@
-package com.fanflip.catalogs.service.impl;
+package com.monsterdam.catalogs.service.impl;
 
-import com.fanflip.catalogs.domain.GlobalEvent;
-import com.fanflip.catalogs.repository.GlobalEventRepository;
-import com.fanflip.catalogs.service.GlobalEventService;
-import com.fanflip.catalogs.service.dto.GlobalEventDTO;
-import com.fanflip.catalogs.service.mapper.GlobalEventMapper;
+import com.monsterdam.catalogs.domain.GlobalEvent;
+import com.monsterdam.catalogs.repository.GlobalEventRepository;
+import com.monsterdam.catalogs.service.GlobalEventService;
+import com.monsterdam.catalogs.service.dto.GlobalEventDTO;
+import com.monsterdam.catalogs.service.mapper.GlobalEventMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.catalogs.domain.GlobalEvent}.
+ * Service Implementation for managing {@link com.monsterdam.catalogs.domain.GlobalEvent}.
  */
 @Service
 @Transactional

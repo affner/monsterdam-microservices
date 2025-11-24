@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,18 +6,18 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.CreatorEarning;
-import com.fanflip.admin.domain.PurchasedSubscription;
-import com.fanflip.admin.domain.SubscriptionBundle;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.enumeration.PurchasedSubscriptionStatus;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.PurchasedSubscriptionRepository;
-import com.fanflip.admin.repository.search.PurchasedSubscriptionSearchRepository;
-import com.fanflip.admin.service.PurchasedSubscriptionService;
-import com.fanflip.admin.service.dto.PurchasedSubscriptionDTO;
-import com.fanflip.admin.service.mapper.PurchasedSubscriptionMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.CreatorEarning;
+import com.monsterdam.admin.domain.PurchasedSubscription;
+import com.monsterdam.admin.domain.SubscriptionBundle;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.enumeration.PurchasedSubscriptionStatus;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.PurchasedSubscriptionRepository;
+import com.monsterdam.admin.repository.search.PurchasedSubscriptionSearchRepository;
+import com.monsterdam.admin.service.PurchasedSubscriptionService;
+import com.monsterdam.admin.service.dto.PurchasedSubscriptionDTO;
+import com.monsterdam.admin.service.mapper.PurchasedSubscriptionMapper;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;

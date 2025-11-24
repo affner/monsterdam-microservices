@@ -15,7 +15,7 @@
 
 spring:
   application:
-    name: fanflip
+    name: monsterdam
   autoconfigure:
     exclude:
       - org.springframework.cloud.gateway.config.GatewayMetricsAutoConfiguration
@@ -37,14 +37,14 @@ spring:
       bindings:
         binding-out-0:
           content-type: text/plain
-          group: fanflip
+          group: monsterdam
         kafkaConsumer-in-0:
           destination: sse-topic
           content-type: text/plain
-          group: fanflip
+          group: monsterdam
         kafkaProducer-out-0:
           content-type: text/plain
-          group: fanflip
+          group: monsterdam
   # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
   liquibase:
     contexts: test
@@ -59,13 +59,13 @@ spring:
     basename: i18n/messages
   task:
     execution:
-      thread-name-prefix: fanflip-task-
+      thread-name-prefix: monsterdam-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: fanflip-scheduling-
+      thread-name-prefix: monsterdam-scheduling-
       pool:
         size: 20
   thymeleaf:
@@ -82,9 +82,9 @@ server:
 # ===================================================================
 jhipster:
   clientApp:
-    name: 'fanflipApp'
+    name: 'monsterdamApp'
   mail:
-    from: fanflip@localhost.com
+    from: monsterdam@localhost.com
     base-url: http://127.0.0.1:8080
   logging:
     # To test json console appender

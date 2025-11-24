@@ -1,4 +1,4 @@
 /**
  * Repository layer.
  */
-package com.fanflip.notifications.repository;
+package com.monsterdam.notifications.repository;

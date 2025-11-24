@@ -1,4 +1,4 @@
 /**
  * Rest layer.
  */
-package com.fanflip.multimedia.web.rest;
+package com.monsterdam.multimedia.web.rest;

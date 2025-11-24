@@ -1,10 +1,10 @@
-package com.fanflip.profile.domain;
+package com.monsterdam.profile.domain;
 
-import static com.fanflip.profile.domain.HashTagTestSamples.*;
-import static com.fanflip.profile.domain.PostFeedHashTagRelationTestSamples.*;
+import static com.monsterdam.profile.domain.HashTagTestSamples.*;
+import static com.monsterdam.profile.domain.PostFeedHashTagRelationTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.profile.web.rest.TestUtil;
+import com.monsterdam.profile.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class PostFeedHashTagRelationTest {

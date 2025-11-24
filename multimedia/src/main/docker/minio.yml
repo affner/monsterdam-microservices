@@ -1,5 +1,5 @@
 # This configuration is intended for development purpose, it's **your** responsibility to harden it for production
-name: fanflip
+name: monsterdam
 services:
   minio:
     image: quay.io/minio/minio:RELEASE.2023-01-25T00-19-54Z
@@ -16,7 +16,7 @@ services:
     command: server --console-address ":9001" /data
     restart: 'no'
     networks:
-      - fanflip-net
+      - monsterdam-net
 
 volumes:
   tmp:
@@ -28,5 +28,5 @@ volumes:
     driver: local
 
 networks:
-  fanflip-net:
+  monsterdam-net:
     driver: bridge

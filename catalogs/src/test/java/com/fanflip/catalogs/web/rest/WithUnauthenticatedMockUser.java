@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.web.rest;
+package com.monsterdam.catalogs.web.rest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

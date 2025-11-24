@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.AdminUserProfile;
-import com.fanflip.admin.domain.AssistanceTicket;
-import com.fanflip.admin.domain.ModerationAction;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.AdminUserProfileDTO;
-import com.fanflip.admin.service.dto.AssistanceTicketDTO;
-import com.fanflip.admin.service.dto.ModerationActionDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.AdminUserProfile;
+import com.monsterdam.admin.domain.AssistanceTicket;
+import com.monsterdam.admin.domain.ModerationAction;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.AdminUserProfileDTO;
+import com.monsterdam.admin.service.dto.AssistanceTicketDTO;
+import com.monsterdam.admin.service.dto.ModerationActionDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

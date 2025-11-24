@@ -1,4 +1,4 @@
-package com.fanflip.finance.domain.enumeration;
+package com.monsterdam.finance.domain.enumeration;
 
 /**
  * The PurchasedSubscriptionStatus enumeration.

@@ -1,4 +1,4 @@
-package com.fanflip.interactions.service.mapper;
+package com.monsterdam.interactions.service.mapper;
 
 import org.junit.jupiter.api.BeforeEach;
 

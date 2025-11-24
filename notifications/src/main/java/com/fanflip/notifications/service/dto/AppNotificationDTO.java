@@ -1,4 +1,4 @@
-package com.fanflip.notifications.service.dto;
+package com.monsterdam.notifications.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.notifications.domain.AppNotification} entity.
+ * A DTO for the {@link com.monsterdam.notifications.domain.AppNotification} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class AppNotificationDTO implements Serializable {

@@ -1,4 +1,4 @@
 /**
  * Application root.
  */
-package com.fanflip.finance;
+package com.monsterdam.finance;

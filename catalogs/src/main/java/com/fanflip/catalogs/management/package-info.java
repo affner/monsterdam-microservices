@@ -1,4 +1,4 @@
 /**
  * Application management.
  */
-package com.fanflip.catalogs.management;
+package com.monsterdam.catalogs.management;

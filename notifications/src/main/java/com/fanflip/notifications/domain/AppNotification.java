@@ -1,4 +1,4 @@
-package com.fanflip.notifications.domain;
+package com.monsterdam.notifications.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;

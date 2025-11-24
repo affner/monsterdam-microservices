@@ -1,16 +1,16 @@
-package com.fanflip.interactions.web.rest;
+package com.monsterdam.interactions.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.fanflip.interactions.IntegrationTest;
-import com.fanflip.interactions.domain.PostFeed;
-import com.fanflip.interactions.domain.PostPoll;
-import com.fanflip.interactions.repository.PostPollRepository;
-import com.fanflip.interactions.service.dto.PostPollDTO;
-import com.fanflip.interactions.service.mapper.PostPollMapper;
+import com.monsterdam.interactions.IntegrationTest;
+import com.monsterdam.interactions.domain.PostFeed;
+import com.monsterdam.interactions.domain.PostPoll;
+import com.monsterdam.interactions.repository.PostPollRepository;
+import com.monsterdam.interactions.service.dto.PostPollDTO;
+import com.monsterdam.interactions.service.mapper.PostPollMapper;
 import jakarta.persistence.EntityManager;
 import java.time.Duration;
 import java.time.Instant;

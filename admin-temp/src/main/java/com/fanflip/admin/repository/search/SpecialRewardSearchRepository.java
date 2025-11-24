@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository.search;
+package com.monsterdam.admin.repository.search;
 
 import co.elastic.clients.elasticsearch._types.query_dsl.QueryStringQuery;
-import com.fanflip.admin.domain.SpecialReward;
+import com.monsterdam.admin.domain.SpecialReward;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.client.elc.NativeQuery;
 import org.springframework.data.elasticsearch.client.elc.ReactiveElasticsearchTemplate;

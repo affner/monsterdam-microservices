@@ -1,6 +1,6 @@
-package com.fanflip.finance.security.jwt;
+package com.monsterdam.finance.security.jwt;
 
-import static com.fanflip.finance.security.jwt.JwtAuthenticationTestUtils.*;
+import static com.monsterdam.finance.security.jwt.JwtAuthenticationTestUtils.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 

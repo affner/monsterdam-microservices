@@ -1,12 +1,12 @@
-package com.fanflip.interactions.service;
+package com.monsterdam.interactions.service;
 
-import com.fanflip.interactions.service.dto.LikeMarkDTO;
+import com.monsterdam.interactions.service.dto.LikeMarkDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.interactions.domain.LikeMark}.
+ * Service Interface for managing {@link com.monsterdam.interactions.domain.LikeMark}.
  */
 public interface LikeMarkService {
     /**

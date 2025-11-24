@@ -1,9 +1,9 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.ChatRoom;
-import com.fanflip.admin.domain.DirectMessage;
-import com.fanflip.admin.repository.rowmapper.ChatRoomRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.domain.ChatRoom;
+import com.monsterdam.admin.domain.DirectMessage;
+import com.monsterdam.admin.repository.rowmapper.ChatRoomRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

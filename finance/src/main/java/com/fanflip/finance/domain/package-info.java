@@ -1,4 +1,4 @@
 /**
  * Domain objects.
  */
-package com.fanflip.finance.domain;
+package com.monsterdam.finance.domain;

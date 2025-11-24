@@ -1,4 +1,4 @@
 /**
  * Domain objects.
  */
-package com.fanflip.notifications.domain;
+package com.monsterdam.notifications.domain;

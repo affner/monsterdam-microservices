@@ -1,4 +1,4 @@
-package com.fanflip.profile.config;
+package com.monsterdam.profile.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

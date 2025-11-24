@@ -14,7 +14,7 @@ import UserUIPreferences from './user-ui-preferences';
 
 export default () => {
   const store = getStore();
-  store.injectReducer('fanflip', combineReducers(entitiesReducers as ReducersMapObject));
+  store.injectReducer('monsterdam', combineReducers(entitiesReducers as ReducersMapObject));
   return (
     <div>
       <ErrorBoundaryRoutes>

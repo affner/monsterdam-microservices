@@ -1,15 +1,15 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.AccountingRecord;
-import com.fanflip.admin.domain.Asset;
-import com.fanflip.admin.domain.Budget;
-import com.fanflip.admin.domain.Liability;
-import com.fanflip.admin.domain.PaymentTransaction;
-import com.fanflip.admin.service.dto.AccountingRecordDTO;
-import com.fanflip.admin.service.dto.AssetDTO;
-import com.fanflip.admin.service.dto.BudgetDTO;
-import com.fanflip.admin.service.dto.LiabilityDTO;
-import com.fanflip.admin.service.dto.PaymentTransactionDTO;
+import com.monsterdam.admin.domain.AccountingRecord;
+import com.monsterdam.admin.domain.Asset;
+import com.monsterdam.admin.domain.Budget;
+import com.monsterdam.admin.domain.Liability;
+import com.monsterdam.admin.domain.PaymentTransaction;
+import com.monsterdam.admin.service.dto.AccountingRecordDTO;
+import com.monsterdam.admin.service.dto.AssetDTO;
+import com.monsterdam.admin.service.dto.BudgetDTO;
+import com.monsterdam.admin.service.dto.LiabilityDTO;
+import com.monsterdam.admin.service.dto.PaymentTransactionDTO;
 import org.mapstruct.*;
 
 /**

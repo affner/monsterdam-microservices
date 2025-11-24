@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.ChatRoomRepository;
-import com.fanflip.admin.repository.search.ChatRoomSearchRepository;
-import com.fanflip.admin.service.ChatRoomService;
-import com.fanflip.admin.service.dto.ChatRoomDTO;
-import com.fanflip.admin.service.mapper.ChatRoomMapper;
+import com.monsterdam.admin.repository.ChatRoomRepository;
+import com.monsterdam.admin.repository.search.ChatRoomSearchRepository;
+import com.monsterdam.admin.service.ChatRoomService;
+import com.monsterdam.admin.service.dto.ChatRoomDTO;
+import com.monsterdam.admin.service.mapper.ChatRoomMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.ChatRoom}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.ChatRoom}.
  */
 @Service
 @Transactional

@@ -1,4 +1,4 @@
 /**
  * Application management.
  */
-package com.fanflip.notifications.management;
+package com.monsterdam.notifications.management;

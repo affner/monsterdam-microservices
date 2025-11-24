@@ -1,15 +1,15 @@
-package com.fanflip.app.service;
+package com.monsterdam.app.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import com.fanflip.app.IntegrationTest;
-import com.fanflip.app.config.Constants;
-import com.fanflip.app.domain.User;
-import com.fanflip.app.repository.UserRepository;
-import com.fanflip.app.repository.search.UserSearchRepository;
+import com.monsterdam.app.IntegrationTest;
+import com.monsterdam.app.config.Constants;
+import com.monsterdam.app.domain.User;
+import com.monsterdam.app.repository.UserRepository;
+import com.monsterdam.app.repository.search.UserSearchRepository;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -48,9 +48,9 @@ class UserServiceIT {
     private UserService userService;
 
     /**
-     * This repository is mocked in the com.fanflip.app.repository.search test package.
+     * This repository is mocked in the com.monsterdam.app.repository.search test package.
      *
-     * @see com.fanflip.app.repository.search.UserSearchRepositoryMockConfiguration
+     * @see com.monsterdam.app.repository.search.UserSearchRepositoryMockConfiguration
      */
     @SpyBean
     private UserSearchRepository spiedUserSearchRepository;

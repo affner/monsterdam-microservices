@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: interactions-app
-          image: fanflip/interactions
+          image: monsterdam/interactions
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod

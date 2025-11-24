@@ -1,7 +1,7 @@
-package com.fanflip.profile.service.mapper;
+package com.monsterdam.profile.service.mapper;
 
-import com.fanflip.profile.domain.Feedback;
-import com.fanflip.profile.service.dto.FeedbackDTO;
+import com.monsterdam.profile.domain.Feedback;
+import com.monsterdam.profile.service.dto.FeedbackDTO;
 import org.mapstruct.*;
 
 /**

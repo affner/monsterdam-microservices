@@ -1,7 +1,7 @@
-package com.fanflip.profile;
+package com.monsterdam.profile;
 
-import com.fanflip.profile.config.ApplicationProperties;
-import com.fanflip.profile.config.CRLFLogConverter;
+import com.monsterdam.profile.config.ApplicationProperties;
+import com.monsterdam.profile.config.CRLFLogConverter;
 import jakarta.annotation.PostConstruct;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

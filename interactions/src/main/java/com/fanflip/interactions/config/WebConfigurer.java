@@ -1,4 +1,4 @@
-package com.fanflip.interactions.config;
+package com.monsterdam.interactions.config;
 
 import jakarta.servlet.*;
 import org.slf4j.Logger;

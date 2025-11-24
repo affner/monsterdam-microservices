@@ -1,4 +1,4 @@
-package com.fanflip.catalogs.web.rest.errors;
+package com.monsterdam.catalogs.web.rest.errors;
 
 import java.net.URI;
 import org.springframework.http.HttpStatus;

@@ -1,6 +1,6 @@
-package com.fanflip.profile.repository;
+package com.monsterdam.profile.repository;
 
-import com.fanflip.profile.domain.SpecialAward;
+import com.monsterdam.profile.domain.SpecialAward;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

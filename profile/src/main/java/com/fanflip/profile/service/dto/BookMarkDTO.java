@@ -1,4 +1,4 @@
-package com.fanflip.profile.service.dto;
+package com.monsterdam.profile.service.dto;
 
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -6,7 +6,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.profile.domain.BookMark} entity.
+ * A DTO for the {@link com.monsterdam.profile.domain.BookMark} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class BookMarkDTO implements Serializable {

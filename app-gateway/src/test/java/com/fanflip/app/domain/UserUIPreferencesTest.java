@@ -1,9 +1,9 @@
-package com.fanflip.app.domain;
+package com.monsterdam.app.domain;
 
-import static com.fanflip.app.domain.UserUIPreferencesTestSamples.*;
+import static com.monsterdam.app.domain.UserUIPreferencesTestSamples.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.fanflip.app.web.rest.TestUtil;
+import com.monsterdam.app.web.rest.TestUtil;
 import org.junit.jupiter.api.Test;
 
 class UserUIPreferencesTest {

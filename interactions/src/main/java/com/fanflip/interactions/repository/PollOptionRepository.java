@@ -1,6 +1,6 @@
-package com.fanflip.interactions.repository;
+package com.monsterdam.interactions.repository;
 
-import com.fanflip.interactions.domain.PollOption;
+import com.monsterdam.interactions.domain.PollOption;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;

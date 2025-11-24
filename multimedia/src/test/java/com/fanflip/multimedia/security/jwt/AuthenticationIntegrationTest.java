@@ -1,9 +1,9 @@
-package com.fanflip.multimedia.security.jwt;
+package com.monsterdam.multimedia.security.jwt;
 
-import com.fanflip.multimedia.config.SecurityConfiguration;
-import com.fanflip.multimedia.config.SecurityJwtConfiguration;
-import com.fanflip.multimedia.config.WebConfigurer;
-import com.fanflip.multimedia.management.SecurityMetersService;
+import com.monsterdam.multimedia.config.SecurityConfiguration;
+import com.monsterdam.multimedia.config.SecurityJwtConfiguration;
+import com.monsterdam.multimedia.config.WebConfigurer;
+import com.monsterdam.multimedia.management.SecurityMetersService;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

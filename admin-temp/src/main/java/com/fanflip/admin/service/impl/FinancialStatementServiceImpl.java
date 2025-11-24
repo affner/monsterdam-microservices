@@ -1,10 +1,10 @@
-package com.fanflip.admin.service.impl;
+package com.monsterdam.admin.service.impl;
 
-import com.fanflip.admin.repository.FinancialStatementRepository;
-import com.fanflip.admin.repository.search.FinancialStatementSearchRepository;
-import com.fanflip.admin.service.FinancialStatementService;
-import com.fanflip.admin.service.dto.FinancialStatementDTO;
-import com.fanflip.admin.service.mapper.FinancialStatementMapper;
+import com.monsterdam.admin.repository.FinancialStatementRepository;
+import com.monsterdam.admin.repository.search.FinancialStatementSearchRepository;
+import com.monsterdam.admin.service.FinancialStatementService;
+import com.monsterdam.admin.service.dto.FinancialStatementDTO;
+import com.monsterdam.admin.service.mapper.FinancialStatementMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +14,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
- * Service Implementation for managing {@link com.fanflip.admin.domain.FinancialStatement}.
+ * Service Implementation for managing {@link com.monsterdam.admin.domain.FinancialStatement}.
  */
 @Service
 @Transactional

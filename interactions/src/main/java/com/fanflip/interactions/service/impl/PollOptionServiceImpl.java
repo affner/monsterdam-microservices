@@ -1,10 +1,10 @@
-package com.fanflip.interactions.service.impl;
+package com.monsterdam.interactions.service.impl;
 
-import com.fanflip.interactions.domain.PollOption;
-import com.fanflip.interactions.repository.PollOptionRepository;
-import com.fanflip.interactions.service.PollOptionService;
-import com.fanflip.interactions.service.dto.PollOptionDTO;
-import com.fanflip.interactions.service.mapper.PollOptionMapper;
+import com.monsterdam.interactions.domain.PollOption;
+import com.monsterdam.interactions.repository.PollOptionRepository;
+import com.monsterdam.interactions.service.PollOptionService;
+import com.monsterdam.interactions.service.dto.PollOptionDTO;
+import com.monsterdam.interactions.service.mapper.PollOptionMapper;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Service Implementation for managing {@link com.fanflip.interactions.domain.PollOption}.
+ * Service Implementation for managing {@link com.monsterdam.interactions.domain.PollOption}.
  */
 @Service
 @Transactional

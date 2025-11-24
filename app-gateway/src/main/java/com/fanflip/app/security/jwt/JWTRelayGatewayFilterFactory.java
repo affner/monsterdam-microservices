@@ -1,4 +1,4 @@
-package com.fanflip.app.security.jwt;
+package com.monsterdam.app.security.jwt;
 
 import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 

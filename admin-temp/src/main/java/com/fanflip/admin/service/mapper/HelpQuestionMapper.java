@@ -1,11 +1,11 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.HelpQuestion;
-import com.fanflip.admin.domain.HelpRelatedArticle;
-import com.fanflip.admin.domain.HelpSubcategory;
-import com.fanflip.admin.service.dto.HelpQuestionDTO;
-import com.fanflip.admin.service.dto.HelpRelatedArticleDTO;
-import com.fanflip.admin.service.dto.HelpSubcategoryDTO;
+import com.monsterdam.admin.domain.HelpQuestion;
+import com.monsterdam.admin.domain.HelpRelatedArticle;
+import com.monsterdam.admin.domain.HelpSubcategory;
+import com.monsterdam.admin.service.dto.HelpQuestionDTO;
+import com.monsterdam.admin.service.dto.HelpRelatedArticleDTO;
+import com.monsterdam.admin.service.dto.HelpSubcategoryDTO;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.mapstruct.*;

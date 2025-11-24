@@ -1,4 +1,4 @@
-package com.fanflip.profile;
+package com.monsterdam.profile;
 
 import static com.tngtech.archunit.base.DescribedPredicate.alwaysTrue;
 import static com.tngtech.archunit.core.domain.JavaClass.Predicates.belongToAnyOf;
@@ -32,7 +32,7 @@ class TechnicalStructureTest {
 
         .ignoreDependency(belongToAnyOf(ProfileApp.class), alwaysTrue())
         .ignoreDependency(alwaysTrue(), belongToAnyOf(
-            com.fanflip.profile.config.Constants.class,
-            com.fanflip.profile.config.ApplicationProperties.class
+            com.monsterdam.profile.config.Constants.class,
+            com.monsterdam.profile.config.ApplicationProperties.class
         ));
 }

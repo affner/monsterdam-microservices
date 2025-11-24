@@ -1,12 +1,12 @@
-package com.fanflip.catalogs.service;
+package com.monsterdam.catalogs.service;
 
-import com.fanflip.catalogs.service.dto.SpecialTitleDTO;
+import com.monsterdam.catalogs.service.dto.SpecialTitleDTO;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 /**
- * Service Interface for managing {@link com.fanflip.catalogs.domain.SpecialTitle}.
+ * Service Interface for managing {@link com.monsterdam.catalogs.domain.SpecialTitle}.
  */
 public interface SpecialTitleService {
     /**

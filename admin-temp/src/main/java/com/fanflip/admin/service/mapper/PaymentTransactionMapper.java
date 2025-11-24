@@ -1,13 +1,13 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.PaymentMethod;
-import com.fanflip.admin.domain.PaymentProvider;
-import com.fanflip.admin.domain.PaymentTransaction;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.PaymentMethodDTO;
-import com.fanflip.admin.service.dto.PaymentProviderDTO;
-import com.fanflip.admin.service.dto.PaymentTransactionDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.PaymentMethod;
+import com.monsterdam.admin.domain.PaymentProvider;
+import com.monsterdam.admin.domain.PaymentTransaction;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.PaymentMethodDTO;
+import com.monsterdam.admin.service.dto.PaymentProviderDTO;
+import com.monsterdam.admin.service.dto.PaymentTransactionDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

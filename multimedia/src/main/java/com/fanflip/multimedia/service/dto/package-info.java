@@ -1,4 +1,4 @@
 /**
  * Data transfer objects for rest mapping.
  */
-package com.fanflip.multimedia.service.dto;
+package com.monsterdam.multimedia.service.dto;

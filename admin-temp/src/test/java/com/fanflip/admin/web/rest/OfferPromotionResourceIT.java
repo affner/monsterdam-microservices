@@ -1,4 +1,4 @@
-package com.fanflip.admin.web.rest;
+package com.monsterdam.admin.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.awaitility.Awaitility.await;
@@ -6,15 +6,15 @@ import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.Mockito.*;
 
-import com.fanflip.admin.IntegrationTest;
-import com.fanflip.admin.domain.OfferPromotion;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.domain.enumeration.OfferPromotionType;
-import com.fanflip.admin.repository.EntityManager;
-import com.fanflip.admin.repository.OfferPromotionRepository;
-import com.fanflip.admin.repository.search.OfferPromotionSearchRepository;
-import com.fanflip.admin.service.dto.OfferPromotionDTO;
-import com.fanflip.admin.service.mapper.OfferPromotionMapper;
+import com.monsterdam.admin.IntegrationTest;
+import com.monsterdam.admin.domain.OfferPromotion;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.domain.enumeration.OfferPromotionType;
+import com.monsterdam.admin.repository.EntityManager;
+import com.monsterdam.admin.repository.OfferPromotionRepository;
+import com.monsterdam.admin.repository.search.OfferPromotionSearchRepository;
+import com.monsterdam.admin.service.dto.OfferPromotionDTO;
+import com.monsterdam.admin.service.mapper.OfferPromotionMapper;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;

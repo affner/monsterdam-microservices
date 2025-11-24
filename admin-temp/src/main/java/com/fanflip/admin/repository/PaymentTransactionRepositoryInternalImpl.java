@@ -1,10 +1,10 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.PaymentTransaction;
-import com.fanflip.admin.repository.rowmapper.PaymentMethodRowMapper;
-import com.fanflip.admin.repository.rowmapper.PaymentProviderRowMapper;
-import com.fanflip.admin.repository.rowmapper.PaymentTransactionRowMapper;
-import com.fanflip.admin.repository.rowmapper.UserProfileRowMapper;
+import com.monsterdam.admin.domain.PaymentTransaction;
+import com.monsterdam.admin.repository.rowmapper.PaymentMethodRowMapper;
+import com.monsterdam.admin.repository.rowmapper.PaymentProviderRowMapper;
+import com.monsterdam.admin.repository.rowmapper.PaymentTransactionRowMapper;
+import com.monsterdam.admin.repository.rowmapper.UserProfileRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

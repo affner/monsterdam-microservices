@@ -1,9 +1,9 @@
-package com.fanflip.admin.service.mapper;
+package com.monsterdam.admin.service.mapper;
 
-import com.fanflip.admin.domain.SubscriptionBundle;
-import com.fanflip.admin.domain.UserProfile;
-import com.fanflip.admin.service.dto.SubscriptionBundleDTO;
-import com.fanflip.admin.service.dto.UserProfileDTO;
+import com.monsterdam.admin.domain.SubscriptionBundle;
+import com.monsterdam.admin.domain.UserProfile;
+import com.monsterdam.admin.service.dto.SubscriptionBundleDTO;
+import com.monsterdam.admin.service.dto.UserProfileDTO;
 import org.mapstruct.*;
 
 /**

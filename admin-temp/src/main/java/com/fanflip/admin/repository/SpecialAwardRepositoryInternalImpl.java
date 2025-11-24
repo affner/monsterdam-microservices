@@ -1,7 +1,7 @@
-package com.fanflip.admin.repository;
+package com.monsterdam.admin.repository;
 
-import com.fanflip.admin.domain.SpecialAward;
-import com.fanflip.admin.repository.rowmapper.SpecialAwardRowMapper;
+import com.monsterdam.admin.domain.SpecialAward;
+import com.monsterdam.admin.repository.rowmapper.SpecialAwardRowMapper;
 import io.r2dbc.spi.Row;
 import io.r2dbc.spi.RowMetadata;
 import java.util.List;

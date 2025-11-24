@@ -258,7 +258,7 @@ cloud:
       path-style:
         enabled: true
       bucket:
-        name: fanflip-multimedia
+        name: monsterdam-multimedia
       anonymous-files:
         enabled: false
     credentials:

@@ -1,6 +1,6 @@
-package com.fanflip.catalogs.repository;
+package com.monsterdam.catalogs.repository;
 
-import com.fanflip.catalogs.domain.SocialNetwork;
+import com.monsterdam.catalogs.domain.SocialNetwork;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 

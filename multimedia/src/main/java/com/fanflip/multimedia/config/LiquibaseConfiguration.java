@@ -1,4 +1,4 @@
-package com.fanflip.multimedia.config;
+package com.monsterdam.multimedia.config;
 
 import java.util.concurrent.Executor;
 import javax.sql.DataSource;

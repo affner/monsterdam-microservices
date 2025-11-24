@@ -1,7 +1,7 @@
-package com.fanflip.catalogs.service.dto;
+package com.monsterdam.catalogs.service.dto;
 
-import com.fanflip.catalogs.domain.enumeration.ConfigurationCategory;
-import com.fanflip.catalogs.domain.enumeration.ConfigurationValueType;
+import com.monsterdam.catalogs.domain.enumeration.ConfigurationCategory;
+import com.monsterdam.catalogs.domain.enumeration.ConfigurationValueType;
 import jakarta.persistence.Lob;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
@@ -9,7 +9,7 @@ import java.time.Instant;
 import java.util.Objects;
 
 /**
- * A DTO for the {@link com.fanflip.catalogs.domain.AdminSystemConfigs} entity.
+ * A DTO for the {@link com.monsterdam.catalogs.domain.AdminSystemConfigs} entity.
  */
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class AdminSystemConfigsDTO implements Serializable {

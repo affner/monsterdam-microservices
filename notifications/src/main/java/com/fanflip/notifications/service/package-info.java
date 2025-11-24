@@ -1,4 +1,4 @@
 /**
  * Service layer.
  */
-package com.fanflip.notifications.service;
+package com.monsterdam.notifications.service;
