@@ -4,12 +4,14 @@ import com.monsterdam.finance.broker.KafkaConsumer;
 import java.security.Principal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
 @RestController
 @RequestMapping("/api/finance-kafka")
+@ConditionalOnProperty(prefix = "app.features", name = "kafka-enabled", havingValue = "true")
 public class FinanceKafkaResource {
 
     private static final String PRODUCER_BINDING_NAME = "binding-out-0";
