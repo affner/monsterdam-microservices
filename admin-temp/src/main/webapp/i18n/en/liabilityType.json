@@ -1,9 +1,0 @@
-{
-  "adminApp": {
-    "LiabilityType": {
-      "null": "",
-      "CURRENT": "CURRENT",
-      "LONG_TERM": "LONG_TERM"
-    }
-  }
-}

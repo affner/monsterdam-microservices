@@ -1,9 +1,0 @@
-export enum WalletTransactionType {
-  TOP_UP = 'viewer.wallet.transaction.type.deposit',
-
-  PURCHASE = 'viewer.wallet.transaction.type.purchase',
-
-  REFUND = 'viewer.wallet.transaction.type.refund',
-
-  WITHDRAWAL = 'viewer.wallet.transaction.type.withdrawal',
-}

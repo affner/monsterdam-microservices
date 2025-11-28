@@ -1,9 +1,0 @@
-export enum AdminGender {
-  MALE = 'user.gender.male',
-
-  FEMALE = 'user.gender.female',
-
-  TRANS_FEMALE = 'user.gender.trans-female',
-
-  TRANS_MALE = 'user.gender.trans-male',
-}

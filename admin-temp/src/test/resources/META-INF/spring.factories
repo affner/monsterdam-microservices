@@ -1,4 +1,0 @@
-org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.admin.\
-    config.TestContainersSpringContextCustomizerFactory,com.monsterdam.admin.\
-    config.SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.admin.\
-    config.KafkaTestContainersSpringContextCustomizerFactory
