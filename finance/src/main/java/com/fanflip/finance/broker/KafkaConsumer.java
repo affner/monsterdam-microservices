@@ -9,11 +9,13 @@ import java.util.Optional;
 import java.util.function.Consumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 @Component
+@ConditionalOnProperty(prefix = "app.features", name = "kafka-enabled", havingValue = "true")
 public class KafkaConsumer implements Consumer<String> {
 
     private final Logger log = LoggerFactory.getLogger(KafkaConsumer.class);

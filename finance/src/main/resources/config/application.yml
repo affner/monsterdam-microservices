@@ -96,6 +96,25 @@ management:
         autotime:
           enabled: true
 
+---
+spring:
+  config:
+    activate:
+      on-profile: kafka
+  cloud:
+    function:
+      definition: kafkaConsumer;kafkaProducer
+    stream:
+      kafka:
+        binder:
+          replicationFactor: 1
+          auto-create-topics: true
+          brokers: localhost:9092
+app:
+  features:
+    kafka-enabled: true
+
+---
 spring:
   autoconfigure:
     exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
@@ -110,14 +129,8 @@ spring:
       config:
         watch:
           enabled: false
-    function:
-      definition: kafkaConsumer;kafkaProducer
     stream:
-      kafka:
-        binder:
-          replicationFactor: 1
-          auto-create-topics: true
-          brokers: localhost:9092
+      # Kafka binder details are now bound to the `kafka` profile to keep the MVP footprint small.
       bindings:
         binding-out-0:
           content-type: text/plain
@@ -248,3 +261,7 @@ jhipster:
 # ===================================================================
 
 # application:
+app:
+  features:
+    redis-enabled: false
+    kafka-enabled: false

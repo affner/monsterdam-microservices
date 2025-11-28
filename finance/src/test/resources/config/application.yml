@@ -110,6 +110,10 @@ jhipster:
 # ===================================================================
 
 # application:
+app:
+  features:
+    redis-enabled: false
+    kafka-enabled: true
 management:
   health:
     mail:
