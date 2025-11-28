@@ -32,6 +32,8 @@ management:
       probability: 1.0 # report 100% of traces
 
 spring:
+  cache:
+    type: none
   devtools:
     restart:
       enabled: true
@@ -78,6 +80,10 @@ spring:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
     cache: false
+  jpa:
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
 
 server:
   port: 8081
@@ -94,6 +100,7 @@ jhipster:
       expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
       server: redis://localhost:6379
       cluster: false
+      enabled: false
       # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
       # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
