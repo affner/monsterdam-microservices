@@ -1,6 +1,7 @@
 package com.monsterdam.finance.config;
 
 import java.net.URI;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.CreatedExpiryPolicy;
@@ -23,14 +24,41 @@ import org.springframework.context.annotation.Configuration;
 import tech.jhipster.config.JHipsterProperties;
 import tech.jhipster.config.cache.PrefixedKeyGenerator;
 
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCache;
+import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.cache.support.SimpleCacheManager;
+
 @Configuration
 @EnableCaching
 public class CacheConfiguration {
 
+    // esto se comentara cuando se quiera activar redis
+    private static final List<String> CACHE_NAMES = List.of(
+        com.monsterdam.finance.domain.MoneyPayout.class.getName(),
+        com.monsterdam.finance.domain.CreatorEarning.class.getName(),
+        com.monsterdam.finance.domain.SubscriptionBundle.class.getName(),
+        com.monsterdam.finance.domain.SubscriptionBundle.class.getName() + ".selledSubscriptions",
+        com.monsterdam.finance.domain.WalletTransaction.class.getName(),
+        com.monsterdam.finance.domain.PaymentTransaction.class.getName(),
+        com.monsterdam.finance.domain.PurchasedTip.class.getName(),
+        com.monsterdam.finance.domain.OfferPromotion.class.getName(),
+        com.monsterdam.finance.domain.OfferPromotion.class.getName() + ".purchasedSubscriptions",
+        com.monsterdam.finance.domain.PurchasedContent.class.getName(),
+        com.monsterdam.finance.domain.PurchasedSubscription.class.getName()
+        // jhipster-needle-redis-add-entry
+    ); // esto se comentara cuando se quiera activar redis
+
     private GitProperties gitProperties;
     private BuildProperties buildProperties;
 
-    @Bean
+
+    /*
+     * Redis-backed caching was disabled to avoid the external dependency. The application now uses
+     * simple in-memory caches, so there is no need to run a Redis server for local development or tests.
+     */
+    /*@Bean
     public javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration(JHipsterProperties jHipsterProperties) {
         MutableConfiguration<Object, Object> jcacheConfig = new MutableConfiguration<>();
 
@@ -65,8 +93,14 @@ public class CacheConfiguration {
             CreatedExpiryPolicy.factoryOf(new Duration(TimeUnit.SECONDS, jHipsterProperties.getCache().getRedis().getExpiration()))
         );
         return RedissonConfiguration.fromInstance(Redisson.create(config), jcacheConfig);
+    }*/
+    @Bean
+    public CacheManager cacheManager() {
+        SimpleCacheManager cacheManager = new SimpleCacheManager();
+        cacheManager.setCaches(CACHE_NAMES.stream().map(ConcurrentMapCache::new).toList());
+        return cacheManager;
     }
-
+/*
     @Bean
     public HibernatePropertiesCustomizer hibernatePropertiesCustomizer(javax.cache.CacheManager cm) {
         return hibernateProperties -> hibernateProperties.put(ConfigSettings.CACHE_MANAGER, cm);
@@ -101,7 +135,7 @@ public class CacheConfiguration {
         } else {
             cm.createCache(cacheName, jcacheConfiguration);
         }
-    }
+    }*/
 
     @Autowired(required = false)
     public void setGitProperties(GitProperties gitProperties) {

@@ -78,7 +78,8 @@ spring:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
     cache: false
-
+  cache:
+    type: simple
 server:
   port: 8081
 
@@ -89,11 +90,11 @@ server:
 # ===================================================================
 
 jhipster:
-  cache: # Cache configuration
-    redis: # Redis configuration
-      expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      server: redis://localhost:6379
-      cluster: false
+#  cache: # Cache configuration
+#    redis: # Redis configuration
+#      expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
+#      server: redis://localhost:6379
+#      cluster: false
       # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
       # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
