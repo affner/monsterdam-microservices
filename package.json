@@ -6,7 +6,11 @@
   "license": "UNLICENSED",
   "scripts": {
     "app:start": "./mvnw",
+    "multimedia:start": "npm --prefix multimedia run app:start",
+    "finance:start": "npm --prefix finance run app:start",
+    "adminbff:start": "npm --prefix adminbff run app:start",
     "app:up": "docker compose -f src/main/docker/app.yml up --wait",
+    "adminbff:up": "docker compose -f src/main/docker/adminbff.yml up --wait",
     "backend:build-cache": "./mvnw dependency:go-offline -ntp",
     "backend:debug": "./mvnw -Dspring-boot.run.jvmArguments=\"-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8000\"",
     "backend:doc:test": "./mvnw -ntp javadoc:javadoc --batch-mode",

@@ -24,36 +24,3 @@ services:
       interval: 5s
       timeout: 5s
       retries: 40
-    depends_on:
-      postgresql:
-        condition: service_healthy
-      elasticsearch:
-        condition: service_healthy
-  postgresql:
-    extends:
-      file: ./postgresql.yml
-      service: postgresql
-  elasticsearch:
-    extends:
-      file: ./elasticsearch.yml
-      service: elasticsearch
-  redis:
-    extends:
-      file: ./redis.yml
-      service: redis
-  consul:
-    extends:
-      file: ./consul.yml
-      service: consul
-  consul-config-loader:
-    extends:
-      file: ./consul.yml
-      service: consul-config-loader
-  kafka:
-    extends:
-      file: ./kafka.yml
-      service: kafka
-  zookeeper:
-    extends:
-      file: ./kafka.yml
-      service: zookeeper
