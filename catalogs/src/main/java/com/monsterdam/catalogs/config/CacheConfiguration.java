@@ -1,6 +1,7 @@
 package com.monsterdam.catalogs.config;
 
 import java.net.URI;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import javax.cache.configuration.MutableConfiguration;
 import javax.cache.expiry.CreatedExpiryPolicy;
@@ -16,21 +17,56 @@ import org.springframework.boot.autoconfigure.cache.JCacheManagerCustomizer;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer;
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.boot.info.GitProperties;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
+import org.springframework.cache.support.SimpleCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tech.jhipster.config.JHipsterProperties;
 import tech.jhipster.config.cache.PrefixedKeyGenerator;
+import org.springframework.cache.concurrent.ConcurrentMapCache;
 
 @Configuration
 @EnableCaching
 public class CacheConfiguration {
+    // esto se comentara cuando se quiera activar redis
+    private static final List<String> CACHE_NAMES = List.of(
+        com.monsterdam.catalogs.domain.Country.class.getName(),
+        com.monsterdam.catalogs.domain.State.class.getName(),
+        com.monsterdam.catalogs.domain.SocialNetwork.class.getName(),
+        com.monsterdam.catalogs.domain.EmojiType.class.getName(),
+        com.monsterdam.catalogs.domain.PayoutMethod.class.getName(),
+        com.monsterdam.catalogs.domain.PaymentMethod.class.getName(),
+        com.monsterdam.catalogs.domain.PaymentProvider.class.getName(),
+        com.monsterdam.catalogs.domain.TaxInfo.class.getName(),
+        com.monsterdam.catalogs.domain.Currency.class.getName(),
+        com.monsterdam.catalogs.domain.GlobalEvent.class.getName(),
+        com.monsterdam.catalogs.domain.HelpCategory.class.getName(),
+        com.monsterdam.catalogs.domain.HelpCategory.class.getName() + ".subCategories",
+        com.monsterdam.catalogs.domain.HelpSubcategory.class.getName(),
+        com.monsterdam.catalogs.domain.HelpSubcategory.class.getName() + ".questions",
+        com.monsterdam.catalogs.domain.HelpQuestion.class.getName(),
+        com.monsterdam.catalogs.domain.HelpQuestion.class.getName() + ".questions",
+        com.monsterdam.catalogs.domain.HelpRelatedArticle.class.getName(),
+        com.monsterdam.catalogs.domain.HelpRelatedArticle.class.getName() + ".relatedArticles",
+        com.monsterdam.catalogs.domain.AdminSystemConfigs.class.getName(),
+        com.monsterdam.catalogs.domain.AdminEmailConfigs.class.getName(),
+        com.monsterdam.catalogs.domain.SpecialTitle.class.getName()
+        // jhipster-needle-redis-add-entry
+    ); // esto se comentara cuando se quiera activar redis
 
     private GitProperties gitProperties;
     private BuildProperties buildProperties;
 
     @Bean
+    public CacheManager cacheManager() {
+        SimpleCacheManager cacheManager = new SimpleCacheManager();
+        cacheManager.setCaches(CACHE_NAMES.stream().map(ConcurrentMapCache::new).toList());
+        return cacheManager;
+    }
+
+   /* @Bean
     public javax.cache.configuration.Configuration<Object, Object> jcacheConfiguration(JHipsterProperties jHipsterProperties) {
         MutableConfiguration<Object, Object> jcacheConfig = new MutableConfiguration<>();
 
@@ -111,7 +147,7 @@ public class CacheConfiguration {
         } else {
             cm.createCache(cacheName, jcacheConfiguration);
         }
-    }
+    }*/
 
     @Autowired(required = false)
     public void setGitProperties(GitProperties gitProperties) {
