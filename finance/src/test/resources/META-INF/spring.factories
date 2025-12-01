@@ -1,5 +1,1 @@
-org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.finance.\
-    config.TestContainersSpringContextCustomizerFactory,com.monsterdam.finance.\
-    config.SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.finance.\
-    config.KafkaTestContainersSpringContextCustomizerFactory,com.monsterdam.\
-    finance.config.RedisTestContainersSpringContextCustomizerFactory
+org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.finance.config.SqlTestContainersSpringContextCustomizerFactory
