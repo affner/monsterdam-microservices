@@ -3,17 +3,17 @@ package com.monsterdam.bff.web.rest.errors;
 import static org.springframework.core.annotation.AnnotatedElementUtils.findMergedAnnotation;
 
 import jakarta.servlet.http.HttpServletRequest;
+
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
-import org.springframework.dao.ConcurrencyFailureException;
-import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -90,7 +90,8 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     protected ProblemDetailWithCause customizeProblem(ProblemDetailWithCause problem, Throwable err, NativeWebRequest request) {
         if (problem.getStatus() <= 0) problem.setStatus(toStatus(err));
 
-        if (problem.getType() == null || problem.getType().equals(URI.create("about:blank"))) problem.setType(getMappedType(err));
+        if (problem.getType() == null || problem.getType().equals(URI.create("about:blank")))
+            problem.setType(getMappedType(err));
 
         // higher precedence to Custom/ResponseStatus types
         String title = extractTitle(err, problem.getStatus());
@@ -110,11 +111,12 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
             getMappedMessageKey(err) != null ? getMappedMessageKey(err) : "error.http." + problem.getStatus()
         );
 
-        if (problemProperties == null || !problemProperties.containsKey(PATH_KEY)) problem.setProperty(PATH_KEY, getPathValue(request));
+        if (problemProperties == null || !problemProperties.containsKey(PATH_KEY))
+            problem.setProperty(PATH_KEY, getPathValue(request));
 
         if (
             (err instanceof MethodArgumentNotValidException fieldException) &&
-            (problemProperties == null || !problemProperties.containsKey(FIELD_ERRORS_KEY))
+                (problemProperties == null || !problemProperties.containsKey(FIELD_ERRORS_KEY))
         ) problem.setProperty(FIELD_ERRORS_KEY, getFieldErrors(fieldException));
 
         problem.setCause(buildCause(err.getCause(), request).orElse(null));
@@ -179,10 +181,9 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     private String getMappedMessageKey(Throwable err) {
         if (err instanceof MethodArgumentNotValidException) {
             return ErrorConstants.ERR_VALIDATION;
-        } else if (err instanceof ConcurrencyFailureException || err.getCause() instanceof ConcurrencyFailureException) {
-            return ErrorConstants.ERR_CONCURRENCY_FAILURE;
+        } else {
+            return null;
         }
-        return null;
     }
 
     private String getCustomizedTitle(Throwable err) {
@@ -194,7 +195,6 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
         Collection<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
         if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
             if (err instanceof HttpMessageConversionException) return "Unable to convert http message";
-            if (err instanceof DataAccessException) return "Failure during data access";
             if (containsPackageName(err.getMessage())) return "Unexpected runtime exception";
         }
         return err.getCause() != null ? err.getCause().getMessage() : err.getMessage();
@@ -203,7 +203,6 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     private HttpStatus getMappedStatus(Throwable err) {
         // Where we disagree with Spring defaults
         if (err instanceof AccessDeniedException) return HttpStatus.FORBIDDEN;
-        if (err instanceof ConcurrencyFailureException) return HttpStatus.CONFLICT;
         if (err instanceof BadCredentialsException) return HttpStatus.UNAUTHORIZED;
         return null;
     }
@@ -216,12 +215,12 @@ public class ExceptionTranslator extends ResponseEntityExceptionHandler {
     private HttpHeaders buildHeaders(Throwable err) {
         return err instanceof BadRequestAlertException badRequestAlertException
             ? HeaderUtil.createFailureAlert(
-                applicationName,
-                true,
-                badRequestAlertException.getEntityName(),
-                badRequestAlertException.getErrorKey(),
-                badRequestAlertException.getMessage()
-            )
+            applicationName,
+            true,
+            badRequestAlertException.getEntityName(),
+            badRequestAlertException.getErrorKey(),
+            badRequestAlertException.getMessage()
+        )
             : null;
     }
 

@@ -3,7 +3,6 @@ package com.monsterdam.bff.service;
 
 import com.monsterdam.bff.service.dto.AdminPostFeedDTO;
 import org.springframework.data.domain.Pageable;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,7 +17,6 @@ public interface AdminFeedService {
      * @param pageable the pagination information.
      * @return the list of entities.
      */
-    @Transactional(readOnly = true)
     List<AdminPostFeedDTO> findAll(Pageable pageable);
 
     /**
@@ -27,7 +25,6 @@ public interface AdminFeedService {
      * @param id the id of the entity.
      * @return the entity.
      */
-    @Transactional(readOnly = true)
     AdminPostFeedDTO findOne(Long id);
 
     /**
@@ -38,7 +35,6 @@ public interface AdminFeedService {
      * @param pageable the pagination information.
      * @return the list of entities.
      */
-    @Transactional(readOnly = true)
     List<AdminPostFeedDTO> search(String query, Pageable pageable);
 
 }
