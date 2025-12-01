@@ -2,7 +2,6 @@ package com.monsterdam.interactions.service.impl;
 
 import com.monsterdam.interactions.domain.DirectMessage;
 import com.monsterdam.interactions.repository.DirectMessageRepository;
-import com.monsterdam.interactions.repository.search.DirectMessageSearchRepository;
 import com.monsterdam.interactions.service.DirectMessageService;
 import com.monsterdam.interactions.service.dto.DirectMessageDTO;
 import com.monsterdam.interactions.service.mapper.DirectMessageMapper;
@@ -27,16 +26,9 @@ public class DirectMessageServiceImpl implements DirectMessageService {
 
     private final DirectMessageMapper directMessageMapper;
 
-    private final DirectMessageSearchRepository directMessageSearchRepository;
-
-    public DirectMessageServiceImpl(
-        DirectMessageRepository directMessageRepository,
-        DirectMessageMapper directMessageMapper,
-        DirectMessageSearchRepository directMessageSearchRepository
-    ) {
+    public DirectMessageServiceImpl(DirectMessageRepository directMessageRepository, DirectMessageMapper directMessageMapper) {
         this.directMessageRepository = directMessageRepository;
         this.directMessageMapper = directMessageMapper;
-        this.directMessageSearchRepository = directMessageSearchRepository;
     }
 
     @Override
@@ -44,9 +36,7 @@ public class DirectMessageServiceImpl implements DirectMessageService {
         log.debug("Request to save DirectMessage : {}", directMessageDTO);
         DirectMessage directMessage = directMessageMapper.toEntity(directMessageDTO);
         directMessage = directMessageRepository.save(directMessage);
-        DirectMessageDTO result = directMessageMapper.toDto(directMessage);
-        directMessageSearchRepository.index(directMessage);
-        return result;
+        return directMessageMapper.toDto(directMessage);
     }
 
     @Override
@@ -54,9 +44,7 @@ public class DirectMessageServiceImpl implements DirectMessageService {
         log.debug("Request to update DirectMessage : {}", directMessageDTO);
         DirectMessage directMessage = directMessageMapper.toEntity(directMessageDTO);
         directMessage = directMessageRepository.save(directMessage);
-        DirectMessageDTO result = directMessageMapper.toDto(directMessage);
-        directMessageSearchRepository.index(directMessage);
-        return result;
+        return directMessageMapper.toDto(directMessage);
     }
 
     @Override
@@ -71,10 +59,6 @@ public class DirectMessageServiceImpl implements DirectMessageService {
                 return existingDirectMessage;
             })
             .map(directMessageRepository::save)
-            .map(savedDirectMessage -> {
-                directMessageSearchRepository.index(savedDirectMessage);
-                return savedDirectMessage;
-            })
             .map(directMessageMapper::toDto);
     }
 
@@ -100,13 +84,5 @@ public class DirectMessageServiceImpl implements DirectMessageService {
     public void delete(Long id) {
         log.debug("Request to delete DirectMessage : {}", id);
         directMessageRepository.deleteById(id);
-        directMessageSearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<DirectMessageDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of DirectMessages for query {}", query);
-        return directMessageSearchRepository.search(query, pageable).map(directMessageMapper::toDto);
     }
 }

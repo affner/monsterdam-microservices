@@ -11,10 +11,6 @@ services:
       - SPRING_CLOUD_CONSUL_PORT=8500
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/interactions
       - SPRING_LIQUIBASE_URL=jdbc:postgresql://postgresql:5432/interactions
-      - JHIPSTER_CACHE_REDIS_SERVER=redis://redis:6379
-      - JHIPSTER_CACHE_REDIS_CLUSTER=false
-      - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
-      - SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS=kafka:9092
     healthcheck:
       test:
         - CMD
@@ -27,20 +23,10 @@ services:
     depends_on:
       postgresql:
         condition: service_healthy
-      elasticsearch:
-        condition: service_healthy
   postgresql:
     extends:
       file: ./postgresql.yml
       service: postgresql
-  elasticsearch:
-    extends:
-      file: ./elasticsearch.yml
-      service: elasticsearch
-  redis:
-    extends:
-      file: ./redis.yml
-      service: redis
   consul:
     extends:
       file: ./consul.yml
@@ -49,11 +35,3 @@ services:
     extends:
       file: ./consul.yml
       service: consul-config-loader
-  kafka:
-    extends:
-      file: ./kafka.yml
-      service: kafka
-  zookeeper:
-    extends:
-      file: ./kafka.yml
-      service: zookeeper

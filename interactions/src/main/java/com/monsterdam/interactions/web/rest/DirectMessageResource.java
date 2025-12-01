@@ -4,7 +4,6 @@ import com.monsterdam.interactions.repository.DirectMessageRepository;
 import com.monsterdam.interactions.service.DirectMessageService;
 import com.monsterdam.interactions.service.dto.DirectMessageDTO;
 import com.monsterdam.interactions.web.rest.errors.BadRequestAlertException;
-import com.monsterdam.interactions.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -191,26 +190,4 @@ public class DirectMessageResource {
             .build();
     }
 
-    /**
-     * {@code SEARCH  /direct-messages/_search?query=:query} : search for the directMessage corresponding
-     * to the query.
-     *
-     * @param query the query of the directMessage search.
-     * @param pageable the pagination information.
-     * @return the result of the search.
-     */
-    @GetMapping("/_search")
-    public ResponseEntity<List<DirectMessageDTO>> searchDirectMessages(
-        @RequestParam("query") String query,
-        @org.springdoc.core.annotations.ParameterObject Pageable pageable
-    ) {
-        log.debug("REST request to search for a page of DirectMessages for query {}", query);
-        try {
-            Page<DirectMessageDTO> page = directMessageService.search(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
-            return ResponseEntity.ok().headers(headers).body(page.getContent());
-        } catch (RuntimeException e) {
-            throw ElasticsearchExceptionMapper.mapException(e);
-        }
-    }
 }

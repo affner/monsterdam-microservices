@@ -16,7 +16,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "post_comment")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "postcomment")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PostComment implements Serializable {
 
@@ -30,11 +29,9 @@ public class PostComment implements Serializable {
 
     @Lob
     @Column(name = "comment_content", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String commentContent;
 
     @Column(name = "like_count")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Integer)
     private Integer likeCount;
 
     @NotNull
@@ -45,16 +42,13 @@ public class PostComment implements Serializable {
     private Instant lastModifiedDate;
 
     @Column(name = "created_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String createdBy;
 
     @Column(name = "last_modified_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String lastModifiedBy;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isDeleted;
 
     @NotNull

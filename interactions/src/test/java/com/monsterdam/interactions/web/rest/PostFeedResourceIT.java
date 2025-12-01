@@ -22,8 +22,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import org.apache.commons.collections4.IterableUtils;
-import org.assertj.core.util.IterableUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -80,7 +78,6 @@ class PostFeedResourceIT {
 
     private static final String ENTITY_API_URL = "/api/post-feeds";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
-    private static final String ENTITY_SEARCH_API_URL = "/api/post-feeds/_search";
 
     private static Random random = new Random();
     private static AtomicLong longCount = new AtomicLong(random.nextInt() + (2 * Integer.MAX_VALUE));
@@ -98,7 +95,6 @@ class PostFeedResourceIT {
     private PostFeedService postFeedServiceMock;
 
     @Autowired
-    private PostFeedSearchRepository postFeedSearchRepository;
 
     @Autowired
     private EntityManager em;
@@ -152,8 +148,6 @@ class PostFeedResourceIT {
 
     @AfterEach
     public void cleanupElasticSearchRepository() {
-        postFeedSearchRepository.deleteAll();
-        assertThat(postFeedSearchRepository.count()).isEqualTo(0);
     }
 
     @BeforeEach
@@ -165,7 +159,6 @@ class PostFeedResourceIT {
     @Transactional
     void createPostFeed() throws Exception {
         int databaseSizeBeforeCreate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         // Create the PostFeed
         PostFeedDTO postFeedDTO = postFeedMapper.toDto(postFeed);
         restPostFeedMockMvc
@@ -178,8 +171,6 @@ class PostFeedResourceIT {
         await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore + 1);
             });
         PostFeed testPostFeed = postFeedList.get(postFeedList.size() - 1);
         assertThat(testPostFeed.getPostContent()).isEqualTo(DEFAULT_POST_CONTENT);
@@ -202,7 +193,6 @@ class PostFeedResourceIT {
         PostFeedDTO postFeedDTO = postFeedMapper.toDto(postFeed);
 
         int databaseSizeBeforeCreate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restPostFeedMockMvc
@@ -212,15 +202,12 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeCreate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCreatedDateIsRequired() throws Exception {
         int databaseSizeBeforeTest = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         // set the field null
         postFeed.setCreatedDate(null);
 
@@ -233,15 +220,12 @@ class PostFeedResourceIT {
 
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkIsDeletedIsRequired() throws Exception {
         int databaseSizeBeforeTest = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         // set the field null
         postFeed.setIsDeleted(null);
 
@@ -254,15 +238,12 @@ class PostFeedResourceIT {
 
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCreatorUserIdIsRequired() throws Exception {
         int databaseSizeBeforeTest = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         // set the field null
         postFeed.setCreatorUserId(null);
 
@@ -275,8 +256,6 @@ class PostFeedResourceIT {
 
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -358,8 +337,6 @@ class PostFeedResourceIT {
         postFeedRepository.saveAndFlush(postFeed);
 
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        postFeedSearchRepository.save(postFeed);
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
 
         // Update the postFeed
         PostFeed updatedPostFeed = postFeedRepository.findById(postFeed.getId()).orElseThrow();
@@ -403,10 +380,6 @@ class PostFeedResourceIT {
         await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
-                List<PostFeed> postFeedSearchList = IterableUtils.toList(postFeedSearchRepository.findAll());
-                PostFeed testPostFeedSearch = postFeedSearchList.get(searchDatabaseSizeAfter - 1);
                 assertThat(testPostFeedSearch.getPostContent()).isEqualTo(UPDATED_POST_CONTENT);
                 assertThat(testPostFeedSearch.getIsHidden()).isEqualTo(UPDATED_IS_HIDDEN);
                 assertThat(testPostFeedSearch.getPinnedPost()).isEqualTo(UPDATED_PINNED_POST);
@@ -424,7 +397,6 @@ class PostFeedResourceIT {
     @Transactional
     void putNonExistingPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -442,15 +414,12 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithIdMismatchPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -468,15 +437,12 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithMissingIdPathParamPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -490,8 +456,6 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -590,7 +554,6 @@ class PostFeedResourceIT {
     @Transactional
     void patchNonExistingPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -608,15 +571,12 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithIdMismatchPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -634,15 +594,12 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithMissingIdPathParamPostFeed() throws Exception {
         int databaseSizeBeforeUpdate = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
         postFeed.setId(longCount.incrementAndGet());
 
         // Create the PostFeed
@@ -658,8 +615,6 @@ class PostFeedResourceIT {
         // Validate the PostFeed in the database
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -668,11 +623,8 @@ class PostFeedResourceIT {
         // Initialize the database
         postFeedRepository.saveAndFlush(postFeed);
         postFeedRepository.save(postFeed);
-        postFeedSearchRepository.save(postFeed);
 
         int databaseSizeBeforeDelete = postFeedRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeBefore).isEqualTo(databaseSizeBeforeDelete);
 
         // Delete the postFeed
         restPostFeedMockMvc
@@ -682,32 +634,6 @@ class PostFeedResourceIT {
         // Validate the database contains one less item
         List<PostFeed> postFeedList = postFeedRepository.findAll();
         assertThat(postFeedList).hasSize(databaseSizeBeforeDelete - 1);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postFeedSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore - 1);
     }
 
-    @Test
-    @Transactional
-    void searchPostFeed() throws Exception {
-        // Initialize the database
-        postFeed = postFeedRepository.saveAndFlush(postFeed);
-        postFeedSearchRepository.save(postFeed);
-
-        // Search the postFeed
-        restPostFeedMockMvc
-            .perform(get(ENTITY_SEARCH_API_URL + "?query=id:" + postFeed.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(postFeed.getId().intValue())))
-            .andExpect(jsonPath("$.[*].postContent").value(hasItem(DEFAULT_POST_CONTENT.toString())))
-            .andExpect(jsonPath("$.[*].isHidden").value(hasItem(DEFAULT_IS_HIDDEN.booleanValue())))
-            .andExpect(jsonPath("$.[*].pinnedPost").value(hasItem(DEFAULT_PINNED_POST.booleanValue())))
-            .andExpect(jsonPath("$.[*].likeCount").value(hasItem(DEFAULT_LIKE_COUNT)))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(DEFAULT_CREATED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(DEFAULT_LAST_MODIFIED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY)))
-            .andExpect(jsonPath("$.[*].lastModifiedBy").value(hasItem(DEFAULT_LAST_MODIFIED_BY)))
-            .andExpect(jsonPath("$.[*].isDeleted").value(hasItem(DEFAULT_IS_DELETED.booleanValue())))
-            .andExpect(jsonPath("$.[*].creatorUserId").value(hasItem(DEFAULT_CREATOR_USER_ID.intValue())));
-    }
 }
