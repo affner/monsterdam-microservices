@@ -3,8 +3,6 @@ package com.monsterdam.multimedia.domain;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.io.Serializable;
 import java.time.Duration;
@@ -34,7 +32,6 @@ public abstract class MultiMedia extends AbstractAuditingEntity<Long> implements
 
     @NotNull
     @Column(name = "thumbnail_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
     private String thumbnailS3Key;
 
     @Column(name = "content_content_type")
@@ -42,7 +39,6 @@ public abstract class MultiMedia extends AbstractAuditingEntity<Long> implements
 
     @NotNull
     @Column(name = "content_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
     private String contentS3Key;
 
     @Column(name = "duration")
@@ -50,11 +46,9 @@ public abstract class MultiMedia extends AbstractAuditingEntity<Long> implements
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @Field(type = FieldType.Boolean)
     private Boolean isDeleted = false;
 
     @Column(name = "like_count")
-    @Field(type = FieldType.Integer)
     private Integer likeCount;
 
     @ManyToOne(fetch = FetchType.LAZY)

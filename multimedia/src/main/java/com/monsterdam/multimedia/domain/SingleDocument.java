@@ -6,8 +6,6 @@ import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
 
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * A SingleDocument.
@@ -43,7 +41,6 @@ public class SingleDocument extends AbstractAuditingEntity<Long> implements Seri
 
     @NotNull
     @Column(name = "thumbnail_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
     private String thumbnailS3Key;
 
     @Column(name = "content_content_type")
@@ -51,7 +48,6 @@ public class SingleDocument extends AbstractAuditingEntity<Long> implements Seri
 
     @NotNull
     @Column(name = "content_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
     private String contentS3Key;
 
     @Column(name = "duration")
@@ -59,11 +55,9 @@ public class SingleDocument extends AbstractAuditingEntity<Long> implements Seri
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @Field(type = FieldType.Boolean)
     private Boolean isDeleted = false;
 
     @Column(name = "like_count")
-    @Field(type = FieldType.Integer)
     private Integer likeCount;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
