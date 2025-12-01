@@ -2,7 +2,6 @@ package com.monsterdam.profile.service.impl;
 
 import com.monsterdam.profile.domain.HashTag;
 import com.monsterdam.profile.repository.HashTagRepository;
-import com.monsterdam.profile.repository.search.HashTagSearchRepository;
 import com.monsterdam.profile.service.HashTagService;
 import com.monsterdam.profile.service.dto.HashTagDTO;
 import com.monsterdam.profile.service.mapper.HashTagMapper;
@@ -27,16 +26,12 @@ public class HashTagServiceImpl implements HashTagService {
 
     private final HashTagMapper hashTagMapper;
 
-    private final HashTagSearchRepository hashTagSearchRepository;
-
     public HashTagServiceImpl(
         HashTagRepository hashTagRepository,
-        HashTagMapper hashTagMapper,
-        HashTagSearchRepository hashTagSearchRepository
+        HashTagMapper hashTagMapper
     ) {
         this.hashTagRepository = hashTagRepository;
         this.hashTagMapper = hashTagMapper;
-        this.hashTagSearchRepository = hashTagSearchRepository;
     }
 
     @Override
@@ -44,9 +39,7 @@ public class HashTagServiceImpl implements HashTagService {
         log.debug("Request to save HashTag : {}", hashTagDTO);
         HashTag hashTag = hashTagMapper.toEntity(hashTagDTO);
         hashTag = hashTagRepository.save(hashTag);
-        HashTagDTO result = hashTagMapper.toDto(hashTag);
-        hashTagSearchRepository.index(hashTag);
-        return result;
+        return hashTagMapper.toDto(hashTag);
     }
 
     @Override
@@ -54,9 +47,7 @@ public class HashTagServiceImpl implements HashTagService {
         log.debug("Request to update HashTag : {}", hashTagDTO);
         HashTag hashTag = hashTagMapper.toEntity(hashTagDTO);
         hashTag = hashTagRepository.save(hashTag);
-        HashTagDTO result = hashTagMapper.toDto(hashTag);
-        hashTagSearchRepository.index(hashTag);
-        return result;
+        return hashTagMapper.toDto(hashTag);
     }
 
     @Override
@@ -71,10 +62,6 @@ public class HashTagServiceImpl implements HashTagService {
                 return existingHashTag;
             })
             .map(hashTagRepository::save)
-            .map(savedHashTag -> {
-                hashTagSearchRepository.index(savedHashTag);
-                return savedHashTag;
-            })
             .map(hashTagMapper::toDto);
     }
 
@@ -96,13 +83,5 @@ public class HashTagServiceImpl implements HashTagService {
     public void delete(Long id) {
         log.debug("Request to delete HashTag : {}", id);
         hashTagRepository.deleteById(id);
-        hashTagSearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<HashTagDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of HashTags for query {}", query);
-        return hashTagSearchRepository.search(query, pageable).map(hashTagMapper::toDto);
     }
 }
