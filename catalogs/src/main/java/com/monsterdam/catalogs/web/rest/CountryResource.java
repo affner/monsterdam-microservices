@@ -4,7 +4,6 @@ import com.monsterdam.catalogs.repository.CountryRepository;
 import com.monsterdam.catalogs.service.CountryService;
 import com.monsterdam.catalogs.service.dto.CountryDTO;
 import com.monsterdam.catalogs.web.rest.errors.BadRequestAlertException;
-import com.monsterdam.catalogs.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -181,26 +180,4 @@ public class CountryResource {
             .build();
     }
 
-    /**
-     * {@code SEARCH  /countries/_search?query=:query} : search for the country corresponding
-     * to the query.
-     *
-     * @param query the query of the country search.
-     * @param pageable the pagination information.
-     * @return the result of the search.
-     */
-    @GetMapping("/_search")
-    public ResponseEntity<List<CountryDTO>> searchCountries(
-        @RequestParam("query") String query,
-        @org.springdoc.core.annotations.ParameterObject Pageable pageable
-    ) {
-        log.debug("REST request to search for a page of Countries for query {}", query);
-        try {
-            Page<CountryDTO> page = countryService.search(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
-            return ResponseEntity.ok().headers(headers).body(page.getContent());
-        } catch (RuntimeException e) {
-            throw ElasticsearchExceptionMapper.mapException(e);
-        }
-    }
 }

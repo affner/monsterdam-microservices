@@ -13,7 +13,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "state")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "state")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class State implements Serializable {
 
@@ -28,13 +27,11 @@ public class State implements Serializable {
     @NotNull
     @Size(max = 100)
     @Column(name = "state_name", length = 100, nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String stateName;
 
     @NotNull
     @Size(max = 3)
     @Column(name = "iso_code", length = 3, nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String isoCode;
 
     @NotNull
@@ -45,16 +42,13 @@ public class State implements Serializable {
     private Instant lastModifiedDate;
 
     @Column(name = "created_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String createdBy;
 
     @Column(name = "last_modified_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String lastModifiedBy;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isDeleted;
 
     @ManyToOne(optional = false)

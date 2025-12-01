@@ -2,7 +2,6 @@ package com.monsterdam.catalogs.service.impl;
 
 import com.monsterdam.catalogs.domain.State;
 import com.monsterdam.catalogs.repository.StateRepository;
-import com.monsterdam.catalogs.repository.search.StateSearchRepository;
 import com.monsterdam.catalogs.service.StateService;
 import com.monsterdam.catalogs.service.dto.StateDTO;
 import com.monsterdam.catalogs.service.mapper.StateMapper;
@@ -27,12 +26,9 @@ public class StateServiceImpl implements StateService {
 
     private final StateMapper stateMapper;
 
-    private final StateSearchRepository stateSearchRepository;
-
-    public StateServiceImpl(StateRepository stateRepository, StateMapper stateMapper, StateSearchRepository stateSearchRepository) {
+    public StateServiceImpl(StateRepository stateRepository, StateMapper stateMapper) {
         this.stateRepository = stateRepository;
         this.stateMapper = stateMapper;
-        this.stateSearchRepository = stateSearchRepository;
     }
 
     @Override
@@ -40,9 +36,7 @@ public class StateServiceImpl implements StateService {
         log.debug("Request to save State : {}", stateDTO);
         State state = stateMapper.toEntity(stateDTO);
         state = stateRepository.save(state);
-        StateDTO result = stateMapper.toDto(state);
-        stateSearchRepository.index(state);
-        return result;
+        return stateMapper.toDto(state);
     }
 
     @Override
@@ -50,9 +44,7 @@ public class StateServiceImpl implements StateService {
         log.debug("Request to update State : {}", stateDTO);
         State state = stateMapper.toEntity(stateDTO);
         state = stateRepository.save(state);
-        StateDTO result = stateMapper.toDto(state);
-        stateSearchRepository.index(state);
-        return result;
+        return stateMapper.toDto(state);
     }
 
     @Override
@@ -67,10 +59,6 @@ public class StateServiceImpl implements StateService {
                 return existingState;
             })
             .map(stateRepository::save)
-            .map(savedState -> {
-                stateSearchRepository.index(savedState);
-                return savedState;
-            })
             .map(stateMapper::toDto);
     }
 
@@ -96,13 +84,5 @@ public class StateServiceImpl implements StateService {
     public void delete(Long id) {
         log.debug("Request to delete State : {}", id);
         stateRepository.deleteById(id);
-        stateSearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<StateDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of States for query {}", query);
-        return stateSearchRepository.search(query, pageable).map(stateMapper::toDto);
     }
 }
