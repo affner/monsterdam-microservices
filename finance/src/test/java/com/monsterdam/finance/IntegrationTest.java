@@ -1,9 +1,6 @@
 package com.monsterdam.finance;
 
 import com.monsterdam.finance.config.AsyncSyncConfiguration;
-import com.monsterdam.finance.config.EmbeddedElasticsearch;
-import com.monsterdam.finance.config.EmbeddedKafka;
-import com.monsterdam.finance.config.EmbeddedRedis;
 import com.monsterdam.finance.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,10 +15,7 @@ import org.springframework.test.annotation.DirtiesContext;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { FinanceApp.class, AsyncSyncConfiguration.class })
-@EmbeddedRedis
-@EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
-@EmbeddedKafka
 public @interface IntegrationTest {
 }
