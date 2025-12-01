@@ -21,9 +21,6 @@ logging:
     com.monsterdam.bff: DEBUG
 
 management:
-  health:
-    elasticsearch:
-      enabled: false
   zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
@@ -57,8 +54,6 @@ spring:
           - git-branch=${git.branch:}
       host: localhost
       port: 8500
-  elasticsearch:
-    uris: http://localhost:9200
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:
@@ -74,13 +69,6 @@ server:
 # ===================================================================
 
 jhipster:
-  cache: # Cache configuration
-    redis: # Redis configuration
-      expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      server: redis://localhost:6379
-      cluster: false
-      # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
-      # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
   # If you want to enable it, please uncomment the configuration below.
   # cors:

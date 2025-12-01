@@ -24,24 +24,6 @@ spring:
       config:
         enabled: false
       enabled: false
-    function:
-      definition: kafkaConsumer;kafkaProducer
-    stream:
-      kafka:
-        binder:
-          replicationFactor: 1
-          auto-create-topics: true
-      bindings:
-        binding-out-0:
-          content-type: text/plain
-          group: adminbff
-        kafkaConsumer-in-0:
-          destination: sse-topic
-          content-type: text/plain
-          group: adminbff
-        kafkaProducer-out-0:
-          content-type: text/plain
-          group: adminbff
   jackson:
     serialization:
       write-durations-as-timestamps: false
