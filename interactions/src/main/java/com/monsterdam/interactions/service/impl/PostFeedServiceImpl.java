@@ -2,7 +2,6 @@ package com.monsterdam.interactions.service.impl;
 
 import com.monsterdam.interactions.domain.PostFeed;
 import com.monsterdam.interactions.repository.PostFeedRepository;
-import com.monsterdam.interactions.repository.search.PostFeedSearchRepository;
 import com.monsterdam.interactions.service.PostFeedService;
 import com.monsterdam.interactions.service.dto.PostFeedDTO;
 import com.monsterdam.interactions.service.mapper.PostFeedMapper;
@@ -27,16 +26,9 @@ public class PostFeedServiceImpl implements PostFeedService {
 
     private final PostFeedMapper postFeedMapper;
 
-    private final PostFeedSearchRepository postFeedSearchRepository;
-
-    public PostFeedServiceImpl(
-        PostFeedRepository postFeedRepository,
-        PostFeedMapper postFeedMapper,
-        PostFeedSearchRepository postFeedSearchRepository
-    ) {
+    public PostFeedServiceImpl(PostFeedRepository postFeedRepository, PostFeedMapper postFeedMapper) {
         this.postFeedRepository = postFeedRepository;
         this.postFeedMapper = postFeedMapper;
-        this.postFeedSearchRepository = postFeedSearchRepository;
     }
 
     @Override
@@ -44,9 +36,7 @@ public class PostFeedServiceImpl implements PostFeedService {
         log.debug("Request to save PostFeed : {}", postFeedDTO);
         PostFeed postFeed = postFeedMapper.toEntity(postFeedDTO);
         postFeed = postFeedRepository.save(postFeed);
-        PostFeedDTO result = postFeedMapper.toDto(postFeed);
-        postFeedSearchRepository.index(postFeed);
-        return result;
+        return postFeedMapper.toDto(postFeed);
     }
 
     @Override
@@ -54,9 +44,7 @@ public class PostFeedServiceImpl implements PostFeedService {
         log.debug("Request to update PostFeed : {}", postFeedDTO);
         PostFeed postFeed = postFeedMapper.toEntity(postFeedDTO);
         postFeed = postFeedRepository.save(postFeed);
-        PostFeedDTO result = postFeedMapper.toDto(postFeed);
-        postFeedSearchRepository.index(postFeed);
-        return result;
+        return postFeedMapper.toDto(postFeed);
     }
 
     @Override
@@ -71,10 +59,6 @@ public class PostFeedServiceImpl implements PostFeedService {
                 return existingPostFeed;
             })
             .map(postFeedRepository::save)
-            .map(savedPostFeed -> {
-                postFeedSearchRepository.index(savedPostFeed);
-                return savedPostFeed;
-            })
             .map(postFeedMapper::toDto);
     }
 
@@ -100,13 +84,5 @@ public class PostFeedServiceImpl implements PostFeedService {
     public void delete(Long id) {
         log.debug("Request to delete PostFeed : {}", id);
         postFeedRepository.deleteById(id);
-        postFeedSearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<PostFeedDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of PostFeeds for query {}", query);
-        return postFeedSearchRepository.search(query, pageable).map(postFeedMapper::toDto);
     }
 }

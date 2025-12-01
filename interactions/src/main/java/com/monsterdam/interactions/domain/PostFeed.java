@@ -16,7 +16,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "post_feed")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "postfeed")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class PostFeed implements Serializable {
 
@@ -30,19 +29,15 @@ public class PostFeed implements Serializable {
 
     @Lob
     @Column(name = "post_content", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String postContent;
 
     @Column(name = "is_hidden")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isHidden;
 
     @Column(name = "pinned_post")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean pinnedPost;
 
     @Column(name = "like_count")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Integer)
     private Integer likeCount;
 
     @NotNull
@@ -53,16 +48,13 @@ public class PostFeed implements Serializable {
     private Instant lastModifiedDate;
 
     @Column(name = "created_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String createdBy;
 
     @Column(name = "last_modified_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String lastModifiedBy;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isDeleted;
 
     @NotNull

@@ -2,7 +2,6 @@ package com.monsterdam.interactions.service.impl;
 
 import com.monsterdam.interactions.domain.PostComment;
 import com.monsterdam.interactions.repository.PostCommentRepository;
-import com.monsterdam.interactions.repository.search.PostCommentSearchRepository;
 import com.monsterdam.interactions.service.PostCommentService;
 import com.monsterdam.interactions.service.dto.PostCommentDTO;
 import com.monsterdam.interactions.service.mapper.PostCommentMapper;
@@ -27,16 +26,9 @@ public class PostCommentServiceImpl implements PostCommentService {
 
     private final PostCommentMapper postCommentMapper;
 
-    private final PostCommentSearchRepository postCommentSearchRepository;
-
-    public PostCommentServiceImpl(
-        PostCommentRepository postCommentRepository,
-        PostCommentMapper postCommentMapper,
-        PostCommentSearchRepository postCommentSearchRepository
-    ) {
+    public PostCommentServiceImpl(PostCommentRepository postCommentRepository, PostCommentMapper postCommentMapper) {
         this.postCommentRepository = postCommentRepository;
         this.postCommentMapper = postCommentMapper;
-        this.postCommentSearchRepository = postCommentSearchRepository;
     }
 
     @Override
@@ -44,9 +36,7 @@ public class PostCommentServiceImpl implements PostCommentService {
         log.debug("Request to save PostComment : {}", postCommentDTO);
         PostComment postComment = postCommentMapper.toEntity(postCommentDTO);
         postComment = postCommentRepository.save(postComment);
-        PostCommentDTO result = postCommentMapper.toDto(postComment);
-        postCommentSearchRepository.index(postComment);
-        return result;
+        return postCommentMapper.toDto(postComment);
     }
 
     @Override
@@ -54,9 +44,7 @@ public class PostCommentServiceImpl implements PostCommentService {
         log.debug("Request to update PostComment : {}", postCommentDTO);
         PostComment postComment = postCommentMapper.toEntity(postCommentDTO);
         postComment = postCommentRepository.save(postComment);
-        PostCommentDTO result = postCommentMapper.toDto(postComment);
-        postCommentSearchRepository.index(postComment);
-        return result;
+        return postCommentMapper.toDto(postComment);
     }
 
     @Override
@@ -71,10 +59,6 @@ public class PostCommentServiceImpl implements PostCommentService {
                 return existingPostComment;
             })
             .map(postCommentRepository::save)
-            .map(savedPostComment -> {
-                postCommentSearchRepository.index(savedPostComment);
-                return savedPostComment;
-            })
             .map(postCommentMapper::toDto);
     }
 
@@ -100,13 +84,5 @@ public class PostCommentServiceImpl implements PostCommentService {
     public void delete(Long id) {
         log.debug("Request to delete PostComment : {}", id);
         postCommentRepository.deleteById(id);
-        postCommentSearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<PostCommentDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of PostComments for query {}", query);
-        return postCommentSearchRepository.search(query, pageable).map(postCommentMapper::toDto);
     }
 }

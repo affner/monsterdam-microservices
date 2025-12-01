@@ -10,7 +10,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.monsterdam.interactions.IntegrationTest;
 import com.monsterdam.interactions.domain.DirectMessage;
 import com.monsterdam.interactions.repository.DirectMessageRepository;
-import com.monsterdam.interactions.repository.search.DirectMessageSearchRepository;
 import com.monsterdam.interactions.service.DirectMessageService;
 import com.monsterdam.interactions.service.dto.DirectMessageDTO;
 import com.monsterdam.interactions.service.mapper.DirectMessageMapper;
@@ -22,8 +21,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import org.apache.commons.collections4.IterableUtils;
-import org.assertj.core.util.IterableUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -83,7 +80,6 @@ class DirectMessageResourceIT {
 
     private static final String ENTITY_API_URL = "/api/direct-messages";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
-    private static final String ENTITY_SEARCH_API_URL = "/api/direct-messages/_search";
 
     private static Random random = new Random();
     private static AtomicLong longCount = new AtomicLong(random.nextInt() + (2 * Integer.MAX_VALUE));
@@ -99,9 +95,6 @@ class DirectMessageResourceIT {
 
     @Mock
     private DirectMessageService directMessageServiceMock;
-
-    @Autowired
-    private DirectMessageSearchRepository directMessageSearchRepository;
 
     @Autowired
     private EntityManager em;
@@ -157,8 +150,6 @@ class DirectMessageResourceIT {
 
     @AfterEach
     public void cleanupElasticSearchRepository() {
-        directMessageSearchRepository.deleteAll();
-        assertThat(directMessageSearchRepository.count()).isEqualTo(0);
     }
 
     @BeforeEach
@@ -170,7 +161,6 @@ class DirectMessageResourceIT {
     @Transactional
     void createDirectMessage() throws Exception {
         int databaseSizeBeforeCreate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         // Create the DirectMessage
         DirectMessageDTO directMessageDTO = directMessageMapper.toDto(directMessage);
         restDirectMessageMockMvc
@@ -185,8 +175,6 @@ class DirectMessageResourceIT {
         await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore + 1);
             });
         DirectMessage testDirectMessage = directMessageList.get(directMessageList.size() - 1);
         assertThat(testDirectMessage.getMessageContent()).isEqualTo(DEFAULT_MESSAGE_CONTENT);
@@ -210,7 +198,6 @@ class DirectMessageResourceIT {
         DirectMessageDTO directMessageDTO = directMessageMapper.toDto(directMessage);
 
         int databaseSizeBeforeCreate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restDirectMessageMockMvc
@@ -222,15 +209,12 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeCreate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCreatedDateIsRequired() throws Exception {
         int databaseSizeBeforeTest = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         // set the field null
         directMessage.setCreatedDate(null);
 
@@ -245,15 +229,12 @@ class DirectMessageResourceIT {
 
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkIsDeletedIsRequired() throws Exception {
         int databaseSizeBeforeTest = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         // set the field null
         directMessage.setIsDeleted(null);
 
@@ -268,15 +249,12 @@ class DirectMessageResourceIT {
 
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkSenderUserIdIsRequired() throws Exception {
         int databaseSizeBeforeTest = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         // set the field null
         directMessage.setSenderUserId(null);
 
@@ -291,8 +269,6 @@ class DirectMessageResourceIT {
 
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -376,8 +352,6 @@ class DirectMessageResourceIT {
         directMessageRepository.saveAndFlush(directMessage);
 
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        directMessageSearchRepository.save(directMessage);
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
 
         // Update the directMessage
         DirectMessage updatedDirectMessage = directMessageRepository.findById(directMessage.getId()).orElseThrow();
@@ -420,32 +394,27 @@ class DirectMessageResourceIT {
         assertThat(testDirectMessage.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
         assertThat(testDirectMessage.getRepliedStoryId()).isEqualTo(UPDATED_REPLIED_STORY_ID);
         assertThat(testDirectMessage.getSenderUserId()).isEqualTo(UPDATED_SENDER_USER_ID);
-        await()
-            .atMost(5, TimeUnit.SECONDS)
-            .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
-                List<DirectMessage> directMessageSearchList = IterableUtils.toList(directMessageSearchRepository.findAll());
-                DirectMessage testDirectMessageSearch = directMessageSearchList.get(searchDatabaseSizeAfter - 1);
-                assertThat(testDirectMessageSearch.getMessageContent()).isEqualTo(UPDATED_MESSAGE_CONTENT);
-                assertThat(testDirectMessageSearch.getReadDate()).isEqualTo(UPDATED_READ_DATE);
-                assertThat(testDirectMessageSearch.getLikeCount()).isEqualTo(UPDATED_LIKE_COUNT);
-                assertThat(testDirectMessageSearch.getIsHidden()).isEqualTo(UPDATED_IS_HIDDEN);
-                assertThat(testDirectMessageSearch.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
-                assertThat(testDirectMessageSearch.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
-                assertThat(testDirectMessageSearch.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
-                assertThat(testDirectMessageSearch.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
-                assertThat(testDirectMessageSearch.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
-                assertThat(testDirectMessageSearch.getRepliedStoryId()).isEqualTo(UPDATED_REPLIED_STORY_ID);
-                assertThat(testDirectMessageSearch.getSenderUserId()).isEqualTo(UPDATED_SENDER_USER_ID);
-            });
+//        await()
+//            .atMost(5, TimeUnit.SECONDS)
+//            .untilAsserted(() -> {
+//                assertThat(testDirectMessageSearch.getMessageContent()).isEqualTo(UPDATED_MESSAGE_CONTENT);
+//                assertThat(testDirectMessageSearch.getReadDate()).isEqualTo(UPDATED_READ_DATE);
+//                assertThat(testDirectMessageSearch.getLikeCount()).isEqualTo(UPDATED_LIKE_COUNT);
+//                assertThat(testDirectMessageSearch.getIsHidden()).isEqualTo(UPDATED_IS_HIDDEN);
+//                assertThat(testDirectMessageSearch.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
+//                assertThat(testDirectMessageSearch.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
+//                assertThat(testDirectMessageSearch.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
+//                assertThat(testDirectMessageSearch.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
+//                assertThat(testDirectMessageSearch.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
+//                assertThat(testDirectMessageSearch.getRepliedStoryId()).isEqualTo(UPDATED_REPLIED_STORY_ID);
+//                assertThat(testDirectMessageSearch.getSenderUserId()).isEqualTo(UPDATED_SENDER_USER_ID);
+//            });
     }
 
     @Test
     @Transactional
     void putNonExistingDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -463,15 +432,12 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithIdMismatchDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -489,15 +455,12 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithMissingIdPathParamDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -513,8 +476,6 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -614,7 +575,6 @@ class DirectMessageResourceIT {
     @Transactional
     void patchNonExistingDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -632,15 +592,12 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithIdMismatchDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -658,15 +615,12 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithMissingIdPathParamDirectMessage() throws Exception {
         int databaseSizeBeforeUpdate = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
         directMessage.setId(longCount.incrementAndGet());
 
         // Create the DirectMessage
@@ -684,8 +638,6 @@ class DirectMessageResourceIT {
         // Validate the DirectMessage in the database
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -694,11 +646,8 @@ class DirectMessageResourceIT {
         // Initialize the database
         directMessageRepository.saveAndFlush(directMessage);
         directMessageRepository.save(directMessage);
-        directMessageSearchRepository.save(directMessage);
 
         int databaseSizeBeforeDelete = directMessageRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeBefore).isEqualTo(databaseSizeBeforeDelete);
 
         // Delete the directMessage
         restDirectMessageMockMvc
@@ -708,33 +657,6 @@ class DirectMessageResourceIT {
         // Validate the database contains one less item
         List<DirectMessage> directMessageList = directMessageRepository.findAll();
         assertThat(directMessageList).hasSize(databaseSizeBeforeDelete - 1);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(directMessageSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore - 1);
     }
 
-    @Test
-    @Transactional
-    void searchDirectMessage() throws Exception {
-        // Initialize the database
-        directMessage = directMessageRepository.saveAndFlush(directMessage);
-        directMessageSearchRepository.save(directMessage);
-
-        // Search the directMessage
-        restDirectMessageMockMvc
-            .perform(get(ENTITY_SEARCH_API_URL + "?query=id:" + directMessage.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(directMessage.getId().intValue())))
-            .andExpect(jsonPath("$.[*].messageContent").value(hasItem(DEFAULT_MESSAGE_CONTENT.toString())))
-            .andExpect(jsonPath("$.[*].readDate").value(hasItem(DEFAULT_READ_DATE.toString())))
-            .andExpect(jsonPath("$.[*].likeCount").value(hasItem(DEFAULT_LIKE_COUNT)))
-            .andExpect(jsonPath("$.[*].isHidden").value(hasItem(DEFAULT_IS_HIDDEN.booleanValue())))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(DEFAULT_CREATED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(DEFAULT_LAST_MODIFIED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY)))
-            .andExpect(jsonPath("$.[*].lastModifiedBy").value(hasItem(DEFAULT_LAST_MODIFIED_BY)))
-            .andExpect(jsonPath("$.[*].isDeleted").value(hasItem(DEFAULT_IS_DELETED.booleanValue())))
-            .andExpect(jsonPath("$.[*].repliedStoryId").value(hasItem(DEFAULT_REPLIED_STORY_ID.intValue())))
-            .andExpect(jsonPath("$.[*].senderUserId").value(hasItem(DEFAULT_SENDER_USER_ID.intValue())));
-    }
 }

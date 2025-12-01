@@ -11,7 +11,6 @@ import com.monsterdam.interactions.IntegrationTest;
 import com.monsterdam.interactions.domain.PostComment;
 import com.monsterdam.interactions.domain.PostFeed;
 import com.monsterdam.interactions.repository.PostCommentRepository;
-import com.monsterdam.interactions.repository.search.PostCommentSearchRepository;
 import com.monsterdam.interactions.service.PostCommentService;
 import com.monsterdam.interactions.service.dto.PostCommentDTO;
 import com.monsterdam.interactions.service.mapper.PostCommentMapper;
@@ -23,8 +22,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import org.apache.commons.collections4.IterableUtils;
-import org.assertj.core.util.IterableUtil;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -75,7 +72,6 @@ class PostCommentResourceIT {
 
     private static final String ENTITY_API_URL = "/api/post-comments";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
-    private static final String ENTITY_SEARCH_API_URL = "/api/post-comments/_search";
 
     private static Random random = new Random();
     private static AtomicLong longCount = new AtomicLong(random.nextInt() + (2 * Integer.MAX_VALUE));
@@ -91,9 +87,6 @@ class PostCommentResourceIT {
 
     @Mock
     private PostCommentService postCommentServiceMock;
-
-    @Autowired
-    private PostCommentSearchRepository postCommentSearchRepository;
 
     @Autowired
     private EntityManager em;
@@ -163,8 +156,6 @@ class PostCommentResourceIT {
 
     @AfterEach
     public void cleanupElasticSearchRepository() {
-        postCommentSearchRepository.deleteAll();
-        assertThat(postCommentSearchRepository.count()).isEqualTo(0);
     }
 
     @BeforeEach
@@ -176,7 +167,6 @@ class PostCommentResourceIT {
     @Transactional
     void createPostComment() throws Exception {
         int databaseSizeBeforeCreate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         // Create the PostComment
         PostCommentDTO postCommentDTO = postCommentMapper.toDto(postComment);
         restPostCommentMockMvc
@@ -191,8 +181,6 @@ class PostCommentResourceIT {
         await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore + 1);
             });
         PostComment testPostComment = postCommentList.get(postCommentList.size() - 1);
         assertThat(testPostComment.getCommentContent()).isEqualTo(DEFAULT_COMMENT_CONTENT);
@@ -213,7 +201,6 @@ class PostCommentResourceIT {
         PostCommentDTO postCommentDTO = postCommentMapper.toDto(postComment);
 
         int databaseSizeBeforeCreate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restPostCommentMockMvc
@@ -225,15 +212,12 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeCreate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCreatedDateIsRequired() throws Exception {
         int databaseSizeBeforeTest = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         // set the field null
         postComment.setCreatedDate(null);
 
@@ -248,15 +232,12 @@ class PostCommentResourceIT {
 
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkIsDeletedIsRequired() throws Exception {
         int databaseSizeBeforeTest = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         // set the field null
         postComment.setIsDeleted(null);
 
@@ -271,15 +252,12 @@ class PostCommentResourceIT {
 
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCommenterUserIdIsRequired() throws Exception {
         int databaseSizeBeforeTest = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         // set the field null
         postComment.setCommenterUserId(null);
 
@@ -294,8 +272,6 @@ class PostCommentResourceIT {
 
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -373,8 +349,6 @@ class PostCommentResourceIT {
         postCommentRepository.saveAndFlush(postComment);
 
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        postCommentSearchRepository.save(postComment);
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
 
         // Update the postComment
         PostComment updatedPostComment = postCommentRepository.findById(postComment.getId()).orElseThrow();
@@ -411,29 +385,24 @@ class PostCommentResourceIT {
         assertThat(testPostComment.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
         assertThat(testPostComment.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
         assertThat(testPostComment.getCommenterUserId()).isEqualTo(UPDATED_COMMENTER_USER_ID);
-        await()
-            .atMost(5, TimeUnit.SECONDS)
-            .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
-                List<PostComment> postCommentSearchList = IterableUtils.toList(postCommentSearchRepository.findAll());
-                PostComment testPostCommentSearch = postCommentSearchList.get(searchDatabaseSizeAfter - 1);
-                assertThat(testPostCommentSearch.getCommentContent()).isEqualTo(UPDATED_COMMENT_CONTENT);
-                assertThat(testPostCommentSearch.getLikeCount()).isEqualTo(UPDATED_LIKE_COUNT);
-                assertThat(testPostCommentSearch.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
-                assertThat(testPostCommentSearch.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
-                assertThat(testPostCommentSearch.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
-                assertThat(testPostCommentSearch.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
-                assertThat(testPostCommentSearch.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
-                assertThat(testPostCommentSearch.getCommenterUserId()).isEqualTo(UPDATED_COMMENTER_USER_ID);
-            });
+//        await()
+//            .atMost(5, TimeUnit.SECONDS)
+//            .untilAsserted(() -> {
+//                assertThat(testPostCommentSearch.getCommentContent()).isEqualTo(UPDATED_COMMENT_CONTENT);
+//                assertThat(testPostCommentSearch.getLikeCount()).isEqualTo(UPDATED_LIKE_COUNT);
+//                assertThat(testPostCommentSearch.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
+//                assertThat(testPostCommentSearch.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
+//                assertThat(testPostCommentSearch.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
+//                assertThat(testPostCommentSearch.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
+//                assertThat(testPostCommentSearch.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
+//                assertThat(testPostCommentSearch.getCommenterUserId()).isEqualTo(UPDATED_COMMENTER_USER_ID);
+//            });
     }
 
     @Test
     @Transactional
     void putNonExistingPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -451,15 +420,12 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithIdMismatchPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -477,15 +443,12 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithMissingIdPathParamPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -499,8 +462,6 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -587,7 +548,6 @@ class PostCommentResourceIT {
     @Transactional
     void patchNonExistingPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -605,15 +565,12 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithIdMismatchPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -631,15 +588,12 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithMissingIdPathParamPostComment() throws Exception {
         int databaseSizeBeforeUpdate = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
         postComment.setId(longCount.incrementAndGet());
 
         // Create the PostComment
@@ -655,8 +609,6 @@ class PostCommentResourceIT {
         // Validate the PostComment in the database
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -665,11 +617,8 @@ class PostCommentResourceIT {
         // Initialize the database
         postCommentRepository.saveAndFlush(postComment);
         postCommentRepository.save(postComment);
-        postCommentSearchRepository.save(postComment);
 
         int databaseSizeBeforeDelete = postCommentRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeBefore).isEqualTo(databaseSizeBeforeDelete);
 
         // Delete the postComment
         restPostCommentMockMvc
@@ -679,30 +628,6 @@ class PostCommentResourceIT {
         // Validate the database contains one less item
         List<PostComment> postCommentList = postCommentRepository.findAll();
         assertThat(postCommentList).hasSize(databaseSizeBeforeDelete - 1);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(postCommentSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore - 1);
     }
 
-    @Test
-    @Transactional
-    void searchPostComment() throws Exception {
-        // Initialize the database
-        postComment = postCommentRepository.saveAndFlush(postComment);
-        postCommentSearchRepository.save(postComment);
-
-        // Search the postComment
-        restPostCommentMockMvc
-            .perform(get(ENTITY_SEARCH_API_URL + "?query=id:" + postComment.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(postComment.getId().intValue())))
-            .andExpect(jsonPath("$.[*].commentContent").value(hasItem(DEFAULT_COMMENT_CONTENT.toString())))
-            .andExpect(jsonPath("$.[*].likeCount").value(hasItem(DEFAULT_LIKE_COUNT)))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(DEFAULT_CREATED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(DEFAULT_LAST_MODIFIED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].createdBy").value(hasItem(DEFAULT_CREATED_BY)))
-            .andExpect(jsonPath("$.[*].lastModifiedBy").value(hasItem(DEFAULT_LAST_MODIFIED_BY)))
-            .andExpect(jsonPath("$.[*].isDeleted").value(hasItem(DEFAULT_IS_DELETED.booleanValue())))
-            .andExpect(jsonPath("$.[*].commenterUserId").value(hasItem(DEFAULT_COMMENTER_USER_ID.intValue())));
-    }
 }
