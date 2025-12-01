@@ -13,7 +13,6 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 @Entity
 @Table(name = "country")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "country")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class Country implements Serializable {
 
@@ -27,23 +26,19 @@ public class Country implements Serializable {
 
     @NotNull
     @Column(name = "name", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String name;
 
     @NotNull
     @Size(min = 2, max = 2)
     @Column(name = "alpha_2_code", length = 2, nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String alpha2Code;
 
     @NotNull
     @Size(min = 3, max = 3)
     @Column(name = "alpha_3_code", length = 3, nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String alpha3Code;
 
     @Column(name = "phone_code")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String phoneCode;
 
     @Lob
@@ -61,16 +56,13 @@ public class Country implements Serializable {
     private Instant lastModifiedDate;
 
     @Column(name = "created_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String createdBy;
 
     @Column(name = "last_modified_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String lastModifiedBy;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isDeleted;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here

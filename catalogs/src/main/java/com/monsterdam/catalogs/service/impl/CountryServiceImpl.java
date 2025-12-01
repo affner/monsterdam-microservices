@@ -2,7 +2,6 @@ package com.monsterdam.catalogs.service.impl;
 
 import com.monsterdam.catalogs.domain.Country;
 import com.monsterdam.catalogs.repository.CountryRepository;
-import com.monsterdam.catalogs.repository.search.CountrySearchRepository;
 import com.monsterdam.catalogs.service.CountryService;
 import com.monsterdam.catalogs.service.dto.CountryDTO;
 import com.monsterdam.catalogs.service.mapper.CountryMapper;
@@ -27,16 +26,12 @@ public class CountryServiceImpl implements CountryService {
 
     private final CountryMapper countryMapper;
 
-    private final CountrySearchRepository countrySearchRepository;
-
     public CountryServiceImpl(
         CountryRepository countryRepository,
-        CountryMapper countryMapper,
-        CountrySearchRepository countrySearchRepository
+        CountryMapper countryMapper
     ) {
         this.countryRepository = countryRepository;
         this.countryMapper = countryMapper;
-        this.countrySearchRepository = countrySearchRepository;
     }
 
     @Override
@@ -44,9 +39,7 @@ public class CountryServiceImpl implements CountryService {
         log.debug("Request to save Country : {}", countryDTO);
         Country country = countryMapper.toEntity(countryDTO);
         country = countryRepository.save(country);
-        CountryDTO result = countryMapper.toDto(country);
-        countrySearchRepository.index(country);
-        return result;
+        return countryMapper.toDto(country);
     }
 
     @Override
@@ -54,9 +47,7 @@ public class CountryServiceImpl implements CountryService {
         log.debug("Request to update Country : {}", countryDTO);
         Country country = countryMapper.toEntity(countryDTO);
         country = countryRepository.save(country);
-        CountryDTO result = countryMapper.toDto(country);
-        countrySearchRepository.index(country);
-        return result;
+        return countryMapper.toDto(country);
     }
 
     @Override
@@ -71,10 +62,6 @@ public class CountryServiceImpl implements CountryService {
                 return existingCountry;
             })
             .map(countryRepository::save)
-            .map(savedCountry -> {
-                countrySearchRepository.index(savedCountry);
-                return savedCountry;
-            })
             .map(countryMapper::toDto);
     }
 
@@ -96,13 +83,5 @@ public class CountryServiceImpl implements CountryService {
     public void delete(Long id) {
         log.debug("Request to delete Country : {}", id);
         countryRepository.deleteById(id);
-        countrySearchRepository.deleteFromIndexById(id);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Page<CountryDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of Countries for query {}", query);
-        return countrySearchRepository.search(query, pageable).map(countryMapper::toDto);
     }
 }

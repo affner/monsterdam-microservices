@@ -1,9 +1,6 @@
 package com.monsterdam.catalogs;
 
 import com.monsterdam.catalogs.config.AsyncSyncConfiguration;
-import com.monsterdam.catalogs.config.EmbeddedElasticsearch;
-import com.monsterdam.catalogs.config.EmbeddedKafka;
-import com.monsterdam.catalogs.config.EmbeddedRedis;
 import com.monsterdam.catalogs.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,10 +15,6 @@ import org.springframework.test.annotation.DirtiesContext;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { CatalogsApp.class, AsyncSyncConfiguration.class })
-@EmbeddedRedis
-@EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
-@EmbeddedKafka
-public @interface IntegrationTest {
-}
+public @interface IntegrationTest {}
