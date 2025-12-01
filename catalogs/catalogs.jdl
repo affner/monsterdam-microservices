@@ -8,17 +8,17 @@ application {
     databaseType sql
     devDatabaseType h2Memory
     prodDatabaseType postgresql
-    cacheProvider redis
+    cacheProvider no
     buildTool maven
     serviceDiscoveryType consul
-    enableHibernateCache true
+    enableHibernateCache false
     enableSwaggerCodegen true
     enableTranslation true
     nativeLanguage es
     languages [en, fr, de, pt-br, ru]
     testFrameworks [gatling]
     searchEngine elasticsearch
-    messageBroker kafka
+    messageBroker no
     serverPort 8089
   }
   entities *
