@@ -1,5 +1,2 @@
 org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.bff.\
-    config.TestContainersSpringContextCustomizerFactory,com.monsterdam.bff.config.\
-    SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.bff.config.\
-    KafkaTestContainersSpringContextCustomizerFactory,com.monsterdam.bff.config.\
-    RedisTestContainersSpringContextCustomizerFactory
+    config.SqlTestContainersSpringContextCustomizerFactory
