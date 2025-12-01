@@ -8,17 +8,16 @@ application {
         databaseType sql
         devDatabaseType h2Memory
         prodDatabaseType postgresql
-        cacheProvider redis
+        cacheProvider no
         buildTool maven
         serviceDiscoveryType consul
-        enableHibernateCache true
+        enableHibernateCache false
         enableSwaggerCodegen true
         enableTranslation true
         nativeLanguage es
         languages [en, fr, de, pt-br, ru]
         testFrameworks [gatling]
-        searchEngine elasticsearch
-        messageBroker kafka
+        searchEngine no
         serverPort 8084
     }
     entities UserLite, UserProfile, UserSettings, UserAssociation, UserEvent, BookMark, PersonalSocialLinks, Feedback, StateUserRelation, HashTag, PostFeedHashTagRelation, SpecialAward
@@ -313,8 +312,6 @@ relationship ManyToMany {
     UserProfile{joinedEvents(startDate)} to UserEvent{members}
     UserProfile{hashtags} to HashTag{user required},
 }
-
-search HashTag with elasticsearch
 
 dto all with mapstruct
 

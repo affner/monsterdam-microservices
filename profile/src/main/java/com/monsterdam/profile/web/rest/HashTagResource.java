@@ -4,7 +4,6 @@ import com.monsterdam.profile.repository.HashTagRepository;
 import com.monsterdam.profile.service.HashTagService;
 import com.monsterdam.profile.service.dto.HashTagDTO;
 import com.monsterdam.profile.web.rest.errors.BadRequestAlertException;
-import com.monsterdam.profile.web.rest.errors.ElasticsearchExceptionMapper;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import java.net.URI;
@@ -181,26 +180,4 @@ public class HashTagResource {
             .build();
     }
 
-    /**
-     * {@code SEARCH  /hash-tags/_search?query=:query} : search for the hashTag corresponding
-     * to the query.
-     *
-     * @param query the query of the hashTag search.
-     * @param pageable the pagination information.
-     * @return the result of the search.
-     */
-    @GetMapping("/_search")
-    public ResponseEntity<List<HashTagDTO>> searchHashTags(
-        @RequestParam("query") String query,
-        @org.springdoc.core.annotations.ParameterObject Pageable pageable
-    ) {
-        log.debug("REST request to search for a page of HashTags for query {}", query);
-        try {
-            Page<HashTagDTO> page = hashTagService.search(query, pageable);
-            HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(ServletUriComponentsBuilder.fromCurrentRequest(), page);
-            return ResponseEntity.ok().headers(headers).body(page.getContent());
-        } catch (RuntimeException e) {
-            throw ElasticsearchExceptionMapper.mapException(e);
-        }
-    }
 }

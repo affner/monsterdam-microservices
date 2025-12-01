@@ -7,16 +7,11 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
 /**
  * A HashTag.
  */
 @Entity
 @Table(name = "hash_tag")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "hashtag")
 @SuppressWarnings("common-java:DuplicatedBlocks")
 public class HashTag implements Serializable {
 
@@ -30,7 +25,6 @@ public class HashTag implements Serializable {
 
     @NotNull
     @Column(name = "tag_name", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String tagName;
 
     @NotNull
@@ -41,26 +35,21 @@ public class HashTag implements Serializable {
     private Instant lastModifiedDate;
 
     @Column(name = "created_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String createdBy;
 
     @Column(name = "last_modified_by")
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Text)
     private String lastModifiedBy;
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @org.springframework.data.elasticsearch.annotations.Field(type = org.springframework.data.elasticsearch.annotations.FieldType.Boolean)
     private Boolean isDeleted;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "hashtag")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @org.springframework.data.annotation.Transient
     @JsonIgnoreProperties(value = { "hashtag" }, allowSetters = true)
     private Set<PostFeedHashTagRelation> postFeeds = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "hashtags")
-    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @org.springframework.data.annotation.Transient
     @JsonIgnoreProperties(
         value = {

@@ -56,13 +56,4 @@ public interface HashTagService {
      */
     void delete(Long id);
 
-    /**
-     * Search for the hashTag corresponding to the query.
-     *
-     * @param query the query of the search.
-     *
-     * @param pageable the pagination information.
-     * @return the list of entities.
-     */
-    Page<HashTagDTO> search(String query, Pageable pageable);
 }

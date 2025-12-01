@@ -1,7 +1,6 @@
 package com.monsterdam.profile.web.rest;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.awaitility.Awaitility.await;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -10,7 +9,6 @@ import com.monsterdam.profile.IntegrationTest;
 import com.monsterdam.profile.domain.HashTag;
 import com.monsterdam.profile.domain.UserProfile;
 import com.monsterdam.profile.repository.HashTagRepository;
-import com.monsterdam.profile.repository.search.HashTagSearchRepository;
 import com.monsterdam.profile.service.dto.HashTagDTO;
 import com.monsterdam.profile.service.mapper.HashTagMapper;
 import jakarta.persistence.EntityManager;
@@ -18,11 +16,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
-import org.apache.commons.collections4.IterableUtils;
-import org.assertj.core.util.IterableUtil;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,8 +54,6 @@ class HashTagResourceIT {
 
     private static final String ENTITY_API_URL = "/api/hash-tags";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
-    private static final String ENTITY_SEARCH_API_URL = "/api/hash-tags/_search";
-
     private static Random random = new Random();
     private static AtomicLong longCount = new AtomicLong(random.nextInt() + (2 * Integer.MAX_VALUE));
 
@@ -70,9 +62,6 @@ class HashTagResourceIT {
 
     @Autowired
     private HashTagMapper hashTagMapper;
-
-    @Autowired
-    private HashTagSearchRepository hashTagSearchRepository;
 
     @Autowired
     private EntityManager em;
@@ -136,12 +125,6 @@ class HashTagResourceIT {
         return hashTag;
     }
 
-    @AfterEach
-    public void cleanupElasticSearchRepository() {
-        hashTagSearchRepository.deleteAll();
-        assertThat(hashTagSearchRepository.count()).isEqualTo(0);
-    }
-
     @BeforeEach
     public void initTest() {
         hashTag = createEntity(em);
@@ -151,7 +134,6 @@ class HashTagResourceIT {
     @Transactional
     void createHashTag() throws Exception {
         int databaseSizeBeforeCreate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         // Create the HashTag
         HashTagDTO hashTagDTO = hashTagMapper.toDto(hashTag);
         restHashTagMockMvc
@@ -161,11 +143,8 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeCreate + 1);
-        await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore + 1);
             });
         HashTag testHashTag = hashTagList.get(hashTagList.size() - 1);
         assertThat(testHashTag.getTagName()).isEqualTo(DEFAULT_TAG_NAME);
@@ -184,7 +163,6 @@ class HashTagResourceIT {
         HashTagDTO hashTagDTO = hashTagMapper.toDto(hashTag);
 
         int databaseSizeBeforeCreate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restHashTagMockMvc
@@ -194,15 +172,12 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeCreate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkTagNameIsRequired() throws Exception {
         int databaseSizeBeforeTest = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         // set the field null
         hashTag.setTagName(null);
 
@@ -215,15 +190,12 @@ class HashTagResourceIT {
 
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkCreatedDateIsRequired() throws Exception {
         int databaseSizeBeforeTest = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         // set the field null
         hashTag.setCreatedDate(null);
 
@@ -236,15 +208,12 @@ class HashTagResourceIT {
 
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void checkIsDeletedIsRequired() throws Exception {
         int databaseSizeBeforeTest = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         // set the field null
         hashTag.setIsDeleted(null);
 
@@ -257,8 +226,6 @@ class HashTagResourceIT {
 
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeTest);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -315,8 +282,6 @@ class HashTagResourceIT {
         hashTagRepository.saveAndFlush(hashTag);
 
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        hashTagSearchRepository.save(hashTag);
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
 
         // Update the hashTag
         HashTag updatedHashTag = hashTagRepository.findById(hashTag.getId()).orElseThrow();
@@ -349,19 +314,8 @@ class HashTagResourceIT {
         assertThat(testHashTag.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
         assertThat(testHashTag.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
         assertThat(testHashTag.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
-        await()
             .atMost(5, TimeUnit.SECONDS)
             .untilAsserted(() -> {
-                int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-                assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
-                List<HashTag> hashTagSearchList = IterableUtils.toList(hashTagSearchRepository.findAll());
-                HashTag testHashTagSearch = hashTagSearchList.get(searchDatabaseSizeAfter - 1);
-                assertThat(testHashTagSearch.getTagName()).isEqualTo(UPDATED_TAG_NAME);
-                assertThat(testHashTagSearch.getCreatedDate()).isEqualTo(UPDATED_CREATED_DATE);
-                assertThat(testHashTagSearch.getLastModifiedDate()).isEqualTo(UPDATED_LAST_MODIFIED_DATE);
-                assertThat(testHashTagSearch.getCreatedBy()).isEqualTo(UPDATED_CREATED_BY);
-                assertThat(testHashTagSearch.getLastModifiedBy()).isEqualTo(UPDATED_LAST_MODIFIED_BY);
-                assertThat(testHashTagSearch.getIsDeleted()).isEqualTo(UPDATED_IS_DELETED);
             });
     }
 
@@ -369,7 +323,6 @@ class HashTagResourceIT {
     @Transactional
     void putNonExistingHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -387,15 +340,12 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithIdMismatchHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -413,15 +363,12 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void putWithMissingIdPathParamHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -435,8 +382,6 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -517,7 +462,6 @@ class HashTagResourceIT {
     @Transactional
     void patchNonExistingHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -535,15 +479,12 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithIdMismatchHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -561,15 +502,12 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
     @Transactional
     void patchWithMissingIdPathParamHashTag() throws Exception {
         int databaseSizeBeforeUpdate = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
         hashTag.setId(longCount.incrementAndGet());
 
         // Create the HashTag
@@ -585,8 +523,6 @@ class HashTagResourceIT {
         // Validate the HashTag in the database
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeUpdate);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore);
     }
 
     @Test
@@ -595,11 +531,8 @@ class HashTagResourceIT {
         // Initialize the database
         hashTagRepository.saveAndFlush(hashTag);
         hashTagRepository.save(hashTag);
-        hashTagSearchRepository.save(hashTag);
 
         int databaseSizeBeforeDelete = hashTagRepository.findAll().size();
-        int searchDatabaseSizeBefore = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeBefore).isEqualTo(databaseSizeBeforeDelete);
 
         // Delete the hashTag
         restHashTagMockMvc
@@ -609,8 +542,6 @@ class HashTagResourceIT {
         // Validate the database contains one less item
         List<HashTag> hashTagList = hashTagRepository.findAll();
         assertThat(hashTagList).hasSize(databaseSizeBeforeDelete - 1);
-        int searchDatabaseSizeAfter = IterableUtil.sizeOf(hashTagSearchRepository.findAll());
-        assertThat(searchDatabaseSizeAfter).isEqualTo(searchDatabaseSizeBefore - 1);
     }
 
     @Test
@@ -618,11 +549,9 @@ class HashTagResourceIT {
     void searchHashTag() throws Exception {
         // Initialize the database
         hashTag = hashTagRepository.saveAndFlush(hashTag);
-        hashTagSearchRepository.save(hashTag);
 
         // Search the hashTag
         restHashTagMockMvc
-            .perform(get(ENTITY_SEARCH_API_URL + "?query=id:" + hashTag.getId()))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(hashTag.getId().intValue())))

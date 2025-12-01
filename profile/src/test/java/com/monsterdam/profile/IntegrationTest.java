@@ -1,9 +1,6 @@
 package com.monsterdam.profile;
 
 import com.monsterdam.profile.config.AsyncSyncConfiguration;
-import com.monsterdam.profile.config.EmbeddedElasticsearch;
-import com.monsterdam.profile.config.EmbeddedKafka;
-import com.monsterdam.profile.config.EmbeddedRedis;
 import com.monsterdam.profile.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,10 +15,7 @@ import org.springframework.test.annotation.DirtiesContext;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { ProfileApp.class, AsyncSyncConfiguration.class })
-@EmbeddedRedis
-@EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
-@EmbeddedKafka
 public @interface IntegrationTest {
 }
