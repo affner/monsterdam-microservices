@@ -1,6 +1,2 @@
 org.springframework.test.context.ContextCustomizerFactory = com.monsterdam.\
-    notifications.config.TestContainersSpringContextCustomizerFactory,com.\
-    monsterdam.notifications.config.\
-    SqlTestContainersSpringContextCustomizerFactory,com.monsterdam.notifications.\
-    config.KafkaTestContainersSpringContextCustomizerFactory,com.monsterdam.\
-    notifications.config.RedisTestContainersSpringContextCustomizerFactory
+    notifications.config.SqlTestContainersSpringContextCustomizerFactory

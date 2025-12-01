@@ -1,9 +1,6 @@
 package com.monsterdam.notifications;
 
 import com.monsterdam.notifications.config.AsyncSyncConfiguration;
-import com.monsterdam.notifications.config.EmbeddedElasticsearch;
-import com.monsterdam.notifications.config.EmbeddedKafka;
-import com.monsterdam.notifications.config.EmbeddedRedis;
 import com.monsterdam.notifications.config.EmbeddedSQL;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,10 +15,7 @@ import org.springframework.test.annotation.DirtiesContext;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { NotificationsApp.class, AsyncSyncConfiguration.class })
-@EmbeddedRedis
-@EmbeddedElasticsearch
 @EmbeddedSQL
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
-@EmbeddedKafka
 public @interface IntegrationTest {
 }

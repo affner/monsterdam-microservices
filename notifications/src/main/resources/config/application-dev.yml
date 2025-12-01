@@ -22,8 +22,6 @@ logging:
 
 management:
   health:
-    elasticsearch:
-      enabled: false
   zipkin: # Use the "zipkin" Maven profile to have the Spring Cloud Zipkin dependencies
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
@@ -69,8 +67,6 @@ spring:
     console:
       # disable spring boot built-in h2-console since we start it manually with correct configuration
       enabled: false
-  elasticsearch:
-    uris: http://localhost:9200
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
@@ -89,13 +85,6 @@ server:
 # ===================================================================
 
 jhipster:
-  cache: # Cache configuration
-    redis: # Redis configuration
-      expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      server: redis://localhost:6379
-      cluster: false
-      # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
-      # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
   # If you want to enable it, please uncomment the configuration below.
   # cors:
