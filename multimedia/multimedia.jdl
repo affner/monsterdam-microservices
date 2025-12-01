@@ -8,7 +8,7 @@ application {
         databaseType sql
         devDatabaseType h2Memory
         prodDatabaseType postgresql
-        cacheProvider redis
+        cacheProvider no
         buildTool maven
         enableHibernateCache true
         enableSwaggerCodegen true
@@ -16,8 +16,8 @@ application {
         nativeLanguage es
         languages [es, en, fr, de, pt-br, ru]
         testFrameworks [gatling]
-        searchEngine elasticsearch
-        messageBroker kafka
+        searchEngine no
+        messageBroker no
         clientPackageManager npm
         serverPort 8082
         serviceDiscoveryType consul

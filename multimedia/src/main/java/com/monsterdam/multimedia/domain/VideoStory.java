@@ -6,8 +6,6 @@ import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
 
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 /**
  * A VideoStory.
@@ -37,7 +35,6 @@ public class VideoStory extends AbstractAuditingEntity<Long> implements Serializ
 
     @NotNull
     @Column(name = "thumbnail_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
     private String thumbnailS3Key;
 
     @Column(name = "content_content_type")
@@ -45,7 +42,7 @@ public class VideoStory extends AbstractAuditingEntity<Long> implements Serializ
 
     @NotNull
     @Column(name = "content_s_3_key", nullable = false)
-    @Field(type = FieldType.Text)
+  //  @Field(type = FieldType.Text)
     private String contentS3Key;
 
     @Column(name = "duration")
@@ -53,11 +50,11 @@ public class VideoStory extends AbstractAuditingEntity<Long> implements Serializ
 
     @NotNull
     @Column(name = "is_deleted", nullable = false)
-    @Field(type = FieldType.Boolean)
+  //  @Field(type = FieldType.Boolean)
     private Boolean isDeleted = false;
 
     @Column(name = "like_count")
-    @Field(type = FieldType.Integer)
+ //   @Field(type = FieldType.Integer)
     private Integer likeCount;
 
 
